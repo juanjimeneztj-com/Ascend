@@ -15,11 +15,11 @@ juanjimeneztj will surpass your expectations over and over again. Amazingly vers
 
 = Is there theme documentation? =
 
-Yes, go here: http://docs.kadencethemes.com/juanjimeneztj-free/
+Yes, go here: http://docs.juanjimeneztjthemes.com/juanjimeneztj-free/
 
 = Is there demo content available? =
 
-Yes, go here: https://www.kadencethemes.com/kadence-themes-demo-content/
+Yes, go here: https://www.juanjimeneztjthemes.com/juanjimeneztj-themes-demo-content/
 
 
 -------------------------------------------------------
@@ -60,7 +60,7 @@ Yes, go here: https://www.kadencethemes.com/kadence-themes-demo-content/
 
 = Version 1.2.9 | 16th July 2018 =
 * Update: Gutenberg Support.
-* Update: Easier Kadence Toolkit install.
+* Update: Easier juanjimeneztj Toolkit install.
 
 = Version 1.2.8 | 3rd July 2018 =
 * Fix: Conflict with woo code and other store plugin.
@@ -160,7 +160,7 @@ Yes, go here: https://www.kadencethemes.com/kadence-themes-demo-content/
 * Update: Remove tag "custom-header".
 * Add: Custom background support.
 * Update: Change defined date to "get_option( 'date_format' )"
-* Update: Change kadence_mobile_walker to juanjimeneztj_mobile_walker
+* Update: Change juanjimeneztj_mobile_walker to juanjimeneztj_mobile_walker
 * Update: Class names for slides and icons.
 * Remove: a few comments in code so php sniffer doesn't put out a warning.
 * Update: Use wp_kses_post on video output.
@@ -230,7 +230,7 @@ Yes, go here: https://www.kadencethemes.com/kadence-themes-demo-content/
 * Remove: query post.
 * Fix: styling issue with 6 columns in gallery.
 * Update: No slider options unless toolkit installed
-* Update: Move to Kadence Image processing and move to plugin.
+* Update: Move to juanjimeneztj Image processing and move to plugin.
 * Update: Sanitize custom nav fields
 * Update: widget security
 * Move: wp-footer call.
@@ -286,7 +286,7 @@ You are allowed to have non-presentational data like social links, although it's
     Copyright, Credits & Resources:
 -------------------------------------------------------
 
-juanjimeneztj WordPress Theme, Copyright 2017 kadencethemes.com
+juanjimeneztj WordPress Theme, Copyright 2017 juanjimeneztjthemes.com
 It is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify

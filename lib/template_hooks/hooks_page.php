@@ -379,7 +379,7 @@ if(!function_exists('juanjimeneztj_build_post_content_carousel')) {
 		}
 			echo '<div class="carousel_outerrim">';
 			echo '<div class="carouselcontainer '.esc_attr($margin).'">';
-			echo '<div id="kadence-carousel-'.esc_attr($id).'" class="slick-slider '.esc_attr($class).' carousel_shortcode kt-slickslider kt-content-carousel loading clearfix" data-slider-fade="false" data-slider-type="content-carousel" data-slider-anim-speed="'.esc_attr($trans_speed).'" data-slider-scroll="'.esc_attr($scroll).'" data-slider-auto="'.esc_attr($auto).'" data-slider-speed="'.esc_attr($speed).'" data-slider-xxl="'.esc_attr($cc['xxl']).'" data-slider-xl="'.esc_attr($cc['xl']).'" data-slider-md="'.esc_attr($cc['md']).'" data-slider-sm="'.esc_attr($cc['sm']).'" data-slider-xs="'.esc_attr($cc['xs']).'" data-slider-ss="'.esc_attr($cc['ss']).'">';
+			echo '<div id="juanjimeneztj-carousel-'.esc_attr($id).'" class="slick-slider '.esc_attr($class).' carousel_shortcode kt-slickslider kt-content-carousel loading clearfix" data-slider-fade="false" data-slider-type="content-carousel" data-slider-anim-speed="'.esc_attr($trans_speed).'" data-slider-scroll="'.esc_attr($scroll).'" data-slider-auto="'.esc_attr($auto).'" data-slider-speed="'.esc_attr($speed).'" data-slider-xxl="'.esc_attr($cc['xxl']).'" data-slider-xl="'.esc_attr($cc['xl']).'" data-slider-md="'.esc_attr($cc['md']).'" data-slider-sm="'.esc_attr($cc['sm']).'" data-slider-xs="'.esc_attr($cc['xs']).'" data-slider-ss="'.esc_attr($cc['ss']).'">';
 				  	$loop = new WP_Query($args);
 					if ( $loop ) : 
 						if($type == 'portfolio') {

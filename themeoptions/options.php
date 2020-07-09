@@ -47,8 +47,8 @@
         'show_options_object'  => false,
         'default_show'         => false,
         'default_mark'         => '',
-        'intro_text'           => 'Upgrade to <a href="https://www.kadencethemes.com/product/juanjimeneztj-premium-wordpress-theme/?utm_source=themeoptions&utm_medium=banner&utm_campaign=juanjimeneztj_premium" target="_blank">juanjimeneztj Premium</a> for more great features. Over 50 more theme options, premium sliders and carousels, custom post types and much much more!',       
-        'footer_credit' 		=> __('Thank you for using the juanjimeneztj Theme by <a href="https://kadencethemes.com/" target="_blank">Kadence Themes</a>.', 'juanjimeneztj'),
+        'intro_text'           => 'Upgrade to <a href="https://www.juanjimeneztj.com/product/juanjimeneztj-premium-wordpress-theme/?utm_source=themeoptions&utm_medium=banner&utm_campaign=juanjimeneztj_premium" target="_blank">juanjimeneztj Premium</a> for more great features. Over 50 more theme options, premium sliders and carousels, custom post types and much much more!',       
+        'footer_credit' 		=> __('Thank you for using the juanjimeneztj Theme by <a href="https://juanjimeneztj.com/" target="_blank">Juan Jimenez Themes</a>.', 'juanjimeneztj'),
         'hints'                => array(
             'icon'          => 'kt-icon-question',
             'icon_position' => 'right',
@@ -80,22 +80,22 @@
     );
 
     $args['share_icons'][] = array(
-        'url' => 'https://www.facebook.com/KadenceThemes',
-        'title' => 'Follow Kadence Themes on Facebook', 
+        'url' => 'https://www.facebook.com/juanjimeneztj',
+        'title' => 'Follow Juan Jimenez Themes on Facebook', 
         'icon' => 'dashicons dashicons-facebook',
     );
     $args['share_icons'][] = array(
-        'url' => 'https://www.twitter.com/KadenceThemes',
-        'title' => 'Follow Kadence Themes on Twitter', 
+        'url' => 'https://www.twitter.com/juanjimeneztj',
+        'title' => 'Follow Juan Jimenez Themes on Twitter', 
         'icon' => 'dashicons dashicons-twitter',
     );
     $args['share_icons'][] = array(
-        'url' => 'https://www.instagram.com/KadenceThemes',
-        'title' => 'Follow Kadence Themes on Instagram', 
+        'url' => 'https://www.instagram.com/juanjimeneztj',
+        'title' => 'Follow Juan Jimenez Themes on Instagram', 
         'icon' => 'dashicons dashicons-format-image',
     );
 
-    $args = apply_filters('kadence_theme_options_args', $args);
+    $args = apply_filters('juanjimeneztj_theme_options_args', $args);
     Redux::setArgs( $opt_name, $args );
 
 
@@ -833,7 +833,7 @@ Redux::setSection( $opt_name, array(
             'transparent'=>false,
             'default' => '',
             'validate' => 'color',
-            'output'    => array('color' =>'body.trans-header div:not(.is-sticky) > .headerclass-outer div:not(.is-sticky) > .kad-header-topbar-primary-outer div:not(.is-sticky) > .headerclass .nav-main ul.sf-menu > li > a, body.trans-header div:not(.is-sticky) > .headerclass-outer div:not(.is-sticky) > .kad-header-topbar-primary-outer div:not(.is-sticky) > .headerclass .kt-header-extras ul.sf-menu > li > a, body.trans-header div:not(.is-sticky) > .headerclass-outer div:not(.is-sticky) > .kad-header-topbar-primary-outer div:not(.is-sticky) > .headerclass .kt-header-extras .kt-extras-label [class*="kt-icon-"], body.trans-header div:not(.is-sticky) > .headerclass-outer div:not(.is-sticky) > .kad-header-topbar-primary-outer div:not(.is-sticky) > .headerclass .kt-header-extras .kadence_social_widget a, body.trans-header div:not(.is-sticky) > .headerclass-outer div:not(.is-sticky) > .second-navclass .sf-menu > li > a, body.trans-header div:not(.is-sticky) > .mobile-headerclass .kt-mobile-header-toggle button', 'background' => 'body.trans-header div:not(.is-sticky) > .headerclass-outer div:not(.is-sticky) > .second-navclass  .sf-menu>li:after, body.trans-header div:not(.is-sticky) > .mobile-headerclass .kt-mnt span'),
+            'output'    => array('color' =>'body.trans-header div:not(.is-sticky) > .headerclass-outer div:not(.is-sticky) > .kad-header-topbar-primary-outer div:not(.is-sticky) > .headerclass .nav-main ul.sf-menu > li > a, body.trans-header div:not(.is-sticky) > .headerclass-outer div:not(.is-sticky) > .kad-header-topbar-primary-outer div:not(.is-sticky) > .headerclass .kt-header-extras ul.sf-menu > li > a, body.trans-header div:not(.is-sticky) > .headerclass-outer div:not(.is-sticky) > .kad-header-topbar-primary-outer div:not(.is-sticky) > .headerclass .kt-header-extras .kt-extras-label [class*="kt-icon-"], body.trans-header div:not(.is-sticky) > .headerclass-outer div:not(.is-sticky) > .kad-header-topbar-primary-outer div:not(.is-sticky) > .headerclass .kt-header-extras .juanjimeneztj_social_widget a, body.trans-header div:not(.is-sticky) > .headerclass-outer div:not(.is-sticky) > .second-navclass .sf-menu > li > a, body.trans-header div:not(.is-sticky) > .mobile-headerclass .kt-mobile-header-toggle button', 'background' => 'body.trans-header div:not(.is-sticky) > .headerclass-outer div:not(.is-sticky) > .second-navclass  .sf-menu>li:after, body.trans-header div:not(.is-sticky) > .mobile-headerclass .kt-mnt span'),
             ),
         array(
             'id'=>'trans_header_border_color',
@@ -3177,7 +3177,7 @@ Redux::setSection( $opt_name, array(
             'type' => 'color',
             'title' => __('Topbar Font color', 'juanjimeneztj'), 
             'default' => '#ffffff',
-            'output'    => array('.kad-topbar-flex-item, .kad-topbar-flex-item a, .kad-topbar-flex-item .kadence_social_widget a, .topbarclass .kt-woo-account-nav .kad-customer-name h5, .topbarclass .kt-mini-cart-refreash .total'),
+            'output'    => array('.kad-topbar-flex-item, .kad-topbar-flex-item a, .kad-topbar-flex-item .juanjimeneztj_social_widget a, .topbarclass .kt-woo-account-nav .kad-customer-name h5, .topbarclass .kt-mini-cart-refreash .total'),
             'transparent'=>false,
             'validate' => 'color',
             ),
@@ -4091,7 +4091,7 @@ Redux::setSection( $opt_name, array(
             'desc' => __('WordPress Galleries', 'juanjimeneztj'),
             ),
         array(
-            'id'=>'kadence_gallery',
+            'id'=>'juanjimeneztj_gallery',
             'type' => 'switch', 
             'title' => __('Enable juanjimeneztj Galleries to override WordPress', 'juanjimeneztj'),
             'subtitle' => __('Disable this if using a plugin to customize galleries, for example jetpack tiled gallery.', 'juanjimeneztj'),
@@ -4103,7 +4103,7 @@ Redux::setSection( $opt_name, array(
             'desc' => __('Theme Lightbox', 'juanjimeneztj'),
             ),
         array(
-            'id'=>'kadence_themes_lightbox',
+            'id'=>'juanjimeneztj_themes_lightbox',
             'type' => 'switch',
             'on' => __('Lightbox On', 'juanjimeneztj'),
             'off' => __('Lightbox Off', 'juanjimeneztj'),
@@ -4132,7 +4132,7 @@ Redux::setSection( $opt_name, array(
 	    'desc'   => __( 'Import and Export your Theme Options from text or URL.', 'juanjimeneztj' ),
 	    'fields' => array(
 	        array(
-	            'id'         => 'kadence-import-export',
+	            'id'         => 'juanjimeneztj-import-export',
 	            'type'       => 'import_export',
 	            'full_width' => true,
 	        ),

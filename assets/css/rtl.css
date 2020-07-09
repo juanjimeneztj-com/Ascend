@@ -7,7 +7,7 @@ body.rtl {
       float: right;
   	}
 }
-.kadence_recent_posts .recentpost_featimg {
+.juanjimeneztj_recent_posts .recentpost_featimg {
     float: right;
     margin-left: 10px;
     margin-right: 0;
@@ -179,7 +179,7 @@ ol, ul {
     right: 0;
     left: auto;
 }
-.footerclass .kadence_social_widget {
+.footerclass .juanjimeneztj_social_widget {
 	text-align: right;
 }
 ul.product_list_widget li a {

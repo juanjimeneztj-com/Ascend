@@ -12,7 +12,7 @@
  */
 function juanjimeneztj_admin_scripts( $hook ) {
 
-	wp_register_script( 'kadence-toolkit-install', get_template_directory_uri() . '/assets/js/admin-activate.js', false, juanjimeneztj_VERSION );
+	wp_register_script( 'juanjimeneztj-toolkit-install', get_template_directory_uri() . '/assets/js/admin-activate.js', false, juanjimeneztj_VERSION );
 
 	if ( 'appearance_page_kad_options' === $hook || 'widgets.php' === $hook ) {
 		wp_enqueue_script( 'select2', get_template_directory_uri() . '/assets/js/min/select2-min.js', array( 'jquery' ), juanjimeneztj_VERSION, false );

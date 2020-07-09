@@ -39,7 +39,7 @@ function juanjimeneztj_body_classes($classes) {
         $site_layout = 'kad-header-position-above';
     }
     $classes[] = $site_layout;
-    if(isset($juanjimeneztj['kadence_themes_lightbox']) && 0 == $juanjimeneztj['kadence_themes_lightbox']) {
+    if(isset($juanjimeneztj['juanjimeneztj_themes_lightbox']) && 0 == $juanjimeneztj['juanjimeneztj_themes_lightbox']) {
         $classes[] = 'kt-turnoff-lightbox';
     }
     if(isset($juanjimeneztj['show_subindicator']) && 0 == $juanjimeneztj['show_subindicator']) {

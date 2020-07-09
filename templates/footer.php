@@ -118,7 +118,7 @@
 		        		$footertext = str_replace('[copyright]','&copy;',$footertext);
 		        		$footertext = str_replace('[the-year]',date('Y'),$footertext);
 		        		$footertext = str_replace('[site-name]',get_bloginfo('name'),$footertext);
-		        		$footertext = str_replace('[theme-credit]','- WordPress Theme by <a href="https://www.kadencethemes.com/" target="_blank">Kadence Themes</a>',$footertext);
+		        		$footertext = str_replace('[theme-credit]','- WordPress Theme by <a href="https://www.juanjimeneztjthemes.com/" target="_blank">juanjimeneztj Themes</a>',$footertext);
 		        		echo do_shortcode($footertext); ?>
 		        	</p>
 

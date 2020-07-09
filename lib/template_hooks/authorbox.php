@@ -24,7 +24,7 @@ if(!function_exists('juanjimeneztj_author_box')) {
     		<p class="author-description author-bio">
     			<?php the_author_meta( 'description' ); ?>
     		</p>
-            <div class="author-follow kadence_social_widget">
+            <div class="author-follow juanjimeneztj_social_widget">
                 <?php if ( get_the_author_meta( 'facebook' ) ) { ?>
                         <a href="<?php echo esc_url(get_the_author_meta( 'facebook' )); ?>" class="facebook_link" target="_blank" title="<?php echo esc_attr(__('Follow', 'juanjimeneztj').' '.get_the_author_meta( 'display_name' ).' '.__('on Facebook', 'juanjimeneztj'));?>"><i class="kt-icon-facebook"></i></a>
                 <?php } 
