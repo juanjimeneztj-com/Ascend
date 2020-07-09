@@ -117,7 +117,7 @@
             public function add_section() {
                 $this->parent->sections[] = array(
                     'id'         => 'import/export',
-                    'title'      => __( 'Import / Export', 'ascend' ),
+                    'title'      => __( 'Import / Export', 'juanjimeneztj' ),
                     'heading'    => '',
                     'icon'       => 'el el-refresh',
                     'customizer' => false,

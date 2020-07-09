@@ -438,7 +438,7 @@
                  *
                  * @param       string        save_pending string
                  */
-                $save_pending = apply_filters( "redux/{$this->parent->args['opt_name']}/localize/save_pending", __( 'You have changes that are not saved. Would you like to save them now?', 'ascend' ) );
+                $save_pending = apply_filters( "redux/{$this->parent->args['opt_name']}/localize/save_pending", __( 'You have changes that are not saved. Would you like to save them now?', 'juanjimeneztj' ) );
 
                 /**
                  * Reset all string
@@ -446,7 +446,7 @@
                  *
                  * @param       string        reset all string
                  */
-                $reset_all = apply_filters( "redux/{$this->parent->args['opt_name']}/localize/reset", __( 'Are you sure? Resetting will lose all custom values.', 'ascend' ) );
+                $reset_all = apply_filters( "redux/{$this->parent->args['opt_name']}/localize/reset", __( 'Are you sure? Resetting will lose all custom values.', 'juanjimeneztj' ) );
 
                 /**
                  * Reset section string
@@ -454,7 +454,7 @@
                  *
                  * @param       string        reset section string
                  */
-                $reset_section = apply_filters( "redux/{$this->parent->args['opt_name']}/localize/reset_section", __( 'Are you sure? Resetting will lose all custom values in this section.', 'ascend' ) );
+                $reset_section = apply_filters( "redux/{$this->parent->args['opt_name']}/localize/reset_section", __( 'Are you sure? Resetting will lose all custom values in this section.', 'juanjimeneztj' ) );
 
                 /**
                  * Preset confirm string
@@ -462,14 +462,14 @@
                  *
                  * @param       string        preset confirm string
                  */
-                $preset_confirm = apply_filters( "redux/{$this->parent->args['opt_name']}/localize/preset", __( 'Your current options will be replaced with the values of this preset. Would you like to proceed?', 'ascend' ) );
+                $preset_confirm = apply_filters( "redux/{$this->parent->args['opt_name']}/localize/preset", __( 'Your current options will be replaced with the values of this preset. Would you like to proceed?', 'juanjimeneztj' ) );
                 global $pagenow;
                 $this->parent->localize_data['args'] = array(
                     'save_pending'          => $save_pending,
                     'reset_confirm'         => $reset_all,
                     'reset_section_confirm' => $reset_section,
                     'preset_confirm'        => $preset_confirm,
-                    'please_wait'           => __( 'Please Wait', 'ascend' ),
+                    'please_wait'           => __( 'Please Wait', 'juanjimeneztj' ),
                     'opt_name'              => $this->parent->args['opt_name'],
                     'slug'                  => $this->parent->args['page_slug'],
                     'hints'                 => $this->parent->args['hints'],
@@ -480,8 +480,8 @@
                 );
 
                 $this->parent->localize_data['ajax'] = array(
-                    'console' => __( 'There was an error saving. Here is the result of your action:', 'ascend' ),
-                    'alert'   => __( 'There was a problem with your action. Please try again or reload the page.', 'ascend' ),
+                    'console' => __( 'There was an error saving. Here is the result of your action:', 'juanjimeneztj' ),
+                    'alert'   => __( 'There was a problem with your action. Please try again or reload the page.', 'juanjimeneztj' ),
                 );
 
                 $this->parent->localize_data = apply_filters( "redux/{$this->parent->args['opt_name']}/localize", $this->parent->localize_data );

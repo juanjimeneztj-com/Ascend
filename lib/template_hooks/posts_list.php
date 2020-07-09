@@ -6,8 +6,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  *  Post list Hooks
  */
-add_action( 'ascend_post_excerpt_header', 'ascend_post_excerpt_header_title', 10 );
-function ascend_post_excerpt_header_title() {
+add_action( 'juanjimeneztj_post_excerpt_header', 'juanjimeneztj_post_excerpt_header_title', 10 );
+function juanjimeneztj_post_excerpt_header_title() {
 	echo '<a href="'.esc_url( get_the_permalink() ).'">';
     	echo '<h3 class="entry-title" itemprop="name headline">';
           		the_title();
@@ -15,22 +15,22 @@ function ascend_post_excerpt_header_title() {
     echo '</a>';
 }
 
-add_action( 'ascend_single_loop_post_header', 'ascend_post_full_loop_title', 20 );
-function ascend_post_full_loop_title() {
+add_action( 'juanjimeneztj_single_loop_post_header', 'juanjimeneztj_post_full_loop_title', 20 );
+function juanjimeneztj_post_full_loop_title() {
 	echo '<a href="'.esc_url( get_the_permalink() ).'">';
     	echo '<h2 class="entry-title" itemprop="name headline">';
           		the_title();
     	echo '</h2>';
     echo '</a>';
 }
-function ascend_get_postsummary() {
+function juanjimeneztj_get_postsummary() {
   global $post;
-  $ascend = ascend_get_options();
+  $juanjimeneztj = juanjimeneztj_get_options();
   if ( has_post_format( 'video' )) {
         $postsummery = get_post_meta( $post->ID, '_kad_video_post_summery', true );
         if(empty($postsummery) || $postsummery == 'default') {
-            if(!empty($ascend['video_post_summery_default'])) {
-                $postsummery = $ascend['video_post_summery_default'];
+            if(!empty($juanjimeneztj['video_post_summery_default'])) {
+                $postsummery = $juanjimeneztj['video_post_summery_default'];
             } else {
                 $postsummery = 'video';
             }
@@ -38,8 +38,8 @@ function ascend_get_postsummary() {
     } else if (has_post_format( 'gallery' )) {
         $postsummery = get_post_meta( $post->ID, '_kad_gallery_post_summery', true );
         if(empty($postsummery) || $postsummery == 'default') {
-            if(!empty($ascend['gallery_post_summery_default'])) {
-                $postsummery = $ascend['gallery_post_summery_default'];
+            if(!empty($juanjimeneztj['gallery_post_summery_default'])) {
+                $postsummery = $juanjimeneztj['gallery_post_summery_default'];
             } else {
                 $postsummery = 'img_landscape';
             }
@@ -47,8 +47,8 @@ function ascend_get_postsummary() {
     } elseif (has_post_format( 'image' )) {
         $postsummery = get_post_meta( $post->ID, '_kad_image_post_summery', true );
         if(empty($postsummery) || $postsummery == 'default') {
-            if(!empty($ascend['image_post_summery_default'])) {
-                $postsummery = $ascend['image_post_summery_default'];
+            if(!empty($juanjimeneztj['image_post_summery_default'])) {
+                $postsummery = $juanjimeneztj['image_post_summery_default'];
             } else {
                 $postsummery = 'img_portrait';
             }
@@ -56,8 +56,8 @@ function ascend_get_postsummary() {
     } else {
         $postsummery = get_post_meta( $post->ID, '_kad_post_summery', true );
         if(empty($postsummery) || $postsummery == 'default') {
-            if(!empty($ascend['post_summery_default'])) {
-                $postsummery = $ascend['post_summery_default'];
+            if(!empty($juanjimeneztj['post_summery_default'])) {
+                $postsummery = $juanjimeneztj['post_summery_default'];
             } else {
                 $postsummery = 'img_portrait';
             }
@@ -66,7 +66,7 @@ function ascend_get_postsummary() {
 
     return $postsummery;
 }
-function ascend_get_postlayout($type = 'normal') {
+function juanjimeneztj_get_postlayout($type = 'normal') {
 	if(isset($type) && $type == 'full') {
         $r['sum']    		= 'full'; 
         $r['pclass']  		= "postlist fullpost";
@@ -75,8 +75,8 @@ function ascend_get_postlayout($type = 'normal') {
         $r['data_style'] 	= '';
         $r['highlight'] 	= 'false';
     } else if (isset($type) && $type == 'grid'){
-    	$ascend = ascend_get_options();
-    	if(isset($ascend['blog_grid_display_height']) && $ascend['blog_grid_display_height'] == 0 ) {
+    	$juanjimeneztj = juanjimeneztj_get_options();
+    	if(isset($juanjimeneztj['blog_grid_display_height']) && $juanjimeneztj['blog_grid_display_height'] == 0 ) {
     		$masonry_style = 'masonry';
     	} else {
     		$masonry_style = 'matchheight';
@@ -116,9 +116,9 @@ function ascend_get_postlayout($type = 'normal') {
         $r['data_style'] 	= '';
         $r['highlight'] 	= 'false';
     } 
-    return apply_filters( 'ascend_post_layout_args_array', $r );
+    return apply_filters( 'juanjimeneztj_post_layout_args_array', $r );
 }
-function ascend_get_post_grid_item_size($columns = '3', $sidebar = false) {
+function juanjimeneztj_get_post_grid_item_size($columns = '3', $sidebar = false) {
 	if(!$sidebar) {
 		if ($columns == '2') {
 	        $itemsize = 'col-xxl-4 col-xl-6 col-md-6 col-sm-6 col-xs-12 col-ss-12'; 

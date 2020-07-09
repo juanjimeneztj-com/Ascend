@@ -2,18 +2,18 @@
     "use strict";
 
     redux.field_objects = redux.field_objects || {};
-    redux.field_objects.ascend_icons = redux.field_objects.ascend_icons || {};
+    redux.field_objects.juanjimeneztj_icons = redux.field_objects.juanjimeneztj_icons || {};
 
     $( document ).ready(
         function() {
-            //redux.field_objects.ascend_icons.init();
+            //redux.field_objects.juanjimeneztj_icons.init();
         }
     );
 
-    redux.field_objects.ascend_icons.init = function( selector ) {
+    redux.field_objects.juanjimeneztj_icons.init = function( selector ) {
 
         if ( !selector ) {
-            selector = $( document ).find( ".redux-group-tab:visible" ).find( '.redux-container-ascend_icons' );
+            selector = $( document ).find( ".redux-group-tab:visible" ).find( '.redux-container-juanjimeneztj_icons' );
         }
 
         $( selector ).each(
@@ -27,7 +27,7 @@
                     parent = el.parents( '.redux-field-container:first' );
                 }
                 
-                if ( parent.hasClass( 'redux-container-ascend_icons' ) ) {
+                if ( parent.hasClass( 'redux-container-juanjimeneztj_icons' ) ) {
                     parent.addClass( 'redux-field-init' );    
                 }
                 
@@ -58,7 +58,7 @@
                         $( this ).parent().siblings().find( 'input[type="hidden"]' ).val( '' );
                         $( this ).parent().siblings().find( 'select' ).val( '' );
 
-                        var slideCount = $( this ).parents( '.redux-container-ascend_icons:first' ).find( '.redux-slides-accordion-group' ).length;
+                        var slideCount = $( this ).parents( '.redux-container-juanjimeneztj_icons:first' ).find( '.redux-slides-accordion-group' ).length;
 
                         if ( slideCount > 1 ) {
                             $( this ).parents( '.redux-slides-accordion-group:first' ).slideUp(
@@ -70,7 +70,7 @@
                             var content_new_title = $( this ).parent( '.redux-slides-accordion' ).data( 'new-content-title' );
 
                             $( this ).parents( '.redux-slides-accordion-group:first' ).find( '.remove-image' ).click();
-                            $( this ).parents( '.redux-container-ascend_icons:first' ).find( '.redux-slides-accordion-group:last' ).find( '.redux-slides-header' ).text( content_new_title );
+                            $( this ).parents( '.redux-container-juanjimeneztj_icons:first' ).find( '.redux-slides-accordion-group:last' ).find( '.redux-slides-header' ).text( content_new_title );
                         }
                     }
                 );

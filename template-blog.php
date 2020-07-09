@@ -4,9 +4,9 @@ Template Name: Blog
 */
 get_header(); 
 
-global $post, $ascend_grid_carousel;
+global $post, $juanjimeneztj_grid_carousel;
 	$post_id = $post->ID;
-    $ascend_grid_carousel = false;
+    $juanjimeneztj_grid_carousel = false;
     $blog_type 		= get_post_meta( $post_id, '_kad_blog_type', true );
     $blog_columns 	= get_post_meta( $post_id, '_kad_blog_columns', true );
     $blog_category 	= get_post_meta( $post_id, '_kad_blog_cat', true );
@@ -32,36 +32,36 @@ global $post, $ascend_grid_carousel;
 	} else {
 		$b_order = 'DESC';
 	}
-    $ascend_blog_loop['loop'] = 1;
+    $juanjimeneztj_blog_loop['loop'] = 1;
     $paged = ( get_query_var( 'paged') ) ? get_query_var( 'paged' ) : 1;
-    $lay = ascend_get_postlayout( $blog_type );
+    $lay = juanjimeneztj_get_postlayout( $blog_type );
 
-    $ascend_grid_columns 		= $blog_columns ? absint( $blog_columns ) : 3;
-    if( ascend_display_sidebar() ) {
+    $juanjimeneztj_grid_columns 		= $blog_columns ? absint( $blog_columns ) : 3;
+    if( juanjimeneztj_display_sidebar() ) {
         $fullclass 		= '';
-        $ascend_has_sidebar = true;
+        $juanjimeneztj_has_sidebar = true;
     } else {
         $fullclass 		= 'fullwidth';
-        $ascend_has_sidebar = false;
+        $juanjimeneztj_has_sidebar = false;
     }
-    $itemsize = ascend_get_post_grid_item_size( $ascend_grid_columns, $ascend_has_sidebar );
+    $itemsize = juanjimeneztj_get_post_grid_item_size( $juanjimeneztj_grid_columns, $juanjimeneztj_has_sidebar );
 
     /**
-    * @hooked ascend_page_title - 20
+    * @hooked juanjimeneztj_page_title - 20
     */
-     do_action( 'ascend_page_title_container' );
+     do_action( 'juanjimeneztj_page_title_container' );
     ?>
 	
-	<div id="content" class="container <?php echo esc_attr( ascend_container_class() ); ?>">
+	<div id="content" class="container <?php echo esc_attr( juanjimeneztj_container_class() ); ?>">
 		<div class="row">
-  			<div class="main <?php echo esc_attr( ascend_main_class() );?> <?php echo esc_attr( $lay['pclass'] ); ?>" id="ktmain" role="main">
+  			<div class="main <?php echo esc_attr( juanjimeneztj_main_class() );?> <?php echo esc_attr( $lay['pclass'] ); ?>" id="ktmain" role="main">
 	  			<?php 
                 /**
-                * @hooked ascend_page_content_wrap_before - 10
-                * @hooked ascend_page_content - 20
-                * @hooked ascend_page_content_wrap_after - 30
+                * @hooked juanjimeneztj_page_content_wrap_before - 10
+                * @hooked juanjimeneztj_page_content - 20
+                * @hooked juanjimeneztj_page_content_wrap_after - 30
                 */
-                do_action('ascend_page_content');
+                do_action('juanjimeneztj_page_content');
                 ?>
 				<div class="kt_archivecontent <?php echo esc_attr( $lay['tclass'] ); ?>" data-masonry-selector="<?php echo esc_attr( $lay['data_selector'] );?>" data-masonry-style="<?php echo esc_attr( $lay['data_style'] );?>"> 
 	  				<?php
@@ -79,7 +79,7 @@ global $post, $ascend_grid_carousel;
 						);			
 					$wp_query = new WP_Query( $args );
 					if ( $wp_query ) : 
-						$ascend_blog_loop['count'] = $wp_query->post_count;
+						$juanjimeneztj_blog_loop['count'] = $wp_query->post_count;
 					while ( $wp_query->have_posts() ) : $wp_query->the_post(); 
 					 	if($lay['sum'] == 'full'){ 
 			                if ( has_post_format( 'quote' ) ) {
@@ -88,7 +88,7 @@ global $post, $ascend_grid_carousel;
 			                    get_template_part( 'templates/content', 'post-full' ); 
 			                }
 				        } else if( $lay['sum'] == 'grid' ) { 
-				        	if($lay['highlight'] == 'true' && $ascend_blog_loop['loop'] == 1 && $paged == 1) {
+				        	if($lay['highlight'] == 'true' && $juanjimeneztj_blog_loop['loop'] == 1 && $paged == 1) {
 		                        get_template_part( 'templates/content', get_post_format() );
 		                    } else { ?>
 		                       	<div class="<?php echo esc_attr( $itemsize );?> b_item kad_blog_item">
@@ -105,31 +105,31 @@ global $post, $ascend_grid_carousel;
 				        } else { 
 				        	get_template_part( 'templates/content', get_post_format() );
 				        }
-				        $ascend_blog_loop['loop'] ++;
+				        $juanjimeneztj_blog_loop['loop'] ++;
 	                endwhile; else: ?>
-						<div class="error-not-found"><?php _e( 'Sorry, no blog entries found.', 'ascend' ); ?></div>
+						<div class="error-not-found"><?php _e( 'Sorry, no blog entries found.', 'juanjimeneztj' ); ?></div>
 					<?php 
 					endif; 
             		?>
             	 </div><!-- /.archive content -->
             	 <?php 
 		    		/**
-	                * @hooked ascend_pagination - 20
+	                * @hooked juanjimeneztj_pagination - 20
 	                */
-	                do_action( 'ascend_pagination' );
+	                do_action( 'juanjimeneztj_pagination' );
 	                $wp_query = $temp;  // Reset 
                 	wp_reset_postdata();
 	                /**
-	                * @hooked ascend_page_comments - 20
+	                * @hooked juanjimeneztj_page_comments - 20
 	                */
-	                do_action( 'ascend_page_footer' );
+	                do_action( 'juanjimeneztj_page_footer' );
 	                ?>		
 			</div><!-- /.main -->
 			<?php
 				/**
 			    * Sidebar
 			    */
-				if ( ascend_display_sidebar() ) : 
+				if ( juanjimeneztj_display_sidebar() ) : 
 				      	get_sidebar();
 			    endif; ?>
     		</div><!-- /.row-->

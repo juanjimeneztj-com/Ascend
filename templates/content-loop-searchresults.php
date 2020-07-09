@@ -2,16 +2,16 @@
 /**
  * Simple Search Grid output.
  *
- * @package Ascend Theme
+ * @package juanjimeneztj Theme
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-global $post, $ascend_has_sidebar;
-$ascend = ascend_get_options();
-if ( $ascend_has_sidebar ) {
+global $post, $juanjimeneztj_has_sidebar;
+$juanjimeneztj = juanjimeneztj_get_options();
+if ( $juanjimeneztj_has_sidebar ) {
 	$image_width  = 360;
 	$image_height = 240;
 } else {
@@ -19,7 +19,7 @@ if ( $ascend_has_sidebar ) {
 	$image_height = 280;
 }
 
-if ( isset( $ascend['postexcerpt_hard_crop'] ) && '1' == $ascend['postexcerpt_hard_crop'] ) {
+if ( isset( $juanjimeneztj['postexcerpt_hard_crop'] ) && '1' == $juanjimeneztj['postexcerpt_hard_crop'] ) {
 	$image_crop = true;
 } else {
 	$image_height = null;
@@ -29,8 +29,8 @@ if ( isset( $ascend['postexcerpt_hard_crop'] ) && '1' == $ascend['postexcerpt_ha
 <article id="post-<?php the_ID(); ?>" class="search_results_item postclass kt_item_fade_in grid_item">
 	<?php
 	if ( has_post_thumbnail( $post->ID ) ) {
-		$img = ascend_get_image_array( $image_width, $image_height, $image_crop, null, null, null, true );
-		if ( ascend_lazy_load_filter() ) {
+		$img = juanjimeneztj_get_image_array( $image_width, $image_height, $image_crop, null, null, null, true );
+		if ( juanjimeneztj_lazy_load_filter() ) {
 			$image_src_output = 'src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="' . esc_url( $img['src'] ) . '" ';
 		} else {
 			$image_src_output = 'src="' . esc_url( $img['src'] ) . '"';

@@ -1,7 +1,7 @@
 <?php 
-$ascend = ascend_get_options();
-if(isset($ascend['site_layout'])) {
-    $site_layout = $ascend['site_layout'];
+$juanjimeneztj = juanjimeneztj_get_options();
+if(isset($juanjimeneztj['site_layout'])) {
+    $site_layout = $juanjimeneztj['site_layout'];
 } else {
     $site_layout = 'left';
 }
@@ -14,27 +14,27 @@ if(isset($ascend['site_layout'])) {
             <div class="kad-relative-vertical-content">
                 <?php 
                 /* 
-		        * Hooked ascend_the_custom_logo 10
-		        * Hooked ascend_header_vertical_extras 20
+		        * Hooked juanjimeneztj_the_custom_logo 10
+		        * Hooked juanjimeneztj_header_vertical_extras 20
 		        */
-                do_action('ascend_start_vertical_header'); 
+                do_action('juanjimeneztj_start_vertical_header'); 
     
                 /* 
-		        * Hooked ascend_primary_vertical_menu 20
+		        * Hooked juanjimeneztj_primary_vertical_menu 20
 		        */
-                do_action('ascend_menu_vertical_header'); 
+                do_action('juanjimeneztj_menu_vertical_header'); 
 
                 /* 
-		        * Hooked ascend_header_vertical_extras 20
+		        * Hooked juanjimeneztj_header_vertical_extras 20
 		        */
-                do_action('ascend_end_vertical_header'); ?>
+                do_action('juanjimeneztj_end_vertical_header'); ?>
             </div>
         </div>
     </div> <!-- close v header innner -->
 </aside>
  <?php 
 /* 
-    * Hooked ascend_secondary_menu 20
+    * Hooked juanjimeneztj_secondary_menu 20
     */
-do_action('ascend_after_vertical_header'); 
+do_action('juanjimeneztj_after_vertical_header'); 
 ?>

@@ -86,7 +86,7 @@
   -o-transform: translate(0, -50%);
   transform: translate(0, -50%);
 }
-.kt-header-position-above #logo a .ascend-logo {
+.kt-header-position-above #logo a .juanjimeneztj-logo {
   float: left;
 }
 .kt-header-position-above.kt-header-layout-center-logo #logo {
@@ -101,7 +101,7 @@
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-.kt-header-position-above.kt-header-layout-center-logo #logo a.brand .ascend-logo {
+.kt-header-position-above.kt-header-layout-center-logo #logo a.brand .juanjimeneztj-logo {
   float: none;
   display: inline-block;
 }
@@ -159,7 +159,7 @@
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-.kt-header-layout-below-lg #logo a.brand .ascend-logo {
+.kt-header-layout-below-lg #logo a.brand .juanjimeneztj-logo {
   float: none;
   display: inline-block;
 }

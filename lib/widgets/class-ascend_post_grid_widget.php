@@ -6,12 +6,12 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Kadence_Image_Grid_Widget widget class
  * 
  */
-class ascend_post_grid_widget extends WP_Widget {
+class juanjimeneztj_post_grid_widget extends WP_Widget {
 
   private static $instance = 0;
     public function __construct() {
-      $widget_ops = array('classname' => 'kadence_image_grid', 'description' => __('This shows a grid of featured images from recent posts or portfolio items', 'ascend'));
-      parent::__construct('kadence_image_grid', __('Ascend: Post Grid', 'ascend'), $widget_ops);
+      $widget_ops = array('classname' => 'kadence_image_grid', 'description' => __('This shows a grid of featured images from recent posts or portfolio items', 'juanjimeneztj'));
+      parent::__construct('kadence_image_grid', __('juanjimeneztj: Post Grid', 'juanjimeneztj'), $widget_ops);
   }
 
   public function widget($args, $instance) {
@@ -59,13 +59,13 @@ class ascend_post_grid_widget extends WP_Widget {
                 ) ) 
             );
             if ($r->have_posts()) :       
-                $image_size = apply_filters('ascend_widget_image_size', array('width'=> 60, 'height' => 60));
+                $image_size = apply_filters('juanjimeneztj_widget_image_size', array('width'=> 60, 'height' => 60));
                 echo '<div class="imagegrid-widget clearfix">';
                     while ($r->have_posts()) : $r->the_post(); 
                         global $post; 
                         if(has_post_thumbnail( $post->ID ) ) {
                             echo '<a href="'.esc_url( get_the_permalink() ).'" title="'.esc_attr(get_the_title()).'" class="imagegrid_item lightboxhover">';
-                                echo ascend_get_full_image_output($image_size['width'], $image_size['height'], true, 'attachment-widget-thumb wp-post-image', null, null, true);
+                                echo juanjimeneztj_get_full_image_output($image_size['width'], $image_size['height'], true, 'attachment-widget-thumb wp-post-image', null, null, true);
                             echo '</a>';
                         } 
                 endwhile; 
@@ -88,13 +88,13 @@ class ascend_post_grid_widget extends WP_Widget {
             );
 
             if ($r->have_posts()) : 
-                $image_size = apply_filters('ascend_widget_image_size', array('width'=> 60, 'height' => 60));
+                $image_size = apply_filters('juanjimeneztj_widget_image_size', array('width'=> 60, 'height' => 60));
                 echo '<div class="imagegrid-widget clearfix">';
                 while ($r->have_posts()) : $r->the_post(); 
                     global $post; 
                     if(has_post_thumbnail( $post->ID ) ) {
                          echo '<a href="'.esc_url( get_the_permalink() ).'" title="'.esc_attr(get_the_title()).'" class="imagegrid_item lightboxhover">';
-                            echo ascend_get_full_image_output($image_size['width'], $image_size['height'], true, 'attachment-widget-thumb wp-post-image', null, null, true);
+                            echo juanjimeneztj_get_full_image_output($image_size['width'], $image_size['height'], true, 'attachment-widget-thumb wp-post-image', null, null, true);
                         echo '</a>';
                     }
                 endwhile;
@@ -153,25 +153,25 @@ class ascend_post_grid_widget extends WP_Widget {
 
 
 ?>
-    <p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'ascend'); ?></label>
+    <p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'juanjimeneztj'); ?></label>
     <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></p>
 
-    <p><label for="<?php echo $this->get_field_id('gridchoice'); ?>"><?php _e('Grid Choice:','ascend'); ?></label>
+    <p><label for="<?php echo $this->get_field_id('gridchoice'); ?>"><?php _e('Grid Choice:','juanjimeneztj'); ?></label>
         <select id="<?php echo $this->get_field_id('gridchoice'); ?>" name="<?php echo $this->get_field_name('gridchoice'); ?>">
-            <option value="post"<?php echo ($gridchoice === 'post' ? ' selected="selected"' : ''); ?>><?php _e('Blog Posts', 'ascend'); ?></option>
-            <option value="portfolio"<?php echo ($gridchoice === 'portfolio' ? ' selected="selected"' : ''); ?>><?php _e('Portfolio', 'ascend'); ?></option>
+            <option value="post"<?php echo ($gridchoice === 'post' ? ' selected="selected"' : ''); ?>><?php _e('Blog Posts', 'juanjimeneztj'); ?></option>
+            <option value="portfolio"<?php echo ($gridchoice === 'portfolio' ? ' selected="selected"' : ''); ?>><?php _e('Portfolio', 'juanjimeneztj'); ?></option>
         </select></p>
         
-        <p><label for="<?php echo $this->get_field_id('thecat'); ?>"><?php _e('If Post - Choose Category (Optional):', 'ascend'); ?></label>
+        <p><label for="<?php echo $this->get_field_id('thecat'); ?>"><?php _e('If Post - Choose Category (Optional):', 'juanjimeneztj'); ?></label>
     <select id="<?php echo $this->get_field_id('thecat'); ?>" name="<?php echo $this->get_field_name('thecat'); ?>"><?php echo implode('', $cat_options); ?></select></p>
         
-    <p><label for="<?php echo $this->get_field_id('thetype'); ?>"><?php _e('If Portfolio - Choose Type (Optional):', 'ascend'); ?></label>
+    <p><label for="<?php echo $this->get_field_id('thetype'); ?>"><?php _e('If Portfolio - Choose Type (Optional):', 'juanjimeneztj'); ?></label>
     <select id="<?php echo $this->get_field_id('thetype'); ?>" name="<?php echo $this->get_field_name('thetype'); ?>"><?php echo implode('', $type_options); ?></select></p>
         
-        <p><label for="<?php echo $this->get_field_id('number'); ?>"><?php _e('Number of images to show:', 'ascend'); ?></label>
+        <p><label for="<?php echo $this->get_field_id('number'); ?>"><?php _e('Number of images to show:', 'juanjimeneztj'); ?></label>
     <input id="<?php echo $this->get_field_id('number'); ?>" name="<?php echo $this->get_field_name('number'); ?>" type="text" value="<?php echo esc_attr($number); ?>" size="3" /></p>
      <p>
-    <label for="<?php echo $this->get_field_id('orderby'); ?>"><?php _e('Orderby:', 'ascend'); ?></label>
+    <label for="<?php echo $this->get_field_id('orderby'); ?>"><?php _e('Orderby:', 'juanjimeneztj'); ?></label>
     <select id="<?php echo $this->get_field_id('orderby'); ?>" name="<?php echo $this->get_field_name('orderby'); ?>"><?php echo implode('', $order_options); ?></select>
     </p>
   

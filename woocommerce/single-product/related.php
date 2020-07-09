@@ -14,9 +14,9 @@ global $product, $woocommerce_loop;
 if ( empty( $product ) || ! $product->exists() ) {
 	return;
 }
-$ascend = ascend_get_options();
-if(!empty($ascend['related_item_column'])) {
-	$product_related_column = $ascend['related_item_column'];
+$juanjimeneztj = juanjimeneztj_get_options();
+if(!empty($juanjimeneztj['related_item_column'])) {
+	$product_related_column = $juanjimeneztj['related_item_column'];
 } else {
 	$product_related_column = '4';
 }
@@ -24,17 +24,17 @@ $woocommerce_loop['columns'] = $product_related_column;
 						
 $rpc = array();
 if ($product_related_column == '2') {
-	$rpc = ascend_carousel_columns('2');
+	$rpc = juanjimeneztj_carousel_columns('2');
 } else if ($product_related_column == '3'){
-	$rpc = ascend_carousel_columns('3');
+	$rpc = juanjimeneztj_carousel_columns('3');
 } else if ($product_related_column == '6'){
-	$rpc = ascend_carousel_columns('6');
+	$rpc = juanjimeneztj_carousel_columns('6');
 } else if ($product_related_column == '5'){ 
-	$rpc = ascend_carousel_columns('5');
+	$rpc = juanjimeneztj_carousel_columns('5');
 } else {
-	$rpc = ascend_carousel_columns('4');
+	$rpc = juanjimeneztj_carousel_columns('4');
 } 
-$rpc = apply_filters('ascend_related_products_columns', $rpc);
+$rpc = apply_filters('juanjimeneztj_related_products_columns', $rpc);
 
 if ( version_compare( WC_VERSION, '3.0', '>' ) ) {
 	$related = wc_get_related_products($product->get_id(), $posts_per_page);
@@ -54,10 +54,10 @@ $args = apply_filters('woocommerce_related_products_args', array(
 	'post__not_in'			=> array($product->get_id())
 ) );
 
-if(!empty($ascend['related_products_text'])) {
-	$relatedtext = $ascend['related_products_text'];
+if(!empty($juanjimeneztj['related_products_text'])) {
+	$relatedtext = $juanjimeneztj['related_products_text'];
 } else {
-	$relatedtext = __( 'Related Products', 'ascend');
+	$relatedtext = __( 'Related Products', 'juanjimeneztj');
 }
 
 $products = new WP_Query( $args );

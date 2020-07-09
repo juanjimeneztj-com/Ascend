@@ -1,36 +1,36 @@
 <?php 
-add_filter( 'cmb2_admin_init', 'ascend_pagesetting_metaboxes');
-function ascend_pagesetting_metaboxes(){
+add_filter( 'cmb2_admin_init', 'juanjimeneztj_pagesetting_metaboxes');
+function juanjimeneztj_pagesetting_metaboxes(){
 	$prefix = '_kad_';
 
-	$ascend_pagesettings = new_cmb2_box( array(
+	$juanjimeneztj_pagesettings = new_cmb2_box( array(
 		'id'         	=> 'pagesetting_metabox',
-		'title'      	=> __("Page Settings", 'ascend'),
+		'title'      	=> __("Page Settings", 'juanjimeneztj'),
 		'object_types'  => array('page'),
 		'priority'   	=> 'low',
 		'context'      	=> 'side',
 	) );
 	
-	$ascend_pagesettings->add_field( array(
-		'name'    => __("Page Title Area", 'ascend' ),
+	$juanjimeneztj_pagesettings->add_field( array(
+		'name'    => __("Page Title Area", 'juanjimeneztj' ),
 		'desc'    => '',
 		'id'      => $prefix . 'pagetitle_hide',
 		'type'    => 'select',
 		'options' => array(
-			'default' 	=> __("Default", 'ascend' ),
-			'show' 		=> __("Show", 'ascend' ),
-			'hide' 		=> __("Hide", 'ascend' ),
+			'default' 	=> __("Default", 'juanjimeneztj' ),
+			'show' 		=> __("Show", 'juanjimeneztj' ),
+			'hide' 		=> __("Hide", 'juanjimeneztj' ),
 		),
 	) );
-	$ascend_pagesettings->add_field( array(
-		'name'    => __("Page Content Width", 'ascend' ),
+	$juanjimeneztj_pagesettings->add_field( array(
+		'name'    => __("Page Content Width", 'juanjimeneztj' ),
 		'desc'    => '',
 		'id'      => $prefix . 'page_content_width',
 		'type'    => 'select',
 		'options' => array(
-			'default' 	=> __("Default", 'ascend' ),
-			'contained' => __("Contained", 'ascend' ),
-			'full' 		=> __("Fullwidth", 'ascend' ),
+			'default' 	=> __("Default", 'juanjimeneztj' ),
+			'contained' => __("Contained", 'juanjimeneztj' ),
+			'full' 		=> __("Fullwidth", 'juanjimeneztj' ),
 		),
 	) );
 

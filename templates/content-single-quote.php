@@ -7,7 +7,7 @@
 
    	while (have_posts()) : the_post(); 
          
-        do_action( 'ascend_single_post_before' ); 
+        do_action( 'juanjimeneztj_single_post_before' ); 
 
         ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class($postclass); ?> itemscope itemtype="http://schema.org/CreativeWork">
@@ -28,11 +28,11 @@
                 <div class="entry-content kt-quote-post-outer <?php echo esc_attr($quote_class);?> clearfix" itemprop="description" style="<?php echo esc_attr($style);?>">
                     <div class="kt-quote-post">
                         <?php
-                        do_action( 'ascend_single_post_content_before' );
+                        do_action( 'juanjimeneztj_single_post_content_before' );
                         
                             the_content(); 
                         
-                        do_action( 'ascend_single_post_content_after' );
+                        do_action( 'juanjimeneztj_single_post_content_after' );
                         ?>
                     </div>
                 </div>
@@ -47,23 +47,23 @@
                 <footer class="single-footer">
                 <?php 
                 /**
-                * @hooked ascend_post_footer_pagination - 10
-                * @hooked ascend_post_footer_tags - 20
-                * @hooked ascend_post_footer_meta - 30
-                * @hooked ascend_post_nav - 40
+                * @hooked juanjimeneztj_post_footer_pagination - 10
+                * @hooked juanjimeneztj_post_footer_tags - 20
+                * @hooked juanjimeneztj_post_footer_meta - 30
+                * @hooked juanjimeneztj_post_nav - 40
                 */
-                do_action( 'ascend_single_post_footer' );
+                do_action( 'juanjimeneztj_single_post_footer' );
                 ?>
                 </footer>
             </article>
             <?php
             /**
-            * @hooked ascend_post_authorbox - 20
-            * @hooked ascend_post_bottom_carousel - 30
-            * @hooked ascend_post_comments - 40
+            * @hooked juanjimeneztj_post_authorbox - 20
+            * @hooked juanjimeneztj_post_bottom_carousel - 30
+            * @hooked juanjimeneztj_post_comments - 40
             */
-            do_action( 'ascend_single_post_after' );
+            do_action( 'juanjimeneztj_single_post_after' );
 
             endwhile; 
 
-do_action( 'ascend_single_post_end' ); 
+do_action( 'juanjimeneztj_single_post_end' ); 

@@ -1,27 +1,27 @@
 <?php
 	// Post Header
 	global $post; 
-			$ascend = ascend_get_options();
-			if(isset($ascend['single_header_title_size'])){
-				$title_data = $ascend['single_header_title_size'];
+			$juanjimeneztj = juanjimeneztj_get_options();
+			if(isset($juanjimeneztj['single_header_title_size'])){
+				$title_data = $juanjimeneztj['single_header_title_size'];
 			} else {
 				$title_data = '70';
 			}
 
-			if(isset($ascend['single_header_title_size_small'])){
-				$title_small_data = $ascend['single_header_title_size_small'];
+			if(isset($juanjimeneztj['single_header_title_size_small'])){
+				$title_small_data = $juanjimeneztj['single_header_title_size_small'];
 			} else {
 				$title_small_data = '30';
 			}
 
-			if(isset($ascend['single_header_subtitle_size'])){
-				$subtitle_data = $ascend['single_header_subtitle_size'];
+			if(isset($juanjimeneztj['single_header_subtitle_size'])){
+				$subtitle_data = $juanjimeneztj['single_header_subtitle_size'];
 			} else {
 				$subtitle_data = '40';
 			}
 
-			if(isset($ascend['single_header_subtitle_size_small'])){
-				$subtitle_small_data = $ascend['single_header_subtitle_size_small'];
+			if(isset($juanjimeneztj['single_header_subtitle_size_small'])){
+				$subtitle_small_data = $juanjimeneztj['single_header_subtitle_size_small'];
 			} else {
 				$subtitle_small_data = '20';
 			}
@@ -31,16 +31,16 @@
 	if(is_singular('product')){
 		if(!empty($post_header_title)) {
 			$page_title_title = $post_header_title;
-		} else if(isset($ascend['product_post_title_content']) && $ascend['product_post_title_content'] == 'custom') {
-			if(isset($ascend['product_header_title_text'])) {
-				$page_title_title = $ascend['product_header_title_text']; 
+		} else if(isset($juanjimeneztj['product_post_title_content']) && $juanjimeneztj['product_post_title_content'] == 'custom') {
+			if(isset($juanjimeneztj['product_header_title_text'])) {
+				$page_title_title = $juanjimeneztj['product_header_title_text']; 
 			} else { 
 				$page_title_title = '';
 			}
-			if(!empty($ascend['product_header_subtitle_text'])) {
-				$bsub = $ascend['product_header_subtitle_text'];
+			if(!empty($juanjimeneztj['product_header_subtitle_text'])) {
+				$bsub = $juanjimeneztj['product_header_subtitle_text'];
 			}
-		} else if (isset($ascend['product_post_title_content']) && $ascend['product_post_title_content'] == 'category') {
+		} else if (isset($juanjimeneztj['product_post_title_content']) && $juanjimeneztj['product_post_title_content'] == 'category') {
 			$terms = wp_get_post_terms( $post->ID, 'product_cat', array( 'orderby' => 'parent', 'order' => 'DESC' ) );
 			if ( !empty($terms) ) {
 	            $cat = $terms[0];
@@ -51,7 +51,7 @@
 		} else {
 			$page_title_title =  get_the_title();
 		}
-		if( ascend_display_product_breadcrumbs()) {
+		if( juanjimeneztj_display_product_breadcrumbs()) {
 		 	$breadcrumb = true;
 		 	$breadclass = "kt_bc_active";
 		} else {
@@ -62,16 +62,16 @@
 		// Sinlge Portfolio
 		if(!empty($post_header_title)) {
 			$page_title_title = $post_header_title;
-		} else if(isset($ascend['portfolio_post_title_content']) && $ascend['portfolio_post_title_content'] == 'custom') {
-			if(isset($ascend['portfolio_header_title_text'])) {
-				$page_title_title = $ascend['portfolio_header_title_text']; 
+		} else if(isset($juanjimeneztj['portfolio_post_title_content']) && $juanjimeneztj['portfolio_post_title_content'] == 'custom') {
+			if(isset($juanjimeneztj['portfolio_header_title_text'])) {
+				$page_title_title = $juanjimeneztj['portfolio_header_title_text']; 
 			} else { 
 				$page_title_title = '';
 			}
-			if(!empty($ascend['portfolio_header_subtitle_text'])) {
-				$bsub = $ascend['portfolio_header_subtitle_text'];
+			if(!empty($juanjimeneztj['portfolio_header_subtitle_text'])) {
+				$bsub = $juanjimeneztj['portfolio_header_subtitle_text'];
 			}
-		} else if (isset($ascend['portfolio_post_title_content']) && $ascend['portfolio_post_title_content'] == 'portfolio-type') {
+		} else if (isset($juanjimeneztj['portfolio_post_title_content']) && $juanjimeneztj['portfolio_post_title_content'] == 'portfolio-type') {
 			$terms = wp_get_post_terms( $post->ID, 'portfolio-type', array( 'orderby' => 'parent', 'order' => 'DESC' ) );
 			if ( !empty($terms) ) {
 	            $cat = $terms[0];
@@ -82,7 +82,7 @@
 		} else {
 			$page_title_title =  get_the_title();
 		}
-		if( ascend_display_portfolio_breadcrumbs()) {
+		if( juanjimeneztj_display_portfolio_breadcrumbs()) {
 		 	$breadcrumb = true;
 		 	$breadclass = "kt_bc_active";
 		} else {
@@ -93,16 +93,16 @@
 		// Blog Post
 		if(!empty($post_header_title)) {
 			$page_title_title = $post_header_title;
-		} else if ( isset( $ascend['blog_post_title_content'] ) && 'custom' == $ascend['blog_post_title_content'] ) {
-			if ( isset( $ascend['blog_header_title_text'] ) ) {
-				$page_title_title = $ascend['blog_header_title_text'];
+		} else if ( isset( $juanjimeneztj['blog_post_title_content'] ) && 'custom' == $juanjimeneztj['blog_post_title_content'] ) {
+			if ( isset( $juanjimeneztj['blog_header_title_text'] ) ) {
+				$page_title_title = $juanjimeneztj['blog_header_title_text'];
 			} else {
 				$page_title_title = '';
 			}
-			if ( ! empty( $ascend['blog_header_subtitle_text'] ) ) {
-				$bsub = $ascend['blog_header_subtitle_text'];
+			if ( ! empty( $juanjimeneztj['blog_header_subtitle_text'] ) ) {
+				$bsub = $juanjimeneztj['blog_header_subtitle_text'];
 			}
-		} else if (isset($ascend['blog_post_title_content']) && $ascend['blog_post_title_content'] == 'posttitle') {
+		} else if (isset($juanjimeneztj['blog_post_title_content']) && $juanjimeneztj['blog_post_title_content'] == 'posttitle') {
 			$page_title_title =  get_the_title();
 		} else {
 			$terms = wp_get_post_terms( $post->ID, 'category', array( 'orderby' => 'parent', 'order' => 'DESC' ) );
@@ -113,7 +113,7 @@
 	            $page_title_title = '';
 	        }
 		}
-		if( ascend_display_post_breadcrumbs()) {
+		if( juanjimeneztj_display_post_breadcrumbs()) {
 		 	$breadcrumb = true;
 		 	$breadclass = "kt_bc_active";
 		} else {
@@ -124,7 +124,7 @@
 		// Events
 		if(!empty($post_header_title)) {
 			$page_title_title = $post_header_title;
-		} else if (isset($ascend['blog_post_title_content']) && $ascend['blog_post_title_content'] == 'posttitle') {
+		} else if (isset($juanjimeneztj['blog_post_title_content']) && $juanjimeneztj['blog_post_title_content'] == 'posttitle') {
 			$page_title_title =  get_the_title();
 		} else {
 			$main_term = '';
@@ -152,7 +152,7 @@
 	            $page_title_title = '';
 	        }
 	    }
-	    if( ascend_display_post_breadcrumbs()) {
+	    if( juanjimeneztj_display_post_breadcrumbs()) {
 		 	$breadcrumb = true;
 		 	$breadclass = "kt_bc_active";
 		} else {
@@ -166,7 +166,7 @@
 		} else {
 			$page_title_title = tribe_get_event_label_singular();
 		} 
-		if( ascend_display_post_breadcrumbs()) {
+		if( juanjimeneztj_display_post_breadcrumbs()) {
 		 	$breadcrumb = true;
 		 	$breadclass = "kt_bc_active";
 		} else {
@@ -175,7 +175,7 @@
 		}
 	} else if(is_attachment()){
 		$page_title_title = get_the_title();
-		if( apply_filters('ascend_attachment_breadcrumbs', false) ) {
+		if( apply_filters('juanjimeneztj_attachment_breadcrumbs', false) ) {
 		 	$breadcrumb = true;
 		 	$breadclass = "kt_bc_active";
 		} else {
@@ -189,7 +189,7 @@
 		} else  {
 			$page_title_title =  get_the_title();
 		} 
-		if( apply_filters('ascend_custom_post_type_breadcrumbs', false, $post) ) {
+		if( apply_filters('juanjimeneztj_custom_post_type_breadcrumbs', false, $post) ) {
 		 	$breadcrumb = true;
 		 	$breadclass = "kt_bc_active";
 		} else {
@@ -201,7 +201,7 @@
 ?>
 	<div id="pageheader" class="titleclass post-header-area <?php echo esc_attr($breadclass);?>">
 	<div class="header-color-overlay"></div>
-	<?php do_action('ascend_header_overlay'); ?>
+	<?php do_action('juanjimeneztj_header_overlay'); ?>
 		<div class="container">
 			<div class="page-header">
 				<div class="page-header-inner">
@@ -210,5 +210,5 @@
 				</div>
 			</div>
 		</div><!--container-->
-		<?php if($breadcrumb) { ascend_breadcrumbs(); } ?>
+		<?php if($breadcrumb) { juanjimeneztj_breadcrumbs(); } ?>
 	</div><!--titleclass-->

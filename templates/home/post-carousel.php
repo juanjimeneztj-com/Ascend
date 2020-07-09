@@ -2,47 +2,47 @@
 if ( ! defined( 'ABSPATH' ) ) {
   exit; // Exit if accessed directly
 }
-    $ascend = ascend_get_options();
+    $juanjimeneztj = juanjimeneztj_get_options();
 
-        if(isset($ascend['home_carousel_height'])) {
-        	$slideheight = $ascend['home_carousel_height'];
+        if(isset($juanjimeneztj['home_carousel_height'])) {
+        	$slideheight = $juanjimeneztj['home_carousel_height'];
         } else { 
         	$slideheight = 400; 
         }
         $type = 'post';
-        if(isset($ascend['slider_transtime'])) {
-        	$transtime = $ascend['slider_transtime'];
+        if(isset($juanjimeneztj['slider_transtime'])) {
+        	$transtime = $juanjimeneztj['slider_transtime'];
         } else {
         	$transtime = '400';
         }
-        if(isset($ascend['home_post_carousel_items'])) {
-        	$items = $ascend['home_post_carousel_items'];
+        if(isset($juanjimeneztj['home_post_carousel_items'])) {
+        	$items = $juanjimeneztj['home_post_carousel_items'];
         } else {
         	$items = '8';
         }
-        if(isset($ascend['home_post_carousel_orderby'])) {
-        	$orderby = $ascend['home_post_carousel_orderby'];
+        if(isset($juanjimeneztj['home_post_carousel_orderby'])) {
+        	$orderby = $juanjimeneztj['home_post_carousel_orderby'];
         } else {
         	$orderby = 'date';
         }
-        if(isset($ascend['home_post_carousel_order'])) {
-        	$order = $ascend['home_post_carousel_order'];
+        if(isset($juanjimeneztj['home_post_carousel_order'])) {
+        	$order = $juanjimeneztj['home_post_carousel_order'];
         } else {
         	$order = 'DESC';
         }
         
-    	if(isset($ascend['home_post_carousel_post_cat'])) {
-        	$cat = $ascend['home_post_carousel_post_cat'];
+    	if(isset($juanjimeneztj['home_post_carousel_post_cat'])) {
+        	$cat = $juanjimeneztj['home_post_carousel_post_cat'];
         } else {
         	$cat = '';
         }
-        if(isset($ascend['slider_autoplay']) && $ascend['slider_autoplay'] == "1" ) {
+        if(isset($juanjimeneztj['slider_autoplay']) && $juanjimeneztj['slider_autoplay'] == "1" ) {
         	$autoplay ='true';
         } else {
         	$autoplay = 'false';
         }
-        if(isset($ascend['slider_pausetime'])) {
-        	$pausetime = $ascend['slider_pausetime'];
+        if(isset($juanjimeneztj['slider_pausetime'])) {
+        	$pausetime = $juanjimeneztj['slider_pausetime'];
     	} else {
     		$pausetime = '7000';
     	}
@@ -50,6 +50,6 @@ if ( ! defined( 'ABSPATH' ) ) {
         ?>
 <div class="sliderclass basic-post-carousel kt_desktop_slider home-sliderclass clearfix">
 	<?php 
-		ascend_build_post_carousel(null, $slideheight, $class, $type, $cat, $items, $orderby, $order, null, $autoplay, $pausetime, 'true', $transtime); 
+		juanjimeneztj_build_post_carousel(null, $slideheight, $class, $type, $cat, $items, $orderby, $order, null, $autoplay, $pausetime, 'true', $transtime); 
   	 ?>
 </div><!--sliderclass-->

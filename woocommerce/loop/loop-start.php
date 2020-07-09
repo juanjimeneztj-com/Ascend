@@ -16,7 +16,7 @@
  * @version     3.3.0
  */
 
-$ascend = ascend_get_options();
+$juanjimeneztj = juanjimeneztj_get_options();
 if ( version_compare( WC_VERSION, '3.3', '>' ) ) {
 	$product_columns =  wc_get_loop_prop( 'columns' );
 
@@ -28,7 +28,7 @@ if ( version_compare( WC_VERSION, '3.3', '>' ) ) {
 	$product_columns = $woocommerce_loop['columns'];
 }
 
-if ( ascend_display_sidebar() ) {
+if ( juanjimeneztj_display_sidebar() ) {
 	$columns = "shopcolumn".$product_columns." shopsidebarwidth"; 
 } else {
 	$columns = "shopcolumn".$product_columns." shopfullwidth"; 
@@ -36,12 +36,12 @@ if ( ascend_display_sidebar() ) {
 if ( is_cart() ) {
 	$columns = "shopcolumn-cart".$product_columns." shopfullwidth";
 }
-if ( isset( $ascend['product_img_resize'] ) && 0 == $ascend['product_img_resize'] ) { 
+if ( isset( $juanjimeneztj['product_img_resize'] ) && 0 == $juanjimeneztj['product_img_resize'] ) { 
 	$isoclass = 'init-masonry';
 } else { 
 	$isoclass = 'init-masonry-intrinsic';
 }
-if ( get_option( 'woocommerce_enable_review_rating' ) != 'no' && isset( $ascend['shop_rating'] ) && $ascend['shop_rating'] != '0' ) {
+if ( get_option( 'woocommerce_enable_review_rating' ) != 'no' && isset( $juanjimeneztj['shop_rating'] ) && $juanjimeneztj['shop_rating'] != '0' ) {
 	$ratingclass = 'kt-show-rating';
 } else {
 	$ratingclass = 'kt-hide-rating';

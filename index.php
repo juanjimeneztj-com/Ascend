@@ -4,18 +4,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
   get_header(); 
     /**
-    * @hooked ascend_archive_title - 20
+    * @hooked juanjimeneztj_archive_title - 20
     */
-     do_action('ascend_archive_title_container');
+     do_action('juanjimeneztj_archive_title_container');
     ?>
   
 	<div id="content" class="container">
    		<div class="row">
-	      	<div class="main <?php echo esc_attr(ascend_main_class()); ?>" id="ktmain" role="main">
+	      	<div class="main <?php echo esc_attr(juanjimeneztj_main_class()); ?>" id="ktmain" role="main">
         	<?php 
 	        if (!have_posts()) : ?>
 		          <div class="alert">
-		            <?php esc_html_e( 'Sorry, no results were found.', 'ascend' ); ?>
+		            <?php esc_html_e( 'Sorry, no results were found.', 'juanjimeneztj' ); ?>
 		          </div>
 	          <?php 
           		get_search_form(); 
@@ -26,16 +26,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 	        endwhile; 
 
 	       	/**
-            * @hooked ascend_pagination - 20
+            * @hooked juanjimeneztj_pagination - 20
             */
-            do_action('ascend_pagination'); 
+            do_action('juanjimeneztj_pagination'); 
             ?>
         </div><!-- /.main -->
 			<?php 
 			/**
 		    * Sidebar
 		    */
-			if (ascend_display_sidebar()) : 
+			if (juanjimeneztj_display_sidebar()) : 
 			      	get_sidebar();
 		    endif; ?>
 		</div><!-- /.row-->

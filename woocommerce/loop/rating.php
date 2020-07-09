@@ -14,8 +14,8 @@ global $product;
 if ( get_option( 'woocommerce_enable_review_rating' ) == 'no' ) {
 	return;
 }
-	$ascend = ascend_get_options();
-	if (!isset($ascend['shop_rating']) ||  $ascend['shop_rating'] != '0') { 
+	$juanjimeneztj = juanjimeneztj_get_options();
+	if (!isset($juanjimeneztj['shop_rating']) ||  $juanjimeneztj['shop_rating'] != '0') { 
 		if ( version_compare( WC_VERSION, '3.0', '>' ) ) {
 			$rating_html = wc_get_rating_html($product->get_average_rating());
 		} else	{
@@ -25,6 +25,6 @@ if ( get_option( 'woocommerce_enable_review_rating' ) == 'no' ) {
 		if ( $rating_html ) { 
 			echo '<a href="'.esc_url(get_the_permalink()).'">'.$rating_html.'</a>';
 		} else { 
-			echo "<span class='kt-notrated'>".__('not rated', 'ascend')."</span>"; 
+			echo "<span class='kt-notrated'>".__('not rated', 'juanjimeneztj')."</span>"; 
 		}
  	}

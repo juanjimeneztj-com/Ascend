@@ -3,33 +3,33 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
 
-function ascend_lazy_load_filter() {
+function juanjimeneztj_lazy_load_filter() {
   	$lazy = false;
   	if(function_exists( 'get_rocket_option' ) && get_rocket_option( 'lazyload') ) {
     	$lazy = true;
   	}
-  	return apply_filters('ascend_lazy_load', $lazy);
+  	return apply_filters('juanjimeneztj_lazy_load', $lazy);
 }
 
-add_filter( 'max_srcset_image_width','ascend_srcset_max');
-function ascend_srcset_max($string) {
+add_filter( 'max_srcset_image_width','juanjimeneztj_srcset_max');
+function juanjimeneztj_srcset_max($string) {
   	return 2300;
 }
 
-function ascend_get_options_placeholder_image() {
-    $ascend = ascend_get_options();
-    if(isset($ascend['default_placeholder_image']) && isset($ascend['default_placeholder_image']['id']) && !empty($ascend['default_placeholder_image']['id'])){
-        return $ascend['default_placeholder_image']['id'];
+function juanjimeneztj_get_options_placeholder_image() {
+    $juanjimeneztj = juanjimeneztj_get_options();
+    if(isset($juanjimeneztj['default_placeholder_image']) && isset($juanjimeneztj['default_placeholder_image']['id']) && !empty($juanjimeneztj['default_placeholder_image']['id'])){
+        return $juanjimeneztj['default_placeholder_image']['id'];
     } else {
         return '';
     }
 }
 
-function ascend_default_placeholder_image_url() {
-    return apply_filters('ascend_default_placeholder_image_url', get_template_directory_uri() . '/assets/img/placeholder-min.jpg');
+function juanjimeneztj_default_placeholder_image_url() {
+    return apply_filters('juanjimeneztj_default_placeholder_image_url', get_template_directory_uri() . '/assets/img/placeholder-min.jpg');
 }
 
-function ascend_basic_image_sizes() {
+function juanjimeneztj_basic_image_sizes() {
 
 	$sizes = array('full' => 'Full Size');
 
@@ -44,18 +44,18 @@ function ascend_basic_image_sizes() {
 }
 
 
-function ascend_get_image_array($width = null, $height = null, $crop = true, $class = null, $alt = null, $id = null, $placeholder = false) {
+function juanjimeneztj_get_image_array($width = null, $height = null, $crop = true, $class = null, $alt = null, $id = null, $placeholder = false) {
     if(empty($id)) {
         $id = get_post_thumbnail_id();
     }
     if(empty($id)){
         if($placeholder == true) {
-            $id = ascend_get_options_placeholder_image();
+            $id = juanjimeneztj_get_options_placeholder_image();
         }
     }
     if(!empty($id)) {
-        $Ascend_Get_Image = Ascend_Get_Image::getInstance();
-        $image = $Ascend_Get_Image->process( $id, $width, $height);
+        $juanjimeneztj_Get_Image = juanjimeneztj_Get_Image::getInstance();
+        $image = $juanjimeneztj_Get_Image->process( $id, $width, $height);
         if(empty($alt)) {
             $alt = get_post_meta($id, '_wp_attachment_image_alt', true);
         }
@@ -76,13 +76,13 @@ function ascend_get_image_array($width = null, $height = null, $crop = true, $cl
     		$width = $height;
     	}
         $return_array = array(
-            'src' => ascend_default_placeholder_image_url(),
+            'src' => juanjimeneztj_default_placeholder_image_url(),
             'width' => $width,
             'height' => $height,
             'srcset' => '',
             'class' => $class,
             'alt' => $alt,
-            'full' => ascend_default_placeholder_image_url(),
+            'full' => juanjimeneztj_default_placeholder_image_url(),
         );
     } else {
         $return_array = array(
@@ -98,10 +98,10 @@ function ascend_get_image_array($width = null, $height = null, $crop = true, $cl
 
     return $return_array;
 }
-function ascend_get_full_image_output($width = null, $height = null, $crop = true, $class = null, $alt = null, $id = null, $placeholder = false, $lazy = false, $schema = true, $extra = null) {
-    $img = ascend_get_image_array($width, $height, $crop, $class, $alt, $id, $placeholder);
+function juanjimeneztj_get_full_image_output($width = null, $height = null, $crop = true, $class = null, $alt = null, $id = null, $placeholder = false, $lazy = false, $schema = true, $extra = null) {
+    $img = juanjimeneztj_get_image_array($width, $height, $crop, $class, $alt, $id, $placeholder);
     if($lazy) {
-        if( ascend_lazy_load_filter() ) {
+        if( juanjimeneztj_lazy_load_filter() ) {
             $image_src_output = 'src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="'.esc_url($img['src']).'" '; 
         } else {
             $image_src_output = 'src="'.esc_url($img['src']).'"'; 

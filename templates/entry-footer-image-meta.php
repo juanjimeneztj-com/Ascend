@@ -1,5 +1,5 @@
 <?php 
-$headcontent = ascend_get_post_head_content();
+$headcontent = juanjimeneztj_get_post_head_content();
 if('none' == $headcontent) {
 	if(has_post_thumbnail()) {
         $image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ); 

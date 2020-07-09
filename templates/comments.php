@@ -13,9 +13,9 @@ if ( post_password_required() ) {
 	        <?php
 	        	$comments_number = get_comments_number();
 				if ( '1' === $comments_number ) {
-					printf( esc_html__( 'One Response', 'ascend' ), $comments_number );
+					printf( esc_html__( 'One Response', 'juanjimeneztj' ), $comments_number );
 				} else {
-					printf( esc_html( _n( '%d Response', '%d Responses', $comments_number, 'ascend' ) ), $comments_number );
+					printf( esc_html( _n( '%d Response', '%d Responses', $comments_number, 'juanjimeneztj' ) ), $comments_number );
 				}
 	        ?>
 	        </span>
@@ -38,7 +38,7 @@ if ( post_password_required() ) {
     // If comments are closed and there are comments, let's leave a little note, shall we?
     if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
         ?>
-        <p class="no-comments"><?php _e( 'Comments are closed.', 'ascend' ); ?></p>
+        <p class="no-comments"><?php _e( 'Comments are closed.', 'juanjimeneztj' ); ?></p>
     <?php
     endif; ?>
 

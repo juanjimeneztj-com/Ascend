@@ -5,10 +5,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Config Page Title
  */
-function ascend_display_pagetitle() {
+function juanjimeneztj_display_pagetitle() {
     if( is_front_page() ) {
-        $ascend = ascend_get_options();
-        if(isset($ascend['home_header']) && $ascend['home_header'] == 'none') {
+        $juanjimeneztj = juanjimeneztj_get_options();
+        if(isset($juanjimeneztj['home_header']) && $juanjimeneztj['home_header'] == 'none') {
             $pagetitledisplay = false;
         } else {
             $pagetitledisplay = true;
@@ -21,8 +21,8 @@ function ascend_display_pagetitle() {
         } else if(isset($hidepagetitle) && $hidepagetitle == 'show') {
             $pagetitledisplay = true;
         } else {
-        	$ascend = ascend_get_options();
-           if(isset($ascend['default_showpagetitle']) && $ascend['default_showpagetitle'] == '0') {
+        	$juanjimeneztj = juanjimeneztj_get_options();
+           if(isset($juanjimeneztj['default_showpagetitle']) && $juanjimeneztj['default_showpagetitle'] == '0') {
                 $pagetitledisplay = false;
             } else {
                 $pagetitledisplay = true;
@@ -38,8 +38,8 @@ function ascend_display_pagetitle() {
         } else if(isset($hidepagetitle) && $hidepagetitle == 'show') {
             $pagetitledisplay = true;
         } else {
-        	$ascend = ascend_get_options();
-            if(isset($ascend['default_showpagetitle']) && $ascend['default_showpagetitle'] == '0') {
+        	$juanjimeneztj = juanjimeneztj_get_options();
+            if(isset($juanjimeneztj['default_showpagetitle']) && $juanjimeneztj['default_showpagetitle'] == '0') {
                 $pagetitledisplay = false;
             } else {
                $pagetitledisplay = true;
@@ -53,16 +53,16 @@ function ascend_display_pagetitle() {
         } else if(isset($hidepagetitle) && $hidepagetitle == 'show') {
             $pagetitledisplay = true;
         } else {
-        	$ascend = ascend_get_options();
-            if(isset($ascend['product_post_title']) && $ascend['product_post_title'] == '1') {
+        	$juanjimeneztj = juanjimeneztj_get_options();
+            if(isset($juanjimeneztj['product_post_title']) && $juanjimeneztj['product_post_title'] == '1') {
                 $pagetitledisplay = true;
             } else {
                 $pagetitledisplay = false;
             }
         }
     } else if(is_tax('product_cat') || is_tax('product_tag') || is_category() ||  is_tag() ) {
-        $ascend = ascend_get_options();
-            if(isset($ascend['default_showpagetitle']) && $ascend['default_showpagetitle'] == '0') {
+        $juanjimeneztj = juanjimeneztj_get_options();
+            if(isset($juanjimeneztj['default_showpagetitle']) && $juanjimeneztj['default_showpagetitle'] == '0') {
                 $pagetitledisplay = false;
             } else {
                 $pagetitledisplay = true;
@@ -75,8 +75,8 @@ function ascend_display_pagetitle() {
         } else if(isset($hidepagetitle) && $hidepagetitle == 'show') {
             $pagetitledisplay = true;
         } else {
-        	$ascend = ascend_get_options();
-            if(isset($ascend['portfolio_post_title']) && $ascend['portfolio_post_title'] == '0') {
+        	$juanjimeneztj = juanjimeneztj_get_options();
+            if(isset($juanjimeneztj['portfolio_post_title']) && $juanjimeneztj['portfolio_post_title'] == '0') {
                 $pagetitledisplay = false;
             } else {
                 $pagetitledisplay = true;
@@ -90,29 +90,29 @@ function ascend_display_pagetitle() {
         } else if(isset($hidepagetitle) && $hidepagetitle == 'show') {
             $pagetitledisplay = true;
         } else {
-        	$ascend = ascend_get_options();
-            if(isset($ascend['blog_post_title']) && $ascend['blog_post_title'] == '0') {
+        	$juanjimeneztj = juanjimeneztj_get_options();
+            if(isset($juanjimeneztj['blog_post_title']) && $juanjimeneztj['blog_post_title'] == '0') {
                 $pagetitledisplay = false;
             } else {
                 $pagetitledisplay = true;
             }
         }
     } else {
-        $ascend = ascend_get_options();
-        if(isset($ascend['default_showpagetitle']) && $ascend['default_showpagetitle'] == '0') {
+        $juanjimeneztj = juanjimeneztj_get_options();
+        if(isset($juanjimeneztj['default_showpagetitle']) && $juanjimeneztj['default_showpagetitle'] == '0') {
             $pagetitledisplay = false;
         } else {
             $pagetitledisplay = true;
         }
     }
 
-    return apply_filters('ascend_pagetitle_display', $pagetitledisplay);
+    return apply_filters('juanjimeneztj_pagetitle_display', $pagetitledisplay);
 }
-add_filter('ascend_pagetitle_display', 'ascend_shop_page_title');
-function ascend_shop_page_title($show) {
+add_filter('juanjimeneztj_pagetitle_display', 'juanjimeneztj_shop_page_title');
+function juanjimeneztj_shop_page_title($show) {
     if (class_exists('woocommerce')) {
         if(is_shop()) {
-            $ascend = ascend_get_options();
+            $juanjimeneztj = juanjimeneztj_get_options();
             $shopid = get_option( 'woocommerce_shop_page_id' );
             $hidepagetitle = get_post_meta( $shopid, '_kad_pagetitle_hide', true );
             if(isset($hidepagetitle) && $hidepagetitle == 'hide') {
@@ -120,7 +120,7 @@ function ascend_shop_page_title($show) {
             } else if(isset($hidepagetitle) && $hidepagetitle == 'show') {
                 $show = true;
             } else {
-                if(isset($ascend['default_showpagetitle']) && $ascend['default_showpagetitle'] == '0') {
+                if(isset($juanjimeneztj['default_showpagetitle']) && $juanjimeneztj['default_showpagetitle'] == '0') {
                     $show = false;
                 } else {
                     $show = true;
@@ -131,8 +131,8 @@ function ascend_shop_page_title($show) {
     return $show;
 }
 
-function ascend_trans_header() {
-  	if(!ascend_display_pagetitle()) {
+function juanjimeneztj_trans_header() {
+  	if(!juanjimeneztj_display_pagetitle()) {
     	$trans_head = false;
     	if(is_front_page()) {
     		$post_id =  get_option( 'page_on_front' );
@@ -168,26 +168,26 @@ function ascend_trans_header() {
     	}
   	} else {
     	if(is_front_page()) {
-      			$ascend = ascend_get_options();
-                if(isset($ascend['home_transheader']) && $ascend['home_transheader'] == 'true') {
+      			$juanjimeneztj = juanjimeneztj_get_options();
+                if(isset($juanjimeneztj['home_transheader']) && $juanjimeneztj['home_transheader'] == 'true') {
                   	$trans_head = true;
-                } elseif(isset($ascend['home_transheader']) && $ascend['home_transheader'] == 'false') {
+                } elseif(isset($juanjimeneztj['home_transheader']) && $juanjimeneztj['home_transheader'] == 'false') {
                   	$trans_head = false;
                 } else {
-		            if(isset($ascend['page_trans_default']) && $ascend['page_trans_default'] == '1') {
+		            if(isset($juanjimeneztj['page_trans_default']) && $juanjimeneztj['page_trans_default'] == '1') {
 		          		$trans_head = true;
 		        	} else {
 		          		$trans_head = false;
 		        	}
 		        }
       	} else {
-        	$ascend = ascend_get_options();
-        	if(isset($ascend['page_trans_default']) && $ascend['page_trans_default'] == '1') {
+        	$juanjimeneztj = juanjimeneztj_get_options();
+        	if(isset($juanjimeneztj['page_trans_default']) && $juanjimeneztj['page_trans_default'] == '1') {
                   	$trans_head = true;
                 } else {
                   	$trans_head = false;
                 }
       	}
   	}
-    return apply_filters('ascend_transparent_header', $trans_head);
+    return apply_filters('juanjimeneztj_transparent_header', $trans_head);
 }

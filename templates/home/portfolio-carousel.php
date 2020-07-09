@@ -2,20 +2,20 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
-global $ascend_portfolio_loop;
-$ascend = ascend_get_options();
-	if(!empty($ascend['home_portfolio_carousel_title'])) {
-		$btitle = $ascend['home_portfolio_carousel_title'];
+global $juanjimeneztj_portfolio_loop;
+$juanjimeneztj = juanjimeneztj_get_options();
+	if(!empty($juanjimeneztj['home_portfolio_carousel_title'])) {
+		$btitle = $juanjimeneztj['home_portfolio_carousel_title'];
 	} else { 
 		$btitle = '';
 	}
-	if(isset($ascend['home_portfolio_carousel_show_type']) && $ascend['home_portfolio_carousel_show_type'] == '0') {
+	if(isset($juanjimeneztj['home_portfolio_carousel_show_type']) && $juanjimeneztj['home_portfolio_carousel_show_type'] == '0') {
 		$portfolio_item_types = 'false';
 	} else {
 		$portfolio_item_types = 'true';
 	}
-	if(isset($ascend['home_portfolio_carousel_order'])) {
-		$portfolio_order = $ascend['home_portfolio_carousel_order'];
+	if(isset($juanjimeneztj['home_portfolio_carousel_order'])) {
+		$portfolio_order = $juanjimeneztj['home_portfolio_carousel_order'];
 	} else {
 		$portfolio_order = 'menu_order';
 	}
@@ -24,75 +24,75 @@ $ascend = ascend_get_options();
    	} else {
    		$p_order = 'DESC';
    	}
-	if(isset($ascend['home_portfolio_carousel_show_excerpt']) && $ascend['home_portfolio_carousel_show_excerpt'] == '0') {
+	if(isset($juanjimeneztj['home_portfolio_carousel_show_excerpt']) && $juanjimeneztj['home_portfolio_carousel_show_excerpt'] == '0') {
 		$portfolio_excerpt = 'false';
 	} else {
 		$portfolio_excerpt = 'true';
 	}
-	if(isset($ascend['home_portfolio_carousel_show_lightbox']) && $ascend['home_portfolio_carousel_show_lightbox'] == '0') {
+	if(isset($juanjimeneztj['home_portfolio_carousel_show_lightbox']) && $juanjimeneztj['home_portfolio_carousel_show_lightbox'] == '0') {
 		$portfolio_lightbox = 'false';
 	} else {
 		$portfolio_lightbox = 'true';
 	}
-	if(isset($ascend['home_portfolio_carousel_style']) ) {
-		$portfolio_style = $ascend['home_portfolio_carousel_style'];
+	if(isset($juanjimeneztj['home_portfolio_carousel_style']) ) {
+		$portfolio_style = $juanjimeneztj['home_portfolio_carousel_style'];
 	} else {
 		$portfolio_style = 'pgrid';
 	}
-	if(isset($ascend['home_portfolio_carousel_ratio']) ) {
-		$portfolio_ratio = $ascend['home_portfolio_carousel_ratio'];
+	if(isset($juanjimeneztj['home_portfolio_carousel_ratio']) ) {
+		$portfolio_ratio = $juanjimeneztj['home_portfolio_carousel_ratio'];
 	} else {
 		$portfolio_ratio = 'square';
 	}
-	if(isset($ascend['home_portfolio_carousel_column']) ) {
-        $ascend_grid_columns = $ascend['home_portfolio_carousel_column'];
+	if(isset($juanjimeneztj['home_portfolio_carousel_column']) ) {
+        $juanjimeneztj_grid_columns = $juanjimeneztj['home_portfolio_carousel_column'];
     } else {
-        $ascend_grid_columns = '4';
+        $juanjimeneztj_grid_columns = '4';
     }
-    if(isset($ascend['home_portfolio_carousel_count']) ) {
-        $carousel_items = $ascend['home_portfolio_carousel_count'];
+    if(isset($juanjimeneztj['home_portfolio_carousel_count']) ) {
+        $carousel_items = $juanjimeneztj['home_portfolio_carousel_count'];
     } else {
         $carousel_items = '8';
     }
-    if(isset($ascend['home_portfolio_carousel_speed']) ) {
-        $carousel_speed = $ascend['home_portfolio_carousel_speed'].'000';
+    if(isset($juanjimeneztj['home_portfolio_carousel_speed']) ) {
+        $carousel_speed = $juanjimeneztj['home_portfolio_carousel_speed'].'000';
     } else {
         $carousel_speed = '9000';
     }
-    if(isset($ascend['home_portfolio_carousel_scroll']) && $ascend['home_portfolio_carousel_scroll'] == 'all' ) {
+    if(isset($juanjimeneztj['home_portfolio_carousel_scroll']) && $juanjimeneztj['home_portfolio_carousel_scroll'] == 'all' ) {
         $carousel_scroll = 'all';
     } else {
         $carousel_scroll = '1';
     }
-    if(!empty($ascend['home_portfolio_carousel_type'])) { 
-		$portfolio_type = get_term_by ('id',$ascend['home_portfolio_carousel_type'],'portfolio-type');
+    if(!empty($juanjimeneztj['home_portfolio_carousel_type'])) { 
+		$portfolio_type = get_term_by ('id',$juanjimeneztj['home_portfolio_carousel_type'],'portfolio-type');
 		$p_type_slug = $portfolio_type->slug;
 	} else {
 		$p_type_slug = '';
 	}
 	$bc = array();
-    if ($ascend_grid_columns == '4') {
-        $bc = ascend_carousel_columns('4');
-    } else if($ascend_grid_columns == '5') {
-        $bc = ascend_carousel_columns('5');
-    } else if($ascend_grid_columns == '6') {
-        $bc = ascend_carousel_columns('6');
-    } else if($ascend_grid_columns == '2') {
-        $bc = ascend_carousel_columns('2');
+    if ($juanjimeneztj_grid_columns == '4') {
+        $bc = juanjimeneztj_carousel_columns('4');
+    } else if($juanjimeneztj_grid_columns == '5') {
+        $bc = juanjimeneztj_carousel_columns('5');
+    } else if($juanjimeneztj_grid_columns == '6') {
+        $bc = juanjimeneztj_carousel_columns('6');
+    } else if($juanjimeneztj_grid_columns == '2') {
+        $bc = juanjimeneztj_carousel_columns('2');
     } else {
-        $bc = ascend_carousel_columns('3');
+        $bc = juanjimeneztj_carousel_columns('3');
     } 
     if($portfolio_style == 'pgrid-no-margin') {
     	$margins = 'row-nomargin';
     } else {
     	$margins = 'row-margin-small';
     }
-    $bc = apply_filters('ascend_home_portfolio_carousel_columns', $bc);
-    $ascend_portfolio_loop = array(
+    $bc = apply_filters('juanjimeneztj_home_portfolio_carousel_columns', $bc);
+    $juanjimeneztj_portfolio_loop = array(
      	'lightbox' 		=> $portfolio_lightbox,
      	'showexcerpt' 	=> $portfolio_excerpt,
      	'showtypes' 	=> $portfolio_item_types,
-     	'columns' 		=> $ascend_grid_columns,
+     	'columns' 		=> $juanjimeneztj_grid_columns,
      	'ratio' 		=> $portfolio_ratio,
      	'style' 		=> $portfolio_style,
      	'carousel' 		=> 'true',
@@ -133,7 +133,7 @@ $ascend = ascend_get_options();
                     get_template_part('templates/content', 'loop-portfolio');  
 				
                 endwhile; else: ?>
-				    <div class="error-not-found"><?php _e('Sorry, no portfolio entries found.', 'ascend');?></div>
+				    <div class="error-not-found"><?php _e('Sorry, no portfolio entries found.', 'juanjimeneztj');?></div>
 
 				<?php endif; 
 				wp_reset_postdata(); ?>								

@@ -700,9 +700,9 @@
                 );
 
                 $localize = array(
-                    'save_pending'   => __( 'You have changes that are not saved. Would you like to save them now?', 'ascend' ),
-                    'reset_confirm'  => __( 'Are you sure? Resetting will lose all custom values.', 'ascend' ),
-                    'preset_confirm' => __( 'Your current options will be replaced with the values of this preset. Would you like to proceed?', 'ascend' ),
+                    'save_pending'   => __( 'You have changes that are not saved. Would you like to save them now?', 'juanjimeneztj' ),
+                    'reset_confirm'  => __( 'Are you sure? Resetting will lose all custom values.', 'juanjimeneztj' ),
+                    'preset_confirm' => __( 'Your current options will be replaced with the values of this preset. Would you like to proceed?', 'juanjimeneztj' ),
                     'opt_name'       => $this->args['opt_name'],
                     //'folds'             => $this->folds,
                     'options'        => $this->parent->options,
@@ -735,9 +735,9 @@
                 //wp_enqueue_style('redux-extension-customizer-css', $this->_extension_url . 'assets/css/customizer.css');
 
                 $localize = array(
-                    'save_pending'   => __( 'You have changes that are not saved.  Would you like to save them now?', 'ascend' ),
-                    'reset_confirm'  => __( 'Are you sure?  Resetting will lose all custom values.', 'ascend' ),
-                    'preset_confirm' => __( 'Your current options will be replaced with the values of this preset.  Would you like to proceed?', 'ascend' ),
+                    'save_pending'   => __( 'You have changes that are not saved.  Would you like to save them now?', 'juanjimeneztj' ),
+                    'reset_confirm'  => __( 'Are you sure?  Resetting will lose all custom values.', 'juanjimeneztj' ),
+                    'preset_confirm' => __( 'Your current options will be replaced with the values of this preset.  Would you like to proceed?', 'juanjimeneztj' ),
                     'opt_name'       => $this->args['opt_name'],
                     //'folds'             => $this->folds,
                     'field'          => $this->parent->options,

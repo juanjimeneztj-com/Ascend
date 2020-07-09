@@ -10,11 +10,11 @@
 		/**
 	    * @hooked asencd_single_portfolio_header - 20
 	    */
-	    do_action('ascend_portfolio_header'); ?>
+	    do_action('juanjimeneztj_portfolio_header'); ?>
 
 		<div id="content" class="container clearfix">
     		<div class="row single-portfolio">
-    			<div class="main <?php echo esc_attr(ascend_main_class()); ?>" id="ktmain" role="main">
+    			<div class="main <?php echo esc_attr(juanjimeneztj_main_class()); ?>" id="ktmain" role="main">
 			    	<?php 
 					get_template_part('templates/content', 'single-portfolio');
 					?>
@@ -24,7 +24,7 @@
 				/**
 			    * Sidebar
 			    */
-				if (ascend_display_sidebar()) : 
+				if (juanjimeneztj_display_sidebar()) : 
 				      	get_sidebar();
 			    endif; ?>
     		</div><!-- /.row-->

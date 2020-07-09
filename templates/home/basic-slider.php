@@ -2,90 +2,90 @@
 if ( ! defined( 'ABSPATH' ) ) {
   exit; // Exit if accessed directly
 }
-    $ascend = ascend_get_options();
+    $juanjimeneztj = juanjimeneztj_get_options();
 
-        if(isset($ascend['slider_size'])) {
-        	$slideheight = $ascend['slider_size'];
+        if(isset($juanjimeneztj['slider_size'])) {
+        	$slideheight = $juanjimeneztj['slider_size'];
         } else { 
         	$slideheight = 400; 
         }
-        if(isset($ascend['slider_size_width'])) {
-        	$slidewidth = $ascend['slider_size_width'];
+        if(isset($juanjimeneztj['slider_size_width'])) {
+        	$slidewidth = $juanjimeneztj['slider_size_width'];
         } else { 
         	$slidewidth = 1140; 
         }
-        if(isset($ascend['slider_captions']) && $ascend['slider_captions'] == 1) {
+        if(isset($juanjimeneztj['slider_captions']) && $juanjimeneztj['slider_captions'] == 1) {
          	$captions = 'true'; 
      	} else {
      		$captions = 'false';
      	}
-        if(isset($ascend['home_basic_slider'])) {
-        	$slides = $ascend['home_basic_slider'];
+        if(isset($juanjimeneztj['home_basic_slider'])) {
+        	$slides = $juanjimeneztj['home_basic_slider'];
 		} else {
 			$slides = '';
 		}
-        if(isset($ascend['home_basic_slider_type'])) {
-        	$type = $ascend['home_basic_slider_type'];
+        if(isset($juanjimeneztj['home_basic_slider_type'])) {
+        	$type = $juanjimeneztj['home_basic_slider_type'];
         } else {
         	$type = 'latest-posts';
         }
-        if(isset($ascend['trans_type']) && $ascend['trans_type'] == 'false') {
+        if(isset($juanjimeneztj['trans_type']) && $juanjimeneztj['trans_type'] == 'false') {
         	$transtype = 'false';
         } else {
         	$transtype = 'true';
         }
-        if(isset($ascend['slider_transtime'])) {
-        	$transtime = $ascend['slider_transtime'];
+        if(isset($juanjimeneztj['slider_transtime'])) {
+        	$transtime = $juanjimeneztj['slider_transtime'];
         } else {
         	$transtime = '400';
         }
-        if(isset($ascend['slider_autoplay']) && $ascend['slider_autoplay'] == "1" ) {
+        if(isset($juanjimeneztj['slider_autoplay']) && $juanjimeneztj['slider_autoplay'] == "1" ) {
         	$autoplay ='true';
         } else {
         	$autoplay = 'false';
         }
-        if(isset($ascend['slider_pausetime'])) {
-        	$pausetime = $ascend['slider_pausetime'];
+        if(isset($juanjimeneztj['slider_pausetime'])) {
+        	$pausetime = $juanjimeneztj['slider_pausetime'];
     	} else {
     		$pausetime = '7000';
     	}
-    	if(isset($ascend['home_page_title_align']) && !empty($ascend['home_page_title_align'])) {
-			$talign = $ascend['home_page_title_align'];
+    	if(isset($juanjimeneztj['home_page_title_align']) && !empty($juanjimeneztj['home_page_title_align'])) {
+			$talign = $juanjimeneztj['home_page_title_align'];
 		} else {
 			$talign = 'center';
 		}
-    	if(!empty($ascend['home_page_title_max_size'])) {
-			$title_data = $ascend['home_page_title_max_size'];
+    	if(!empty($juanjimeneztj['home_page_title_max_size'])) {
+			$title_data = $juanjimeneztj['home_page_title_max_size'];
 		} else {
-			if(isset($ascend['single_header_title_size'])){
-				$title_data = $ascend['single_header_title_size'];
+			if(isset($juanjimeneztj['single_header_title_size'])){
+				$title_data = $juanjimeneztj['single_header_title_size'];
 			} else {
 				$title_data = '70';
 			}
 		}
-		if(!empty($ascend['home_page_title_min_size'])) {
-			$title_small_data = $ascend['home_page_title_min_size'];
+		if(!empty($juanjimeneztj['home_page_title_min_size'])) {
+			$title_small_data = $juanjimeneztj['home_page_title_min_size'];
 		} else {
-			if(isset($ascend['single_header_title_size_small'])){
-				$title_small_data = $ascend['single_header_title_size_small'];
+			if(isset($juanjimeneztj['single_header_title_size_small'])){
+				$title_small_data = $juanjimeneztj['single_header_title_size_small'];
 			} else {
 				$title_small_data = '30';
 			}
 		}
-		if(!empty($ascend['home_page_subtitle_max_size'])) {
-			$subtitle_data = $ascend['home_page_subtitle_max_size'];
+		if(!empty($juanjimeneztj['home_page_subtitle_max_size'])) {
+			$subtitle_data = $juanjimeneztj['home_page_subtitle_max_size'];
 		} else {
-			if(isset($ascend['single_header_subtitle_size'])){
-				$subtitle_data = $ascend['single_header_subtitle_size'];
+			if(isset($juanjimeneztj['single_header_subtitle_size'])){
+				$subtitle_data = $juanjimeneztj['single_header_subtitle_size'];
 			} else {
 				$subtitle_data = '40';
 			}
 		}
-		if(!empty($ascend['home_page_subtitle_min_size'])) {
-			$subtitle_small_data = $ascend['home_page_subtitle_min_size'];
+		if(!empty($juanjimeneztj['home_page_subtitle_min_size'])) {
+			$subtitle_small_data = $juanjimeneztj['home_page_subtitle_min_size'];
 		} else {
-			if(isset($ascend['single_header_subtitle_size_small'])){
-				$subtitle_small_data = $ascend['single_header_subtitle_size_small'];
+			if(isset($juanjimeneztj['single_header_subtitle_size_small'])){
+				$subtitle_small_data = $juanjimeneztj['single_header_subtitle_size_small'];
 			} else {
 				$subtitle_small_data = '20';
 			}
@@ -109,7 +109,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					if (  $loop->have_posts() ) {
 						while ( $loop->have_posts() ) : $loop->the_post(); 
 							global $post;
-                            $img = ascend_get_image_array($slidewidth, $slideheight, true, null, null, null, true);
+                            $img = juanjimeneztj_get_image_array($slidewidth, $slideheight, true, null, null, null, true);
                             echo '<div class="kt-slick-slide">';
 	                                echo '<a href="'.get_the_permalink().'" class="kt-slider-image-link">';
 	                                echo '<div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">';
@@ -139,17 +139,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 	                   	wp_reset_postdata();
 	                	
 	             	} else {
-							echo '<div class="error-not-found">'.__('Sorry, no entries found.', 'ascend').'</li>';
+							echo '<div class="error-not-found">'.__('Sorry, no entries found.', 'juanjimeneztj').'</li>';
 					} 
 	        echo '</div>';
   		echo '</div><!--Container-->';
 	} else if($type == 'fullwidth' ) {
-		ascend_build_slider_home_fullwidth($slides, $slidewidth, $slideheight, $class, $id, $type, $captions, $autoplay, $pausetime, 'true', $transtype, $transtime, $title_data, $title_small_data, $subtitle_data, $subtitle_small_data, $talign); 
+		juanjimeneztj_build_slider_home_fullwidth($slides, $slidewidth, $slideheight, $class, $id, $type, $captions, $autoplay, $pausetime, 'true', $transtype, $transtime, $title_data, $title_small_data, $subtitle_data, $subtitle_small_data, $talign); 
 	} else if($type == 'carousel') {
-		ascend_build_slider_home($slides, $slidewidth, $slideheight, $class, $id, $type, $captions, $autoplay, $pausetime, 'true', $transtype, $transtime, $title_data, $title_small_data, $subtitle_data, $subtitle_small_data, $talign); 
+		juanjimeneztj_build_slider_home($slides, $slidewidth, $slideheight, $class, $id, $type, $captions, $autoplay, $pausetime, 'true', $transtype, $transtime, $title_data, $title_small_data, $subtitle_data, $subtitle_small_data, $talign); 
 	} else {
   		echo '<div id="imageslider" class="container">';
-  			ascend_build_slider_home($slides, $slidewidth, $slideheight, $class, $id, $type, $captions, $autoplay, $pausetime, 'true', $transtype, $transtime, $title_data, $title_small_data, $subtitle_data, $subtitle_small_data, $talign); 
+  			juanjimeneztj_build_slider_home($slides, $slidewidth, $slideheight, $class, $id, $type, $captions, $autoplay, $pausetime, 'true', $transtype, $transtime, $title_data, $title_small_data, $subtitle_data, $subtitle_small_data, $talign); 
   		echo '</div><!--Container-->';
   	} ?>
 </div><!--sliderclass-->

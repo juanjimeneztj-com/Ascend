@@ -1,9 +1,9 @@
 <div class="theme-info">
 				
-<div class="screenshot"><img src="https://i0.wp.com/themes.svn.wordpress.org/ascend/1.3.7/screenshot.png?zoom=1.5&amp;w=1142&amp;strip=all" alt="" width="572" height="429" src-orig="https://i0.wp.com/themes.svn.wordpress.org/ascend/1.3.7/screenshot.png?w=1142&amp;strip=all" scale="1.5"></div>
+<div class="screenshot"><img src="https://i0.wp.com/themes.svn.wordpress.org/juanjimeneztj/1.3.7/screenshot.png?zoom=1.5&amp;w=1142&amp;strip=all" alt="" width="572" height="429" src-orig="https://i0.wp.com/themes.svn.wordpress.org/juanjimeneztj/1.3.7/screenshot.png?w=1142&amp;strip=all" scale="1.5"></div>
 
 
-<div class="theme-description entry-summary" itemprop="description"><p>Ascend will surpass your expectations over and over again. Amazingly versatile, easily customizable and loaded with features you will love. Adds full support for Gutenberg and you can use with any page builder, like Elementor. We built this multipurpose theme with several fresh and original layout options for your website’s header and menus, including a very stylish vertical menu and a stunning transparent header that changes as you scroll.</p></div>
+<div class="theme-description entry-summary" itemprop="description"><p>juanjimeneztj will surpass your expectations over and over again. Amazingly versatile, easily customizable and loaded with features you will love. Adds full support for Gutenberg and you can use with any page builder, like Elementor. We built this multipurpose theme with several fresh and original layout options for your website’s header and menus, including a very stylish vertical menu and a stunning transparent header that changes as you scroll.</p></div>
 
 
 <div class="theme-tags">

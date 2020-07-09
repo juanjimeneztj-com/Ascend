@@ -3,9 +3,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 } 
 /**
- * HFE Ascend theme compatibility.
+ * HFE juanjimeneztj theme compatibility.
  */
-class Ascend_Elementor_Header_Footer {
+class juanjimeneztj_Elementor_Header_Footer {
 	/**
 	* @var null
 	*/
@@ -28,28 +28,28 @@ class Ascend_Elementor_Header_Footer {
 		add_theme_support( 'header-footer-elementor' );
 		if ( function_exists( 'hfe_header_enabled' ) ) {
 			if ( hfe_header_enabled() ) {
-				add_action( 'template_redirect', array( $this, 'ascend_remove_header' ), 10 );
-				add_action( 'ascend_header', 'hfe_render_header' );
+				add_action( 'template_redirect', array( $this, 'juanjimeneztj_remove_header' ), 10 );
+				add_action( 'juanjimeneztj_header', 'hfe_render_header' );
 			}
 		}
 		if ( function_exists( 'hfe_footer_enabled' ) ) {
 			if ( hfe_footer_enabled() ) {
-				add_action( 'template_redirect', array( $this, 'ascend_remove_footer' ), 10 );
-				add_action( 'ascend_footer', 'hfe_render_footer' );
+				add_action( 'template_redirect', array( $this, 'juanjimeneztj_remove_footer' ), 10 );
+				add_action( 'juanjimeneztj_footer', 'hfe_render_footer' );
 			}
 		}
 	}
 	/**
 	 * Disable header from the theme.
 	 */
-	public function ascend_remove_header() {
-		remove_action( 'ascend_header', 'ascend_header_markup' );
+	public function juanjimeneztj_remove_header() {
+		remove_action( 'juanjimeneztj_header', 'juanjimeneztj_header_markup' );
 	}
 	/**
 	 * Disable footer from the theme.
 	 */
-	public function ascend_remove_footer() {
-		remove_action( 'ascend_footer', 'ascend_footer_markup' );
+	public function juanjimeneztj_remove_footer() {
+		remove_action( 'juanjimeneztj_footer', 'juanjimeneztj_footer_markup' );
 	}
 }
-Ascend_Elementor_Header_Footer::get_instance();
+juanjimeneztj_Elementor_Header_Footer::get_instance();

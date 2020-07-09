@@ -1,5 +1,5 @@
 /*
- * CSS for Ascend Theme
+ * CSS for juanjimeneztj Theme
  */
 html {
   font-family: sans-serif;
@@ -2320,7 +2320,7 @@ body.body-style-bubbled footer.single-footer .post-footer-section:last-child {
   -o-transition: background 0.2s ease-in-out;
   transition: background 0.2s ease-in-out;
 }
-.ascend-trans-logo {
+.juanjimeneztj-trans-logo {
   display: none;
 }
 body.trans-header div:not(.is-sticky) > .headerclass-outer div:not(.is-sticky) > .kad-header-topbar-primary-outer div:not(.is-sticky) > .headerclass {
@@ -5844,7 +5844,7 @@ ul.product_list_widget li dl dt {
   display: block;
   height: 100%;
 }
-#logo a .ascend-logo {
+#logo a .juanjimeneztj-logo {
   width: auto;
   max-height: 100%;
 }
@@ -5867,8 +5867,8 @@ ul.product_list_widget li dl dt {
   justify-content: center;
   position: relative;
 }
-.kt-header-position-above #logo a .ascend-logo,
-.kt-header-position-above #logo a .ascend-trans-logo {
+.kt-header-position-above #logo a .juanjimeneztj-logo,
+.kt-header-position-above #logo a .juanjimeneztj-trans-logo {
   width: auto;
   height: 100%;
   flex: 0 0 auto;
@@ -5904,7 +5904,7 @@ ul.product_list_widget li dl dt {
   justify-content: center;
   height: 100%;
 }
-#mobile-logo a .ascend-mobile-logo {
+#mobile-logo a .juanjimeneztj-mobile-logo {
   max-height: 100%;
   width: auto;
 }
@@ -5919,7 +5919,7 @@ ul.product_list_widget li dl dt {
   z-index: 1;
   padding: 0 80px;
 }
-.mobile-headerclass .ascend-mobile-trans-logo {
+.mobile-headerclass .juanjimeneztj-mobile-trans-logo {
   display: none;
 }
 .kad-mobile-logo-left {
@@ -8426,7 +8426,7 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
   color: #16A085;
   border-color: #16A085;
 }
-.kad-ascend-parallax,
+.kad-juanjimeneztj-parallax,
 .kt-parallax-stellar {
   background-attachment: fixed !important;
   -moz-background-size: cover!important;
@@ -10439,17 +10439,17 @@ input.kt-error {
   }
 }
 @media (max-width: 992px) {
-  .kad-ascend-parallax,
+  .kad-juanjimeneztj-parallax,
   .kt-parallax-stellar {
     background-attachment: scroll !important;
     background-position: center !important;
   }
 }
 @media only screen and (max-device-width: 1024px) {
-  .kad-ascend-parallax,
+  .kad-juanjimeneztj-parallax,
   .kt-parallax-stellar {
     background-attachment: scroll !important;
     background-position: center !important;
   }
 }
-/*# sourceMappingURL=ascend-unminify.css.map */
+/*# sourceMappingURL=juanjimeneztj-unminify.css.map */

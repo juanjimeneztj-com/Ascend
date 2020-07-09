@@ -1,38 +1,38 @@
 <?php 
-$ascend = ascend_get_options();
-if(isset($ascend['above_header_style']) && $ascend['above_header_style'] == 'center_menu') {
+$juanjimeneztj = juanjimeneztj_get_options();
+if(isset($juanjimeneztj['above_header_style']) && $juanjimeneztj['above_header_style'] == 'center_menu') {
 	$headerclass = 'kt-header-layout-center-menu';
-} elseif( isset($ascend['above_header_style']) && $ascend['above_header_style'] == 'center' ) {
+} elseif( isset($juanjimeneztj['above_header_style']) && $juanjimeneztj['above_header_style'] == 'center' ) {
 	$headerclass = 'kt-header-layout-center-logo';
-} elseif( isset($ascend['above_header_style']) && $ascend['above_header_style'] == 'bylogo' ) {
+} elseif( isset($juanjimeneztj['above_header_style']) && $juanjimeneztj['above_header_style'] == 'bylogo' ) {
 	$headerclass = 'kt-header-layout-lgmenu';
-} elseif( isset($ascend['above_header_style']) && $ascend['above_header_style'] == 'center_below' ) {
+} elseif( isset($juanjimeneztj['above_header_style']) && $juanjimeneztj['above_header_style'] == 'center_below' ) {
 	$headerclass = 'kt-header-layout-below-lg';
 } else {
 	$headerclass = 'kt-header-layout-standard';
 }
-if(isset($ascend['sticky_header_parts'])) {
-	$sticky = $ascend['sticky_header_parts'];
+if(isset($juanjimeneztj['sticky_header_parts'])) {
+	$sticky = $juanjimeneztj['sticky_header_parts'];
 } else {
 	$sticky = 'none';
 }
-if(isset($ascend['shrinking_header']) && $ascend['shrinking_header'] == 1 && ($ascend['sticky_header_parts'] == 'header' || $ascend['sticky_header_parts'] == 'header_all' || $ascend['sticky_header_parts'] == 'header_top')) {
+if(isset($juanjimeneztj['shrinking_header']) && $juanjimeneztj['shrinking_header'] == 1 && ($juanjimeneztj['sticky_header_parts'] == 'header' || $juanjimeneztj['sticky_header_parts'] == 'header_all' || $juanjimeneztj['sticky_header_parts'] == 'header_top')) {
 	$shrink = '1';
 } else {
 	$shrink = '0';
 }
-if(isset($ascend['above_header_shrunk_height'])) {
-	$shrunk_height = $ascend['above_header_shrunk_height'];
+if(isset($juanjimeneztj['above_header_shrunk_height'])) {
+	$shrunk_height = $juanjimeneztj['above_header_shrunk_height'];
 } else {
 	$shrunk_height = '120';
 }
-if(isset($ascend['above_header_height'])) {
-	$height = $ascend['above_header_height'];
+if(isset($juanjimeneztj['above_header_height'])) {
+	$height = $juanjimeneztj['above_header_height'];
 } else {
 	$height = '120';
 }
-if(isset($ascend['above_header_height'])) {
-	$height = $ascend['above_header_height'];
+if(isset($juanjimeneztj['above_header_height'])) {
+	$height = $juanjimeneztj['above_header_height'];
 } else {
 	$height = '120';
 }
@@ -42,9 +42,9 @@ if(isset($ascend['above_header_height'])) {
 	<div class="kad-header-topbar-primary-outer">
  	<?php
  	   	/* 
-        * Hooked ascend_top_bar 20
+        * Hooked juanjimeneztj_top_bar 20
         */
-        do_action('ascend_before_above_header');
+        do_action('juanjimeneztj_before_above_header');
 	?>	<div class="outside-headerclass">
 		<div class="kad-header-menu-outer headerclass">
 		    <div class="kad-header-menu-inner container">
@@ -54,24 +54,24 @@ if(isset($ascend['above_header_height'])) {
 			        	<div class="kad-left-header kt-header-flex-item header-sidewidth">
 			        		<?php 
 			        		/* 
-					        * Hooked ascend_left_header_menu 10
+					        * Hooked juanjimeneztj_left_header_menu 10
 					        */
-					        do_action('ascend_center_logo_header_left'); ?>
+					        do_action('juanjimeneztj_center_logo_header_left'); ?>
 			           	</div> <!-- Close left header-->
 			            <div class="kad-center-header kt-header-flex-item header-logo-width">
 			            	<?php 
 			        		/* 
-					        * Hooked ascend_the_custom_logo 20
+					        * Hooked juanjimeneztj_the_custom_logo 20
 					        */
-					        do_action('ascend_center_logo_header_center'); ?>
+					        do_action('juanjimeneztj_center_logo_header_center'); ?>
 			            </div>  <!-- Close center header-->
 			            <div class="kad-right-header kt-header-flex-item header-sidewidth">
 			            	<?php 
 			        		/* 
-			        		* Hooked ascend_right_header_menu 10
-					        * Hooked ascend_header_extras 20
+			        		* Hooked juanjimeneztj_right_header_menu 10
+					        * Hooked juanjimeneztj_header_extras 20
 					        */
-					        do_action('ascend_center_logo_header_right'); ?>
+					        do_action('juanjimeneztj_center_logo_header_right'); ?>
 					    </div>  <!-- Close right header-->
 			        </div>  <!-- Close container--> 
 		    	<?php 
@@ -80,32 +80,32 @@ if(isset($ascend['above_header_height'])) {
 			        	<div class="kad-left-header kt-header-flex-item header-sidewidth">
 			        		<?php 
 			        		/* 
-					        * Hooked ascend_second_header_extras 10
+					        * Hooked juanjimeneztj_second_header_extras 10
 					        */
-					        do_action('ascend_below_logo_header_left'); ?>
+					        do_action('juanjimeneztj_below_logo_header_left'); ?>
 			           	</div> <!-- Close left header-->
 			            <div class="kad-center-header kt-header-flex-item header-logo-width">
 			            	<?php 
 			        		/* 
-					        * Hooked ascend_the_custom_logo 20
+					        * Hooked juanjimeneztj_the_custom_logo 20
 					        */
-					        do_action('ascend_below_logo_header_center'); ?>
+					        do_action('juanjimeneztj_below_logo_header_center'); ?>
 			            </div>  <!-- Close center header-->
 			            <div class="kad-right-header kt-header-flex-item header-sidewidth">
 			            	<?php 
 			        		/* 
-					        * Hooked ascend_header_extras 20
+					        * Hooked juanjimeneztj_header_extras 20
 					        */
-					        do_action('ascend_below_logo_header_right'); ?>
+					        do_action('juanjimeneztj_below_logo_header_right'); ?>
 					    </div>  <!-- Close right header-->
 					</div>
 					<div class="menu_below_container">
 					    <div class="kad-below-header kt-header-flex-item">
 			            	<?php 
 			        		/* 
-					        * Hooked ascend_primary_menu_area 20
+					        * Hooked juanjimeneztj_primary_menu_area 20
 					        */
-					        do_action('ascend_below_logo_header_below'); ?>
+					        do_action('juanjimeneztj_below_logo_header_below'); ?>
 					    </div>  <!-- Close right header-->
 			        </div>  <!-- Close container--> 
 		        <?php 
@@ -114,23 +114,23 @@ if(isset($ascend['above_header_height'])) {
 			        	<div class="kad-left-header kt-header-flex-item">
 			        		<?php 
 			        		/* 
-					        * Hooked ascend_the_custom_logo 20
+					        * Hooked juanjimeneztj_the_custom_logo 20
 					        */
-					        do_action('ascend_header_left'); ?>
+					        do_action('juanjimeneztj_header_left'); ?>
 			           	</div> <!-- Close left header-->
 			            <div class="kad-center-header kt-header-flex-item">
 			            	<?php 
 			        		/* 
-					        * Hooked ascend_primary_menu_area 20
+					        * Hooked juanjimeneztj_primary_menu_area 20
 					        */
-					        do_action('ascend_header_center'); ?>
+					        do_action('juanjimeneztj_header_center'); ?>
 			            </div>  <!-- Close center header-->
 			            <div class="kad-right-header kt-header-flex-item">
 			            	<?php 
 			        		/* 
-					        * Hooked ascend_header_extras 20
+					        * Hooked juanjimeneztj_header_extras 20
 					        */
-					        do_action('ascend_header_right'); ?>
+					        do_action('juanjimeneztj_header_right'); ?>
 					    </div>  <!-- Close right header-->
 			        </div>  <!-- Close container--> 
 	        	<?php }  ?>
@@ -141,8 +141,8 @@ if(isset($ascend['above_header_height'])) {
 	</div>
     <?php 
 	/* 
-    * Hooked ascend_secondary_menu 20
+    * Hooked juanjimeneztj_secondary_menu 20
     */
-    do_action('ascend_after_above_header'); 
+    do_action('juanjimeneztj_after_above_header'); 
     ?>
 </header>

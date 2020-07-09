@@ -20,11 +20,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	/**
     * @hooked asencd_single_post_header - 20
     */
-    do_action('ascend_post_header');
+    do_action('juanjimeneztj_post_header');
     ?>
     <div id="content" class="container">
    		<div class="row">
-	      	<div class="main <?php echo esc_attr(ascend_main_class()); ?>" id="ktmain" role="main">
+	      	<div class="main <?php echo esc_attr(juanjimeneztj_main_class()); ?>" id="ktmain" role="main">
                 <div id="tribe-events-pg-template">
 					<?php 
 						tribe_events_before_html(); 
@@ -37,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			/**
 		    * Sidebar
 		    */
-			if (ascend_display_sidebar()) : 
+			if (juanjimeneztj_display_sidebar()) : 
 			      	get_sidebar();
 		    endif; ?>
 		</div><!-- /.row-->

@@ -2,45 +2,45 @@
 /**
  * Add functions files
  *
- * @package Ascend Theme
+ * @package juanjimeneztj Theme
  */
 
-define( 'ASCEND_OPTIONS_SLUG', 'ascend' );
-define( 'ASCEND_LANGUAGE_SLUG', 'ascend' );
+define( 'juanjimeneztj_OPTIONS_SLUG', 'juanjimeneztj' );
+define( 'juanjimeneztj_LANGUAGE_SLUG', 'juanjimeneztj' );
 
 /**
  * Language setup
  */
-function ascend_lang_setup() {
-	load_theme_textdomain( 'ascend', get_template_directory() . '/languages' );
+function juanjimeneztj_lang_setup() {
+	load_theme_textdomain( 'juanjimeneztj', get_template_directory() . '/languages' );
 }
-add_action( 'after_setup_theme', 'ascend_lang_setup' );
+add_action( 'after_setup_theme', 'juanjimeneztj_lang_setup' );
 
 /**
  * Init Theme Options
  */
 require_once trailingslashit( get_template_directory() ) . 'themeoptions/redux/framework.php';          		// Options framework
 require_once trailingslashit( get_template_directory() ) . 'themeoptions/options.php';          				// Options settings
-require_once trailingslashit( get_template_directory() ) . 'themeoptions/options/ascend_extension.php'; 		// Options framework extension.
+require_once trailingslashit( get_template_directory() ) . 'themeoptions/options/juanjimeneztj_extension.php'; 		// Options framework extension.
 
 /*
  * Init Theme Startup/Core utilities/classes
  */
 require_once trailingslashit( get_template_directory() ) . 'lib/init.php';                                          // Initial theme setup and constants
-require_once trailingslashit( get_template_directory() ) . 'lib/classes/class-ascend-plugin-check.php';             // Sidebar class
-require_once trailingslashit( get_template_directory() ) . 'lib/classes/class-ascend-sidebar.php';         			// Sidebar class
-require_once trailingslashit( get_template_directory() ) . 'lib/classes/class-ascend-get-image.php';     				// Image Processing
-require_once trailingslashit( get_template_directory() ) . 'lib/classes/class-ascend_walker_nav_menu_custom.php';     // Custom Walker
-require_once trailingslashit( get_template_directory() ) . 'lib/classes/class-ascend_custom_menu.php';     			// Custom Menu settings
+require_once trailingslashit( get_template_directory() ) . 'lib/classes/class-juanjimeneztj-plugin-check.php';             // Sidebar class
+require_once trailingslashit( get_template_directory() ) . 'lib/classes/class-juanjimeneztj-sidebar.php';         			// Sidebar class
+require_once trailingslashit( get_template_directory() ) . 'lib/classes/class-juanjimeneztj-get-image.php';     				// Image Processing
+require_once trailingslashit( get_template_directory() ) . 'lib/classes/class-juanjimeneztj_walker_nav_menu_custom.php';     // Custom Walker
+require_once trailingslashit( get_template_directory() ) . 'lib/classes/class-juanjimeneztj_custom_menu.php';     			// Custom Menu settings
 require_once trailingslashit( get_template_directory() ) . 'lib/elementor/elementor-support.php';     				// Elementor Header and Footer Compat
-require_once trailingslashit( get_template_directory() ) . 'lib/ascend-plugins-activate.php';                       // Plugin Activation
-require_once trailingslashit( get_template_directory() ) . 'lib/metaboxes/ascend_cmb_extensions.php';     			// Custom Metaboxe Settings
+require_once trailingslashit( get_template_directory() ) . 'lib/juanjimeneztj-plugins-activate.php';                       // Plugin Activation
+require_once trailingslashit( get_template_directory() ) . 'lib/metaboxes/juanjimeneztj_cmb_extensions.php';     			// Custom Metaboxe Settings
 require_once trailingslashit( get_template_directory() ) . 'lib/config.php';          								// Configuration
 require_once trailingslashit( get_template_directory() ) . 'lib/config-pagetitle.php';          						// Page title Configuration
 require_once trailingslashit( get_template_directory() ) . 'lib/config-sidebar.php';          						// Sidebar Configuration
 require_once trailingslashit( get_template_directory() ) . 'lib/image_functions.php';     							// Image Functions
-require_once trailingslashit( get_template_directory() ) . 'lib/ascend_slider.php';     								// Build Slider
-require_once trailingslashit( get_template_directory() ) . 'lib/ascend_collage_gallery.php';     						// Build collage.
+require_once trailingslashit( get_template_directory() ) . 'lib/juanjimeneztj_slider.php';     								// Build Slider
+require_once trailingslashit( get_template_directory() ) . 'lib/juanjimeneztj_collage_gallery.php';     						// Build collage.
 
 /*
  * Init Custom post type, metaboxes
@@ -57,11 +57,11 @@ require_once trailingslashit( get_template_directory() ) . 'lib/metaboxes/posthe
 /*
  * Init Widgets
  */
-require_once trailingslashit( get_template_directory() ) . 'lib/widgets/class-ascend_contact_widget.php';         	// Contact Widget
-require_once trailingslashit( get_template_directory() ) . 'lib/widgets/class-ascend_recent_posts_widget.php';       	// Recent Posts Widget
-require_once trailingslashit( get_template_directory() ) . 'lib/widgets/class-ascend_post_grid_widget.php';         	// Post Grid Widget
-require_once trailingslashit( get_template_directory() ) . 'lib/widgets/class-ascend_social_widget.php';         		// Social Widget
-require_once trailingslashit( get_template_directory() ) . 'lib/widgets/class-ascend_image_widget.php';         		// Image Widget
+require_once trailingslashit( get_template_directory() ) . 'lib/widgets/class-juanjimeneztj_contact_widget.php';         	// Contact Widget
+require_once trailingslashit( get_template_directory() ) . 'lib/widgets/class-juanjimeneztj_recent_posts_widget.php';       	// Recent Posts Widget
+require_once trailingslashit( get_template_directory() ) . 'lib/widgets/class-juanjimeneztj_post_grid_widget.php';         	// Post Grid Widget
+require_once trailingslashit( get_template_directory() ) . 'lib/widgets/class-juanjimeneztj_social_widget.php';         		// Social Widget
+require_once trailingslashit( get_template_directory() ) . 'lib/widgets/class-juanjimeneztj_image_widget.php';         		// Image Widget
 require_once trailingslashit( get_template_directory() ) . 'lib/widgets/widget_setup.php';  							// Widget Setup.
 
 /*

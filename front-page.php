@@ -5,21 +5,21 @@
     get_header(); 
 
     /**
-    * @hooked ascend_front_page_header - 20
+    * @hooked juanjimeneztj_front_page_header - 20
     */
-    do_action('ascend_front_page_title_container');                
+    do_action('juanjimeneztj_front_page_title_container');                
 
 ?>
-    <div id="content" class="container homepagecontent <?php echo esc_attr( ascend_container_class() ); ?>">
+    <div id="content" class="container homepagecontent <?php echo esc_attr( juanjimeneztj_container_class() ); ?>">
    		<div class="row">
-        	<div class="main <?php echo esc_attr(ascend_main_class()); ?>" role="main">
+        	<div class="main <?php echo esc_attr(juanjimeneztj_main_class()); ?>" role="main">
           		<div class="entry-content" itemprop="mainContentOfPage">
 
 		      	<?php
-		      	$ascend = ascend_get_options();
-		      	if(isset($ascend['homepage_layout'])) { 
+		      	$juanjimeneztj = juanjimeneztj_get_options();
+		      	if(isset($juanjimeneztj['homepage_layout'])) { 
 		      		$layout = array();
-		      		foreach ($ascend['homepage_layout'] as $key => $value) {
+		      		foreach ($juanjimeneztj['homepage_layout'] as $key => $value) {
 		      			if($value == 1) {
 		      				$layout[$key] = $value;
 		      			}
@@ -41,11 +41,11 @@
 						    		get_template_part('templates/home/blog', 'main-loop');
 						    	} else {
 						    		/**
-					                * @hooked ascend_page_content_wrap_before - 10
-					                * @hooked ascend_page_content - 20
-					                * @hooked ascend_page_content_wrap_after - 30
+					                * @hooked juanjimeneztj_page_content_wrap_before - 10
+					                * @hooked juanjimeneztj_page_content - 20
+					                * @hooked juanjimeneztj_page_content_wrap_after - 30
 					                */
-					                do_action('ascend_page_content');
+					                do_action('juanjimeneztj_page_content');
 						    	}
 						    break;
 						    case 'block_two': 
@@ -84,7 +84,7 @@
 			/**
 		    * Sidebar
 		    */
-			if (ascend_display_sidebar()) : 
+			if (juanjimeneztj_display_sidebar()) : 
 			      	get_sidebar();
 		    endif; ?>
 		</div><!-- /.row-->

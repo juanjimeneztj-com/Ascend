@@ -2,22 +2,22 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
-	$ascend = ascend_get_options();
+	$juanjimeneztj = juanjimeneztj_get_options();
 
-	if(!empty($ascend['img_menu_height'])) {
-		$height = $ascend['img_menu_height'];
+	if(!empty($juanjimeneztj['img_menu_height'])) {
+		$height = $juanjimeneztj['img_menu_height'];
 	} else {
 		$height = 210;
 	}
-	if(!empty($ascend['img_menu_height_setting'])) {
-		$type = $ascend['img_menu_height_setting'];
+	if(!empty($juanjimeneztj['img_menu_height_setting'])) {
+		$type = $juanjimeneztj['img_menu_height_setting'];
 	} else {
 		$type = 'normal';
 	} 
-    $slides = $ascend['home_image_menu'];
+    $slides = $juanjimeneztj['home_image_menu'];
 
-    if(!empty($ascend['home_image_menu_column'])) {
-    	$columnsize = $ascend['home_image_menu_column'];
+    if(!empty($juanjimeneztj['home_image_menu_column'])) {
+    	$columnsize = $juanjimeneztj['home_image_menu_column'];
     } else {
     	$columnsize = 3;
     }
@@ -72,7 +72,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				} else {
 					$subtitle = '';
 				}
-			echo ascend_build_image_menu( $id, $type, $height, $link, $target, $title, $subtitle, 'left', 'bottom', $class, $image_uri);
+			echo juanjimeneztj_build_image_menu( $id, $type, $height, $link, $target, $title, $subtitle, 'left', 'bottom', $class, $image_uri);
 			echo '</div>';
 			$counter ++;
 

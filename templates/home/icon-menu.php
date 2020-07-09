@@ -2,11 +2,11 @@
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
-    $ascend = ascend_get_options();
+    $juanjimeneztj = juanjimeneztj_get_options();
     
-    $icons = $ascend['icon_menu']; 
-    if(!empty($ascend['home_icon_menu_column'])) {
-        $columns = $ascend['home_icon_menu_column'];
+    $icons = $juanjimeneztj['icon_menu']; 
+    if(!empty($juanjimeneztj['home_icon_menu_column'])) {
+        $columns = $juanjimeneztj['home_icon_menu_column'];
     } else {
         $columns = 3;
     }
@@ -21,8 +21,8 @@ if ( ! defined( 'ABSPATH' ) ) {
     } else {
         $itemsize = 'col-lg-3 col-md-3 col-sm-6 col-xs-6 col-ss-12';
     }
-    if(!empty($ascend['home_icon_menu_btn'])) {
-        $readmore = $ascend['home_icon_menu_btn'];
+    if(!empty($juanjimeneztj['home_icon_menu_btn'])) {
+        $readmore = $juanjimeneztj['home_icon_menu_btn'];
     } else {
         $readmore = '';
     }
@@ -62,7 +62,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					$subtitle = '';
 				}
                 echo '<div class="'.esc_attr($itemsize).' box-iconmenu iconitemcount'.esc_attr($counter).'">';
-    				ascend_icon_menu_output($icon_o, $id, $link, $target, $title, $subtitle, $readmore);
+    				juanjimeneztj_icon_menu_output($icon_o, $id, $link, $target, $title, $subtitle, $readmore);
     			echo '</div>';
                 $counter ++;
             endforeach; 

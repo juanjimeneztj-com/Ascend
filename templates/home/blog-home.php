@@ -2,33 +2,33 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
-$ascend = ascend_get_options();
+$juanjimeneztj = juanjimeneztj_get_options();
 	// Check for Sidebar
-	if(isset($ascend['home_post_column'])) {
+	if(isset($juanjimeneztj['home_post_column'])) {
 	} 
 
-	if(!empty($ascend['home_blog_title'])) {
-		$btitle = $ascend['home_blog_title'];
+	if(!empty($juanjimeneztj['home_blog_title'])) {
+		$btitle = $juanjimeneztj['home_blog_title'];
 	} else { 
 		$btitle = '';
 	}
-	if(isset($ascend['home_blog_style'])) {
-		$type = $ascend['home_blog_style'];
+	if(isset($juanjimeneztj['home_blog_style'])) {
+		$type = $juanjimeneztj['home_blog_style'];
 	} else {
 		$type = 'grid'; 
 	}
-	if(isset($ascend['home_post_count'])) {
-		$blogcount = $ascend['home_post_count'];
+	if(isset($juanjimeneztj['home_post_count'])) {
+		$blogcount = $juanjimeneztj['home_post_count'];
 	} else {
 		$blogcount = '4'; 
 	}
-	if(isset($ascend['home_post_column'])) {
-		$blogcolumns = $ascend['home_post_column'];
+	if(isset($juanjimeneztj['home_post_column'])) {
+		$blogcolumns = $juanjimeneztj['home_post_column'];
 	} else {
 		$blogcolumns = '3'; 
 	}
-	if(!empty($ascend['home_post_type'])) { 
-		$blog_cat = get_term_by ('id',$ascend['home_post_type'],'category');
+	if(!empty($juanjimeneztj['home_post_type'])) { 
+		$blog_cat = get_term_by ('id',$juanjimeneztj['home_post_type'],'category');
 		$blog_cat_slug = $blog_cat -> slug;
 	} else {
 		$blog_cat_slug = '';
@@ -42,12 +42,12 @@ echo '<div class="home_blog home-margin clearfix home-padding">';
 			echo '</h3>';
 		echo '</div>';
 	}
-	$lay = ascend_get_postlayout($type);
-	global $ascend_grid_columns, $ascend_blog_loop, $ascend_grid_carousel;
-	$ascend_blog_loop['loop'] = 1;
-	$ascend_grid_columns = $blogcolumns;
-	$ascend_grid_carousel = false;
-	$itemsize = ascend_get_post_grid_item_size($blogcolumns, false);
+	$lay = juanjimeneztj_get_postlayout($type);
+	global $juanjimeneztj_grid_columns, $juanjimeneztj_blog_loop, $juanjimeneztj_grid_carousel;
+	$juanjimeneztj_blog_loop['loop'] = 1;
+	$juanjimeneztj_grid_columns = $blogcolumns;
+	$juanjimeneztj_grid_carousel = false;
+	$itemsize = juanjimeneztj_get_post_grid_item_size($blogcolumns, false);
 	 ?>
    	<div class="kt_blog_home <?php echo esc_attr($lay['pclass']); ?>">
 	   	<div class="kt_archivecontent <?php echo esc_attr($lay['tclass']);?>" data-masonry-selector="<?php echo esc_attr($lay['data_selector']);?>" data-masonry-style="<?php echo esc_attr($lay['data_style']);?>"> 
@@ -61,7 +61,7 @@ echo '<div class="home_blog home-margin clearfix home-padding">';
 				'posts_per_page' 		=> $blogcount
 				));
 		if ( $loop ) : 
-			$ascend_blog_loop['count'] = $loop->post_count;
+			$juanjimeneztj_blog_loop['count'] = $loop->post_count;
 
 			while ( $loop->have_posts() ) : $loop->the_post();
 			if($lay['sum'] == 'full'){ 
@@ -71,7 +71,7 @@ echo '<div class="home_blog home-margin clearfix home-padding">';
                     get_template_part('templates/content', 'post-full'); 
                 }
 	        } else if($lay['sum'] == 'grid') { 
-	        	if($lay['highlight'] == 'true' && $ascend_blog_loop['loop'] == 1) {
+	        	if($lay['highlight'] == 'true' && $juanjimeneztj_blog_loop['loop'] == 1) {
                     get_template_part('templates/content', get_post_format());
                 } else { ?>
                    	<div class="<?php echo esc_attr($itemsize);?> b_item kad_blog_item">
@@ -88,9 +88,9 @@ echo '<div class="home_blog home-margin clearfix home-padding">';
 	        } else { 
 	        	get_template_part('templates/content', get_post_format());
 	        }
-	        $ascend_blog_loop['loop'] ++;
+	        $juanjimeneztj_blog_loop['loop'] ++;
         endwhile; else: ?>
-			<div class="error-not-found"><?php _e('Sorry, no blog entries found.', 'ascend'); ?></div>
+			<div class="error-not-found"><?php _e('Sorry, no blog entries found.', 'juanjimeneztj'); ?></div>
 		<?php 
 		endif; 
 
@@ -98,14 +98,14 @@ echo '<div class="home_blog home-margin clearfix home-padding">';
 		</div>
 	</div>
 	<?php  	
-	if(isset($ascend['home_post_readmore']) && $ascend['home_post_readmore'] == 1) {
-		if(isset($ascend['home_post_readmore_text'])) {
-			$readmore = $ascend['home_post_readmore_text'];
+	if(isset($juanjimeneztj['home_post_readmore']) && $juanjimeneztj['home_post_readmore'] == 1) {
+		if(isset($juanjimeneztj['home_post_readmore_text'])) {
+			$readmore = $juanjimeneztj['home_post_readmore_text'];
 		} else {
-			$readmore = __('Read More', 'ascend'); 
+			$readmore = __('Read More', 'juanjimeneztj'); 
 		}
-		if(isset($ascend['home_post_readmore_link'])) {
-			$link = $ascend['home_post_readmore_link'];
+		if(isset($juanjimeneztj['home_post_readmore_link'])) {
+			$link = $juanjimeneztj['home_post_readmore_link'];
 		} else {
 			$link = ''; 
 		}

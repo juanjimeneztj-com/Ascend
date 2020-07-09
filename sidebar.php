@@ -4,8 +4,8 @@
 */
 
 ?>
-<aside id="ktsidebar" class="<?php echo esc_attr(ascend_sidebar_class()); ?> kad-sidebar">
+<aside id="ktsidebar" class="<?php echo esc_attr(juanjimeneztj_sidebar_class()); ?> kad-sidebar">
 	<div class="sidebar">
-		<?php dynamic_sidebar( ascend_sidebar_id() ); ?>
+		<?php dynamic_sidebar( juanjimeneztj_sidebar_id() ); ?>
 	</div><!-- /.sidebar -->
 </aside><!-- /aside -->

@@ -1,5 +1,5 @@
 <?php
-	define( 'ASCEND_OPTIONS_PATH', get_template_directory_uri() . '/themeoptions/options/' );
+	define( 'juanjimeneztj_OPTIONS_PATH', get_template_directory_uri() . '/themeoptions/options/' );
 
 
 	/*
@@ -11,10 +11,10 @@
     }
 
     // This is your option name where all the Redux data is stored.
-    $opt_name = "ascend";
+    $opt_name = "juanjimeneztj";
 
     // If Redux is running as a plugin, this will remove the demo notice and links
-    add_action( 'redux/loaded', 'ascend_remove_demo' );
+    add_action( 'redux/loaded', 'juanjimeneztj_remove_demo' );
 
     $theme = wp_get_theme();
     $args = array(
@@ -23,8 +23,8 @@
         'display_version'      => $theme->get( 'Version' ),
         'menu_type'            => 'submenu',
         'allow_sub_menu'       => false,
-        'menu_title'           => __('Theme Options', 'ascend'),
-        'page_title'           => __('Theme Options', 'ascend'),
+        'menu_title'           => __('Theme Options', 'juanjimeneztj'),
+        'page_title'           => __('Theme Options', 'juanjimeneztj'),
         'google_api_key'       => 'AIzaSyALkgUvb8LFAmrsczX56ZGJx-PPPpwMid0',
         'google_update_weekly' => false,
         'async_typography'     => false,
@@ -47,8 +47,8 @@
         'show_options_object'  => false,
         'default_show'         => false,
         'default_mark'         => '',
-        'intro_text'           => 'Upgrade to <a href="https://www.kadencethemes.com/product/ascend-premium-wordpress-theme/?utm_source=themeoptions&utm_medium=banner&utm_campaign=ascend_premium" target="_blank">Ascend Premium</a> for more great features. Over 50 more theme options, premium sliders and carousels, custom post types and much much more!',       
-        'footer_credit' 		=> __('Thank you for using the Ascend Theme by <a href="https://kadencethemes.com/" target="_blank">Kadence Themes</a>.', 'ascend'),
+        'intro_text'           => 'Upgrade to <a href="https://www.kadencethemes.com/product/juanjimeneztj-premium-wordpress-theme/?utm_source=themeoptions&utm_medium=banner&utm_campaign=juanjimeneztj_premium" target="_blank">juanjimeneztj Premium</a> for more great features. Over 50 more theme options, premium sliders and carousels, custom post types and much much more!',       
+        'footer_credit' 		=> __('Thank you for using the juanjimeneztj Theme by <a href="https://kadencethemes.com/" target="_blank">Kadence Themes</a>.', 'juanjimeneztj'),
         'hints'                => array(
             'icon'          => 'kt-icon-question',
             'icon_position' => 'right',
@@ -100,22 +100,22 @@
 
 
 	Redux::setSection( $opt_name, array(
-	    'title' => __('Layout Settings', 'ascend'),
+	    'title' => __('Layout Settings', 'juanjimeneztj'),
 	    'id' => 'layout_settings',
 	    'header' => '',
-	    'desc' => "<div class='redux-info-field'><h3>".__('Layout Settings', 'ascend')."</h3></div>",
+	    'desc' => "<div class='redux-info-field'><h3>".__('Layout Settings', 'juanjimeneztj')."</h3></div>",
 	    'icon' => '',
 	    'fields' => array(
 		        array(
 		            'id'=>'site_layout',
 		            'type' => 'image_select',
 		         
-		            'title' => __('Site Layout Header Style', 'ascend'), 
-		            'subtitle' => __('Select left, above or right header style', 'ascend'),
+		            'title' => __('Site Layout Header Style', 'juanjimeneztj'), 
+		            'subtitle' => __('Select left, above or right header style', 'juanjimeneztj'),
 		            'options' => array(
-		                    'left' => array('alt' => 'Left Layout', 'img' => ASCEND_OPTIONS_PATH.'img/left_layout-min.png'),
-		                    'above' => array('alt' => 'Above Layout', 'img' => ASCEND_OPTIONS_PATH.'img/above_layout-min.png'),
-		                    'right' => array('alt' => 'Right Layout', 'img' => ASCEND_OPTIONS_PATH.'img/right_layout-min.png'),
+		                    'left' => array('alt' => 'Left Layout', 'img' => juanjimeneztj_OPTIONS_PATH.'img/left_layout-min.png'),
+		                    'above' => array('alt' => 'Above Layout', 'img' => juanjimeneztj_OPTIONS_PATH.'img/above_layout-min.png'),
+		                    'right' => array('alt' => 'Right Layout', 'img' => juanjimeneztj_OPTIONS_PATH.'img/right_layout-min.png'),
 		                ),
 		            'default' => 'above',
 		        ),
@@ -123,12 +123,12 @@
 		            'id'=>'site_layout_style',
 		            'type' => 'image_select',
 		         
-		            'title' => __('Site Layout Style', 'ascend'), 
-		            'subtitle' => __('Select Normal or Boxed Layout Style', 'ascend'),
+		            'title' => __('Site Layout Style', 'juanjimeneztj'), 
+		            'subtitle' => __('Select Normal or Boxed Layout Style', 'juanjimeneztj'),
 		            'options' => array(
-		                    'normal' => array('alt' => 'Normal Layout', 'img' => ASCEND_OPTIONS_PATH.'img/wide_layout.png'),
-		                    'boxed' => array('alt' => 'Boxed Layout', 'img' => ASCEND_OPTIONS_PATH.'img/boxed_layout.png'),
-		                    //'bubbled' => array('alt' => 'Bubbled Layout', 'img' => ASCEND_OPTIONS_PATH.'img/3cm.png'),
+		                    'normal' => array('alt' => 'Normal Layout', 'img' => juanjimeneztj_OPTIONS_PATH.'img/wide_layout.png'),
+		                    'boxed' => array('alt' => 'Boxed Layout', 'img' => juanjimeneztj_OPTIONS_PATH.'img/boxed_layout.png'),
+		                    //'bubbled' => array('alt' => 'Bubbled Layout', 'img' => juanjimeneztj_OPTIONS_PATH.'img/3cm.png'),
 		                ),
 		            'default' => 'normal',
 	            ),
@@ -136,14 +136,14 @@
 		            'id'=>'site_max_width',
 		            'type' => 'select',
 		         
-		            'title' => __('Site Layout Max-Width', 'ascend'), 
-		            'description' => __('NOTE: Grids where you choose columns are designed for 1140px width. If you make the width larger the columns may increase beyond what your settings say to fill that much space.', 'ascend'),
+		            'title' => __('Site Layout Max-Width', 'juanjimeneztj'), 
+		            'description' => __('NOTE: Grids where you choose columns are designed for 1140px width. If you make the width larger the columns may increase beyond what your settings say to fill that much space.', 'juanjimeneztj'),
 		            'options' => array(
-		            	'940' 	=>  __('940px', 'ascend'),
-		            	'1140'	=>  __('1140px', 'ascend'),
-		            	'1440' 	=>  __('1440px', 'ascend'),
-		            	'1740' 	=>  __('1740px', 'ascend'),
-	            		'none'	=> __('none', 'ascend')
+		            	'940' 	=>  __('940px', 'juanjimeneztj'),
+		            	'1140'	=>  __('1140px', 'juanjimeneztj'),
+		            	'1440' 	=>  __('1440px', 'juanjimeneztj'),
+		            	'1740' 	=>  __('1740px', 'juanjimeneztj'),
+	            		'none'	=> __('none', 'juanjimeneztj')
 	            		),
 		            'default' => '1140',
 	            ),
@@ -151,28 +151,28 @@
 		            'id'=>'sidebar_side',
 		            'type' => 'select',
 		            'customizer' => true,
-		            'title' => __('Sidebar Side of page.', 'ascend'), 
+		            'title' => __('Sidebar Side of page.', 'juanjimeneztj'), 
 		            'options' => array(
-		            	'right' => __('Right Side', 'ascend'),
-		            	'left' 	=> __('Left Side', 'ascend')
+		            	'right' => __('Right Side', 'juanjimeneztj'),
+		            	'left' 	=> __('Left Side', 'juanjimeneztj')
 		            	),
 		            'default' => 'right',
 		        ),
 	    	),
 	    ) );
 	    Redux::setSection( $opt_name, array(
-		    'title' => __('Header Settings', 'ascend'),
+		    'title' => __('Header Settings', 'juanjimeneztj'),
 		    'id' => 'header_settings',
 		    'header' => '',
 		    //'priority'=> '37',
 		    'customizer_width' => '450px',
-    		'desc' => "<div class='redux-info-field'><h3>".__('Header Settings', 'ascend')."</h3></div>",
+    		'desc' => "<div class='redux-info-field'><h3>".__('Header Settings', 'juanjimeneztj')."</h3></div>",
 		    'icon' => '',
 		    'fields' => array(
 		    array(
 	            'id'=>'beside_header_style',
 	            'type' => 'select',
-	            'title' => __('Choose Side Header Style', 'ascend'), 
+	            'title' => __('Choose Side Header Style', 'juanjimeneztj'), 
 	            'options' => array('standard' => 'Logo + Menu + Extras','extras_above_menu' => 'Logo + Extras + Menu'),
 	            'default' => 'standard',
 	            'width' => 'width:60%',
@@ -181,7 +181,7 @@
 	         array(
 	            'id'=>'beside_header_width',
 	            'type'	=> 'slider', 
-	            'title' => __('Choose Side Header Width', 'ascend'), 
+	            'title' => __('Choose Side Header Width', 'juanjimeneztj'), 
 	            "default"   => "240",
 	            "min"       => "80",
 	            "step"      => "2",
@@ -191,21 +191,21 @@
 	        array(
 	            'id'=>'second_sticky',
 	            'type' => 'switch', 
-	            'title' => __('Make Secondary Menu Sticky?', 'ascend'),
-	            'subtitle'=> __('To make the secondary menu sticky.', 'ascend'),
+	            'title' => __('Make Secondary Menu Sticky?', 'juanjimeneztj'),
+	            'subtitle'=> __('To make the secondary menu sticky.', 'juanjimeneztj'),
 	            "default" => 0,
 	            'required' => array('site_layout','!=','above'),
             ),
 	        array(
 	            'id'=>'above_header_style',
 	            'type' => 'image_select',
-	            'title' => __('Choose Header Style', 'ascend'), 
+	            'title' => __('Choose Header Style', 'juanjimeneztj'), 
 	            'options' => array(
-		                    'standard' => array('alt' => 'Logo / Menu + Extras', 'img' => ASCEND_OPTIONS_PATH.'img/logo_menu.png'),
-		                    'center' => array('alt' => 'Menu / Logo / Menu + Extras', 'img' => ASCEND_OPTIONS_PATH.'img/center.png'),
-		                    'center_menu' => array('alt' => 'Logo / Menu / Extras', 'img' => ASCEND_OPTIONS_PATH.'img/center_menu.png'),
-		                    'bylogo' => array('alt' => 'Logo + Menu / Extras', 'img' => ASCEND_OPTIONS_PATH.'img/bylogo.png'),
-		                    'center_below' => array('alt' => 'Extras / Logo / Extras 2 // Menu', 'img' => ASCEND_OPTIONS_PATH.'img/center_below.png'),
+		                    'standard' => array('alt' => 'Logo / Menu + Extras', 'img' => juanjimeneztj_OPTIONS_PATH.'img/logo_menu.png'),
+		                    'center' => array('alt' => 'Menu / Logo / Menu + Extras', 'img' => juanjimeneztj_OPTIONS_PATH.'img/center.png'),
+		                    'center_menu' => array('alt' => 'Logo / Menu / Extras', 'img' => juanjimeneztj_OPTIONS_PATH.'img/center_menu.png'),
+		                    'bylogo' => array('alt' => 'Logo + Menu / Extras', 'img' => juanjimeneztj_OPTIONS_PATH.'img/bylogo.png'),
+		                    'center_below' => array('alt' => 'Extras / Logo / Extras 2 // Menu', 'img' => juanjimeneztj_OPTIONS_PATH.'img/center_below.png'),
 		                ),
 	            //'options' => array('standard' => 'Logo / Menu + Extras','center' => 'Menu / Logo / Menu + Extras','center_menu' => 'Logo / Menu / Extras', 'bylogo' => 'Logo + Menu / Extras', 'center_below' => 'Extras / Logo / Extras 2 // Menu'),
 	            'default' => 'standard',
@@ -215,7 +215,7 @@
 	        array(
 	            'id'=>'info_header_center',
 	            'type' => 'info',
-	            'desc' => __('*Note this header style is set with two menus.', 'ascend'),
+	            'desc' => __('*Note this header style is set with two menus.', 'juanjimeneztj'),
 	            'required' => array(
 	            	array('above_header_style','=','center'),
 	            	array('site_layout','=','above'),
@@ -224,7 +224,7 @@
 	        array(
 	            'id'=>'info_header_center_below',
 	            'type' => 'info',
-	            'desc' => __('*Note the header extras are split first half on the left and second half on the right.', 'ascend'),
+	            'desc' => __('*Note the header extras are split first half on the left and second half on the right.', 'juanjimeneztj'),
 	            'required' => array(
 	            	array('above_header_style','=','center_below'),
 	            	array('site_layout','=','above'),
@@ -233,7 +233,7 @@
 	        array(
 	            'id'		=>'above_header_logo_width',
 	            'type'		=> 'slider', 
-	            'title' 	=> __('Logo Area % Width', 'ascend'),
+	            'title' 	=> __('Logo Area % Width', 'juanjimeneztj'),
 	            "default"   => "24",
 	            "min"       => "2",
 	            "step"      => "2",
@@ -246,7 +246,7 @@
          	array(
 	            'id'		=>'above_header_height',
 	            'type'		=> 'slider', 
-	            'title' 	=> __('Header Height', 'ascend'),
+	            'title' 	=> __('Header Height', 'juanjimeneztj'),
 	            "default"   => "100",
 	            "min"       => "40",
 	            "step"      => "2",
@@ -256,7 +256,7 @@
             array(
 	            'id'=>'sticky_header_parts',
 	            'type' => 'select',
-	            'title' => __('Enable Sticky Parts of Header?', 'ascend'), 
+	            'title' => __('Enable Sticky Parts of Header?', 'juanjimeneztj'), 
 	            'options' => array('none' => 'No', 'header' => 'Yes - Only Main Header', 'header_top'=> 'Yes - Topbar + Header','header_all' => 'Yes - Topbar + Header + Secondary Menu', 'topbar' => 'Yes - Only Topbar', 'secondary' => 'Yes - Only secondary'),
 	            'default' => 'none',
 	            'width' => 'width:60%',
@@ -265,8 +265,8 @@
             array(
 	            'id'=>'shrinking_header',
 	            'type' => 'switch',
-	            'title' => __('Enable shrinking header when sticky?', 'ascend'),
-	            'subtitle'=> __('Choose to enable shrinking header when sticky.', 'ascend'),
+	            'title' => __('Enable shrinking header when sticky?', 'juanjimeneztj'),
+	            'subtitle'=> __('Choose to enable shrinking header when sticky.', 'juanjimeneztj'),
 	            "default"       => 0,
 	            'required' => array(
 	            	array('site_layout','=','above'),
@@ -276,7 +276,7 @@
             array(
 	            'id'		=>'above_header_shrunk_height',
 	            'type'		=> 'slider', 
-	            'title' 	=> __('Header Shrunk Height', 'ascend'),
+	            'title' 	=> __('Header Shrunk Height', 'juanjimeneztj'),
 	            "default"   => "100",
 	            "min"       => "40",
 	            "step"      => "2",
@@ -290,20 +290,20 @@
             array(
 	            'id'			=>'info_header_extras',
 	            'type' 			=> 'info',
-	            'desc' 			=> __('Header Extras', 'ascend'),
+	            'desc' 			=> __('Header Extras', 'juanjimeneztj'),
 	        ),
 	        array(
 			    'id'       => 'header_extras',
 			    'type'     => 'sortable',
 			    'customizer' 	=> true,
-			    'title'    => __('Enable and Sort Header Extras', 'ascend'),
-			    'subtitle' => __('Check box to enable and sort for output order (Top First).', 'ascend'),
+			    'title'    => __('Enable and Sort Header Extras', 'juanjimeneztj'),
+			    'subtitle' => __('Check box to enable and sort for output order (Top First).', 'juanjimeneztj'),
 			    'mode'     => 'checkbox',
 			    'options'  => array(
-			        'search'    => __('Search', 'ascend'),
-			        'login'     => __('Login/Register & my-account - woocommerce only', 'ascend'),
-			        'cart'     	=> __('Mini Cart - woocommerce only', 'ascend'),
-			        'widget'    => __('Widget area - customize in appearance > widgets', 'ascend'),
+			        'search'    => __('Search', 'juanjimeneztj'),
+			        'login'     => __('Login/Register & my-account - woocommerce only', 'juanjimeneztj'),
+			        'cart'     	=> __('Mini Cart - woocommerce only', 'juanjimeneztj'),
+			        'widget'    => __('Widget area - customize in appearance > widgets', 'juanjimeneztj'),
 			    ),
 			    'default' => array(
 			        'search' => true,
@@ -315,42 +315,42 @@
 	        array(
 	            'id'=>'header_extras_cart',
 	            'type' => 'switch', 
-	            'title' => __('Show "Cart" Text with mini cart icon?', 'ascend'),
-	            'subtitle'=> __('Disabling this will just show the icon.', 'ascend'),
+	            'title' => __('Show "Cart" Text with mini cart icon?', 'juanjimeneztj'),
+	            'subtitle'=> __('Disabling this will just show the icon.', 'juanjimeneztj'),
 	            'default' => 0,
             ),
             array(
 				'id'=>'header_extras_search_woo',
 				'type' => 'switch', 
-				'title' => __('Search only Products?', 'ascend'),
-				'subtitle'=> __('Make the header search only products', 'ascend'),
+				'title' => __('Search only Products?', 'juanjimeneztj'),
+				'subtitle'=> __('Make the header search only products', 'juanjimeneztj'),
 				'default' => 0,
 			),
 	    ),
 
 ) );
 Redux::setSection( $opt_name, array(
-		    'title' => __('Logo Settings', 'ascend'),
+		    'title' => __('Logo Settings', 'juanjimeneztj'),
 		    'id' => 'logo_settings',
 		    'header' => '',
 		    //'priority'=> '37',
-    		'desc' => "<div class='redux-info-field'><h3>".__('Logo Settings', 'ascend')."</h3></div>",
+    		'desc' => "<div class='redux-info-field'><h3>".__('Logo Settings', 'juanjimeneztj')."</h3></div>",
 		    'fields' => array(
         array(
             'id'=>'logo',
             'type' => 'media', 
             'url'=> true,
-            'title' => __('Logo', 'ascend'),
+            'title' => __('Logo', 'juanjimeneztj'),
             'customizer' => false,
-            'validate_callback' => 'ascend_update_callback_custom_logo',
-            'subtitle' => __('Upload your Logo. Use an image at least twice the size of your logo width setting below.', 'ascend'),
+            'validate_callback' => 'juanjimeneztj_update_callback_custom_logo',
+            'subtitle' => __('Upload your Logo. Use an image at least twice the size of your logo width setting below.', 'juanjimeneztj'),
             ),
         array(
             'id'=>'logo_width',
             'type' => 'slider',
             'customizer' => true,
-            'title' => __('Logo width', 'ascend'),
-            'subtitle' => __('While this effect the width the height is determined by your uploaded logo ratio. Logo will not overflow header size.', 'ascend'),
+            'title' => __('Logo width', 'juanjimeneztj'),
+            'subtitle' => __('While this effect the width the height is determined by your uploaded logo ratio. Logo will not overflow header size.', 'juanjimeneztj'),
             "default"       => "300",
             "min"       => "10",
             "step"      => "2",
@@ -359,14 +359,14 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'site_title',
             'type' => 'switch', 
-            'title' => __('Show site title?', 'ascend'),
-            'subtitle'=> __('Choose if you want your site title to appear in "logo" area.', 'ascend'),
+            'title' => __('Show site title?', 'juanjimeneztj'),
+            'subtitle'=> __('Choose if you want your site title to appear in "logo" area.', 'juanjimeneztj'),
             "default" => 1,
             ),
         array(
             'id'=>'font_site_title',
             'type' => 'typography', 
-            'title' => __('Site Title Font', 'ascend'),
+            'title' => __('Site Title Font', 'juanjimeneztj'),
             'font-family'=>true, 
             'google'=>true, 
             'font-backup'=>false,
@@ -379,7 +379,7 @@ Redux::setSection( $opt_name, array(
             'color'=>true,
             'preview'=>true,
             'output' => array('#logo a.brand, #mobile-logo a.brand'),
-            'subtitle'=> __("Choose size and style your site title", 'ascend'),
+            'subtitle'=> __("Choose size and style your site title", 'juanjimeneztj'),
             'default'=> array(
                 'font-family'=>'Source Sans Pro',
                 'color'=>"#444444", 
@@ -393,14 +393,14 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'site_tagline',
             'type' => 'switch', 
-            'title' => __('Show site Tagline?', 'ascend'),
-            'subtitle'=> __('Choose if you want your site Tagline to appear in "logo" area.', 'ascend'),
+            'title' => __('Show site Tagline?', 'juanjimeneztj'),
+            'subtitle'=> __('Choose if you want your site Tagline to appear in "logo" area.', 'juanjimeneztj'),
             "default" => 1,
             ),
         array(
             'id'=>'font_site_tagline',
             'type' => 'typography', 
-            'title' => __('Site Tagline Font', 'ascend'),
+            'title' => __('Site Tagline Font', 'juanjimeneztj'),
             'font-family'=>true, 
             'google'=>true, 
             'font-backup'=>false,
@@ -413,7 +413,7 @@ Redux::setSection( $opt_name, array(
             'color'=>true,
             'preview'=>true,
             'output' => array('#logo .kad-site-tagline'),
-            'subtitle'=> __("Choose size and style your site tagline", 'ascend'),
+            'subtitle'=> __("Choose size and style your site tagline", 'juanjimeneztj'),
             'default'=> array(
                 'font-family'=>'Source Sans Pro',
                 'color'=>"#444444", 
@@ -433,24 +433,24 @@ Redux::setSection( $opt_name, array(
     'icon' => '',
     //'priority'=> '37',
     'icon_class' => 'icon-large',
-    'title' => __('Mobile Header', 'ascend'),
-    'desc' => "<div class='redux-info-field'><h3>".__('Mobile Header Settings', 'ascend')."</h3></div>",
+    'title' => __('Mobile Header', 'juanjimeneztj'),
+    'desc' => "<div class='redux-info-field'><h3>".__('Mobile Header Settings', 'juanjimeneztj')."</h3></div>",
     'fields' => array(
     	array(
             'id'=>'mobile_header_layout',
             'type' => 'image_select',
-            'title' => __('Mobile Header Layout', 'ascend'), 
-            'subtitle' => __('Select left or center mobile header style.', 'ascend'),
+            'title' => __('Mobile Header Layout', 'juanjimeneztj'), 
+            'subtitle' => __('Select left or center mobile header style.', 'juanjimeneztj'),
             'options' => array(
-                    'left' => array('alt' => 'Left Logo with right menu', 'img' => ASCEND_OPTIONS_PATH.'img/mheader_style_left-min.png'),
-                    'center' => array('alt' => 'Center Logo, Right and Left Extras', 'img' => ASCEND_OPTIONS_PATH.'img/mheader_style_center-min.png'),
+                    'left' => array('alt' => 'Left Logo with right menu', 'img' => juanjimeneztj_OPTIONS_PATH.'img/mheader_style_left-min.png'),
+                    'center' => array('alt' => 'Center Logo, Right and Left Extras', 'img' => juanjimeneztj_OPTIONS_PATH.'img/mheader_style_center-min.png'),
                 ),
             'default' => 'left',
         ),
         array(
             'id'=>'mobile_header_height',
             'type' => 'slider',
-            'title' => __('Mobile header height', 'ascend'),
+            'title' => __('Mobile header height', 'juanjimeneztj'),
             "default"       => "60",
             "min"       => "20",
             "step"      => "2",
@@ -459,34 +459,34 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'mobile_header_sticky',
             'type' => 'switch',
-            'title' => __('Make the mobile header sticky', 'ascend'),
-            'subtitle'=> __('This will make the mobile header scroll with the page.', 'ascend'),
+            'title' => __('Make the mobile header sticky', 'juanjimeneztj'),
+            'subtitle'=> __('This will make the mobile header scroll with the page.', 'juanjimeneztj'),
             'default' => 0,
             ),
         array(
             'id'=>'mobile_logo_options',
             'type' => 'info',
-            'desc' => __('Mobile Logo Options', 'ascend'),
+            'desc' => __('Mobile Logo Options', 'juanjimeneztj'),
             ),
         array(
             'id'=>'mobile_logo_switch',
             'type' => 'switch',
-            'title' => __('Use custom mobile logo options?', 'ascend'),
+            'title' => __('Use custom mobile logo options?', 'juanjimeneztj'),
             'default' => 0,
             ),
         array(
             'id'=>'mobile_logo',
             'type' => 'media', 
             'url'=> true,
-            'title' => __('Mobile Logo', 'ascend'),
-            'subtitle' => __('Upload your Logo. This should be twice the pixel size needed.', 'ascend'),
+            'title' => __('Mobile Logo', 'juanjimeneztj'),
+            'subtitle' => __('Upload your Logo. This should be twice the pixel size needed.', 'juanjimeneztj'),
             'required' => array('mobile_logo_switch','=','1'),
             ),
         array(
             'id'=>'mobile_logo_width',
             'type' => 'slider',
-            'title' => __('Mobile Logo width', 'ascend'),
-            'subtitle' => __('While this effects the width the height is determined by your uploaded logo img ratio and logo will not overflow header size.', 'ascend'),
+            'title' => __('Mobile Logo width', 'juanjimeneztj'),
+            'subtitle' => __('While this effects the width the height is determined by your uploaded logo img ratio and logo will not overflow header size.', 'juanjimeneztj'),
             "default"       => "100",
             "min"       => "10",
             "step"      => "2",
@@ -496,15 +496,15 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'mobile_site_title',
             'type' => 'switch', 
-            'title' => __('Show site title in mobile?', 'ascend'),
-            'subtitle'=> __('Choose if you want your site title to appear in "logo" area of the mobile header.', 'ascend'),
+            'title' => __('Show site title in mobile?', 'juanjimeneztj'),
+            'subtitle'=> __('Choose if you want your site title to appear in "logo" area of the mobile header.', 'juanjimeneztj'),
             "default" => 1,
             'required' => array('mobile_logo_switch','=','1'),
             ),
         array(
             'id'=>'mobile_font_site_title',
             'type' => 'typography', 
-            'title' => __('Mobile Site Title Font Size', 'ascend'),
+            'title' => __('Mobile Site Title Font Size', 'juanjimeneztj'),
             'font-family'=>true, 
             'google'=>true,
             'font-backup'=>false,
@@ -517,7 +517,7 @@ Redux::setSection( $opt_name, array(
             'color'=>true,
             'preview'=>true,
             'output' => array('#mobile-logo .kad-mobile-site-title'),
-            'subtitle'=> __("Choose size of your site title on mobile", 'ascend'),
+            'subtitle'=> __("Choose size of your site title on mobile", 'juanjimeneztj'),
             'default'=> array(
             	'font-family'=>'Source Sans Pro',
                 'color'=>"#444444", 
@@ -533,15 +533,15 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'mobile_site_tagline',
             'type' => 'switch', 
-            'title' => __('Show site Tagline?', 'ascend'),
-            'subtitle'=> __('Choose if you want your site Tagline to appear in "logo" area.', 'ascend'),
+            'title' => __('Show site Tagline?', 'juanjimeneztj'),
+            'subtitle'=> __('Choose if you want your site Tagline to appear in "logo" area.', 'juanjimeneztj'),
             "default" => 0,
             'required' => array('mobile_logo_switch','=','1'),
             ),
         array(
             'id'=>'mobile_font_site_tagline',
             'type' => 'typography', 
-            'title' => __('Site Tagline Font', 'ascend'),
+            'title' => __('Site Tagline Font', 'juanjimeneztj'),
             'font-family'=>true, 
             'google'=>true, 
             'font-backup'=>false,
@@ -554,7 +554,7 @@ Redux::setSection( $opt_name, array(
             'color'=>true,
             'preview'=>true,
             'output' => array('.kad-mobile-site-tagline'),
-            'subtitle'=> __("Choose size and style your site tagline", 'ascend'),
+            'subtitle'=> __("Choose size and style your site tagline", 'juanjimeneztj'),
             'default'=> array(
                 'font-family'=>'Source Sans Pro',
                 'color'=>"#444444", 
@@ -570,72 +570,72 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'mobile_menu_options',
             'type' => 'info',
-            'desc' => __('Mobile Menu Options', 'ascend'),
+            'desc' => __('Mobile Menu Options', 'juanjimeneztj'),
             ),
         array(
             'id'=>'mobile_header_menu',
              'type' => 'select',
-            'title' => __('Mobile Menu Display', 'ascend'), 
-            'subtitle' => __('Select which side to display the mobile menu', 'ascend'),
+            'title' => __('Mobile Menu Display', 'juanjimeneztj'), 
+            'subtitle' => __('Select which side to display the mobile menu', 'juanjimeneztj'),
             'options' => array(
-            	'right' => __('Right Side', 'ascend'), 
-            	'left' => __('Left Side', 'ascend'),
-            	'none' => __('None', 'ascend'),
+            	'right' => __('Right Side', 'juanjimeneztj'), 
+            	'left' => __('Left Side', 'juanjimeneztj'),
+            	'none' => __('None', 'juanjimeneztj'),
 				),
             'default' => 'right',
         ),
         array(
             'id'=>'mobile_menu_search',
             'type' => 'switch', 
-            'title' => __('Show Search in mobile menu', 'ascend'),
-            'subtitle'	=> __('Show a search form in the mobile menu', 'ascend'),
+            'title' => __('Show Search in mobile menu', 'juanjimeneztj'),
+            'subtitle'	=> __('Show a search form in the mobile menu', 'juanjimeneztj'),
             'default'	=> 1,
             ),
         array(
             'id'=>'mobile_menu_search_woo',
             'type' => 'switch', 
-            'title' => __('Search only Products?', 'ascend'),
-            'subtitle'=> __('Make the mobile menu search only products', 'ascend'),
+            'title' => __('Search only Products?', 'juanjimeneztj'),
+            'subtitle'=> __('Make the mobile menu search only products', 'juanjimeneztj'),
             'default' => 0,
         ),
     	array(
             'id'=>'mobile_extras_options',
             'type' => 'info',
-            'desc' => __('Mobile Header Extras', 'ascend'),
+            'desc' => __('Mobile Header Extras', 'juanjimeneztj'),
         ),
         array(
             'id'=>'mobile_header_cart',
              'type' => 'select',
-            'title' => __('Mobile Cart Display', 'ascend'), 
-            'subtitle' => __('Select to optional display a cart icon', 'ascend'),
+            'title' => __('Mobile Cart Display', 'juanjimeneztj'), 
+            'subtitle' => __('Select to optional display a cart icon', 'juanjimeneztj'),
             'options' => array(
-            	'right' => __('Right Side', 'ascend'), 
-            	'left' => __('Left Side', 'ascend'),
-            	'none' => __('None', 'ascend'),
+            	'right' => __('Right Side', 'juanjimeneztj'), 
+            	'left' => __('Left Side', 'juanjimeneztj'),
+            	'none' => __('None', 'juanjimeneztj'),
 				),
             'default' => 'none',
         ),
         array(
             'id'=>'mobile_header_account',
              'type' => 'select',
-            'title' => __('Mobile Account Display', 'ascend'), 
-            'subtitle' => __('Select to optionally display an account icon', 'ascend'),
+            'title' => __('Mobile Account Display', 'juanjimeneztj'), 
+            'subtitle' => __('Select to optionally display an account icon', 'juanjimeneztj'),
             'options' => array(
-            	'right' => __('Right Side', 'ascend'), 
-            	'left' => __('Left Side', 'ascend'),
-            	'none' => __('None', 'ascend'),
+            	'right' => __('Right Side', 'juanjimeneztj'), 
+            	'left' => __('Left Side', 'juanjimeneztj'),
+            	'none' => __('None', 'juanjimeneztj'),
 				),
             'default' => 'none',
         ),
         array(
             'id'=>'mobile_header_search',
              'type' => 'select',
-            'title' => __('Mobile Search Display', 'ascend'), 
-            'subtitle' => __('Select to optionally display a search icon', 'ascend'),
+            'title' => __('Mobile Search Display', 'juanjimeneztj'), 
+            'subtitle' => __('Select to optionally display a search icon', 'juanjimeneztj'),
             'options' => array(
-            	'right' => __('Right Side', 'ascend'), 
-            	'left' => __('Left Side', 'ascend'),
-            	'none' => __('None', 'ascend'),
+            	'right' => __('Right Side', 'juanjimeneztj'), 
+            	'left' => __('Left Side', 'juanjimeneztj'),
+            	'none' => __('None', 'juanjimeneztj'),
 				),
             'default' => 'none',
         ),
@@ -646,26 +646,26 @@ Redux::setSection( $opt_name, array(
     'icon' => '',
     //'priority'=> '37',
     'icon_class' => 'icon-large',
-    'title' => __('Topbar Settings', 'ascend'),
+    'title' => __('Topbar Settings', 'juanjimeneztj'),
     'fields' => array(
     	array(
             'id'=>'topbar_enable_info',
             'type' => 'info',
-            'desc' => __('The topbar is only for the header above content layout style.', 'ascend'),
+            'desc' => __('The topbar is only for the header above content layout style.', 'juanjimeneztj'),
             'required' => array('site_layout','!=','above'),
         ),
     	array(
             'id'=>'topbar_enable',
             'type' => 'switch',
-            'title' => __('Enable Topbar', 'ascend'),
-            'subtitle'=> __('This controls whether on not the topbar is displayed.', 'ascend'),
+            'title' => __('Enable Topbar', 'juanjimeneztj'),
+            'subtitle'=> __('This controls whether on not the topbar is displayed.', 'juanjimeneztj'),
             'default' => 0,
             'required' => array('site_layout','=','above'),
             ),
     	array(
             'id'=>'topbar_height',
             'type' => 'slider',
-            'title' => __('Topbar height', 'ascend'),
+            'title' => __('Topbar height', 'juanjimeneztj'),
             "default"       => "36",
             "min"       => "20",
             "step"      => "2",
@@ -675,7 +675,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'topbar_font',
             'type' => 'typography', 
-            'title' => __('Topbar font size', 'ascend'),
+            'title' => __('Topbar font size', 'juanjimeneztj'),
             'font-family'=>false, 
             'google'=>false, 
             'font-backup'=>false,
@@ -688,7 +688,7 @@ Redux::setSection( $opt_name, array(
             'color'=>false,
             'preview'=>false,
             'output' => array('.topbarclass'),
-            'subtitle'=> __("Choose size for topbar text", 'ascend'),
+            'subtitle'=> __("Choose size for topbar text", 'juanjimeneztj'),
             'default'=> array(
                 'font-size'=>'12px', 
                 ),
@@ -697,19 +697,19 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'topbar_menu_info',
             'type' => 'info',
-            'desc' => __('Topbar Layout Options', 'ascend'),
+            'desc' => __('Topbar Layout Options', 'juanjimeneztj'),
             'required' => array('site_layout','=','above'),
         ),
         array(
             'id'=>'topbar_menu_location',
              'type' => 'select',
-            'title' => __('Topbar Menu Location', 'ascend'), 
-            'subtitle' => __('Select which side to display the topbar menu', 'ascend'),
-            'description' => __('Note menu is set up in appearance > menus page', 'ascend'), 
+            'title' => __('Topbar Menu Location', 'juanjimeneztj'), 
+            'subtitle' => __('Select which side to display the topbar menu', 'juanjimeneztj'),
+            'description' => __('Note menu is set up in appearance > menus page', 'juanjimeneztj'), 
             'options' => array(
-            	'right' => __('Right Side', 'ascend'), 
-            	'left' => __('Left Side', 'ascend'),
-            	'none' => __('None', 'ascend'),
+            	'right' => __('Right Side', 'juanjimeneztj'), 
+            	'left' => __('Left Side', 'juanjimeneztj'),
+            	'none' => __('None', 'juanjimeneztj'),
 				),
             'default' => 'right',
             'required' => array('site_layout','=','above'),
@@ -717,12 +717,12 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'topbar_search',
              'type' => 'select',
-            'title' => __('Search Icon Display', 'ascend'), 
-            'subtitle' => __('Select to optionally display a search icon in topbar', 'ascend'),
+            'title' => __('Search Icon Display', 'juanjimeneztj'), 
+            'subtitle' => __('Select to optionally display a search icon in topbar', 'juanjimeneztj'),
             'options' => array(
-            	'right' => __('Right Side', 'ascend'), 
-            	'left' => __('Left Side', 'ascend'),
-            	'none' => __('None', 'ascend'),
+            	'right' => __('Right Side', 'juanjimeneztj'), 
+            	'left' => __('Left Side', 'juanjimeneztj'),
+            	'none' => __('None', 'juanjimeneztj'),
 				),
             'default' => 'none',
             'required' => array('site_layout','=','above'),
@@ -730,12 +730,12 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'topbar_cart',
              'type' => 'select',
-            'title' => __('Cart Icon Display', 'ascend'), 
-            'subtitle' => __('Select to optionally display a cart icon in topbar', 'ascend'),
+            'title' => __('Cart Icon Display', 'juanjimeneztj'), 
+            'subtitle' => __('Select to optionally display a cart icon in topbar', 'juanjimeneztj'),
             'options' => array(
-            	'right' => __('Right Side', 'ascend'), 
-            	'left' => __('Left Side', 'ascend'),
-            	'none' => __('None', 'ascend'),
+            	'right' => __('Right Side', 'juanjimeneztj'), 
+            	'left' => __('Left Side', 'juanjimeneztj'),
+            	'none' => __('None', 'juanjimeneztj'),
 				),
             'default' => 'none',
             'required' => array('site_layout','=','above'),
@@ -743,8 +743,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'topbar_cart_label',
             'type' => 'switch', 
-            'title' => __('Show "Cart" Text with mini cart icon?', 'ascend'),
-            'subtitle'=> __('Disabling this will just show the icon.', 'ascend'),
+            'title' => __('Show "Cart" Text with mini cart icon?', 'juanjimeneztj'),
+            'subtitle'=> __('Disabling this will just show the icon.', 'juanjimeneztj'),
             'default' => 1,
             //'class' => 'kt_sub_field',
             'required' => array('site_layout','=','above'),
@@ -752,12 +752,12 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'topbar_account',
              'type' => 'select',
-            'title' => __('Account/Login Display', 'ascend'), 
-            'subtitle' => __('Select to optionally display an account/login in topbar', 'ascend'),
+            'title' => __('Account/Login Display', 'juanjimeneztj'), 
+            'subtitle' => __('Select to optionally display an account/login in topbar', 'juanjimeneztj'),
             'options' => array(
-            	'right' => __('Right Side', 'ascend'), 
-            	'left' => __('Left Side', 'ascend'),
-            	'none' => __('None', 'ascend'),
+            	'right' => __('Right Side', 'juanjimeneztj'), 
+            	'left' => __('Left Side', 'juanjimeneztj'),
+            	'none' => __('None', 'juanjimeneztj'),
 				),
             'default' => 'none',
             'required' => array('site_layout','=','above'),
@@ -765,12 +765,12 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'topbar_widget_area',
              'type' => 'select',
-            'title' => __('Topbar Widget area', 'ascend'), 
-            'subtitle' => __('Select to optionally display a widget area in topbar', 'ascend'),
+            'title' => __('Topbar Widget area', 'juanjimeneztj'), 
+            'subtitle' => __('Select to optionally display a widget area in topbar', 'juanjimeneztj'),
             'options' => array(
-            	'right' => __('Right Side', 'ascend'), 
-            	'left' => __('Left Side', 'ascend'),
-            	'none' => __('None', 'ascend'),
+            	'right' => __('Right Side', 'juanjimeneztj'), 
+            	'left' => __('Left Side', 'juanjimeneztj'),
+            	'none' => __('None', 'juanjimeneztj'),
 				),
             'default' => 'none',
             'required' => array('site_layout','=','above'),
@@ -779,28 +779,28 @@ Redux::setSection( $opt_name, array(
 ) );
 Redux::setSection( $opt_name, array(
     'id' => 'footer',
-    'title' => __('Footer Settings', 'ascend'),
-    'desc' => "<div class='redux-info-field'><h3>".__('Footer Layout', 'ascend')."</h3></div>",
+    'title' => __('Footer Settings', 'juanjimeneztj'),
+    'desc' => "<div class='redux-info-field'><h3>".__('Footer Layout', 'juanjimeneztj')."</h3></div>",
     'fields' => array(
             array(
             'id'=>'footer_layout',
             'type' => 'image_select',
-            'title' => __('Footer Widget Layout', 'ascend'), 
-            'subtitle' => __('Select how many columns for footer widgets', 'ascend'),
+            'title' => __('Footer Widget Layout', 'juanjimeneztj'), 
+            'subtitle' => __('Select how many columns for footer widgets', 'juanjimeneztj'),
             'options' => array(
-                    'fourc' => array('alt' => 'Four Column Layout', 'img' => ASCEND_OPTIONS_PATH.'img/footer-widgets-4.png'),
-                    'threec' => array('alt' => 'Three Column Layout', 'img' => ASCEND_OPTIONS_PATH.'img/footer-widgets-3.png'),
-                    'twoc' => array('alt' => 'Two Column Layout', 'img' => ASCEND_OPTIONS_PATH.'img/footer-widgets-2.png'),
-                    'four_single' => array('alt' => 'One column with three below Layout', 'img' => ASCEND_OPTIONS_PATH.'img/footer-widgets-4-single.png'),
-                    'three_single' => array('alt' => 'One column with two below Layout', 'img' => ASCEND_OPTIONS_PATH.'img/footer-widgets-3-single.png'),
+                    'fourc' => array('alt' => 'Four Column Layout', 'img' => juanjimeneztj_OPTIONS_PATH.'img/footer-widgets-4.png'),
+                    'threec' => array('alt' => 'Three Column Layout', 'img' => juanjimeneztj_OPTIONS_PATH.'img/footer-widgets-3.png'),
+                    'twoc' => array('alt' => 'Two Column Layout', 'img' => juanjimeneztj_OPTIONS_PATH.'img/footer-widgets-2.png'),
+                    'four_single' => array('alt' => 'One column with three below Layout', 'img' => juanjimeneztj_OPTIONS_PATH.'img/footer-widgets-4-single.png'),
+                    'three_single' => array('alt' => 'One column with two below Layout', 'img' => juanjimeneztj_OPTIONS_PATH.'img/footer-widgets-3-single.png'),
                 ),
             'default' => 'fourc',
             ),
              array(
             	'id'=>'footer_text',
             	'type' => 'textarea',
-            	'title' => __('Footer Copyright Text', 'ascend'), 
-            	'subtitle' => __('Write your own copyright text here. You can use the following shortcodes in your footer text: [copyright] [site-name] [the-year]', 'ascend'),
+            	'title' => __('Footer Copyright Text', 'juanjimeneztj'), 
+            	'subtitle' => __('Write your own copyright text here. You can use the following shortcodes in your footer text: [copyright] [site-name] [the-year]', 'juanjimeneztj'),
             	'default' => '[copyright] [the-year] [site-name] [theme-credit]',
             ),
 
@@ -808,19 +808,19 @@ Redux::setSection( $opt_name, array(
 ) );
 Redux::setSection( $opt_name, array(
     'id' => 'transparent_header_options',
-    'title' => __('Transparent Header Options', 'ascend'),
+    'title' => __('Transparent Header Options', 'juanjimeneztj'),
     'fields' => array(
 		array(
             'id'=>'page_trans_default',
             'type' => 'switch', 
-            'title' => __('Enable Transparent header until scrolled by default?', 'ascend'),
-            'subtitle'=> __('This will make the page header background fill to the top of the page.', 'ascend'),
+            'title' => __('Enable Transparent header until scrolled by default?', 'juanjimeneztj'),
+            'subtitle'=> __('This will make the page header background fill to the top of the page.', 'juanjimeneztj'),
             "default" => 0,
             ),
 		array(
             'id'=>'trans_header_background_transparency',
             'type' => 'select',
-            'title' => __('Select Transparency', 'ascend'), 
+            'title' => __('Select Transparency', 'juanjimeneztj'), 
             'options' => array('1' => '1','0.9' => '0.9', '0.8' => '0.8','0.7' => '0.7', '0.6' => '0.6', '0.5' => '0.5', '0.4' => '0.4', '0.3' => '0.3', '0.2' => '0.2', '0.1' => '0.1', '0' => '0'),
             'default' => '0',
             'width' => 'width:60%',
@@ -828,8 +828,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'trans_header_menu_color',
             'type' => 'color',
-            'title' => __('Menu Text Color (For Transparent Header)', 'ascend'), 
-            'subtitle' => __('Choose the font color of the menu font while background is transparent.', 'ascend'),
+            'title' => __('Menu Text Color (For Transparent Header)', 'juanjimeneztj'), 
+            'subtitle' => __('Choose the font color of the menu font while background is transparent.', 'juanjimeneztj'),
             'transparent'=>false,
             'default' => '',
             'validate' => 'color',
@@ -838,8 +838,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'trans_header_border_color',
             'type' => 'color',
-            'title' => __('Border Color (For Transparent Header)', 'ascend'), 
-            'subtitle' => __('Choose the color of bottom border while background is transparent.', 'ascend'),
+            'title' => __('Border Color (For Transparent Header)', 'juanjimeneztj'), 
+            'subtitle' => __('Choose the color of bottom border while background is transparent.', 'juanjimeneztj'),
             'transparent'=>true,
             'default' => '',
             'output' => array('border-color' => 'body.trans-header div:not(.is-sticky) > #kad-header-menu, body.trans-header div:not(.is-sticky) > #kad-mobile-banner,  body.trans-header:not(.kad-header-position-above) .outside-second'),
@@ -848,8 +848,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'trans_site_title_color',
             'type' => 'color',
-            'title' => __('Site title font Color (For Transparent Header)', 'ascend'), 
-            'subtitle' => __('Choose the font color for the site title while background is transparent.', 'ascend'),
+            'title' => __('Site title font Color (For Transparent Header)', 'juanjimeneztj'), 
+            'subtitle' => __('Choose the font color for the site title while background is transparent.', 'juanjimeneztj'),
             'transparent'=>false,
             'validate' => 'color',
             'default' => '',
@@ -858,8 +858,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'trans_site_tagline_color',
             'type' => 'color',
-            'title' => __('Site tagline font Color (For Transparent Header)', 'ascend'), 
-            'subtitle' => __('Choose the font color for the site tagline while background is transparent.', 'ascend'),
+            'title' => __('Site tagline font Color (For Transparent Header)', 'juanjimeneztj'), 
+            'subtitle' => __('Choose the font color for the site tagline while background is transparent.', 'juanjimeneztj'),
             'transparent'=>false,
             'validate' => 'color',
             'default' => '',
@@ -869,22 +869,22 @@ Redux::setSection( $opt_name, array(
             'id'=>'trans_logo',
             'type' => 'media', 
             'url'=> true,
-            'title' => __('Optional Replacement Logo (For Transparent Header)', 'ascend'),
-            'subtitle' => __('Upload your Logo.', 'ascend'),
+            'title' => __('Optional Replacement Logo (For Transparent Header)', 'juanjimeneztj'),
+            'subtitle' => __('Upload your Logo.', 'juanjimeneztj'),
         ),
         array(
             'id'=>'trans_logo_mobile',
             'type' => 'media', 
             'url'=> true,
-            'title' => __('Optional Replacement Mobile Logo (For Transparent Header)', 'ascend'),
-            'subtitle' => __('Upload your Logo.', 'ascend'),
+            'title' => __('Optional Replacement Mobile Logo (For Transparent Header)', 'juanjimeneztj'),
+            'subtitle' => __('Upload your Logo.', 'juanjimeneztj'),
             'required' => array('mobile_logo_switch','=','1'),
         ),
     ),
 ) );
 Redux::setSection( $opt_name, array(
     'id' => 'page_title',
-    'title' => __('Default Title Options', 'ascend'),
+    'title' => __('Default Title Options', 'juanjimeneztj'),
     'fields' => array(
     array(
         'id'        => 'pageheader_background',
@@ -893,12 +893,12 @@ Redux::setSection( $opt_name, array(
         'default'  => array(
 	        'background-color' => '#444',
 	    ),
-        'title'     => __('Header Title Default Background', 'ascend'),
+        'title'     => __('Header Title Default Background', 'juanjimeneztj'),
         ),
     array(
         'id'=>'pagetitle_color',
         'type' => 'color',
-        'title' => __('Header Title Default Color', 'ascend'), 
+        'title' => __('Header Title Default Color', 'juanjimeneztj'), 
         'transparent'=>false,
         'validate' => 'color',
         'default' => '#ffffff',
@@ -907,7 +907,7 @@ Redux::setSection( $opt_name, array(
     array(
         'id'=>'single_header_title_size',
         'type' => 'slider', 
-        'title' => __('Header Title Font Size', 'ascend'),
+        'title' => __('Header Title Font Size', 'juanjimeneztj'),
         "default"       => "70",
         "min"       => "10",
         "step"      => "1",
@@ -916,7 +916,7 @@ Redux::setSection( $opt_name, array(
     array(
         'id'=>'single_header_title_size_small',
         'type' => 'slider', 
-        'title' => __('Smaller Device Title font size', 'ascend'),
+        'title' => __('Smaller Device Title font size', 'juanjimeneztj'),
         "default"       => "30",
         "min"       => "5",
         "step"      => "1",
@@ -925,13 +925,13 @@ Redux::setSection( $opt_name, array(
     array(
         'id'=>'pagetitle_uppercase',
         'type' => 'switch', 
-        'title' => __('Enable Text transform "uppercase" for page title.', 'ascend'),
+        'title' => __('Enable Text transform "uppercase" for page title.', 'juanjimeneztj'),
         "default" => 1,
         ),
     array(
         'id'=>'pagesubtitle_color',
         'type' => 'color',
-        'title' => __('Header Subtitle Default Color', 'ascend'), 
+        'title' => __('Header Subtitle Default Color', 'juanjimeneztj'), 
         'transparent'=>false,
         'validate' => 'color',
         'default' => '#ffffff',
@@ -940,7 +940,7 @@ Redux::setSection( $opt_name, array(
     array(
         'id'=>'single_header_subtitle_size',
         'type' => 'slider', 
-        'title' => __('Header Subtitle Font Size', 'ascend'),
+        'title' => __('Header Subtitle Font Size', 'juanjimeneztj'),
         "default"       => "40",
         "min"       => "10",
         "step"      => "1",
@@ -949,7 +949,7 @@ Redux::setSection( $opt_name, array(
     array(
         'id'=>'single_header_subtitle_size_small',
         'type' => 'slider', 
-        'title' => __('Smaller Device Subtitle Font Size', 'ascend'),
+        'title' => __('Smaller Device Subtitle Font Size', 'juanjimeneztj'),
         "default"       => "20",
         "min"       => "5",
         "step"      => "1",
@@ -958,22 +958,22 @@ Redux::setSection( $opt_name, array(
     array(
         'id'=>'pagesubtitle_uppercase',
         'type' => 'switch', 
-        'title' => __('Enable Text transform "uppercase" for page subtitle.', 'ascend'),
+        'title' => __('Enable Text transform "uppercase" for page subtitle.', 'juanjimeneztj'),
         "default" => 1,
         ),
     array(
         'id'=>'pagetitle_align',
         'type' => 'select',
         'customizer' => true,
-        'title' => __('Header Title Default Align', 'ascend'), 
-        'options' => array('center' => __('Center', 'ascend'),'left' => __('Left', 'ascend'), 'right' => __('Right', 'ascend')),
+        'title' => __('Header Title Default Align', 'juanjimeneztj'), 
+        'options' => array('center' => __('Center', 'juanjimeneztj'),'left' => __('Left', 'juanjimeneztj'), 'right' => __('Right', 'juanjimeneztj')),
         'default' => 'center',
         'width' => 'width:60%',
         ),
     array(
         'id'=>'page_title_height',
         'type' => 'slider', 
-        'title' => __('Header Title Default Height', 'ascend'),
+        'title' => __('Header Title Default Height', 'juanjimeneztj'),
         "default"       => "360",
         "min"       => "20",
         "step"      => "5",
@@ -982,7 +982,7 @@ Redux::setSection( $opt_name, array(
     array(
         'id'=>'page_title_height_min',
         'type' => 'slider', 
-        'title' => __('Smaller Device Title Height', 'ascend'),
+        'title' => __('Smaller Device Title Height', 'juanjimeneztj'),
         "default"       => "360",
         "min"       => "20",
         "step"      => "5",
@@ -992,22 +992,22 @@ Redux::setSection( $opt_name, array(
 ) );
 Redux::setSection( $opt_name, array(
     'id' => 'home_header_section',
-    'title' => __('Home Page Header', 'ascend'),
-    'desc' => "<div class='redux-info-field'><h3>".__('Home Page Header Content', 'ascend')."</h3></div>",
+    'title' => __('Home Page Header', 'juanjimeneztj'),
+    'desc' => "<div class='redux-info-field'><h3>".__('Home Page Header Content', 'juanjimeneztj')."</h3></div>",
     'fields' => array(
     	array(
             'id'=>'home_header',
             'type' => 'select',
-            'title' => __('Choose home page header settings', 'ascend'), 
-            'options' => array('pagetitle' => __('Page Title', 'ascend'), 'none' => __('None', 'ascend')),
+            'title' => __('Choose home page header settings', 'juanjimeneztj'), 
+            'options' => array('pagetitle' => __('Page Title', 'juanjimeneztj'), 'none' => __('None', 'juanjimeneztj')),
             'default' => 'pagetitle',
             'width' => 'width:60%',
         ),
         array(
             'id'=>'home_transheader',
             'type' => 'select',
-            'title' => __('Transparent Header on Home page?', 'ascend'), 
-            'options' => array('default' => __('Default', 'ascend'), 'true' => __('True', 'ascend'), 'false' => __('False', 'ascend')),
+            'title' => __('Transparent Header on Home page?', 'juanjimeneztj'), 
+            'options' => array('default' => __('Default', 'juanjimeneztj'), 'true' => __('True', 'juanjimeneztj'), 'false' => __('False', 'juanjimeneztj')),
             'default' => 'default',
             'width' => 'width:60%',
             'required' => array('home_header','!=','none'), 
@@ -1015,14 +1015,14 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'home_page_title_typed_text',
             'type' => 'switch', 
-            'title' => __('Enable Typed Text instead of standard', 'ascend'),
+            'title' => __('Enable Typed Text instead of standard', 'juanjimeneztj'),
             'default'  => 0,
             'required' => array('home_header','=','pagetitle'), 
             ),
         array(
             'id'=>'home_page_title_typed',
             'type' => 'multi_text',
-            'title' => __('Home Page Title Typed Text', 'ascend'), 
+            'title' => __('Home Page Title Typed Text', 'juanjimeneztj'), 
             'default' => 'Welcome to [site-name]',
             'required' => array(
             	array('home_header','=','pagetitle'), 
@@ -1032,8 +1032,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'home_page_title_typed_text_delay',
             'type' => 'slider', 
-            'title' => __('Typed Text Delay', 'ascend'),
-            'subtitle' => __('In milliseconds', 'ascend'),
+            'title' => __('Typed Text Delay', 'juanjimeneztj'),
+            'subtitle' => __('In milliseconds', 'juanjimeneztj'),
             'default'  => '500',
             "min"       => "100",
             "step"      => "10",
@@ -1046,7 +1046,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'home_page_title_typed_text_loop',
             'type' => 'switch', 
-            'title' => __('Enable Typed Loop', 'ascend'),
+            'title' => __('Enable Typed Loop', 'juanjimeneztj'),
             'default'  => 1,
             'required' => array(
             	array('home_header','=','pagetitle'), 
@@ -1056,7 +1056,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'home_page_title',
             'type' => 'textarea',
-            'title' => __('Home Page Title', 'ascend'), 
+            'title' => __('Home Page Title', 'juanjimeneztj'), 
             'default' => 'Welcome to [site-name]',
             'required' => array(
             	array('home_header','=','pagetitle'), 
@@ -1066,16 +1066,16 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'home_page_sub_title',
             'type' => 'textarea',
-            'title' => __('Home Page SubTitle', 'ascend'), 
-            'subtitle' => __('optional text below home page title', 'ascend'),
+            'title' => __('Home Page SubTitle', 'juanjimeneztj'), 
+            'subtitle' => __('optional text below home page title', 'juanjimeneztj'),
             'default' => '[site-tagline]',
             'required' => array('home_header','=','pagetitle'), 
             ),
         array(
             'id'=>'home_basic_slider_type',
             'type' => 'select',
-            'title' => __('Basic Slider Type', 'ascend'), 
-            'options' => array('equal-ratio' => __('Equal Ratio Images', 'ascend'), 'different-ratio' => __('Different Ratio Images', 'ascend'), 'fullwidth' => __('Forced Fullwidth Images', 'ascend'), 'thumb' => __('Thumbnails', 'ascend'), 'carousel' => __('Images in Carousel', 'ascend'), 'latest-posts' => __('Latest posts', 'ascend')),
+            'title' => __('Basic Slider Type', 'juanjimeneztj'), 
+            'options' => array('equal-ratio' => __('Equal Ratio Images', 'juanjimeneztj'), 'different-ratio' => __('Different Ratio Images', 'juanjimeneztj'), 'fullwidth' => __('Forced Fullwidth Images', 'juanjimeneztj'), 'thumb' => __('Thumbnails', 'juanjimeneztj'), 'carousel' => __('Images in Carousel', 'juanjimeneztj'), 'latest-posts' => __('Latest posts', 'juanjimeneztj')),
             'default' => 'latest-posts',
             'width' => 'width:60%',
             'required' => array('home_header','=','basic'),
@@ -1085,8 +1085,8 @@ Redux::setSection( $opt_name, array(
             'type' => 'select',
             'data' => 'terms',
             'args' => array('taxonomies'=>'category', 'args'=>array()),
-            'title' => __('Blog Post Carousel Category Type', 'ascend'), 
-            'subtitle' => __('Leave blank to select all types', 'ascend'),
+            'title' => __('Blog Post Carousel Category Type', 'juanjimeneztj'), 
+            'subtitle' => __('Leave blank to select all types', 'juanjimeneztj'),
             'width' => 'width:60%',
             'required' => array(
             	array('home_header','=','basic_post_carousel'), 
@@ -1096,8 +1096,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'home_carousel_height',
             'type' => 'slider', 
-            'title' => __('Carousel Max Height', 'ascend'),
-            'subtitle' => __('Note: does not work if images are smaller than max.', 'ascend'),
+            'title' => __('Carousel Max Height', 'juanjimeneztj'),
+            'subtitle' => __('Note: does not work if images are smaller than max.', 'juanjimeneztj'),
             "default"       => "400",
             "min"       => "100",
             "step"      => "5",
@@ -1106,9 +1106,9 @@ Redux::setSection( $opt_name, array(
             ), 
         array(
             'id'=>'home_basic_slider',
-            'type' => 'ascend_slides',
-            'title' => __('Basic Slider Images', 'ascend'),
-            'subtitle'=> __('Use large images for best results.', 'ascend'),
+            'type' => 'juanjimeneztj_slides',
+            'title' => __('Basic Slider Images', 'juanjimeneztj'),
+            'subtitle'=> __('Use large images for best results.', 'juanjimeneztj'),
              'required' => array(
             	array('home_header','=','basic'),
             	array('home_basic_slider_type','!=','latest-posts'),
@@ -1117,8 +1117,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'slider_size',
             'type' => 'slider', 
-            'title' => __('Slider Max Height', 'ascend'),
-            'subtitle' => __('Note: does not work if images are smaller than max.', 'ascend'),
+            'title' => __('Slider Max Height', 'juanjimeneztj'),
+            'subtitle' => __('Note: does not work if images are smaller than max.', 'juanjimeneztj'),
             "default"       => "400",
             "min"       => "100",
             "step"      => "5",
@@ -1129,8 +1129,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'slider_size_width',
             'type' => 'slider', 
-            'title' => __('Slider Max Width', 'ascend'),
-            'subtitle' => __('Note: does not work if images are smaller than max.', 'ascend'),
+            'title' => __('Slider Max Width', 'juanjimeneztj'),
+            'subtitle' => __('Note: does not work if images are smaller than max.', 'juanjimeneztj'),
             "default"       => "1140",
             "min"       => "600",
             "step"      => "5",
@@ -1145,17 +1145,17 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'slider_captions',
             'type' => 'switch', 
-            'title' => __('Show Captions?', 'ascend'),
-            'subtitle'=> __('Choose to show or hide captions', 'ascend'),
+            'title' => __('Show Captions?', 'juanjimeneztj'),
+            'subtitle'=> __('Choose to show or hide captions', 'juanjimeneztj'),
             "default"       => 1,
             'required' => array('home_header','=','basic'),
             ),
         array(
             'id'=>'home_page_title_color',
             'type' => 'color',
-            'title' => __('Title Color', 'ascend'), 
+            'title' => __('Title Color', 'juanjimeneztj'), 
             'output'    => array('color' => '.home .titleclass .entry-title'),
-            'subtitle' => __('Choose the title color', 'ascend'),
+            'subtitle' => __('Choose the title color', 'juanjimeneztj'),
             'transparent'=>false,
             'required' => array(
             	array('home_header','!=','basic_post_carousel'),
@@ -1165,9 +1165,9 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'home_page_title_max_size',
             'type' => 'text',
-            'title' => __('Home Page Title Font size', 'ascend'), 
+            'title' => __('Home Page Title Font size', 'juanjimeneztj'), 
             'validate' => 'numeric',
-            'subtitle' => __('*Number Only', 'ascend'),
+            'subtitle' => __('*Number Only', 'juanjimeneztj'),
             'required' => array(
             	array('home_header','!=','basic_post_carousel'),
             	array('home_header','!=','none'),
@@ -1176,8 +1176,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'home_page_title_min_size',
             'type' => 'text',
-            'title' => __('Smaller Device - Title Font Size', 'ascend'), 
-            'subtitle' => __('*Number Only', 'ascend'),
+            'title' => __('Smaller Device - Title Font Size', 'juanjimeneztj'), 
+            'subtitle' => __('*Number Only', 'juanjimeneztj'),
             'validate' => 'numeric',
             'required' => array(
             	array('home_header','!=','basic_post_carousel'),
@@ -1187,9 +1187,9 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'home_page_sutitle_color',
             'type' => 'color',
-            'title' => __('Subtitle Color', 'ascend'), 
+            'title' => __('Subtitle Color', 'juanjimeneztj'), 
             'output'    => array('color' => '.home .titleclass .subtitle'),
-            'subtitle' => __('Choose the subtitle color.', 'ascend'),
+            'subtitle' => __('Choose the subtitle color.', 'juanjimeneztj'),
             'transparent'=>false,
             'required' => array(
             	array('home_header','!=','basic_post_carousel'),
@@ -1199,9 +1199,9 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'home_page_subtitle_max_size',
             'type' => 'text',
-            'title' => __('Home Page Subtitle Font size', 'ascend'), 
+            'title' => __('Home Page Subtitle Font size', 'juanjimeneztj'), 
             'validate' => 'numeric',
-            'subtitle' => __('*Number Only', 'ascend'),
+            'subtitle' => __('*Number Only', 'juanjimeneztj'),
             'required' => array(
             	array('home_header','!=','basic_post_carousel'),
             	array('home_header','!=','none'),
@@ -1210,8 +1210,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'home_page_subtitle_min_size',
             'type' => 'text',
-            'title' => __('Smaller Device - Subtitle Font Size', 'ascend'), 
-            'subtitle' => __('*Number Only', 'ascend'),
+            'title' => __('Smaller Device - Subtitle Font Size', 'juanjimeneztj'), 
+            'subtitle' => __('*Number Only', 'juanjimeneztj'),
             'validate' => 'numeric',
             'required' => array(
             	array('home_header','!=','basic_post_carousel'),
@@ -1221,8 +1221,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'home_page_title_align',
             'type' => 'select',
-            'title' => __('Text align', 'ascend'), 
-            'options' => array('center' => __('Center', 'ascend'), 'left' => __('Left', 'ascend'), 'right' => __('Right', 'ascend')),
+            'title' => __('Text align', 'juanjimeneztj'), 
+            'options' => array('center' => __('Center', 'juanjimeneztj'), 'left' => __('Left', 'juanjimeneztj'), 'right' => __('Right', 'juanjimeneztj')),
             'default' => 'center',
             'width' => 'width:60%',
             'required' => array(
@@ -1233,7 +1233,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'home_page_title_height',
             'type' => 'slider', 
-            'title' => __('Home Page Title Height', 'ascend'),
+            'title' => __('Home Page Title Height', 'juanjimeneztj'),
             "default"       => "360",
             "min"       => "20",
             "step"      => "5",
@@ -1243,7 +1243,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'home_page_title_height_min',
             'type' => 'slider', 
-            'title' => __('Smaller Device Title Height', 'ascend'),
+            'title' => __('Smaller Device Title Height', 'juanjimeneztj'),
             "default"       => "360",
             "min"       => "20",
             "step"      => "5",
@@ -1258,23 +1258,23 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'home_page_title_parallax',
             'type' => 'switch', 
-            'title' => __('Enable background parallax', 'ascend'),
+            'title' => __('Enable background parallax', 'juanjimeneztj'),
             'default'  => 0,
             'required' => array('home_header','=','pagetitle'), 
             ),
         array(
             'id'=>'slider_autoplay',
             'type' => 'switch', 
-            'title' => __('Auto Play?', 'ascend'),
-            'subtitle'=> __('This determines if a slider automatically scrolls', 'ascend'),
+            'title' => __('Auto Play?', 'juanjimeneztj'),
+            'subtitle'=> __('This determines if a slider automatically scrolls', 'juanjimeneztj'),
             "default"       => 1,
             'required' => array('home_header','contains','basic'),
             ),
         array(
             'id'=>'slider_pausetime',
             'type' => 'slider', 
-            'title' => __('Slider Pause Time', 'ascend'),
-            'subtitle' => __('How long to pause on each slide, in milliseconds.', 'ascend'),
+            'title' => __('Slider Pause Time', 'juanjimeneztj'),
+            'subtitle' => __('How long to pause on each slide, in milliseconds.', 'juanjimeneztj'),
             "default"       => "7000",
             "min"       => "3000",
             "step"      => "1000",
@@ -1284,9 +1284,9 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'trans_type',
             'type' => 'select',
-            'title' => __('Transition Type', 'ascend'), 
-            'subtitle' => __("Choose a transition type", 'ascend'),
-            'options' => array('true' => __('Fade', 'ascend'),'false' => __('Slide', 'ascend')),
+            'title' => __('Transition Type', 'juanjimeneztj'), 
+            'subtitle' => __("Choose a transition type", 'juanjimeneztj'),
+            'options' => array('true' => __('Fade', 'juanjimeneztj'),'false' => __('Slide', 'juanjimeneztj')),
             'default' => 'true',
             'required' => array(
             	array('home_header','=','basic'),
@@ -1296,8 +1296,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'slider_transtime',
             'type' => 'slider', 
-            'title' => __('Slider Transition Time', 'ascend'),
-            'subtitle' => __('How long for slide transitions, in milliseconds.', 'ascend'),
+            'title' => __('Slider Transition Time', 'juanjimeneztj'),
+            'subtitle' => __('How long for slide transitions, in milliseconds.', 'juanjimeneztj'),
             "default"       => "600",
             "min"       => "200",
             "step"      => "100",
@@ -1310,29 +1310,29 @@ Redux::setSection( $opt_name, array(
 Redux::setSection( $opt_name, array(
     'id' => 'home_mobile_slider', 
     'customizer' => false,
-    'title' => __('Mobile Home Header', 'ascend'),
-    'desc' => "<div class='redux-info-field'><h3>".__('Create a simpler home page header for your mobile visitors.', 'ascend')."</h3></div>",
+    'title' => __('Mobile Home Header', 'juanjimeneztj'),
+    'desc' => "<div class='redux-info-field'><h3>".__('Create a simpler home page header for your mobile visitors.', 'juanjimeneztj')."</h3></div>",
     'fields' => array(
       array(
             'id'=>'mobile_switch',
             'type' => 'switch', 
-            'title' => __('Would you like to use this feature?', 'ascend'),
-            'subtitle'=> __('Choose if you would like to show a different home page header content for your mobile visitors.', 'ascend'),
+            'title' => __('Would you like to use this feature?', 'juanjimeneztj'),
+            'subtitle'=> __('Choose if you would like to show a different home page header content for your mobile visitors.', 'juanjimeneztj'),
             "default"       => 0,
             ),
       array(
             'id'=>'mobile_tablet_show',
             'type' => 'switch', 
-            'title' => __('Show for tablet also?', 'ascend'),
-            'subtitle'=> __('Choose if you would like to show the mobile home page header for tablets also.', 'ascend'),
+            'title' => __('Show for tablet also?', 'juanjimeneztj'),
+            'subtitle'=> __('Choose if you would like to show the mobile home page header for tablets also.', 'juanjimeneztj'),
             "default"       => 0,
             'required' => array('mobile_switch','=','1'),
             ),
         array(
             'id'=>'home_mobile_header',
             'type' => 'select',
-            'title' => __('Choose home page header settings', 'ascend'), 
-            'options' => array('pagetitle' => __('Page Title', 'ascend'), 'basic' => __('Basic Slider', 'ascend'), 'none' => __('None', 'ascend')),
+            'title' => __('Choose home page header settings', 'juanjimeneztj'), 
+            'options' => array('pagetitle' => __('Page Title', 'juanjimeneztj'), 'basic' => __('Basic Slider', 'juanjimeneztj'), 'none' => __('None', 'juanjimeneztj')),
             'default' => 'pagetitle',
             'width' => 'width:60%',
             'required' => array('mobile_switch','=','1'),
@@ -1340,14 +1340,14 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'home_mobile_page_title_typed_text',
             'type' => 'switch', 
-            'title' => __('Enable Typed Text instead of standard', 'ascend'),
+            'title' => __('Enable Typed Text instead of standard', 'juanjimeneztj'),
             'default'  => 0,
             'required' => array('home_mobile_header','=','pagetitle'), 
             ),
         array(
             'id'=>'home_mobile_page_title_typed',
             'type' => 'multi_text',
-            'title' => __('Home Page Title Typed Text', 'ascend'), 
+            'title' => __('Home Page Title Typed Text', 'juanjimeneztj'), 
             'default' => 'Welcome to [site-name]',
             'required' => array(
             	array('mobile_switch','=','1'),
@@ -1358,8 +1358,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'home_mobile_page_title_typed_text_delay',
             'type' => 'slider', 
-            'title' => __('Typed Text Delay', 'ascend'),
-            'subtitle' => __('In milliseconds', 'ascend'),
+            'title' => __('Typed Text Delay', 'juanjimeneztj'),
+            'subtitle' => __('In milliseconds', 'juanjimeneztj'),
             'default'  => '500',
             "min"       => "100",
             "step"      => "10",
@@ -1373,7 +1373,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'home_mobile_page_title_typed_text_loop',
             'type' => 'switch', 
-            'title' => __('Enable Typed Loop', 'ascend'),
+            'title' => __('Enable Typed Loop', 'juanjimeneztj'),
             'default'  => 1,
             'required' => array(
             	array('mobile_switch','=','1'),
@@ -1384,7 +1384,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'home_mobile_page_title',
             'type' => 'textarea',
-            'title' => __('Home Page Title', 'ascend'), 
+            'title' => __('Home Page Title', 'juanjimeneztj'), 
             'default' => 'Welcome to [site-name]',
             'required' => array(
             	array('mobile_switch','=','1'),
@@ -1395,8 +1395,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'home_mobile_page_sub_title',
             'type' => 'textarea',
-            'title' => __('Home Page SubTitle', 'ascend'), 
-            'subtitle' => __('optional text below home page title', 'ascend'),
+            'title' => __('Home Page SubTitle', 'juanjimeneztj'), 
+            'subtitle' => __('optional text below home page title', 'juanjimeneztj'),
             'default' => '[site-tagline]',
             'required' => array(
             	array('mobile_switch','=','1'),
@@ -1406,8 +1406,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'home_mobile_basic_slider_type',
             'type' => 'select',
-            'title' => __('Basic Slider Type', 'ascend'), 
-            'options' => array('equal-ratio' => __('Equal Ratio Images', 'ascend'), 'different-ratio' => __('Different Ratio Images', 'ascend'), 'fullwidth' => __('Forced Fullwidth Images', 'ascend'), 'thumb' => __('Thumbnails', 'ascend'), 'carousel' => __('Images in Carousel', 'ascend')),
+            'title' => __('Basic Slider Type', 'juanjimeneztj'), 
+            'options' => array('equal-ratio' => __('Equal Ratio Images', 'juanjimeneztj'), 'different-ratio' => __('Different Ratio Images', 'juanjimeneztj'), 'fullwidth' => __('Forced Fullwidth Images', 'juanjimeneztj'), 'thumb' => __('Thumbnails', 'juanjimeneztj'), 'carousel' => __('Images in Carousel', 'juanjimeneztj')),
             'default' => 'equal-ratio',
             'width' => 'width:60%',
             'required' => array(
@@ -1417,9 +1417,9 @@ Redux::setSection( $opt_name, array(
         ), 
         array(
             'id'=>'home_mobile_basic_slider',
-            'type' => 'ascend_slides',
-            'title' => __('Basic Slider Images', 'ascend'),
-            'subtitle'=> __('Use large images for best results.', 'ascend'),
+            'type' => 'juanjimeneztj_slides',
+            'title' => __('Basic Slider Images', 'juanjimeneztj'),
+            'subtitle'=> __('Use large images for best results.', 'juanjimeneztj'),
             'required' => array(
             	array('mobile_switch','=','1'),
             	array('home_mobile_header','=','basic'),
@@ -1428,8 +1428,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'mobile_slider_size',
             'type' => 'slider', 
-            'title' => __('Slider Max Height', 'ascend'),
-            'subtitle' => __('Note: does not work if images are smaller than max.', 'ascend'),
+            'title' => __('Slider Max Height', 'juanjimeneztj'),
+            'subtitle' => __('Note: does not work if images are smaller than max.', 'juanjimeneztj'),
             "default"       => "400",
             "min"       => "100",
             "step"      => "5",
@@ -1442,8 +1442,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'mobile_slider_size_width',
             'type' => 'slider', 
-            'title' => __('Slider Max Width', 'ascend'),
-            'subtitle' => __('Note: does not work if images are smaller than max.', 'ascend'),
+            'title' => __('Slider Max Width', 'juanjimeneztj'),
+            'subtitle' => __('Note: does not work if images are smaller than max.', 'juanjimeneztj'),
             "default"       => "1140",
             "min"       => "600",
             "step"      => "5",
@@ -1459,8 +1459,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'mobile_slider_captions',
             'type' => 'switch', 
-            'title' => __('Show Captions?', 'ascend'),
-            'subtitle'=> __('Choose to show or hide captions', 'ascend'),
+            'title' => __('Show Captions?', 'juanjimeneztj'),
+            'subtitle'=> __('Choose to show or hide captions', 'juanjimeneztj'),
             "default"       => 1,
             'required' => array(
             	array('mobile_switch','=','1'),
@@ -1470,8 +1470,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'home_mobile_page_title_color',
             'type' => 'color',
-            'title' => __('Title Color', 'ascend'), 
-            'subtitle' => __('Choose the title color', 'ascend'),
+            'title' => __('Title Color', 'juanjimeneztj'), 
+            'subtitle' => __('Choose the title color', 'juanjimeneztj'),
             'output'    => array('color' => '.home .titleclass.kt_mobile_slider .entry-title'),
             'transparent'=>false,
             'required' => array(
@@ -1485,9 +1485,9 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'home_mobile_page_title_max_size',
             'type' => 'text',
-            'title' => __('Home Page Title Font size', 'ascend'), 
+            'title' => __('Home Page Title Font size', 'juanjimeneztj'), 
             'validate' => 'numeric',
-            'subtitle' => __('*Number Only', 'ascend'),
+            'subtitle' => __('*Number Only', 'juanjimeneztj'),
             'required' => array(
             	array('mobile_switch','=','1'),
             	array('home_mobile_header','!=','shortcode'),
@@ -1499,8 +1499,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'home_mobile_page_title_min_size',
             'type' => 'text',
-            'title' => __('Smaller Device - Title Font Size', 'ascend'), 
-            'subtitle' => __('*Number Only', 'ascend'),
+            'title' => __('Smaller Device - Title Font Size', 'juanjimeneztj'), 
+            'subtitle' => __('*Number Only', 'juanjimeneztj'),
             'validate' => 'numeric',
             'required' => array(
             	array('mobile_switch','=','1'),
@@ -1513,9 +1513,9 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'home_mobile_page_sutitle_color',
             'type' => 'color',
-            'title' => __('Subtitle Color', 'ascend'), 
+            'title' => __('Subtitle Color', 'juanjimeneztj'), 
             'output'    => array('color' => '.home .titleclass.kt_mobile_slider .subtitle'),
-            'subtitle' => __('Choose the subtitle color.', 'ascend'),
+            'subtitle' => __('Choose the subtitle color.', 'juanjimeneztj'),
             'transparent'=>false,
             'required' => array(
             	array('mobile_switch','=','1'),
@@ -1528,9 +1528,9 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'home_mobile_page_subtitle_max_size',
             'type' => 'text',
-            'title' => __('Home Page Subtitle Font size', 'ascend'), 
+            'title' => __('Home Page Subtitle Font size', 'juanjimeneztj'), 
             'validate' => 'numeric',
-            'subtitle' => __('*Number Only', 'ascend'),
+            'subtitle' => __('*Number Only', 'juanjimeneztj'),
             'required' => array(
             	array('mobile_switch','=','1'),
             	array('home_mobile_header','!=','shortcode'),
@@ -1542,8 +1542,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'home_mobile_page_subtitle_min_size',
             'type' => 'text',
-            'title' => __('Smaller Device - Subtitle Font Size', 'ascend'), 
-            'subtitle' => __('*Number Only', 'ascend'),
+            'title' => __('Smaller Device - Subtitle Font Size', 'juanjimeneztj'), 
+            'subtitle' => __('*Number Only', 'juanjimeneztj'),
             'validate' => 'numeric',
             'required' => array(
             	array('mobile_switch','=','1'),
@@ -1556,8 +1556,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'home_mobile_page_title_align',
             'type' => 'select',
-            'title' => __('Text align', 'ascend'), 
-            'options' => array('center' => __('Center', 'ascend'), 'left' => __('Left', 'ascend'), 'right' => __('Right', 'ascend')),
+            'title' => __('Text align', 'juanjimeneztj'), 
+            'options' => array('center' => __('Center', 'juanjimeneztj'), 'left' => __('Left', 'juanjimeneztj'), 'right' => __('Right', 'juanjimeneztj')),
             'default' => 'center',
             'width' => 'width:60%',
             'required' => array(
@@ -1571,7 +1571,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'home_mobile_page_title_height',
             'type' => 'slider', 
-            'title' => __('Home Page Title Height', 'ascend'),
+            'title' => __('Home Page Title Height', 'juanjimeneztj'),
             "default"       => "360",
             "min"       => "20",
             "step"      => "5",
@@ -1584,7 +1584,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'home_mobile_page_title_height_min',
             'type' => 'slider', 
-            'title' => __('Smaller Device Title Height', 'ascend'),
+            'title' => __('Smaller Device Title Height', 'juanjimeneztj'),
             "default"       => "360",
             "min"       => "20",
             "step"      => "5",
@@ -1605,8 +1605,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'mobile_slider_autoplay',
             'type' => 'switch', 
-            'title' => __('Auto Play?', 'ascend'),
-            'subtitle'=> __('This determines if a slider automatically scrolls', 'ascend'),
+            'title' => __('Auto Play?', 'juanjimeneztj'),
+            'subtitle'=> __('This determines if a slider automatically scrolls', 'juanjimeneztj'),
             "default"       => 1,
             'required' => array(
             	array('mobile_switch','=','1'),
@@ -1616,8 +1616,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'mobile_slider_pausetime',
             'type' => 'slider', 
-            'title' => __('Slider Pause Time', 'ascend'),
-            'subtitle' => __('How long to pause on each slide, in milliseconds.', 'ascend'),
+            'title' => __('Slider Pause Time', 'juanjimeneztj'),
+            'subtitle' => __('How long to pause on each slide, in milliseconds.', 'juanjimeneztj'),
             "default"       => "7000",
             "min"       => "3000",
             "step"      => "1000",
@@ -1630,9 +1630,9 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'mobile_trans_type',
             'type' => 'select',
-            'title' => __('Transition Type', 'ascend'), 
-            'subtitle' => __("Choose a transition type", 'ascend'),
-            'options' => array('true' => __('Fade', 'ascend'),'false' => __('Slide', 'ascend')),
+            'title' => __('Transition Type', 'juanjimeneztj'), 
+            'subtitle' => __("Choose a transition type", 'juanjimeneztj'),
+            'options' => array('true' => __('Fade', 'juanjimeneztj'),'false' => __('Slide', 'juanjimeneztj')),
             'default' => 'true',
             'required' => array(
             	array('mobile_switch','=','1'),
@@ -1643,8 +1643,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'mobile_slider_transtime',
             'type' => 'slider', 
-            'title' => __('Slider Transition Time', 'ascend'),
-            'subtitle' => __('How long for slide transitions, in milliseconds.', 'ascend'),
+            'title' => __('Slider Transition Time', 'juanjimeneztj'),
+            'subtitle' => __('How long for slide transitions, in milliseconds.', 'juanjimeneztj'),
             "default"       => "600",
             "min"       => "200",
             "step"      => "100",
@@ -1658,20 +1658,20 @@ Redux::setSection( $opt_name, array(
 ) );
 Redux::setSection( $opt_name, array(
     'id' => 'home_layout',
-    'title' => __('Home Page Layout', 'ascend'),
+    'title' => __('Home Page Layout', 'juanjimeneztj'),
     'customizer' => false,
     'fields' => array(
        	array(
             'id'=>'home_sidebar_layout',
             'type' => 'switch',
-            'title' => __('Display a sidebar on the Home Page?', 'ascend'), 
-            'subtitle' => __('This determines if there is a sidebar on the home page.', 'ascend'),
+            'title' => __('Display a sidebar on the Home Page?', 'juanjimeneztj'), 
+            'subtitle' => __('This determines if there is a sidebar on the home page.', 'juanjimeneztj'),
             'default' => '0',
             ),
        array(
             'id'=>'home_sidebar',
             'type' => 'select',
-            'title' => __('Choose a Sidebar for your Home Page', 'ascend'), 
+            'title' => __('Choose a Sidebar for your Home Page', 'juanjimeneztj'), 
             'data' => 'sidebars',
             'default' => 'sidebar-primary',
             'width' => 'width:60%',
@@ -1681,17 +1681,17 @@ Redux::setSection( $opt_name, array(
 		    'id'       => 'homepage_layout',
 		    'type'     => 'sortable',
 		    'customizer' 	=> true,
-		    'title'    => __('Homepage Layout Manager', 'ascend'),
-		    'subtitle' => __('Check box to enable and sort for output order (Top First).', 'ascend'),
+		    'title'    => __('Homepage Layout Manager', 'juanjimeneztj'),
+		    'subtitle' => __('Check box to enable and sort for output order (Top First).', 'juanjimeneztj'),
 		    'mode'     => 'checkbox',
 		    'options'  => array(
-		    	"block_one"  	=> __("Page Content", 'ascend'),
-		        "block_two"   	=> __("Latest Blog Posts", 'ascend'),
-		        "block_three"	=> __("Product Carousel Tabs", 'ascend'),
-                "block_four"  	=> __("Image Menu", 'ascend'),
-                "block_five"  	=> __("Icon Menu", 'ascend'),
-                "block_six"   	=> __("Portfolio Carousel", 'ascend'),
-                "block_seven" 	=> __("Portfolio Grid", 'ascend'),
+		    	"block_one"  	=> __("Page Content", 'juanjimeneztj'),
+		        "block_two"   	=> __("Latest Blog Posts", 'juanjimeneztj'),
+		        "block_three"	=> __("Product Carousel Tabs", 'juanjimeneztj'),
+                "block_four"  	=> __("Image Menu", 'juanjimeneztj'),
+                "block_five"  	=> __("Icon Menu", 'juanjimeneztj'),
+                "block_six"   	=> __("Portfolio Carousel", 'juanjimeneztj'),
+                "block_seven" 	=> __("Portfolio Grid", 'juanjimeneztj'),
 		    ),
 		    'default' => array(
 		        "block_one" 	=> true,
@@ -1709,28 +1709,28 @@ Redux::setSection( $opt_name, array(
 	    'id' => 'home_layout_latest_posts',
 	    'subsection'       => true,
 	    'customizer' => false,
-	    'title' => __('Module Latest Posts', 'ascend'),
+	    'title' => __('Module Latest Posts', 'juanjimeneztj'),
 	    'fields' => array(
         array(
             'id'=>'home_blog_title',
             'type' => 'text',
-            'title' => __('Home Blog Title', 'ascend'),
-            'subtitle' => __('e.g. = Latest posts', 'ascend'),
-            'default' => __('Latest posts', 'ascend'),
+            'title' => __('Home Blog Title', 'juanjimeneztj'),
+            'subtitle' => __('e.g. = Latest posts', 'juanjimeneztj'),
+            'default' => __('Latest posts', 'juanjimeneztj'),
         ),
         array(
             'id'=>'home_blog_style',
             'type' => 'select',
-            'title' => __('Post output style', 'ascend'), 
-            'subtitle' => __("Choose how you want your posts to show", 'ascend'),
-            'options' => array('normal' => __('Standard', 'ascend'), 'below_title' => __('Standard with image below title', 'ascend'), 'full' => __('Full Post', 'ascend'), 'grid' => __('Grid', 'ascend'),'grid_standard' => __('Grid with first post as standard', 'ascend'), 'photo' => __('Photo', 'ascend')),
+            'title' => __('Post output style', 'juanjimeneztj'), 
+            'subtitle' => __("Choose how you want your posts to show", 'juanjimeneztj'),
+            'options' => array('normal' => __('Standard', 'juanjimeneztj'), 'below_title' => __('Standard with image below title', 'juanjimeneztj'), 'full' => __('Full Post', 'juanjimeneztj'), 'grid' => __('Grid', 'juanjimeneztj'),'grid_standard' => __('Grid with first post as standard', 'juanjimeneztj'), 'photo' => __('Photo', 'juanjimeneztj')),
             'default' => 'grid',
             'width' => 'width:60%',
         ),
          array(
             'id'=>'home_post_column',
             'type' => 'slider', 
-            'title' => __('Choose how many post columns on Homepage', 'ascend'),
+            'title' => __('Choose how many post columns on Homepage', 'juanjimeneztj'),
             "default"   => "3",
             "min"       => "2",
             "step"      => "1",
@@ -1744,7 +1744,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'home_post_count',
             'type' => 'slider', 
-            'title' => __('Choose How many posts on homepage', 'ascend'),
+            'title' => __('Choose How many posts on homepage', 'juanjimeneztj'),
             "default"   => "3",
             "min"       => "2",
             "step"      => "1",
@@ -1754,22 +1754,22 @@ Redux::setSection( $opt_name, array(
             'id'=>'home_post_type',
             'type' => 'select',
             'data' => 'categories',
-            'title' => __('Limit posts to a Category', 'ascend'), 
-            'subtitle' => __('Leave blank to select all', 'ascend'),
+            'title' => __('Limit posts to a Category', 'juanjimeneztj'), 
+            'subtitle' => __('Leave blank to select all', 'juanjimeneztj'),
             'width' => 'width:60%',
         ),
         array(
             'id'=>'home_post_readmore',
             'type' => 'switch', 
-            'title' => __('Enable Read More Button after posts to link to blog page', 'ascend'),
+            'title' => __('Enable Read More Button after posts to link to blog page', 'juanjimeneztj'),
             "default"  => '0',
         ),
         array(
             'id'=>'home_post_readmore_text',
             'type' => 'text',
-            'title' => __('Read More Button text', 'ascend'),
-            'subtitle' => __('e.g. = Read More', 'ascend'),
-            'default' => __('Read More', 'ascend'),
+            'title' => __('Read More Button text', 'juanjimeneztj'),
+            'subtitle' => __('e.g. = Read More', 'juanjimeneztj'),
+            'default' => __('Read More', 'juanjimeneztj'),
             'required' => array('home_post_readmore','=','1'),
         ),
         array(
@@ -1777,8 +1777,8 @@ Redux::setSection( $opt_name, array(
             'type' => 'select',
             'data' => 'pages',
             'width' => 'width:60%',
-            'title' => __('Select Read More Page link', 'ascend'), 
-            'subtitle' => __('This sets the read more button link', 'ascend'),
+            'title' => __('Select Read More Page link', 'juanjimeneztj'), 
+            'subtitle' => __('This sets the read more button link', 'juanjimeneztj'),
             'required' => array('home_post_readmore','=','1'),
             ),
     ),
@@ -1787,20 +1787,20 @@ Redux::setSection( $opt_name, array(
 	    'id' => 'home_layout_tabs_products',
 	    'subsection'       => true,
 	    'customizer' => false,
-	    'title' => __('Module Product Carousel Tabs', 'ascend'),
+	    'title' => __('Module Product Carousel Tabs', 'juanjimeneztj'),
 	    'fields' => array(
 	    	array(
 			    'id'       => 'home_product_tabs',
 			    'type'     => 'sortable',
 			    'customizer' 	=> true,
-			    'title'    => __('Enable and Sort Product Tabs', 'ascend'),
-			    'subtitle' => __('Check box to enable and sort for output order (Top First).', 'ascend'),
+			    'title'    => __('Enable and Sort Product Tabs', 'juanjimeneztj'),
+			    'subtitle' => __('Check box to enable and sort for output order (Top First).', 'juanjimeneztj'),
 			    'mode'     => 'checkbox',
 			    'options'  => array(
-			        'featured'  => __('Featured', 'ascend'),
-			        'best'    	=> __('Best Selling', 'ascend'),
-			        'sale'     	=> __('On Sale', 'ascend'),
-			        'latest'    => __('Latest', 'ascend'),
+			        'featured'  => __('Featured', 'juanjimeneztj'),
+			        'best'    	=> __('Best Selling', 'juanjimeneztj'),
+			        'sale'     	=> __('On Sale', 'juanjimeneztj'),
+			        'latest'    => __('Latest', 'juanjimeneztj'),
 			    ),
 			    'default' => array(
 			        'featured' 	=> true,
@@ -1812,31 +1812,31 @@ Redux::setSection( $opt_name, array(
 	        array(
 	            'id'=>'home_featured_title',
 	            'type' => 'text',
-	            'title' => __('Featured Tab Title', 'ascend'),
-	            'subtitle' => __('e.g. = Featured', 'ascend'),
+	            'title' => __('Featured Tab Title', 'juanjimeneztj'),
+	            'subtitle' => __('e.g. = Featured', 'juanjimeneztj'),
 	        ),
 	        array(
 	            'id'=>'home_best_title',
 	            'type' => 'text',
-	            'title' => __('Best Selling Tab Title', 'ascend'),
-	            'subtitle' => __('e.g. = Best Selling', 'ascend'),
+	            'title' => __('Best Selling Tab Title', 'juanjimeneztj'),
+	            'subtitle' => __('e.g. = Best Selling', 'juanjimeneztj'),
 	        ),
 	        array(
 	            'id'=>'home_sale_title',
 	            'type' => 'text',
-	            'title' => __('On Sale Tab Title', 'ascend'),
-	            'subtitle' => __('e.g. = On Sale', 'ascend'),
+	            'title' => __('On Sale Tab Title', 'juanjimeneztj'),
+	            'subtitle' => __('e.g. = On Sale', 'juanjimeneztj'),
 	        ),
 	        array(
 	            'id'=>'home_latest_title',
 	            'type' => 'text',
-	            'title' => __('Latest Tab Title', 'ascend'),
-	            'subtitle' => __('e.g. = Latest', 'ascend'),
+	            'title' => __('Latest Tab Title', 'juanjimeneztj'),
+	            'subtitle' => __('e.g. = Latest', 'juanjimeneztj'),
 	        ),
          	array(
 	            'id'		=>'home_product_tabs_column',
 	            'type' 		=> 'slider', 
-	            'title' 	=> __('Choose how many columns are in each carousel', 'ascend'),
+	            'title' 	=> __('Choose how many columns are in each carousel', 'juanjimeneztj'),
 	            'default'   => "4",
 	            "min"       => "3",
 	            "step"      => "1",
@@ -1845,7 +1845,7 @@ Redux::setSection( $opt_name, array(
          	array(
 	            'id'=>'home_product_count',
 	            'type' => 'slider', 
-	            'title' 		=> __('Choose how many products are in each carousel', 'ascend'),
+	            'title' 		=> __('Choose how many products are in each carousel', 'juanjimeneztj'),
 	            "default"       => "8",
 	            "min"       => "3",
 	            "step"      => "1",
@@ -1854,16 +1854,16 @@ Redux::setSection( $opt_name, array(
          	array(
 	            'id'=>'home_product_scroll',
 	            'type' => 'select',
-	            'title' => __('Carousel Scroll', 'ascend'), 
-	            'subtitle' => __("Choose how the product items scroll.", 'ascend'),
-	            'options' => array('1' => __('One Item', 'ascend'), 'all' => __('All Visible', 'ascend')),
+	            'title' => __('Carousel Scroll', 'juanjimeneztj'), 
+	            'subtitle' => __("Choose how the product items scroll.", 'juanjimeneztj'),
+	            'options' => array('1' => __('One Item', 'juanjimeneztj'), 'all' => __('All Visible', 'juanjimeneztj')),
 	            'default' => '1',
 	            'width' => 'width:60%',
             ),
          	array(
 	            'id'=>'home_product_speed',
 	            'type' => 'slider', 
-	            'title' => __('Choose the carousel speed (in seconds)', 'ascend'),
+	            'title' => __('Choose the carousel speed (in seconds)', 'juanjimeneztj'),
 	            "default"       => "9",
 	            "min"       => "2",
 	            "step"      => "1",
@@ -1872,7 +1872,7 @@ Redux::setSection( $opt_name, array(
             array(
 	            'id'=>'home_product_auto',
 	            'type' => 'switch', 
-	            'title' => __('Auto Scroll Carousel?', 'ascend'),
+	            'title' => __('Auto Scroll Carousel?', 'juanjimeneztj'),
 	            "default"    => '1',
             ),
         )
@@ -1881,23 +1881,23 @@ Redux::setSection( $opt_name, array(
 	    'id' => 'home_layout_image',
 	    'subsection'       => true,
 	    'customizer' => false,
-	    'title' => __('Module Image Menu', 'ascend'),
+	    'title' => __('Module Image Menu', 'juanjimeneztj'),
 	    'fields' => array(
         array(
             'id'=>'info_iconmenu_settings',
             'type' => 'info',
-            'desc' => __('Home Image Menu', 'ascend'),
+            'desc' => __('Home Image Menu', 'juanjimeneztj'),
             ),
         array(
             'id'=>'home_image_menu',
-            'type' => 'ascend_slides',
-            'title' => __('Image Menu', 'ascend'),
-            'subtitle'=> __('Add images, descriptions, titles, and links', 'ascend'),
+            'type' => 'juanjimeneztj_slides',
+            'title' => __('Image Menu', 'juanjimeneztj'),
+            'subtitle'=> __('Add images, descriptions, titles, and links', 'juanjimeneztj'),
         ),
         array(
             'id'=>'home_image_menu_column',
             'type' => 'slider', 
-            'title' => __('Choose how many columns in each row', 'ascend'),
+            'title' => __('Choose how many columns in each row', 'juanjimeneztj'),
             "default"       => "3",
             "min"       => "1",
             "step"      => "1",
@@ -1906,7 +1906,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'img_menu_height',
             'type' => 'slider', 
-            'title' => __('Image Menu Height', 'ascend'),
+            'title' => __('Image Menu Height', 'juanjimeneztj'),
             "default"       => "220",
             "min"       => "80",
             "step"      => "2",
@@ -1915,9 +1915,9 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'img_menu_height_setting',
             'type' => 'select',
-            'title' => __('Height set by', 'ascend'), 
-            'subtitle' => __("Choose how the image menu height will be set.", 'ascend'),
-            'options' => array('normal' => __('Height setting above', 'ascend'), 'image_height' => __('Image Size', 'ascend')),
+            'title' => __('Height set by', 'juanjimeneztj'), 
+            'subtitle' => __("Choose how the image menu height will be set.", 'juanjimeneztj'),
+            'options' => array('normal' => __('Height setting above', 'juanjimeneztj'), 'image_height' => __('Image Size', 'juanjimeneztj')),
             'default' => 'normal',
             'width' => 'width:60%',
             ),
@@ -1927,23 +1927,23 @@ Redux::setSection( $opt_name, array(
 	    'id' => 'home_layout_icon_menu',
 	    'subsection'       => true,
 	    'customizer' => false,
-	    'title' => __('Module Icon Menu', 'ascend'),
+	    'title' => __('Module Icon Menu', 'juanjimeneztj'),
 	    'fields' => array(
            	array(
 	            'id'=>'info_icon_menu_settings',
 	            'type' => 'info',
-	            'desc' => __('Home Icon Menu', 'ascend'),
+	            'desc' => __('Home Icon Menu', 'juanjimeneztj'),
            	),
            	array(
 	            'id'=>'icon_menu',
-	            'type' => 'ascend_icons',
-	            'title' => __('Icon Menu', 'ascend'),
-	            'subtitle'=> __('Choose your icons for the icon menu.', 'ascend'),
+	            'type' => 'juanjimeneztj_icons',
+	            'title' => __('Icon Menu', 'juanjimeneztj'),
+	            'subtitle'=> __('Choose your icons for the icon menu.', 'juanjimeneztj'),
         	), 
             array(
 	            'id'=>'home_icon_menu_column',
 	            'type' => 'slider', 
-	            'title' => __('Choose how many columns in each row', 'ascend'),
+	            'title' => __('Choose how many columns in each row', 'juanjimeneztj'),
 	            "default"       => "3",
 	            "min"       => "2",
 	            "step"      => "1",
@@ -1952,14 +1952,14 @@ Redux::setSection( $opt_name, array(
             array(
 	            'id'=>'home_icon_menu_btn',
 	            'type' => 'text',
-	            'title' => __('Icon menu button text (optional)', 'ascend'),
-	            'subtitle' => __('e.g. = Read More', 'ascend'),
+	            'title' => __('Icon menu button text (optional)', 'juanjimeneztj'),
+	            'subtitle' => __('e.g. = Read More', 'juanjimeneztj'),
             ),
             array(
 	            'id'=>'icon_font_color',
 	            'type' => 'color',
-	            'title' => __('Icon Color', 'ascend'), 
-	            'subtitle' => __('Choose the color for icon.', 'ascend'),
+	            'title' => __('Icon Color', 'juanjimeneztj'), 
+	            'subtitle' => __('Choose the color for icon.', 'juanjimeneztj'),
 	            'default' => '',
 	            'transparent'=>false,
 	            'output' => array('color' => '.kt-home-icon-menu .box-icon-item .icon-container'),
@@ -1968,8 +1968,8 @@ Redux::setSection( $opt_name, array(
            	array(
 	            'id'=>'icon_border_color',
 	            'type' => 'color',
-	            'title' => __('Icon Border Color', 'ascend'), 
-	            'subtitle' => __('Choose the border color for icon.', 'ascend'),
+	            'title' => __('Icon Border Color', 'juanjimeneztj'), 
+	            'subtitle' => __('Choose the border color for icon.', 'juanjimeneztj'),
 	            'default' => '',
 	            'validate' => 'color',
 	            'output' => array('border-color' => '.kt-home-icon-menu .box-icon-item .icon-container'),
@@ -1977,8 +1977,8 @@ Redux::setSection( $opt_name, array(
            	array(
 	            'id'=>'icon_bg_color',
 	            'type' => 'color',
-	            'title' => __('Icon Background Color', 'ascend'), 
-	            'subtitle' => __('Choose the background color for icon.', 'ascend'),
+	            'title' => __('Icon Background Color', 'juanjimeneztj'), 
+	            'subtitle' => __('Choose the background color for icon.', 'juanjimeneztj'),
 	            'default' => '',
 	            'validate' => 'color',
 	            'output' => array('background-color' => '.kt-home-icon-menu .box-icon-item .icon-container'),
@@ -1986,8 +1986,8 @@ Redux::setSection( $opt_name, array(
            array(
 	            'id'=>'icon_menu_font_color',
 	            'type' => 'color',
-	            'title' => __('Icon Menu Title and Description Font Color', 'ascend'), 
-	            'subtitle' => __('Choose the color for icon menu title and description Font', 'ascend'),
+	            'title' => __('Icon Menu Title and Description Font Color', 'juanjimeneztj'), 
+	            'subtitle' => __('Choose the color for icon menu title and description Font', 'juanjimeneztj'),
 	            'default' => '',
 	            'transparent'=>false,
             	'validate' => 'color',
@@ -1996,8 +1996,8 @@ Redux::setSection( $opt_name, array(
            	array(
 	            'id'=>'icon_border_hover_color',
 	            'type' => 'color',
-	            'title' => __('Highlight Border Color', 'ascend'), 
-	            'subtitle' => __('Choose the highlight border color for icon and above the read more.', 'ascend'),
+	            'title' => __('Highlight Border Color', 'juanjimeneztj'), 
+	            'subtitle' => __('Choose the highlight border color for icon and above the read more.', 'juanjimeneztj'),
 	            'default' => '',
 	            'transparent'=>false,
 	            'validate' => 'color',
@@ -2010,35 +2010,35 @@ Redux::setSection( $opt_name, array(
 	    //'priority'=> '38',
 	    'subsection'       => true,
 	    'customizer' => false,
-	    'title' => __('Module Portfolio Carousel', 'ascend'),
+	    'title' => __('Module Portfolio Carousel', 'juanjimeneztj'),
 	    'fields' => array(
          array(
             'id'=>'info_home_portfolio_carousel_settings',
             'type' => 'info',
-            'desc' => __('Home Portfolio Carousel Settings', 'ascend'),
+            'desc' => __('Home Portfolio Carousel Settings', 'juanjimeneztj'),
             ),
          array(
             'id'=>'home_portfolio_carousel_title',
             'type' => 'text',
-            'title' => __('Home Portfolio Carousel title', 'ascend'),
-            'subtitle' => __('e.g. = Latest Projects', 'ascend'),
-            'default' => __('Latest Projects', 'ascend'),
+            'title' => __('Home Portfolio Carousel title', 'juanjimeneztj'),
+            'subtitle' => __('e.g. = Latest Projects', 'juanjimeneztj'),
+            'default' => __('Latest Projects', 'juanjimeneztj'),
             ),
          array(
             'id'=>'home_portfolio_carousel_style',
             'type' => 'select',
-            'title' => __('Portfolio Carousel Item Style', 'ascend'), 
-            'subtitle' => __("Choose how the portfolio items should be ordered in the carousel.", 'ascend'),
-            'options' => array('pgrid' => __('Normal Grid', 'ascend'),'pgrid-no-margin' => __('Grid without margin between items', 'ascend'),'poststyle' => __('Post style', 'ascend')),
+            'title' => __('Portfolio Carousel Item Style', 'juanjimeneztj'), 
+            'subtitle' => __("Choose how the portfolio items should be ordered in the carousel.", 'juanjimeneztj'),
+            'options' => array('pgrid' => __('Normal Grid', 'juanjimeneztj'),'pgrid-no-margin' => __('Grid without margin between items', 'juanjimeneztj'),'poststyle' => __('Post style', 'juanjimeneztj')),
             'default' => 'pgrid',
             'width' => 'width:60%',
             ),
          array(
             'id'=>'home_portfolio_carousel_ratio',
             'type' => 'select',
-            'title' => __('Portfolio Carousel image ratio', 'ascend'), 
-            'subtitle' => __("Choose how the portfolio items images should be cropped.", 'ascend'),
-            'options' => array('square' => __('Square', 'ascend'),'portrait' => __('Portrait', 'ascend'),'landscape' => __('Landscape', 'ascend'),'widelandscape' => __('Wide Landscape', 'ascend')),
+            'title' => __('Portfolio Carousel image ratio', 'juanjimeneztj'), 
+            'subtitle' => __("Choose how the portfolio items images should be cropped.", 'juanjimeneztj'),
+            'options' => array('square' => __('Square', 'juanjimeneztj'),'portrait' => __('Portrait', 'juanjimeneztj'),'landscape' => __('Landscape', 'juanjimeneztj'),'widelandscape' => __('Wide Landscape', 'juanjimeneztj')),
             'default' => 'square',
             'width' => 'width:60%',
             ),
@@ -2047,14 +2047,14 @@ Redux::setSection( $opt_name, array(
             'type' => 'select',
             'data' => 'terms',
             'args' => array('taxonomies'=>'portfolio-type', 'args'=>array()),
-            'title' => __('Portfolio Carousel Category Type', 'ascend'), 
-            'subtitle' => __('Leave blank to select all types', 'ascend'),
+            'title' => __('Portfolio Carousel Category Type', 'juanjimeneztj'), 
+            'subtitle' => __('Leave blank to select all types', 'juanjimeneztj'),
             'width' => 'width:60%',
             ),
          array(
             'id'=>'home_portfolio_carousel_column',
             'type' => 'slider', 
-            'title' => __('Choose how many columns are in carousel', 'ascend'),
+            'title' => __('Choose how many columns are in carousel', 'juanjimeneztj'),
             "default"       => "3",
             "min"       => "2",
             "step"      => "1",
@@ -2063,7 +2063,7 @@ Redux::setSection( $opt_name, array(
          array(
             'id'=>'home_portfolio_carousel_count',
             'type' => 'slider', 
-            'title' => __('Choose how many portfolio items are in carousel', 'ascend'),
+            'title' => __('Choose how many portfolio items are in carousel', 'juanjimeneztj'),
             "default"       => "6",
             "min"       => "4",
             "step"      => "1",
@@ -2072,7 +2072,7 @@ Redux::setSection( $opt_name, array(
          array(
             'id'=>'home_portfolio_carousel_speed',
             'type' => 'slider', 
-            'title' => __('Choose the carousel speed (in seconds)', 'ascend'),
+            'title' => __('Choose the carousel speed (in seconds)', 'juanjimeneztj'),
             "default"       => "9",
             "min"       => "2",
             "step"      => "1",
@@ -2081,37 +2081,37 @@ Redux::setSection( $opt_name, array(
          array(
             'id'=>'home_portfolio_carousel_scroll',
             'type' => 'select',
-            'title' => __('Portfolio Carousel Scroll', 'ascend'), 
-            'subtitle' => __("Choose how the portfolio items scroll.", 'ascend'),
-            'options' => array('oneitem' => __('One Item', 'ascend'), 'all' => __('All Visible', 'ascend')),
+            'title' => __('Portfolio Carousel Scroll', 'juanjimeneztj'), 
+            'subtitle' => __("Choose how the portfolio items scroll.", 'juanjimeneztj'),
+            'options' => array('oneitem' => __('One Item', 'juanjimeneztj'), 'all' => __('All Visible', 'juanjimeneztj')),
             'default' => 'oneitem',
             'width' => 'width:60%',
             ),
          array(
             'id'=>'home_portfolio_carousel_order',
             'type' => 'select',
-            'title' => __('Portfolio Carousel Order by', 'ascend'), 
-            'subtitle' => __("Choose how the portfolio items should be ordered in the carousel.", 'ascend'),
-            'options' => array('menu_order' => __('Menu Order', 'ascend'),'title' => __('Title', 'ascend'),'date' => __('Date', 'ascend'),'rand' => __('Random', 'ascend')),
+            'title' => __('Portfolio Carousel Order by', 'juanjimeneztj'), 
+            'subtitle' => __("Choose how the portfolio items should be ordered in the carousel.", 'juanjimeneztj'),
+            'options' => array('menu_order' => __('Menu Order', 'juanjimeneztj'),'title' => __('Title', 'juanjimeneztj'),'date' => __('Date', 'juanjimeneztj'),'rand' => __('Random', 'juanjimeneztj')),
             'default' => 'menu_order',
             'width' => 'width:60%',
             ),
          array(
             'id'=>'home_portfolio_carousel_show_type',
             'type' => 'switch', 
-            'title' => __('Display Portfolio Types under Title', 'ascend'),
+            'title' => __('Display Portfolio Types under Title', 'juanjimeneztj'),
             "default" => 1,
             ),
          array(
             'id'=>'home_portfolio_carousel_show_excerpt',
             'type' => 'switch', 
-            'title' => __('Display Portfolio Excerpt under Title', 'ascend'),
+            'title' => __('Display Portfolio Excerpt under Title', 'juanjimeneztj'),
             "default" => 0,
             ),
          array(
             'id'=>'home_portfolio_carousel_show_lightbox',
             'type' => 'switch', 
-            'title' => __('Display lightbox icon in portfolio posts', 'ascend'),
+            'title' => __('Display lightbox icon in portfolio posts', 'juanjimeneztj'),
             "default" => 0,
             ),
     ),
@@ -2122,29 +2122,29 @@ Redux::setSection( $opt_name, array(
 	    //'priority'=> '38',
 	    'subsection'       => true,
 	    'customizer' => false,
-	    'title' => __('Module Portfolio Grid', 'ascend'),
+	    'title' => __('Module Portfolio Grid', 'juanjimeneztj'),
 	    'fields' => array(
            array(
             'id'=>'portfolio_full_title',
             'type' => 'text',
-            'title' => __('Home Portfolio Full Title', 'ascend'),
-            'subtitle' => __('e.g. = Our Work', 'ascend'),
+            'title' => __('Home Portfolio Full Title', 'juanjimeneztj'),
+            'subtitle' => __('e.g. = Our Work', 'juanjimeneztj'),
             ),
            array(
             'id'=>'home_portfolio_full_style',
             'type' => 'select',
-            'title' => __('Portfolio Grid Item Style', 'ascend'), 
-            'subtitle' => __("Choose how the portfolio items should be ordered in the grid.", 'ascend'),
-            'options' => array('pgrid' => __('Normal Grid', 'ascend'),'pgrid-no-margin' => __('Grid without margin between items', 'ascend'),'poststyle' => __('Post style', 'ascend')),
+            'title' => __('Portfolio Grid Item Style', 'juanjimeneztj'), 
+            'subtitle' => __("Choose how the portfolio items should be ordered in the grid.", 'juanjimeneztj'),
+            'options' => array('pgrid' => __('Normal Grid', 'juanjimeneztj'),'pgrid-no-margin' => __('Grid without margin between items', 'juanjimeneztj'),'poststyle' => __('Post style', 'juanjimeneztj')),
             'default' => 'pgrid',
             'width' => 'width:60%',
             ),
          array(
             'id'=>'home_portfolio_full_ratio',
             'type' => 'select',
-            'title' => __('Portfolio Grid image ratio', 'ascend'), 
-            'subtitle' => __("Choose how the portfolio items images should be cropped.", 'ascend'),
-            'options' => array('square' => __('Square', 'ascend'),'portrait' => __('Portrait', 'ascend'),'landscape' => __('Landscape', 'ascend'),'widelandscape' => __('Wide Landscape', 'ascend')),
+            'title' => __('Portfolio Grid image ratio', 'juanjimeneztj'), 
+            'subtitle' => __("Choose how the portfolio items images should be cropped.", 'juanjimeneztj'),
+            'options' => array('square' => __('Square', 'juanjimeneztj'),'portrait' => __('Portrait', 'juanjimeneztj'),'landscape' => __('Landscape', 'juanjimeneztj'),'widelandscape' => __('Wide Landscape', 'juanjimeneztj')),
             'default' => 'square',
             'width' => 'width:60%',
             ),
@@ -2153,14 +2153,14 @@ Redux::setSection( $opt_name, array(
             'type' => 'select',
             'data' => 'terms',
             'args' => array('taxonomies'=>'portfolio-type', 'args'=>array()),
-            'title' => __('Portfolio Full Category Type', 'ascend'), 
-            'subtitle' => __('Choose type for the Portfolio Grid or leave blank to show all types', 'ascend'),
+            'title' => __('Portfolio Full Category Type', 'juanjimeneztj'), 
+            'subtitle' => __('Choose type for the Portfolio Grid or leave blank to show all types', 'juanjimeneztj'),
             'width' => 'width:60%',
             ),
            array(
             'id'=>'home_portfolio_full_count',
             'type' => 'slider', 
-            'title' => __('Choose how many Portfolio Items on Homepage', 'ascend'),
+            'title' => __('Choose how many Portfolio Items on Homepage', 'juanjimeneztj'),
             "default"       => "8",
             "min"       => "4",
             "step"      => "1",
@@ -2169,16 +2169,16 @@ Redux::setSection( $opt_name, array(
            array(
             'id'=>'home_portfolio_full_order',
             'type' => 'select',
-            'title' => __('Portfolio full Order by', 'ascend'), 
-            'subtitle' => __("Choose how the portfolio items should be ordered.", 'ascend'),
-            'options' => array('menu_order' => __('Menu Order', 'ascend'),'title' => __('Title', 'ascend'),'date' => __('Date', 'ascend'),'rand' => __('Random', 'ascend')),
+            'title' => __('Portfolio full Order by', 'juanjimeneztj'), 
+            'subtitle' => __("Choose how the portfolio items should be ordered.", 'juanjimeneztj'),
+            'options' => array('menu_order' => __('Menu Order', 'juanjimeneztj'),'title' => __('Title', 'juanjimeneztj'),'date' => __('Date', 'juanjimeneztj'),'rand' => __('Random', 'juanjimeneztj')),
             'default' => 'menu_order',
             'width' => 'width:60%',
             ),
            array(
             'id'=>'home_portfolio_full_columns',
             'type' => 'slider', 
-            'title' => __('Choose how many Portfolio columns', 'ascend'),
+            'title' => __('Choose how many Portfolio columns', 'juanjimeneztj'),
             "default"       => "4",
             "min"       => "2",
             "step"      => "1",
@@ -2187,19 +2187,19 @@ Redux::setSection( $opt_name, array(
            array(
             'id'=>'home_portfolio_full_show_type',
             'type' => 'switch', 
-            'title' => __('Display Portfolio Types under Title', 'ascend'),
+            'title' => __('Display Portfolio Types under Title', 'juanjimeneztj'),
             "default" => 1,
             ),
          array(
             'id'=>'home_portfolio_full_show_excerpt',
             'type' => 'switch', 
-            'title' => __('Display Portfolio Excerpt under Title', 'ascend'),
+            'title' => __('Display Portfolio Excerpt under Title', 'juanjimeneztj'),
             "default" => 0,
             ),
          array(
             'id'=>'home_portfolio_full_show_lightbox',
             'type' => 'switch', 
-            'title' => __('Display lightbox icon in portfolio posts', 'ascend'),
+            'title' => __('Display lightbox icon in portfolio posts', 'juanjimeneztj'),
             "default" => 0,
             ),
         ),
@@ -2208,26 +2208,26 @@ Redux::setSection( $opt_name, array(
 	    'id' => 'home_layout_page_content',
 	    'subsection'       => true,
 	    'customizer' => false,
-	    'title' => __('Module Page Content', 'ascend'),
+	    'title' => __('Module Page Content', 'juanjimeneztj'),
 	    'fields' => array(
            array(
             'id'=>'info_page_content',
             'type' => 'info',
-            'desc' => __('Page Content Options (if home page is latest post page)', 'ascend'),
+            'desc' => __('Page Content Options (if home page is latest post page)', 'juanjimeneztj'),
             ),
            array(
             'id'=>'home_main_post_style',
             'type' => 'select',
-            'title' => __('Latest Post Display', 'ascend'), 
-            'subtitle' => __("If Latest Post page is front page. Choose to the latest posts output style", 'ascend'),
-            'options' => array('normal' => __('Standard', 'ascend'), 'below_title' => __('Standard with image below title', 'ascend'), 'full' => __('Full Post', 'ascend'), 'grid' => __('Grid', 'ascend'),'grid_standard' => __('Grid with first post as standard', 'ascend'), 'photo' => __('Photo', 'ascend')),
+            'title' => __('Latest Post Display', 'juanjimeneztj'), 
+            'subtitle' => __("If Latest Post page is front page. Choose to the latest posts output style", 'juanjimeneztj'),
+            'options' => array('normal' => __('Standard', 'juanjimeneztj'), 'below_title' => __('Standard with image below title', 'juanjimeneztj'), 'full' => __('Full Post', 'juanjimeneztj'), 'grid' => __('Grid', 'juanjimeneztj'),'grid_standard' => __('Grid with first post as standard', 'juanjimeneztj'), 'photo' => __('Photo', 'juanjimeneztj')),
             'default' => 'grid_standard',
             'width' => 'width:60%',
             ),
            array(
             'id'=>'home_main_columns',
             'type' => 'slider',
-            'title' => __('Post Columns', 'ascend'), 
+            'title' => __('Post Columns', 'juanjimeneztj'), 
              "default"   => "3",
             "min"       => "2",
             "step"      => "1",
@@ -2244,21 +2244,21 @@ Redux::setSection( $opt_name, array(
 	Redux::setSection( $opt_name, array(
 	    'id' => 'shop_archive_settings',
 	    'customizer' => false,
-	    'title' => __('Shop Archive Settings', 'ascend'),
+	    'title' => __('Shop Archive Settings', 'juanjimeneztj'),
 	    'fields' => array(
       	array(
             'id'=>'product_shop_layout',
             'type' => 'select',
-            'title' => __('Shop Product Column Layout', 'ascend'), 
-            'subtitle' => __('NOTE: This sets the columns for standard screen size. May be more on larger screens and less on smaller screens.', 'ascend'),
-            'options' => array('1' => __('One Column', 'ascend'), '2' => __('Two Column', 'ascend'), '3' => __('Three Column', 'ascend'), '4' => __('Four Column', 'ascend'), '5' => __('Five Column', 'ascend'), '6' => __('Six Column', 'ascend')),
+            'title' => __('Shop Product Column Layout', 'juanjimeneztj'), 
+            'subtitle' => __('NOTE: This sets the columns for standard screen size. May be more on larger screens and less on smaller screens.', 'juanjimeneztj'),
+            'options' => array('1' => __('One Column', 'juanjimeneztj'), '2' => __('Two Column', 'juanjimeneztj'), '3' => __('Three Column', 'juanjimeneztj'), '4' => __('Four Column', 'juanjimeneztj'), '5' => __('Five Column', 'juanjimeneztj'), '6' => __('Six Column', 'juanjimeneztj')),
             'width' => 'width:60%',
             'default' => '4',
             ),
       	array(
             'id'			=>'products_per_page',
             'type' 			=> 'slider', 
-            'title' 		=> __('How many products per page', 'ascend'),
+            'title' 		=> __('How many products per page', 'juanjimeneztj'),
             "default"       => "12",
             "min"       	=> "2",
             "step"      	=> "1",
@@ -2267,28 +2267,28 @@ Redux::setSection( $opt_name, array(
       	array(
             'id'=>'info_archive_sidebar',
             'type' => 'info',
-            'desc' => __('Shop Archive Sidebar Defaults', 'ascend'),
+            'desc' => __('Shop Archive Sidebar Defaults', 'juanjimeneztj'),
             ),
       	array(
             'id'=>'shop_cat_layout',
             'type' => 'select',
-            'title' => __('Default Layout for product archive pages', 'ascend'), 
-            'subtitle' => __('This determines if there is a sidebar on the product archive pages.', 'ascend'),
-            'options' => array('full' => __('No Sidebar Layout', 'ascend'), 'sidebar' => __('Sidebar Layout', 'ascend')),
+            'title' => __('Default Layout for product archive pages', 'juanjimeneztj'), 
+            'subtitle' => __('This determines if there is a sidebar on the product archive pages.', 'juanjimeneztj'),
+            'options' => array('full' => __('No Sidebar Layout', 'juanjimeneztj'), 'sidebar' => __('Sidebar Layout', 'juanjimeneztj')),
             'default' => 'full',
             ),
       	array(
             'id'=>'shop_cat_sidebar_side',
             'type' => 'select',
-            'title' => __('Sidebar side for product archive pages', 'ascend'), 
-            'subtitle' => __('This determines if the sidebar is on the left of right of page.', 'ascend'),
-            'options' => array('right' => __('Right', 'ascend'), 'left' => __('Left', 'ascend')),
+            'title' => __('Sidebar side for product archive pages', 'juanjimeneztj'), 
+            'subtitle' => __('This determines if the sidebar is on the left of right of page.', 'juanjimeneztj'),
+            'options' => array('right' => __('Right', 'juanjimeneztj'), 'left' => __('Left', 'juanjimeneztj')),
             'default' => 'right',
             ),
       	array(
             'id'=>'shop_cat_sidebar',
             'type' => 'select',
-            'title' => __('Choose a default Sidebar for your product archive pages', 'ascend'), 
+            'title' => __('Choose a default Sidebar for your product archive pages', 'juanjimeneztj'), 
             'data' => 'sidebars',
             'default' => 'sidebar-primary',
             'width' => 'width:60%',
@@ -2296,63 +2296,63 @@ Redux::setSection( $opt_name, array(
       	array(
             'id'=>'info_shop_img_size',
             'type' => 'info',
-            'desc' => __('Product Image Sizes', 'ascend'),
+            'desc' => __('Product Image Sizes', 'juanjimeneztj'),
             ),
          array(
             'id'		=>'shop_img_ratio',
             'type' 		=> 'select',
-            'title' 	=> __('Product Image Aspect Ratio', 'ascend'), 
-            'subtitle' 	=> __('If enabled below this sets how you want your product images to be cropped.', 'ascend'),
-            'options' 	=> array('square' => __('Square 1:1', 'ascend'), 'portrait' => __('Portrait 3:4', 'ascend'), 'landscape' => __('Landscape 4:3', 'ascend'), 'widelandscape' => __('Wide Landscape 4:2', 'ascend'), 'softcrop' => __('Variable based on uploaded image', 'ascend')),
+            'title' 	=> __('Product Image Aspect Ratio', 'juanjimeneztj'), 
+            'subtitle' 	=> __('If enabled below this sets how you want your product images to be cropped.', 'juanjimeneztj'),
+            'options' 	=> array('square' => __('Square 1:1', 'juanjimeneztj'), 'portrait' => __('Portrait 3:4', 'juanjimeneztj'), 'landscape' => __('Landscape 4:3', 'juanjimeneztj'), 'widelandscape' => __('Wide Landscape 4:2', 'juanjimeneztj'), 'softcrop' => __('Variable based on uploaded image', 'juanjimeneztj')),
             'default' 	=> 'square',
             'width' 	=> 'width:60%',
             ),
       	array(
             'id'=>'product_img_resize',
             'type' => 'switch', 
-            'title' => __('Enable Product Image Aspect Ratio on Catalog pages', 'ascend'),
-            'subtitle' => __('If turned off image dimensions are set by woocommerce settings - recommended width: 300px for Catalog Images', 'ascend'),
+            'title' => __('Enable Product Image Aspect Ratio on Catalog pages', 'juanjimeneztj'),
+            'subtitle' => __('If turned off image dimensions are set by woocommerce settings - recommended width: 300px for Catalog Images', 'juanjimeneztj'),
             "default"=> 1,
             ),
       	array(
             'id'=>'product_simg_resize',
             'type' => 'switch', 
-            'title' => __('Enable Product Image Aspect Ratio on product Page', 'ascend'),
-            'subtitle' => __('If turned off image dimensions are set by woocommerce settings - recommended width: 480px for Single Product Image', 'ascend'),
+            'title' => __('Enable Product Image Aspect Ratio on product Page', 'juanjimeneztj'),
+            'subtitle' => __('If turned off image dimensions are set by woocommerce settings - recommended width: 480px for Single Product Image', 'juanjimeneztj'),
             "default"=> 1,
             ),
       	array(
             'id'=>'info_cat_product_size',
             'type' => 'info',
-            'desc' => __('Category Image Size', 'ascend'),
+            'desc' => __('Category Image Size', 'juanjimeneztj'),
             ),
          array(
             'id'=>'product_cat_layout',
             'type' => 'select',
-            'title' => __('Shop Category Column Layout', 'ascend'), 
-            'subtitle' => __('Choose how many Category Image columns to show on the shop and category pages', 'ascend'),
-            'options' => array('2' => __('Two Column', 'ascend'), '3' => __('Three Column', 'ascend'), '4' => __('Four Column', 'ascend'), '5' => __('Five Column', 'ascend'), '6' => __('Six Column', 'ascend')),
+            'title' => __('Shop Category Column Layout', 'juanjimeneztj'), 
+            'subtitle' => __('Choose how many Category Image columns to show on the shop and category pages', 'juanjimeneztj'),
+            'options' => array('2' => __('Two Column', 'juanjimeneztj'), '3' => __('Three Column', 'juanjimeneztj'), '4' => __('Four Column', 'juanjimeneztj'), '5' => __('Five Column', 'juanjimeneztj'), '6' => __('Six Column', 'juanjimeneztj')),
             'width' => 'width:60%',
             'default' => '3',
             ),
         array(
             'id'=>'product_cat_img_ratio',
             'type' => 'select',
-            'title' => __('Category Image Aspect Ratio', 'ascend'), 
-            'subtitle' => __('If enabled below this sets how you want your category images to be cropped.', 'ascend'),
-            'options' => array('square' => __('Square 1:1', 'ascend'), 'portrait' => __('Portrait 3:4', 'ascend'), 'landscape' => __('Landscape 4:3', 'ascend'), 'widelandscape' => __('Wide Landscape 4:2', 'ascend'), 'off' => __('Turn Off', 'ascend')),
+            'title' => __('Category Image Aspect Ratio', 'juanjimeneztj'), 
+            'subtitle' => __('If enabled below this sets how you want your category images to be cropped.', 'juanjimeneztj'),
+            'options' => array('square' => __('Square 1:1', 'juanjimeneztj'), 'portrait' => __('Portrait 3:4', 'juanjimeneztj'), 'landscape' => __('Landscape 4:3', 'juanjimeneztj'), 'widelandscape' => __('Wide Landscape 4:2', 'juanjimeneztj'), 'off' => __('Turn Off', 'juanjimeneztj')),
             'default' => 'square',
             'width' => 'width:60%',
             ),
         array(
             'id'=>'info_shop_product_title',
             'type' => 'info',
-            'desc' => __('Archive Product Title Settings', 'ascend'),
+            'desc' => __('Archive Product Title Settings', 'juanjimeneztj'),
             ),
         array(
             'id'=>'font_shop_title',
             'type' => 'typography', 
-            'title' => __('Shop & archive Product title Font', 'ascend'),
+            'title' => __('Shop & archive Product title Font', 'juanjimeneztj'),
             'font-family'=>true, 
             'google'=>true, 
             'font-backup'=>false, 
@@ -2366,7 +2366,7 @@ Redux::setSection( $opt_name, array(
             'color'=>true,
             'preview'=>true, 
             'output' => array('.product_item .product_archive_title'),
-            'subtitle'=> __("Choose Size and Style for product titles on category and archive pages.", 'ascend'),
+            'subtitle'=> __("Choose Size and Style for product titles on category and archive pages.", 'juanjimeneztj'),
             'default'=> array(
                 'font-family'=>'Source Sans Pro',
                 'color'=>'#444444', 
@@ -2380,8 +2380,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'shop_title_min_height',
             'type' => 'slider', 
-            'title' => __('Product title Min Height', 'ascend'),
-            'subtitle' => __('If your titles are long increase this to help align your products height.', 'ascend'),
+            'title' => __('Product title Min Height', 'juanjimeneztj'),
+            'subtitle' => __('If your titles are long increase this to help align your products height.', 'juanjimeneztj'),
             "default"       => "20",
             "min"       => "20",
             "step"      => "5",
@@ -2390,41 +2390,41 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'info_archive_extras',
             'type' => 'info',
-            'desc' => __('Shop Archive Extras', 'ascend'),
+            'desc' => __('Shop Archive Extras', 'juanjimeneztj'),
             ),
         array(
             'id'=>'product_add_to_cart_show',
             'type' => 'switch', 
-            'title' => __('Show add to cart button only on hover', 'ascend'),
-            'subtitle' => __('If this is turned off your add to cart button will show all the time.', 'ascend'),
+            'title' => __('Show add to cart button only on hover', 'juanjimeneztj'),
+            'subtitle' => __('If this is turned off your add to cart button will show all the time.', 'juanjimeneztj'),
             "default"=> 1,
             ),   
       	array(
             'id'=>'shop_excerpt',
             'type' => 'switch', 
-            'title' => __('Stop Product Excerpt from loading in the shop grid pages.', 'ascend'),
-            'subtitle' => __('Good to turn on if there are conflicts on your shop grid pages.', 'ascend'),
+            'title' => __('Stop Product Excerpt from loading in the shop grid pages.', 'juanjimeneztj'),
+            'subtitle' => __('Good to turn on if there are conflicts on your shop grid pages.', 'juanjimeneztj'),
             "default"=> 0,
             ),
       	array(
             'id'=>'shop_rating',
             'type' => 'switch', 
-            'title' => __('Show Ratings in Shop and Category Pages', 'ascend'),
-            'subtitle' => __('This determines if the rating is displayed in the product archive pages', 'ascend'),
+            'title' => __('Show Ratings in Shop and Category Pages', 'juanjimeneztj'),
+            'subtitle' => __('This determines if the rating is displayed in the product archive pages', 'juanjimeneztj'),
             "default"=> 1,
             ),
       	array(
             'id'=>'outofstocktag',
             'type' => 'switch', 
-            'title' => __('Show Sold tag if product out of stock.', 'ascend'),
-            'subtitle' => __('This determines if a sold tag is displayed on the top right of the product image', 'ascend'),
+            'title' => __('Show Sold tag if product out of stock.', 'juanjimeneztj'),
+            'subtitle' => __('This determines if a sold tag is displayed on the top right of the product image', 'juanjimeneztj'),
             "default"=> 0,
             ),
       	array(
             'id'=>'product_quantity_input',
             'type' => 'switch', 
-            'title' => __('Quantity Box plus and minus', 'ascend'),
-            'subtitle' => __('Turn this off if you would like to use browser added plus and minus for number boxes', 'ascend'),
+            'title' => __('Quantity Box plus and minus', 'juanjimeneztj'),
+            'subtitle' => __('Turn this off if you would like to use browser added plus and minus for number boxes', 'juanjimeneztj'),
             "default"=> 1,
             ),
     	),
@@ -2434,21 +2434,21 @@ Redux::setSection( $opt_name, array(
 Redux::setSection( $opt_name, array(
             'id' => 'product_settings',
             'customizer' => false,
-            'title' => __('Product Settings', 'ascend'),
-            'desc' => "<div class='redux-info-field'><h3>".__('Single Product Settings', 'ascend')."</h3></div>",
+            'title' => __('Product Settings', 'juanjimeneztj'),
+            'desc' => "<div class='redux-info-field'><h3>".__('Single Product Settings', 'juanjimeneztj')."</h3></div>",
             'fields' => array(
         array(
             'id'=>'product_layout',
             'type' => 'select',
-            'title' => __('Single Product Sidebar Layout Default', 'ascend'), 
-            'options' => array('full' => __('No sidebar layout', 'ascend'), 'sidebar' => __('Sidebar Layout', 'ascend')),
+            'title' => __('Single Product Sidebar Layout Default', 'juanjimeneztj'), 
+            'options' => array('full' => __('No sidebar layout', 'juanjimeneztj'), 'sidebar' => __('Sidebar Layout', 'juanjimeneztj')),
             'width' => 'width:60%',
             'default' => 'full',
             ),
         array(
             'id'=>'product_sidebar_default',
             'type' => 'select',
-            'title' => __('Choose a Default Sidebar for your Single Product post', 'ascend'), 
+            'title' => __('Choose a Default Sidebar for your Single Product post', 'juanjimeneztj'), 
             'data' => 'sidebars',
             'default' => 'sidebar-primary',
             'width' => 'width:60%',
@@ -2456,89 +2456,89 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'product_content_layout',
             'type' => 'select',
-            'title' => __('Product Content Layout', 'ascend'), 
-            'options' => array('standard' => __('Standard', 'ascend'), 'large-image' => __('Large Image Center', 'ascend')),
+            'title' => __('Product Content Layout', 'juanjimeneztj'), 
+            'options' => array('standard' => __('Standard', 'juanjimeneztj'), 'large-image' => __('Large Image Center', 'juanjimeneztj')),
             'width' => 'width:60%',
             'default' => 'large-image',
             ),
         array(
             'id'=>'info_product_post_header',
             'type' => 'info',
-            'desc' => __('Single Product Post Header', 'ascend'),
+            'desc' => __('Single Product Post Header', 'juanjimeneztj'),
         ),
         array(
             'id'=>'product_post_title',
             'type' => 'switch', 
-            'title' => __('Show Product Title in Header area by default', 'ascend'),
+            'title' => __('Show Product Title in Header area by default', 'juanjimeneztj'),
             "default" => 0,
         ),
         array(
             'id'=>'product_post_title_content',
             'type' => 'select',
-            'title' => __('Product Default Title Text', 'ascend'), 
-            'options' => array('posttitle' => __('Product Title', 'ascend'), 'category' => __('Category of Product', 'ascend'), 'custom' => __('Custom', 'ascend')),
+            'title' => __('Product Default Title Text', 'juanjimeneztj'), 
+            'options' => array('posttitle' => __('Product Title', 'juanjimeneztj'), 'category' => __('Category of Product', 'juanjimeneztj'), 'custom' => __('Custom', 'juanjimeneztj')),
             'width' => 'width:60%',
             'default' => 'posttitle',
             ),
          array(
             'id'=>'product_header_title_text',
             'type' => 'text',
-            'title' => __('Product Default Title', 'ascend'),
-            'subtitle' => __('Example: Shop', 'ascend'),
+            'title' => __('Product Default Title', 'juanjimeneztj'),
+            'subtitle' => __('Example: Shop', 'juanjimeneztj'),
             'required' => array('product_post_title_content','=','custom'),
             ),
         array(
             'id'=>'product_header_subtitle_text',
             'type' => 'text',
-            'title' => __('Product Default Subtitle', 'ascend'),
+            'title' => __('Product Default Subtitle', 'juanjimeneztj'),
             'required' => array('product_post_title_content','=','custom'),
             ),
          array(
             'id'=>'info_product_nav_options',
             'type' => 'info',
-            'desc' => __('Product Navigation Options', 'ascend'),
+            'desc' => __('Product Navigation Options', 'juanjimeneztj'),
             ),
         array(
             'id'=>'product_single_nav',
             'type' => 'switch', 
-            'title' => __('Enable Arrow navigation for single product post?', 'ascend'),
+            'title' => __('Enable Arrow navigation for single product post?', 'juanjimeneztj'),
             "default" => 0,
             ), 
         array(
             'id'=>'info_product_post_content',
             'type' => 'info',
-            'desc' => __('Single Product Content Settings', 'ascend'),
+            'desc' => __('Single Product Content Settings', 'juanjimeneztj'),
         ),
         array(
             'id'=>'product_cat_above_title',
             'type' => 'switch', 
-            'title' => __('Show the single Category above content title', 'ascend'),
+            'title' => __('Show the single Category above content title', 'juanjimeneztj'),
             "default" => 1,
             ),
         array(
             'id'=>'product_post_title_inpost',
             'type' => 'switch', 
-            'title' => __('Show the Title in post content', 'ascend'),
+            'title' => __('Show the Title in post content', 'juanjimeneztj'),
             'default' => 1,
         ),
         array(
             'id'=>'product_gallery_slider',
             'type' => 'switch', 
-            'title' => __('Enable woocommerce slider for product gallery? (must be woocommerce 3.0+)', 'ascend'),
+            'title' => __('Enable woocommerce slider for product gallery? (must be woocommerce 3.0+)', 'juanjimeneztj'),
             "default" => 1,
         ),
         array(
             'id'=>'product_gallery_zoom',
             'type' => 'switch', 
-            'title' => __('Enable woocommerce hover zoom for product gallery? (must be woocommerce 3.0+)', 'ascend'),
+            'title' => __('Enable woocommerce hover zoom for product gallery? (must be woocommerce 3.0+)', 'juanjimeneztj'),
             "default" => 1,
         ), 
         array(
             'id'=>'product_tabs',
-            'title' => __('Display product tabs?', 'ascend'),
-            'subtitle'=> __('This determines if product tabs are displayed', 'ascend'),
+            'title' => __('Display product tabs?', 'juanjimeneztj'),
+            'subtitle'=> __('This determines if product tabs are displayed', 'juanjimeneztj'),
             'type' => 'select',
-            'options' => array('true' => __('Show as tabs', 'ascend'), 'list' => __('Show Content section by section', 'ascend'), 'none' => __('Show no content', 'ascend')),
+            'options' => array('true' => __('Show as tabs', 'juanjimeneztj'), 'list' => __('Show Content section by section', 'juanjimeneztj'), 'none' => __('Show no content', 'juanjimeneztj')),
             'width' => 'width:60%',
             'default' => 'true',
             ),
@@ -2546,28 +2546,28 @@ Redux::setSection( $opt_name, array(
 	        'id'        => 'product_description_background',
 	        'type'      => 'background',
 	        'output'    => array('.list-woocommerce-tab-panel-description'),
-	        'title'     => __('Product Description Background', 'ascend'),
+	        'title'     => __('Product Description Background', 'juanjimeneztj'),
 	        'required' => array('product_tabs','=','list'),
 		    ),
        	array(
 	        'id'        => 'product_additional_background',
 	        'type'      => 'background',
 	        'output'    => array('.list-woocommerce-tab-panel-additional'),
-	        'title'     => __('Product Additional Background', 'ascend'),
+	        'title'     => __('Product Additional Background', 'juanjimeneztj'),
 	        'required' => array('product_tabs','=','list'),
 		    ),
        	array(
 	        'id'        => 'product_reviews_background',
 	        'type'      => 'background',
 	        'output'    => array('.list-woocommerce-tab-panel-reviews'),
-	        'title'     => __('Product Reviews Background', 'ascend'),
+	        'title'     => __('Product Reviews Background', 'juanjimeneztj'),
 	        'required' => array('product_tabs','=','list'),
 		    ),
         array(
             'id'=>'ptab_description',
             'type' => 'slider', 
-            'title' => __('Product Tab Order - Lowest First', 'ascend'),
-            'desc'=> __('Description Tab', 'ascend'),
+            'title' => __('Product Tab Order - Lowest First', 'juanjimeneztj'),
+            'desc'=> __('Description Tab', 'juanjimeneztj'),
             "default"       => "10",
             "min"       => "5",
             "step"      => "5",
@@ -2576,7 +2576,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'ptab_additional',
             'type' => 'slider', 
-            'desc'=> __('Additional Information Tab', 'ascend'),
+            'desc'=> __('Additional Information Tab', 'juanjimeneztj'),
             "default"       => "20",
             "min"       => "5",
             "step"      => "5",
@@ -2585,7 +2585,7 @@ Redux::setSection( $opt_name, array(
          array(
             'id'=>'ptab_reviews',
             'type' => 'slider', 
-            'desc'=> __('Reviews Tab', 'ascend'),
+            'desc'=> __('Reviews Tab', 'juanjimeneztj'),
             "default"       => "30",
             "min"       => "5",
             "step"      => "5",
@@ -2594,14 +2594,14 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'related_products',
             'type' => 'switch', 
-            'title' => __('Display related products?', 'ascend'),
-            'subtitle'=> __('This determines related products are displayed', 'ascend'),
+            'title' => __('Display related products?', 'juanjimeneztj'),
+            'subtitle'=> __('This determines related products are displayed', 'juanjimeneztj'),
             "default"       => 1,
             ),
         array(
             'id'=>'related_item_column',
             'type' => 'slider', 
-            'title' => __('Choose how many columns are in related product carousel', 'ascend'),
+            'title' => __('Choose how many columns are in related product carousel', 'juanjimeneztj'),
             "default"   => "4",
             "min"       => "2",
             "step"      => "1",
@@ -2614,21 +2614,21 @@ Redux::setSection( $opt_name, array(
 Redux::setSection( $opt_name, array(
     'id' => 'portfolio_settings',
     'customizer' => false,
-    'title' => __('Portfolio Settings', 'ascend'),
-    'desc' => "<div class='redux-info-field'><h3>".__('Portfolio Settings', 'ascend')."</h3></div>",
+    'title' => __('Portfolio Settings', 'juanjimeneztj'),
+    'desc' => "<div class='redux-info-field'><h3>".__('Portfolio Settings', 'juanjimeneztj')."</h3></div>",
     'fields' => array(
     	array(
             'id'=>'portfolio_layout',
             'type' => 'select',
-            'title' => __('Single Portfolio Layout Default', 'ascend'), 
-            'options' => array('full' => __('No sidebar layout', 'ascend'), 'sidebar' => __('Sidebar Layout', 'ascend')),
+            'title' => __('Single Portfolio Layout Default', 'juanjimeneztj'), 
+            'options' => array('full' => __('No sidebar layout', 'juanjimeneztj'), 'sidebar' => __('Sidebar Layout', 'juanjimeneztj')),
             'width' => 'width:60%',
             'default' => 'full',
             ),
         array(
             'id'=>'portfolio_sidebar_default',
             'type' => 'select',
-            'title' => __('Choose a Default Sidebar for your Single Portfolio post', 'ascend'), 
+            'title' => __('Choose a Default Sidebar for your Single Portfolio post', 'juanjimeneztj'), 
             'data' => 'sidebars',
             'default' => 'sidebar-primary',
             'width' => 'width:60%',
@@ -2636,51 +2636,51 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'info_portfolio_post_header',
             'type' => 'info',
-            'desc' => __('Single Portfolio Post Header', 'ascend'),
+            'desc' => __('Single Portfolio Post Header', 'juanjimeneztj'),
         ),
         array(
             'id'=>'portfolio_post_title',
             'type' => 'switch', 
-            'title' => __('Show Portfolio Title in Header area by default', 'ascend'),
+            'title' => __('Show Portfolio Title in Header area by default', 'juanjimeneztj'),
             "default" => 1,
         ),
         array(
             'id'=>'portfolio_post_title_content',
             'type' => 'select',
-            'title' => __('Product Default Title Text', 'ascend'), 
-            'options' => array('posttitle' => __('Portfolio Title', 'ascend'), 'portfolio-type' => __('Type of Portfolio', 'ascend'), 'custom' => __('Custom', 'ascend')),
+            'title' => __('Product Default Title Text', 'juanjimeneztj'), 
+            'options' => array('posttitle' => __('Portfolio Title', 'juanjimeneztj'), 'portfolio-type' => __('Type of Portfolio', 'juanjimeneztj'), 'custom' => __('Custom', 'juanjimeneztj')),
             'width' => 'width:60%',
             'default' => 'posttitle',
             ),
          array(
             'id'=>'portfolio_header_title_text',
             'type' => 'text',
-            'title' => __('Portfolio Default Title', 'ascend'),
-            'subtitle' => __('Example: Projects', 'ascend'),
+            'title' => __('Portfolio Default Title', 'juanjimeneztj'),
+            'subtitle' => __('Example: Projects', 'juanjimeneztj'),
             'required' => array('portfolio_post_title_content','=','custom'),
             ),
         array(
             'id'=>'portfolio_header_subtitle_text',
             'type' => 'text',
-            'title' => __('Portfolio Default Subtitle', 'ascend'),
+            'title' => __('Portfolio Default Subtitle', 'juanjimeneztj'),
             'required' => array('portfolio_post_title_content','=','custom'),
             ),
          array(
             'id'=>'info_portfolio_nav_options',
             'type' => 'info',
-            'desc' => __('Portfolio Navigation Options', 'ascend'),
+            'desc' => __('Portfolio Navigation Options', 'juanjimeneztj'),
             ),
         array(
             'id'=>'portfolio_single_nav',
             'type' => 'switch', 
-            'title' => __('Enable Arrow navigation for single portfolio posts?', 'ascend'),
+            'title' => __('Enable Arrow navigation for single portfolio posts?', 'juanjimeneztj'),
             "default" => 1,
             ), 
         array(
             'id'=>'portfolio_link_type',
             'type' => 'select',
-            'title' => __('Portfolio Grid Icon Link', 'ascend'), 
-            'options' => array('page' => __('Page', 'ascend'), 'type' => __('Parent Portfolio Type', 'ascend'), 'none' => __('None', 'ascend')),
+            'title' => __('Portfolio Grid Icon Link', 'juanjimeneztj'), 
+            'options' => array('page' => __('Page', 'juanjimeneztj'), 'type' => __('Parent Portfolio Type', 'juanjimeneztj'), 'none' => __('None', 'juanjimeneztj')),
             'width' => 'width:60%',
             'default' => 'type',
             ),
@@ -2689,52 +2689,52 @@ Redux::setSection( $opt_name, array(
             'type' => 'select',
             'data' => 'pages',
             'width' => 'width:60%',
-            'title' => __('Select Default Portfolio Page', 'ascend'), 
-            'subtitle' => __('This sets the grid link in every portfolio post.', 'ascend'),
+            'title' => __('Select Default Portfolio Page', 'juanjimeneztj'), 
+            'subtitle' => __('This sets the grid link in every portfolio post.', 'juanjimeneztj'),
             ),
         array(
             'id'=>'info_portfolio_post_content',
             'type' => 'info',
-            'desc' => __('Single Portfolio Content Settings', 'ascend'),
+            'desc' => __('Single Portfolio Content Settings', 'juanjimeneztj'),
         ),
         array(
             'id'=>'portfolio_post_title_inpost',
             'type' => 'switch', 
-            'title' => __('Show the Title in post content', 'ascend'),
+            'title' => __('Show the Title in post content', 'juanjimeneztj'),
             'default' => 1,
         ),
         array(
             'id'=>'project_layout_default',
             'type' => 'select',
-            'title' => __('Project Layout Default', 'ascend'), 
-            'options' => array('beside' => __('Beside 40%', 'ascend'), 'besidesmall' => __('Beside 33%', 'ascend'), 'above' => __('Above', 'ascend')),
+            'title' => __('Project Layout Default', 'juanjimeneztj'), 
+            'options' => array('beside' => __('Beside 40%', 'juanjimeneztj'), 'besidesmall' => __('Beside 33%', 'juanjimeneztj'), 'above' => __('Above', 'juanjimeneztj')),
             'width' => 'width:60%',
             'default' => 'beside',
             ),
         array(
             'id'=>'portfolio_comments',
             'type' => 'switch', 
-            'title' => __('Allow Comments on Portfolio Posts', 'ascend'),
-            'subtitle' => __('Turn on to allow Comments on Portfolio posts', 'ascend'),
+            'title' => __('Allow Comments on Portfolio Posts', 'juanjimeneztj'),
+            'subtitle' => __('Turn on to allow Comments on Portfolio posts', 'juanjimeneztj'),
             "default" => 0,
             ),
         array(
             'id'=>'info_portfolio_recent_carousel',
             'type' => 'info',
-            'desc' => __('Portfolio Post Bottom Carousel', 'ascend'),
+            'desc' => __('Portfolio Post Bottom Carousel', 'juanjimeneztj'),
             ),
         array(
             'id'=>'portfolio_bottom_carousel',
            	'type' => 'select',
-            'title' => __('Portfolio Bottom Carousel', 'ascend'), 
-            'options' => array('related' => __('Display Related Carousel by default ', 'ascend'), 'recent' => __('Display Recent Carousel by Default', 'ascend'), 'none' => __('No default carousel', 'ascend')),
+            'title' => __('Portfolio Bottom Carousel', 'juanjimeneztj'), 
+            'options' => array('related' => __('Display Related Carousel by default ', 'juanjimeneztj'), 'recent' => __('Display Recent Carousel by Default', 'juanjimeneztj'), 'none' => __('No default carousel', 'juanjimeneztj')),
             'width' => 'width:60%',
             'default' => 'none',
             ),
         array(
             'id'=>'portfolio_bottom_car_column',
             'type' => 'slider', 
-            'title' => __('Choose how many columns to show on recent portfolio carousel.', 'ascend'),
+            'title' => __('Choose how many columns to show on recent portfolio carousel.', 'juanjimeneztj'),
             "default"       => "4",
             "min"       => "2",
             "step"      => "1",
@@ -2743,7 +2743,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'portfolio_bottom_car_speed',
             'type' => 'slider', 
-            'title' => __('Choose the carousel speed (in seconds).', 'ascend'),
+            'title' => __('Choose the carousel speed (in seconds).', 'juanjimeneztj'),
             "default"       => "9",
             "min"       => "2",
             "step"      => "1",
@@ -2752,7 +2752,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'portfolio_bottom_car_items',
             'type' => 'slider', 
-            'title' => __('Choose how many items to show on recent portfolio carouselChoose how many portfolio columns to show on portfolio archive pages', 'ascend'),
+            'title' => __('Choose how many items to show on recent portfolio carouselChoose how many portfolio columns to show on portfolio archive pages', 'juanjimeneztj'),
             "default"       => "8",
             "min"       => "6",
             "step"      => "1",
@@ -2761,39 +2761,39 @@ Redux::setSection( $opt_name, array(
          array(
             'id'=>'portfolio_bottom_car_scroll',
             'type' => 'select',
-            'title' => __('Portfolio Carousel Scroll', 'ascend'), 
-            'subtitle' => __("Choose how the portfolio items scroll.", 'ascend'),
-            'options' => array('oneitem' => __('One Item', 'ascend'), 'all' => __('All Visible', 'ascend')),
+            'title' => __('Portfolio Carousel Scroll', 'juanjimeneztj'), 
+            'subtitle' => __("Choose how the portfolio items scroll.", 'juanjimeneztj'),
+            'options' => array('oneitem' => __('One Item', 'juanjimeneztj'), 'all' => __('All Visible', 'juanjimeneztj')),
             'default' => 'oneitem',
             'width' => 'width:60%',
             ),
         array(
             'id'=>'info_portfolio_cat_defaults',
             'type' => 'info',
-            'desc' => __('Portfolio Archive Pages', 'ascend'),
+            'desc' => __('Portfolio Archive Pages', 'juanjimeneztj'),
             ),
         array(
             'id'=>'portfolio_tax_style',
             'type' => 'select',
-            'title' => __('Portfolio Style', 'ascend'), 
-            'subtitle' => __("Choose how the portfolio items should be styled.", 'ascend'),
-            'options' => array('pgrid' => __('Normal Grid', 'ascend'),'pgrid-no-margin' => __('Grid without margin between items', 'ascend'),'poststyle' => __('Post style', 'ascend')),
+            'title' => __('Portfolio Style', 'juanjimeneztj'), 
+            'subtitle' => __("Choose how the portfolio items should be styled.", 'juanjimeneztj'),
+            'options' => array('pgrid' => __('Normal Grid', 'juanjimeneztj'),'pgrid-no-margin' => __('Grid without margin between items', 'juanjimeneztj'),'poststyle' => __('Post style', 'juanjimeneztj')),
             'default' => 'pgrid',
             'width' => 'width:60%',
             ),
          array(
             'id'=>'portfolio_tax_ratio',
             'type' => 'select',
-            'title' => __('Portfolio Grid image ratio', 'ascend'), 
-            'subtitle' => __("Choose how the portfolio items images should be cropped.", 'ascend'),
-            'options' => array('square' => __('Square', 'ascend'),'portrait' => __('Portrait', 'ascend'),'landscape' => __('Landscape', 'ascend'),'widelandscape' => __('Wide Landscape', 'ascend')),
+            'title' => __('Portfolio Grid image ratio', 'juanjimeneztj'), 
+            'subtitle' => __("Choose how the portfolio items images should be cropped.", 'juanjimeneztj'),
+            'options' => array('square' => __('Square', 'juanjimeneztj'),'portrait' => __('Portrait', 'juanjimeneztj'),'landscape' => __('Landscape', 'juanjimeneztj'),'widelandscape' => __('Wide Landscape', 'juanjimeneztj')),
             'default' => 'square',
             'width' => 'width:60%',
             ),
         array(
             'id'=>'portfolio_tax_column',
             'type' => 'slider', 
-            'title' => __('Choose how many portfolio columns to show on portfolio archive pages', 'ascend'),
+            'title' => __('Choose how many portfolio columns to show on portfolio archive pages', 'juanjimeneztj'),
             "default"   => "4",
             "min"       => "2",
             "step"      => "1",
@@ -2802,19 +2802,19 @@ Redux::setSection( $opt_name, array(
         array(
             'id'		=>'portfolio_tax_show_lightbox',
             'type' 		=> 'switch', 
-            'title' 	=> __('Display lightbox link in grid?', 'ascend'),
+            'title' 	=> __('Display lightbox link in grid?', 'juanjimeneztj'),
             "default"   => 1,
             ),
         array(
             'id'		=>'portfolio_tax_show_type',
             'type' 		=> 'switch',
-            'title' 	=> __('Show portfolio type in grid?', 'ascend'),
+            'title' 	=> __('Show portfolio type in grid?', 'juanjimeneztj'),
             "default" 	=> 1,
         ),
          array(
             'id'		=>'portfolio_tax_show_excerpt',
             'type' 		=> 'switch', 
-            'title' 	=> __('Display Portfolio excerpt in grid?', 'ascend'),
+            'title' 	=> __('Display Portfolio excerpt in grid?', 'juanjimeneztj'),
             "default"	=> 0,
             ),
         
@@ -2823,20 +2823,20 @@ Redux::setSection( $opt_name, array(
 Redux::setSection( $opt_name, array(
     'id' => 'page_settings',
     'customizer' => false,
-    'title' => __('Page Settings', 'ascend'),
+    'title' => __('Page Settings', 'juanjimeneztj'),
     'fields' => array(
     	array(
             'id'=>'page_layout',
             'type' => 'select',
-            'title' => __('Single Page Sidebar Default', 'ascend'), 
-            'options' => array('full' => __('No sidebar layout', 'ascend'), 'sidebar' => __('Sidebar Layout', 'ascend')),
+            'title' => __('Single Page Sidebar Default', 'juanjimeneztj'), 
+            'options' => array('full' => __('No sidebar layout', 'juanjimeneztj'), 'sidebar' => __('Sidebar Layout', 'juanjimeneztj')),
             'width' => 'width:60%',
             'default' => 'full',
             ),
         array(
             'id'=>'page_sidebar_default',
             'type' => 'select',
-            'title' => __('Choose a Default Sidebar for your Single Pages', 'ascend'), 
+            'title' => __('Choose a Default Sidebar for your Single Pages', 'juanjimeneztj'), 
             'data' => 'sidebars',
             'default' => 'sidebar-primary',
             'width' => 'width:60%',
@@ -2844,14 +2844,14 @@ Redux::setSection( $opt_name, array(
         array(
 			'id'		=>'default_showpagetitle',
 			'type' 		=> 'switch', 
-			'title' 	=> __('Display page title by default', 'ascend'),
+			'title' 	=> __('Display page title by default', 'juanjimeneztj'),
 			"default"	=> 1,
 		),
 		array(
             'id'=>'default_page_content_width',
             'type' => 'select',
-            'title' => __('Single Page Content Width Default', 'ascend'), 
-            'options' => array('contained' => __('Contained', 'ascend'), 'full' => __('Fullwidth', 'ascend')),
+            'title' => __('Single Page Content Width Default', 'juanjimeneztj'), 
+            'options' => array('contained' => __('Contained', 'juanjimeneztj'), 'full' => __('Fullwidth', 'juanjimeneztj')),
             'width' => 'width:60%',
             'default' => 'contained',
         ),
@@ -2860,14 +2860,14 @@ Redux::setSection( $opt_name, array(
 Redux::setSection( $opt_name, array(
     'id' => 'blog_settings',
     'customizer' => false,
-    'title' => __('Blog Settings', 'ascend'),
-    'desc' => "<div class='redux-info-field'><h3>".__('Blog Settings', 'ascend')."</h3></div>",
+    'title' => __('Blog Settings', 'juanjimeneztj'),
+    'desc' => "<div class='redux-info-field'><h3>".__('Blog Settings', 'juanjimeneztj')."</h3></div>",
     'fields' => array(
       	array(
 			'id'=>'post_word_count',
 			'type' => 'slider', 
-			'title' => __('Post Excerpt Length', 'ascend'),
-			'subtitle' => __('Determines how many words are in an Excerpt.', 'ascend'),
+			'title' => __('Post Excerpt Length', 'juanjimeneztj'),
+			'subtitle' => __('Determines how many words are in an Excerpt.', 'juanjimeneztj'),
 			"default"   => "40",
 			"min"       => "20",
 			"step"      => "2",
@@ -2876,94 +2876,94 @@ Redux::setSection( $opt_name, array(
       	array(
             'id'=>'hide_author',
             'type' => 'switch', 
-            'title' => __('Show Author output with posts?', 'ascend'),
-            'subtitle' => __('Choose to show or hide author output on posts.', 'ascend'),
+            'title' => __('Show Author output with posts?', 'juanjimeneztj'),
+            'subtitle' => __('Choose to show or hide author output on posts.', 'juanjimeneztj'),
             "default" => 1,
             ),
       array(
             'id'=>'hide_categories',
             'type' => 'switch', 
-            'title' => __('Show Categories with posts?', 'ascend'),
-            'subtitle' => __('Choose to show or hide categories with posts.', 'ascend'),
+            'title' => __('Show Categories with posts?', 'juanjimeneztj'),
+            'subtitle' => __('Choose to show or hide categories with posts.', 'juanjimeneztj'),
             "default" => 1,
             ),
       array(
             'id'=>'hide_comments',
             'type' => 'switch', 
-            'title' => __('Show Comment count with posts?', 'ascend'),
-            'subtitle' => __('Choose to show or hide comment counts with posts.', 'ascend'),
+            'title' => __('Show Comment count with posts?', 'juanjimeneztj'),
+            'subtitle' => __('Choose to show or hide comment counts with posts.', 'juanjimeneztj'),
             "default" => 1,
             ),
       array(
             'id'=>'hide_postdate',
             'type' => 'switch', 
-            'title' => __('Show Date with posts?', 'ascend'),
-            'subtitle' => __('Choose to show or hide date with post title.', 'ascend'),
+            'title' => __('Show Date with posts?', 'juanjimeneztj'),
+            'subtitle' => __('Choose to show or hide date with post title.', 'juanjimeneztj'),
             "default" => 1,
             ),
       	array(
             'id'=>'info_blog_header',
             'type' => 'info',
-            'desc' => __('Single Blog Post Header', 'ascend'),
+            'desc' => __('Single Blog Post Header', 'juanjimeneztj'),
             ),
       	array(
             'id'=>'blog_post_title',
             'type' => 'switch', 
-            'title' => __('Show Blog Title in Header area by default', 'ascend'),
+            'title' => __('Show Blog Title in Header area by default', 'juanjimeneztj'),
             "default" => 1,
         ),
         array(
             'id'=>'blog_post_title_content',
             'type' => 'select',
-            'title' => __('Blog Default Title Text', 'ascend'), 
-            'options' => array('posttitle' => __('Blog Title', 'ascend'), 'category' => __('Category of Post', 'ascend'), 'custom' => __('Custom', 'ascend')),
+            'title' => __('Blog Default Title Text', 'juanjimeneztj'), 
+            'options' => array('posttitle' => __('Blog Title', 'juanjimeneztj'), 'category' => __('Category of Post', 'juanjimeneztj'), 'custom' => __('Custom', 'juanjimeneztj')),
             'width' => 'width:60%',
             'default' => 'category',
             ),
         array(
             'id'=>'blog_header_title_text',
             'type' => 'text',
-            'title' => __('Blog Default Title', 'ascend'),
-            'subtitle' => __('Example: Blog', 'ascend'),
+            'title' => __('Blog Default Title', 'juanjimeneztj'),
+            'subtitle' => __('Example: Blog', 'juanjimeneztj'),
             'required' => array('blog_post_title_content','=','custom'),
             ),
         array(
             'id'=>'blog_header_subtitle_text',
             'type' => 'text',
-            'title' => __('Blog Default Subtitle', 'ascend'),
+            'title' => __('Blog Default Subtitle', 'juanjimeneztj'),
             'required' => array('blog_post_title_content','=','custom'),
             ),
         array(
             'id'=>'info_blog_post_content',
             'type' => 'info',
-            'desc' => __('Single Blog Content Settings', 'ascend'),
+            'desc' => __('Single Blog Content Settings', 'juanjimeneztj'),
         ),
         array(
             'id'=>'blog_post_title_inpost',
             'type' => 'switch', 
-            'title' => __('Show the Title in post content', 'ascend'),
+            'title' => __('Show the Title in post content', 'juanjimeneztj'),
             'default' => 1,
         ),
         array(
             'id'=>'post_author_default',
             'type' => 'select',
-            'title' => __('Blog Post Author Box Default', 'ascend'), 
-            'options' => array('no' => __('No, Do not Show', 'ascend'), 'yes' => __('Yes, Show', 'ascend')),
+            'title' => __('Blog Post Author Box Default', 'juanjimeneztj'), 
+            'options' => array('no' => __('No, Do not Show', 'juanjimeneztj'), 'yes' => __('Yes, Show', 'juanjimeneztj')),
             'width' => 'width:60%',
             'default' => 'no',
             ),
         array(
             'id'=>'post_carousel_default',
             'type' => 'select',
-            'title' => __('Blog Post Bottom Carousel Default', 'ascend'), 
-            'options' => array('no' => __('No, Do not Show', 'ascend'), 'recent' => __('Yes - Display Recent Posts', 'ascend'), 'similar' => __('Yes - Display Similar Posts', 'ascend')),
+            'title' => __('Blog Post Bottom Carousel Default', 'juanjimeneztj'), 
+            'options' => array('no' => __('No, Do not Show', 'juanjimeneztj'), 'recent' => __('Yes - Display Recent Posts', 'juanjimeneztj'), 'similar' => __('Yes - Display Similar Posts', 'juanjimeneztj')),
             'width' => 'width:60%',
             'default' => 'no',
             ),
         array(
             'id'=>'post_carousel_columns',
             'type' => 'slider', 
-            'title' => __('Choose how many items to show on recent/similar post carousel.', 'ascend'),
+            'title' => __('Choose how many items to show on recent/similar post carousel.', 'juanjimeneztj'),
             "default"       => "3",
             "min"       => "3",
             "step"      => "1",
@@ -2972,20 +2972,20 @@ Redux::setSection( $opt_name, array(
          array(
             'id'=>'info_blog_nav_options',
             'type' => 'info',
-            'desc' => __('Blog Navigation Options', 'ascend'),
+            'desc' => __('Blog Navigation Options', 'juanjimeneztj'),
         ),
       	array(
             'id'		=> 'show_postlinks',
             'type' 		=> 'switch', 
-            'title' 	=> __('Show Previous and Next posts links?', 'ascend'),
-            'subtitle' 	=> __('Choose to show or hide previous and next post links in the footer of a single post.', 'ascend'),
+            'title' 	=> __('Show Previous and Next posts links?', 'juanjimeneztj'),
+            'subtitle' 	=> __('Choose to show or hide previous and next post links in the footer of a single post.', 'juanjimeneztj'),
             "default" 	=> 1,
         ),
       	array(
             'id'=>'postlinks_in_cat',
             'type' => 'select',
-            'title' => __('Blog post navigation setting', 'ascend'), 
-            'options' => array('all' => __('Navigate through All Posts', 'ascend'), 'cat' => __('Navigate through Categories', 'ascend')),
+            'title' => __('Blog post navigation setting', 'juanjimeneztj'), 
+            'options' => array('all' => __('Navigate through All Posts', 'juanjimeneztj'), 'cat' => __('Navigate through Categories', 'juanjimeneztj')),
             'width' => 'width:60%',
             'default' => 'all',
             'required' => array('show_postlinks','=','1'),
@@ -2993,39 +2993,39 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'info_blog_post_content',
             'type' => 'info',
-            'desc' => __('Blog archive Settings', 'ascend'),
+            'desc' => __('Blog archive Settings', 'juanjimeneztj'),
         ),
         array(
             'id'		=> 'postexcerpt_hard_crop',
             'type' 		=> 'switch', 
-            'title' 	=> __('Crop blog grid images to equal height', 'ascend'),
-            'subtitle' 	=> __('Turn on if you want the blog grid images to have the same height.', 'ascend'),
+            'title' 	=> __('Crop blog grid images to equal height', 'juanjimeneztj'),
+            'subtitle' 	=> __('Turn on if you want the blog grid images to have the same height.', 'juanjimeneztj'),
             'default' 	=> 0,
         ),
       	array(
             'id'		=> 'blog_grid_display_height',
             'type' 		=> 'switch', 
-            'title' 	=> __('Display Blog Grid posts as rows instead of masonry', 'ascend'),
-            'subtitle' 	=> __('Turn on if you want the blog grid to be displayed in equal rows regardless of post content.', 'ascend'),
+            'title' 	=> __('Display Blog Grid posts as rows instead of masonry', 'juanjimeneztj'),
+            'subtitle' 	=> __('Turn on if you want the blog grid to be displayed in equal rows regardless of post content.', 'juanjimeneztj'),
             'default' 	=> 1,
         ),
       	array(
             'id'=>'info_blog_defaults',
             'type' => 'info',
-            'desc' => __('Blog Post Defaults', 'ascend'),
+            'desc' => __('Blog Post Defaults', 'juanjimeneztj'),
             ),
        	array(
             'id'=>'blog_layout',
             'type' => 'select',
-            'title' => __('Single Blog Post Layout Default', 'ascend'), 
-            'options' => array('full' => __('No sidebar layout', 'ascend'), 'sidebar' => __('Sidebar Layout', 'ascend')),
+            'title' => __('Single Blog Post Layout Default', 'juanjimeneztj'), 
+            'options' => array('full' => __('No sidebar layout', 'juanjimeneztj'), 'sidebar' => __('Sidebar Layout', 'juanjimeneztj')),
             'width' => 'width:60%',
             'default' => 'sidebar',
             ),
         array(
             'id'=>'blog_sidebar_default',
             'type' => 'select',
-            'title' => __('Choose a Default Sidebar for your Single blog post', 'ascend'), 
+            'title' => __('Choose a Default Sidebar for your Single blog post', 'juanjimeneztj'), 
             'data' => 'sidebars',
             'default' => 'sidebar-primary',
             'width' => 'width:60%',
@@ -3034,103 +3034,103 @@ Redux::setSection( $opt_name, array(
             'id'=>'default_placeholder_image',
             'type' => 'media', 
             'url'=> true,
-            'title' => __('Default post summary feature Image', 'ascend'),
-            'subtitle' => __('Replace theme default feature image for posts without a featured image', 'ascend'),
+            'title' => __('Default post summary feature Image', 'juanjimeneztj'),
+            'subtitle' => __('Replace theme default feature image for posts without a featured image', 'juanjimeneztj'),
             ),
         array(
             'id'=>'info_blog_defaults_stand',
             'type' => 'info',
-            'desc' => __('Blog Post Defaults Standard', 'ascend'),
+            'desc' => __('Blog Post Defaults Standard', 'juanjimeneztj'),
             ),
         array(
             'id'=>'post_summery_default',
             'type' => 'select',
-            'title' => __('Standard Blog Post Summary Default', 'ascend'), 
-            'options' => array('text' => __('Text', 'ascend'), 'img_portrait' => __('Portrait Image', 'ascend'), 'img_landscape' => __('Landscape Image', 'ascend')),
+            'title' => __('Standard Blog Post Summary Default', 'juanjimeneztj'), 
+            'options' => array('text' => __('Text', 'juanjimeneztj'), 'img_portrait' => __('Portrait Image', 'juanjimeneztj'), 'img_landscape' => __('Landscape Image', 'juanjimeneztj')),
             'width' => 'width:60%',
             'default' => 'img_landscape',
             ),
         array(
             'id'=>'info_blog_defaults_image',
             'type' => 'info',
-            'desc' => __('Blog Post Defaults Image', 'ascend'),
+            'desc' => __('Blog Post Defaults Image', 'juanjimeneztj'),
             ),
         array(
             'id'=>'image_post_summery_default',
             'type' => 'select',
-            'title' => __('Image Blog Post Summary Default', 'ascend'), 
-            'options' => array('text' => __('Text', 'ascend'), 'img_portrait' => __('Portrait Image', 'ascend'), 'img_landscape' => __('Landscape Image', 'ascend')),
+            'title' => __('Image Blog Post Summary Default', 'juanjimeneztj'), 
+            'options' => array('text' => __('Text', 'juanjimeneztj'), 'img_portrait' => __('Portrait Image', 'juanjimeneztj'), 'img_landscape' => __('Landscape Image', 'juanjimeneztj')),
             'width' => 'width:60%',
             'default' => 'img_portrait',
             ),
         array(
             'id'=>'image_post_blog_default',
             'type' => 'select',
-            'title' => __('Single Image Post Head Content', 'ascend'), 
-            'options' => array('none' => __('None', 'ascend'), 'image' => __('Image', 'ascend')),
+            'title' => __('Single Image Post Head Content', 'juanjimeneztj'), 
+            'options' => array('none' => __('None', 'juanjimeneztj'), 'image' => __('Image', 'juanjimeneztj')),
             'width' => 'width:60%',
             'default' => 'image',
             ),
         array(
             'id'=>'info_blog_defaults_gallery',
             'type' => 'info',
-            'desc' => __('Blog Post Defaults gallery', 'ascend'),
+            'desc' => __('Blog Post Defaults gallery', 'juanjimeneztj'),
             ),
         array(
             'id'=>'gallery_post_summery_default',
             'type' => 'select',
-            'title' => __('Gallery Blog Post Summary Default', 'ascend'), 
-            'options' => array('text' => __('Text', 'ascend'), 'img_portrait' => __('Portrait Image', 'ascend'), 'img_landscape' => __('Landscape Image', 'ascend'),'slider_portrait' => __('Portrait Slider', 'ascend'), 'slider_landscape' => __('Landscape Slider', 'ascend'), 'gallery_grid' => __('Photo Collage - (Use 2 to 5 images)', 'ascend')),
+            'title' => __('Gallery Blog Post Summary Default', 'juanjimeneztj'), 
+            'options' => array('text' => __('Text', 'juanjimeneztj'), 'img_portrait' => __('Portrait Image', 'juanjimeneztj'), 'img_landscape' => __('Landscape Image', 'juanjimeneztj'),'slider_portrait' => __('Portrait Slider', 'juanjimeneztj'), 'slider_landscape' => __('Landscape Slider', 'juanjimeneztj'), 'gallery_grid' => __('Photo Collage - (Use 2 to 5 images)', 'juanjimeneztj')),
             'width' => 'width:60%',
             'default' => 'img_landscape',
             ),
         array(
             'id'=>'gallery_post_blog_default',
             'type' => 'select',
-            'title' => __('Single Gallery Post Head Content', 'ascend'), 
-            'options' => array('none' => __('None', 'ascend'), 'flex' => __('Image Slider - (Cropped Image Ratio)', 'ascend'),'carouselslider' => __('Carousel Slider - (Different Image Ratio)', 'ascend'),'thumbslider' => __('Image Slider with thumbnails (Cropped Image Ratio)', 'ascend'),'imgcarousel' => __('Image Carousel - (Muiltiple Images Showing At Once)', 'ascend'),'imgcarousel' => __('Image Collage - (Use 2 to 5 images)', 'ascend'),'shortcode' => __('Shortcode', 'ascend')),
+            'title' => __('Single Gallery Post Head Content', 'juanjimeneztj'), 
+            'options' => array('none' => __('None', 'juanjimeneztj'), 'flex' => __('Image Slider - (Cropped Image Ratio)', 'juanjimeneztj'),'carouselslider' => __('Carousel Slider - (Different Image Ratio)', 'juanjimeneztj'),'thumbslider' => __('Image Slider with thumbnails (Cropped Image Ratio)', 'juanjimeneztj'),'imgcarousel' => __('Image Carousel - (Muiltiple Images Showing At Once)', 'juanjimeneztj'),'imgcarousel' => __('Image Collage - (Use 2 to 5 images)', 'juanjimeneztj'),'shortcode' => __('Shortcode', 'juanjimeneztj')),
             'width' => 'width:60%',
             'default' => 'carouselslider',
             ),
         array(
             'id'=>'info_blog_defaults_video',
             'type' => 'info',
-            'desc' => __('Blog Post Defaults Video', 'ascend'),
+            'desc' => __('Blog Post Defaults Video', 'juanjimeneztj'),
             ),
         array(
             'id'=>'video_post_summery_default',
             'type' => 'select',
-            'title' => __('Video Blog Post Summary Default', 'ascend'), 
-            'options' => array('text' => __('Text', 'ascend'), 'img_portrait' => __('Portrait Image', 'ascend'), 'img_landscape' => __('Landscape Image', 'ascend'),'video' => __('Video', 'ascend')),
+            'title' => __('Video Blog Post Summary Default', 'juanjimeneztj'), 
+            'options' => array('text' => __('Text', 'juanjimeneztj'), 'img_portrait' => __('Portrait Image', 'juanjimeneztj'), 'img_landscape' => __('Landscape Image', 'juanjimeneztj'),'video' => __('Video', 'juanjimeneztj')),
             'width' => 'width:60%',
             'default' => 'video',
             ),
         array(
             'id'=>'video_post_blog_default',
             'type' => 'select',
-            'title' => __('Single Video Post Head Content', 'ascend'), 
-            'options' => array('none' => __('None', 'ascend'), 'video' => __('Video', 'ascend')),
+            'title' => __('Single Video Post Head Content', 'juanjimeneztj'), 
+            'options' => array('none' => __('None', 'juanjimeneztj'), 'video' => __('Video', 'juanjimeneztj')),
             'width' => 'width:60%',
             'default' => 'video',
             ),
         array(
             'id'=>'info_blog_category',
             'type' => 'info',
-            'desc' => __('Blog Category/Archive Defaults', 'ascend'),
+            'desc' => __('Blog Category/Archive Defaults', 'juanjimeneztj'),
             ),
         array(
             'id'=>'category_post_summary',
             'type' => 'select',
-            'title' => __('Category Display Type', 'ascend'), 
-            'options' => array('normal' => __('Standard', 'ascend'), 'below_title' => __('Standard with image below title', 'ascend'), 'full' => __('Full Post', 'ascend'), 'grid' => __('Grid', 'ascend'),'grid_standard' => __('Grid with first post as standard', 'ascend'), 'photo' => __('Photo', 'ascend')),
+            'title' => __('Category Display Type', 'juanjimeneztj'), 
+            'options' => array('normal' => __('Standard', 'juanjimeneztj'), 'below_title' => __('Standard with image below title', 'juanjimeneztj'), 'full' => __('Full Post', 'juanjimeneztj'), 'grid' => __('Grid', 'juanjimeneztj'),'grid_standard' => __('Grid with first post as standard', 'juanjimeneztj'), 'photo' => __('Photo', 'juanjimeneztj')),
             'default' => 'normal',
             'width' => 'width:60%',
             ),
         array(
             'id'=>'category_post_grid_column',
             'type' => 'select',
-            'title' => __('Category Display Columns', 'ascend'), 
-            'options' => array('2' => __('Two Column', 'ascend'),'3' => __('Three Column', 'ascend'), '4' => __('Four Column', 'ascend')),
+            'title' => __('Category Display Columns', 'juanjimeneztj'), 
+            'options' => array('2' => __('Two Column', 'juanjimeneztj'),'3' => __('Three Column', 'juanjimeneztj'), '4' => __('Four Column', 'juanjimeneztj')),
             'width' => 'width:60%',
             'default' => '3',
             'required' => array(
@@ -3143,15 +3143,15 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'blog_cat_layout',
             'type' => 'select',
-            'title' => __('Blog Category/Archive Layout', 'ascend'), 
-            'options' => array('full' => __('No sidebar layout', 'ascend'), 'sidebar' => __('Sidebar Layout', 'ascend')),
+            'title' => __('Blog Category/Archive Layout', 'juanjimeneztj'), 
+            'options' => array('full' => __('No sidebar layout', 'juanjimeneztj'), 'sidebar' => __('Sidebar Layout', 'juanjimeneztj')),
             'width' => 'width:60%',
             'default' => 'full',
             ),
         array(
             'id'=>'blog_cat_sidebar_default',
             'type' => 'select',
-            'title' => __('Choose a Default Sidebar for your Category/Archive pages', 'ascend'), 
+            'title' => __('Choose a Default Sidebar for your Category/Archive pages', 'juanjimeneztj'), 
             'data' => 'sidebars',
             'default' => 'sidebar-primary',
             'width' => 'width:60%',
@@ -3160,14 +3160,14 @@ Redux::setSection( $opt_name, array(
 ) );
 Redux::setSection( $opt_name, array(
     'id' => 'basic_styling',
-    'title' => __('Basic Styling', 'ascend'),
-    'desc' => "<div class='redux-info-field'><h3>".__('Basic Styling', 'ascend')."</h3></div>",
+    'title' => __('Basic Styling', 'juanjimeneztj'),
+    'desc' => "<div class='redux-info-field'><h3>".__('Basic Styling', 'juanjimeneztj')."</h3></div>",
     'fields' => array(
         array(
             'id'=>'primary_color',
             'type' => 'color',
-            'title' => __('Primary Color', 'ascend'), 
-            'subtitle' => __('Choose the default Highlight color for your site.', 'ascend'),
+            'title' => __('Primary Color', 'juanjimeneztj'), 
+            'subtitle' => __('Choose the default Highlight color for your site.', 'juanjimeneztj'),
             'transparent'=>false,
             'validate' => 'color',
             'default' => '#16A085',
@@ -3175,7 +3175,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'topbar_font_color',
             'type' => 'color',
-            'title' => __('Topbar Font color', 'ascend'), 
+            'title' => __('Topbar Font color', 'juanjimeneztj'), 
             'default' => '#ffffff',
             'output'    => array('.kad-topbar-flex-item, .kad-topbar-flex-item a, .kad-topbar-flex-item .kadence_social_widget a, .topbarclass .kt-woo-account-nav .kad-customer-name h5, .topbarclass .kt-mini-cart-refreash .total'),
             'transparent'=>false,
@@ -3184,7 +3184,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'topbar_font_hover_color',
             'type' => 'color',
-            'title' => __('Topbar Font Link Hover color', 'ascend'), 
+            'title' => __('Topbar Font Link Hover color', 'juanjimeneztj'), 
             'default' => '#ffffff',
             'output'    => array('.kad-topbar-flex-item a:hover'),
             'transparent'=>false,
@@ -3193,7 +3193,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'footerfont_color',
             'type' => 'color',
-            'title' => __('Footer Font Color', 'ascend'), 
+            'title' => __('Footer Font Color', 'juanjimeneztj'), 
             'output'    => array('.footerclass a, .footerclass, .footerclass h4, .footerclass h3, .footerclass h5'),
             'transparent'=>false,
             'validate' => 'color',
@@ -3202,7 +3202,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'footerfont_hover_color',
             'type' => 'color',
-            'title' => __('Footer Font Link Hover Color', 'ascend'), 
+            'title' => __('Footer Font Link Hover Color', 'juanjimeneztj'), 
             'output'    => array('color' => '.footerclass a:hover', 'border-color' => '.footerclass .menu li a:hover'),
             'transparent'=>false,
             'validate' => 'color',
@@ -3213,14 +3213,14 @@ Redux::setSection( $opt_name, array(
 Redux::setSection( $opt_name, array(
     'id' => 'advanced_styling',
     'icon_class' => 'icon-large',
-    'title' => __('Advanced Styling', 'ascend'),
-    'desc' => "<div class='redux-info-field'><h3>".__('Main Content Background', 'ascend')."</h3></div>",
+    'title' => __('Advanced Styling', 'juanjimeneztj'),
+    'desc' => "<div class='redux-info-field'><h3>".__('Main Content Background', 'juanjimeneztj')."</h3></div>",
     'fields' => array(
       	array(
 	        'id'        => 'content_background',
 	        'type'      => 'background',
 	        'output'    => array('.contentclass, .above-footer-widgets .widget-title span, .footer-widget-title span, .kt-title span, .sidebar .widget-title span'),
-	        'title'     => __('Content Background', 'ascend'),
+	        'title'     => __('Content Background', 'juanjimeneztj'),
 	        'default'  => array(
 		        'background-color' => '#ffffff',
 		    ),
@@ -3228,13 +3228,13 @@ Redux::setSection( $opt_name, array(
       	array(
             'id'=>'info_topbar_background',
             'type' => 'info',
-            'desc' => __('Topbar Background', 'ascend'),
+            'desc' => __('Topbar Background', 'juanjimeneztj'),
         ),
       	array(
 	        'id'        => 'topbar_background',
 	        'type'      => 'background',
 	        'output'    => array('.topbarclass, .topbarclass .sf-menu ul '),
-	        'title'     => __('Topbar Background', 'ascend'),
+	        'title'     => __('Topbar Background', 'juanjimeneztj'),
 	        'default'  => array(
 		        'background-color' => '#444444',
 		    ),
@@ -3242,13 +3242,13 @@ Redux::setSection( $opt_name, array(
       	array(
             'id'=>'info_header_background',
             'type' => 'info',
-            'desc' => __('Header Background', 'ascend'),
+            'desc' => __('Header Background', 'juanjimeneztj'),
             ),
       	array(
             'id'=>'header_background_choice',
             'type' => 'select',
-            'title' => __('Header Background Style', 'ascend'), 
-            'options' => array('simple' => __('Simple', 'ascend'), 'full' => __('Full', 'ascend')),
+            'title' => __('Header Background Style', 'juanjimeneztj'), 
+            'options' => array('simple' => __('Simple', 'juanjimeneztj'), 'full' => __('Full', 'juanjimeneztj')),
             'width' => 'width:60%',
             'default' => 'simple',
          
@@ -3257,13 +3257,13 @@ Redux::setSection( $opt_name, array(
         	'id'        => 'header_background',
         	'type'      => 'background',
 	        'output'    => array('.headerclass, .mobile-headerclass, .kad-fixed-vertical-background-area'),
-	        'title'     => __('Header Background', 'ascend'),
+	        'title'     => __('Header Background', 'juanjimeneztj'),
 	        'required' 	=> array('header_background_choice','=','full'),
       	),
       	array(
             'id'=>'header_background_color',
             'type' => 'color',
-            'title' => __('Header Background Color', 'ascend'), 
+            'title' => __('Header Background Color', 'juanjimeneztj'), 
             'default' => '#ffffff',
             'transparent'=>false,
             'validate' => 'color',
@@ -3272,7 +3272,7 @@ Redux::setSection( $opt_name, array(
       	array(
             'id'=>'header_background_transparency',
             'type' => 'select',
-            'title' => __('If background is color, select Transparency', 'ascend'), 
+            'title' => __('If background is color, select Transparency', 'juanjimeneztj'), 
             'options' => array('1' => '1','0.9' => '0.9', '0.8' => '0.8','0.7' => '0.7', '0.6' => '0.6', '0.5' => '0.5', '0.4' => '0.4', '0.3' => '0.3', '0.2' => '0.2', '0.1' => '0.1', '0' => '0'),
             'default' => '1',
             'width' => 'width:60%',
@@ -3281,7 +3281,7 @@ Redux::setSection( $opt_name, array(
       	array(
             'id'=>'vheader_border_color',
             'type' => 'color',
-            'title' => __('Beside Header Border Color', 'ascend'), 
+            'title' => __('Beside Header Border Color', 'juanjimeneztj'), 
             'default' => '',
             'transparent'=>true,
             'validate' => 'color',
@@ -3291,14 +3291,14 @@ Redux::setSection( $opt_name, array(
       	array(
 	        'id'=>'info_footer_background',
 	        'type' => 'info',
-	        'desc' => __('Footer Background', 'ascend'),
+	        'desc' => __('Footer Background', 'juanjimeneztj'),
          
         ),
     	array(
 	        'id'        => 'footer_background',
 	        'type'      => 'background',
 	        'output'    => array('.footerclass, .footerclass .footer-widget-title span, body.body-style-bubbled .footerclass .footer-widget-title span'),
-	        'title'     => __('Footer Background', 'ascend'),
+	        'title'     => __('Footer Background', 'juanjimeneztj'),
 	        'default'  => array(
 		        'background-color' => '#333333',
 		    ),
@@ -3307,7 +3307,7 @@ Redux::setSection( $opt_name, array(
 	        'id'        => 'footer_base_background',
 	        'type'      => 'background',
 	        'output'    => array('.footerbase'),
-	        'title'     => __('Footer Base Background', 'ascend'),
+	        'title'     => __('Footer Base Background', 'juanjimeneztj'),
 	        'default'  => array(
 		        'background-color' => '#2e2e2e',
 		    ),
@@ -3315,20 +3315,20 @@ Redux::setSection( $opt_name, array(
       	array(
             'id'=>'info_body_background',
             'type' => 'info',
-            'desc' => __('Body Background', 'ascend'),
+            'desc' => __('Body Background', 'juanjimeneztj'),
             'customizer' => false,
         ),
      	 array(
 	        'id'        => 'body_background',
 	        'type'      => 'background',
 	        //'output'    => array('body'),
-	        'title'     => __('Body Background', 'ascend'),
-	        'subtitle'  => __('This shows if site is using the boxed layout option.', 'ascend'),
+	        'title'     => __('Body Background', 'juanjimeneztj'),
+	        'subtitle'  => __('This shows if site is using the boxed layout option.', 'juanjimeneztj'),
 	        'default'  => array(
 		        'background-color' => '#ffffff',
 		    ),
 		    'customizer' => false,
-            'validate_callback' => 'ascend_update_callback_custom_background',
+            'validate_callback' => 'juanjimeneztj_update_callback_custom_background',
         ),
     ),
 ) );
@@ -3336,13 +3336,13 @@ Redux::setSection( $opt_name, array(
 Redux::setSection( $opt_name, array(
     'id' => 'typography',
     'customizer' => false,
-    'title' => __('Typography', 'ascend'),
-    'desc' => "<div class='redux-info-field'><h3>".__('Header Font Options', 'ascend')."</h3></div>",
+    'title' => __('Typography', 'juanjimeneztj'),
+    'desc' => "<div class='redux-info-field'><h3>".__('Header Font Options', 'juanjimeneztj')."</h3></div>",
     'fields' => array(
       array(
             'id'=>'font_h1',
             'type' => 'typography', 
-            'title' => __('H1 Headings', 'ascend'),
+            'title' => __('H1 Headings', 'juanjimeneztj'),
             'font-family'=>true, 
             'google'=>true,
             'font-backup'=>false, 
@@ -3355,7 +3355,7 @@ Redux::setSection( $opt_name, array(
             'color'=>true,
             'preview'=>true, 
             'output' => array('h1, .h1class'),
-            'subtitle'=> __("Choose Size and Style for h1 (This Styles Your Page Titles)", 'ascend'),
+            'subtitle'=> __("Choose Size and Style for h1 (This Styles Your Page Titles)", 'juanjimeneztj'),
             'default'=> array(
                 'font-family'=>'Source Sans Pro',
                 'subsets'=>'latin',
@@ -3369,7 +3369,7 @@ Redux::setSection( $opt_name, array(
     array(
             'id'=>'font_h2',
             'type' => 'typography', 
-            'title' => __('H2 Headings', 'ascend'),
+            'title' => __('H2 Headings', 'juanjimeneztj'),
             'font-family'=>true, 
             'google'=>true, 
             'font-backup'=>false, 
@@ -3382,7 +3382,7 @@ Redux::setSection( $opt_name, array(
             'color'=>true,
             'preview'=>true, 
             'output' => array('h2, .h2class'),
-            'subtitle'=> __("Choose Size and Style for h2", 'ascend'),
+            'subtitle'=> __("Choose Size and Style for h2", 'juanjimeneztj'),
             'default'=> array(
                 'font-family'=>'Source Sans Pro',
                 'subsets'=>'latin',
@@ -3396,7 +3396,7 @@ Redux::setSection( $opt_name, array(
     array(
             'id'=>'font_h3',
             'type' => 'typography', 
-            'title' => __('H3 Headings', 'ascend'),
+            'title' => __('H3 Headings', 'juanjimeneztj'),
             'font-family'=>true, 
             'google'=>true, 
             'font-backup'=>false, 
@@ -3409,7 +3409,7 @@ Redux::setSection( $opt_name, array(
             'color'=>true,
             'preview'=>true, 
             'output' => array('h3'),
-            'subtitle'=> __("Choose Size and Style for h3", 'ascend'),
+            'subtitle'=> __("Choose Size and Style for h3", 'juanjimeneztj'),
             'default'=> array(
                 'font-family'=>'Source Sans Pro',
                 'subsets'=>'latin',
@@ -3423,7 +3423,7 @@ Redux::setSection( $opt_name, array(
     array(
             'id'=>'font_h4',
             'type' => 'typography', 
-            'title' => __('H4 Headings', 'ascend'),
+            'title' => __('H4 Headings', 'juanjimeneztj'),
             'font-family'=>true, 
             'google'=>true, 
             'font-backup'=>false, 
@@ -3436,7 +3436,7 @@ Redux::setSection( $opt_name, array(
             'color'=>true,
             'preview'=>true, 
             'output' => array('h4'),
-            'subtitle'=> __("Choose Size and Style for h4", 'ascend'),
+            'subtitle'=> __("Choose Size and Style for h4", 'juanjimeneztj'),
             'default'=> array(
                 'font-family'=>'Source Sans Pro',
                 'subsets'=>'latin',
@@ -3450,7 +3450,7 @@ Redux::setSection( $opt_name, array(
     array(
             'id'=>'font_h5',
             'type' => 'typography', 
-            'title' => __('H5 Headings', 'ascend'),
+            'title' => __('H5 Headings', 'juanjimeneztj'),
             'font-family'=>true, 
             'google'=>true, 
             'font-backup'=>false, 
@@ -3463,7 +3463,7 @@ Redux::setSection( $opt_name, array(
             'color'=>true,
             'preview'=>true, 
             'output' => array('h5'),
-            'subtitle'=> __("Choose Size and Style for h5", 'ascend'),
+            'subtitle'=> __("Choose Size and Style for h5", 'juanjimeneztj'),
             'default'=> array(
                 'font-family'=>'Source Sans Pro',
                 'subsets'=>'latin',
@@ -3477,7 +3477,7 @@ Redux::setSection( $opt_name, array(
     array(
         'id'=>'font_subtitle',
         'type' => 'typography', 
-        'title' => __('Page Subtitle', 'ascend'),
+        'title' => __('Page Subtitle', 'juanjimeneztj'),
         'font-family'=>true, 
         'google'=>true, 
         'font-backup'=>false,
@@ -3490,7 +3490,7 @@ Redux::setSection( $opt_name, array(
         'color'=>false,
         'preview'=>true,
         'output' => array('.titleclass .subtitle'),
-        'subtitle'=> __("Choose Size and Style for Page Subtitle", 'ascend'),
+        'subtitle'=> __("Choose Size and Style for Page Subtitle", 'juanjimeneztj'),
         'default'=> array(
             'font-family'=>'Source Sans Pro',
             'subsets'=>'latin',
@@ -3501,12 +3501,12 @@ Redux::setSection( $opt_name, array(
     array(
             'id'=>'info_body_font',
             'type' => 'info',
-            'desc' => __('Body Font Options', 'ascend'),
+            'desc' => __('Body Font Options', 'juanjimeneztj'),
             ),
     array(
             'id'=>'font_p',
             'type' => 'typography', 
-            'title' => __('Body Font', 'ascend'),
+            'title' => __('Body Font', 'juanjimeneztj'),
             'font-family'=>true, 
             'google'=>true, 
             'font-backup'=>false, 
@@ -3520,7 +3520,7 @@ Redux::setSection( $opt_name, array(
             'color'=>true,
             'preview'=>true, 
             'output' => array('body'),
-            'subtitle'=> __("Choose Size and Style for paragraphs", 'ascend'),
+            'subtitle'=> __("Choose Size and Style for paragraphs", 'juanjimeneztj'),
             'default'=> array(
                 'font-family'=>'Source Sans Pro',
                 'subsets'=>'latin',
@@ -3536,22 +3536,22 @@ Redux::setSection( $opt_name, array(
 
 Redux::setSection( $opt_name, array(
     'id' => 'menu_settings',
-    'title' => __('Menu Settings', 'ascend'),
+    'title' => __('Menu Settings', 'juanjimeneztj'),
     'customizer' => false,
-    'desc' => "<div class='redux-info-field'><h3>".__('Menu Options', 'ascend')."</h3></div>",
+    'desc' => "<div class='redux-info-field'><h3>".__('Menu Options', 'juanjimeneztj')."</h3></div>",
     'fields' => array(
         array(
             'id'=>'show_subindicator',
             'type' => 'switch', 
-            'title' => __('Enable sub-indicator in menu?', 'ascend'),
-            'subtitle'=> __('Choose to enable arrows showing there is a submenu', 'ascend'),
+            'title' => __('Enable sub-indicator in menu?', 'juanjimeneztj'),
+            'subtitle'=> __('Choose to enable arrows showing there is a submenu', 'juanjimeneztj'),
             "default" => 1,
             ),
         array(
             'id'=>'show_vert_subindicator',
             'type' => 'switch', 
-            'title' => __('Enable sub-indicator in vertical menu?', 'ascend'),
-            'subtitle'=> __('Choose to enable arrows showing there is a submenu', 'ascend'),
+            'title' => __('Enable sub-indicator in vertical menu?', 'juanjimeneztj'),
+            'subtitle'=> __('Choose to enable arrows showing there is a submenu', 'juanjimeneztj'),
             'default' => 0,
             'required' => array('site_layout','!=','above'),
             ),
@@ -3559,12 +3559,12 @@ Redux::setSection( $opt_name, array(
             'id'=>'info_menu_primary_font',
             'type' => 'info',
          
-            'desc' => __('Primary Menu Options', 'ascend'),
+            'desc' => __('Primary Menu Options', 'juanjimeneztj'),
             ),
       	array(
             'id'=>'font_primary_menu',
             'type' => 'typography', 
-            'title' => __('Primary Menu Font', 'ascend'),
+            'title' => __('Primary Menu Font', 'juanjimeneztj'),
             'font-family'=>true, 
             'google'=>true, 
             'font-backup'=>false, 
@@ -3577,7 +3577,7 @@ Redux::setSection( $opt_name, array(
             'letter-spacing'=>true,
             'preview'=>true,
             'output' => array('.nav-main ul.sf-menu > li > a, .kad-header-menu-inner .kt-header-extras ul.sf-menu > li > a, .kad-header-menu-inner .kt-header-extras .kt-extras-label [class*="kt-icon-"], .kt-header-extras .sf-vertical > li > a'),
-            'subtitle'=> __("Choose Size and Style for primary menu", 'ascend'),
+            'subtitle'=> __("Choose Size and Style for primary menu", 'juanjimeneztj'),
             'default'=> array(
                 'font-family'=>'Source Sans Pro',
                 'subsets'=>'latin',
@@ -3592,7 +3592,7 @@ Redux::setSection( $opt_name, array(
     	array(
             'id'=>'primarymenu_hover_color',
             'type' => 'color',
-            'title' => __('Hover and Active Font Color', 'ascend'), 
+            'title' => __('Hover and Active Font Color', 'juanjimeneztj'), 
             'default' => '#000',
             'output'    => array('color' => '.nav-main ul.sf-menu > li > a:hover, .nav-main ul.sf-menu > li.sfHover > a, .nav-main ul.sf-menu > li.current-menu-item > a, .kt-header-extras .sf-vertical > li > a:hover'),
             'transparent'=>false,
@@ -3602,7 +3602,7 @@ Redux::setSection( $opt_name, array(
     	array(
             'id'=>'primarymenu_hover_bg_color',
             'type' => 'color',
-            'title' => __('Hover and Active Background Color', 'ascend'), 
+            'title' => __('Hover and Active Background Color', 'juanjimeneztj'), 
             'default' => '',
             'output'    => array('background' => '.nav-main ul.sf-menu > li > a:hover, .nav-main ul.sf-menu > li.sfHover > a, .nav-main ul.sf-menu > li.current-menu-item > a, .kt-header-extras .sf-vertical > li > a:hover'),
             'transparent'=>false,
@@ -3613,18 +3613,18 @@ Redux::setSection( $opt_name, array(
             'id'=>'info_menu_secondary_font',
             'type' => 'info',
          
-            'desc' => __('Secondary Menu Options', 'ascend'),
+            'desc' => __('Secondary Menu Options', 'juanjimeneztj'),
             ),
     	array(
 	        'id'        => 'second_menu_background',
 	        'type'      => 'background',
 	        'output'    => array('.second-navclass'),
-	        'title'     => __('Secondary Menu Background', 'ascend'),
+	        'title'     => __('Secondary Menu Background', 'juanjimeneztj'),
         ),
     	array(
             'id'=>'font_secondary_menu',
             'type' => 'typography', 
-            'title' => __('Secondary Menu Font', 'ascend'),
+            'title' => __('Secondary Menu Font', 'juanjimeneztj'),
             'font-family'=>true, 
             'google'=>true,
             'font-backup'=>false,
@@ -3637,7 +3637,7 @@ Redux::setSection( $opt_name, array(
             'letter-spacing'=>true,
             'preview'=>true,
             'output' => array('.second-navclass .sf-menu > li > a'),
-            'subtitle'=> __("Choose Size and Style for secondary menu", 'ascend'),
+            'subtitle'=> __("Choose Size and Style for secondary menu", 'juanjimeneztj'),
             'default'=> array(
                 'font-family'=>'Source Sans Pro',
                 'color'=>'#fff',
@@ -3651,7 +3651,7 @@ Redux::setSection( $opt_name, array(
     	array(
             'id'=>'secondarymenu_hover_color',
             'type' => 'color',
-            'title' => __('Secondary Menu Divider Color', 'ascend'), 
+            'title' => __('Secondary Menu Divider Color', 'juanjimeneztj'), 
             'default' => '',
             'output'    => array('background' => '.second-navclass .sf-menu > li:after'),
             'validate' => 'color',
@@ -3660,7 +3660,7 @@ Redux::setSection( $opt_name, array(
     	array(
             'id'=>'secondarymenu_hover_color',
             'type' => 'color',
-            'title' => __('Secondary Hover and Active Font Color', 'ascend'), 
+            'title' => __('Secondary Hover and Active Font Color', 'juanjimeneztj'), 
             'default' => '',
             'output'    => array('color' => '.second-navclass ul.sf-menu > li > a:hover, .second-navclass ul.sf-menu > li.sfHover > a, .second-navclass ul.sf-menu > li.current-menu-item > a'),
             'transparent'=>false,
@@ -3669,7 +3669,7 @@ Redux::setSection( $opt_name, array(
     	array(
             'id'=>'secondarymenu_hover_bg_color',
             'type' => 'color',
-            'title' => __('Secondary Hover and Active Background Color', 'ascend'), 
+            'title' => __('Secondary Hover and Active Background Color', 'juanjimeneztj'), 
             'default' => '',
             'transparent'=>false,
             'output'    => array('background' => '.second-navclass ul.sf-menu > li > a:hover, .second-navclass ul.sf-menu > li.sfHover > a, .second-navclass ul.sf-menu > li.current-menu-item > a'),
@@ -3679,12 +3679,12 @@ Redux::setSection( $opt_name, array(
             'id'=>'info_dropdown_menu_settings',
             'type' => 'info',
          
-            'desc' => __('Dropdown Menu Style', 'ascend'),
+            'desc' => __('Dropdown Menu Style', 'juanjimeneztj'),
             ),
     	array(
             'id'=>'dropdown_background_color',
             'type' => 'color',
-            'title' => __('Dropdown Background Color', 'ascend'), 
+            'title' => __('Dropdown Background Color', 'juanjimeneztj'), 
             'default' => '',
             'output'    => array('background' => '.nav-main ul.sf-menu ul a, .second-navclass ul.sf-menu ul a,  .kad-header-menu-inner .kt-header-extras ul.sf-menu ul, .kad-relative-vertical-content .kt-header-extras ul.sf-menu ul,.second-navclass .sf-menu > li.kt-lgmenu > ul, .nav-main .sf-menu > li.kt-lgmenu > ul'),
             'transparent'=>false,
@@ -3693,7 +3693,7 @@ Redux::setSection( $opt_name, array(
     	array(
             'id'=>'dropdown_border_color',
             'type' => 'color',
-            'title' => __('Dropdown Border Color', 'ascend'), 
+            'title' => __('Dropdown Border Color', 'juanjimeneztj'), 
             'default' => '',
             'output'    => array('border-color' => '.nav-main ul.sf-menu ul, .second-navclass ul.sf-menu ul,  .kad-header-menu-inner .kt-header-extras ul.sf-menu ul,.kad-relative-vertical-content .kt-header-extras ul.sf-menu ul, .kad-relative-vertical-content .nav-main .sf-vertical ul', 'border-bottom-color' => '.nav-main .sf-menu.sf-menu-normal > li > ul:before, .second-navclass .sf-menu.sf-menu-normal > li > ul:before,  .kad-header-menu-inner .kt-header-extras ul.sf-menu > li > ul:before '),
             'transparent'=>true,
@@ -3702,7 +3702,7 @@ Redux::setSection( $opt_name, array(
     	array(
             'id'=>'dropdown_menu_font_size',
             'type' => 'typography', 
-            'title' => __('Dropdown Menu Font size', 'ascend'),
+            'title' => __('Dropdown Menu Font size', 'juanjimeneztj'),
             'font-family'=>false, 
             'google'=>false,
             'font-backup'=>false,
@@ -3718,7 +3718,7 @@ Redux::setSection( $opt_name, array(
             'color'=>true,
             'preview'=>false,
             'output' => array('.nav-main ul.sf-menu ul a, .second-navclass ul.sf-menu ul a, .kad-header-menu-inner .kt-header-extras .kt-woo-account-nav a, .kad-relative-vertical-content .kt-header-extras .kt-woo-account-nav a'),
-            'subtitle'=> __("Choose Size for the Dropdown menus", 'ascend'),
+            'subtitle'=> __("Choose Size for the Dropdown menus", 'juanjimeneztj'),
             'default'=> array(
                 'font-size'=>'16px',
                 'color'=>'#444',
@@ -3730,7 +3730,7 @@ Redux::setSection( $opt_name, array(
     	array(
             'id'=>'dropdown_font_hover_color',
             'type' => 'color',
-            'title' => __('Dropdown Font Hover and Active Color', 'ascend'), 
+            'title' => __('Dropdown Font Hover and Active Color', 'juanjimeneztj'), 
             'default' => '#000',
             'transparent'=>false,
             'output' => array('color' => '.nav-main ul.sf-menu ul a:hover, .nav-main ul.sf-menu > li:not(.kt-lgmenu) ul li.sfHover > a, .nav-main ul.sf-menu ul li.current-menu-item > a, .second-navclass ul.sf-menu ul a:hover, .second-navclass ul.sf-menu li:not(.kt-lgmenu) ul li.sfHover > a, .second-navclass ul.sf-menu ul li.current-menu-item > a, .kad-header-menu-inner .kt-header-extras .kt-woo-account-nav a:hover, body.woocommerce-account .kad-header-menu-inner .kt-header-extras .kt-woo-account-nav li.is-active a, .kad-relative-vertical-content  .kt-header-extras .kt-woo-account-nav a:hover, body.woocommerce-account .kad-relative-vertical-content  .kt-header-extras .kt-woo-account-nav li.is-active a'),
@@ -3739,7 +3739,7 @@ Redux::setSection( $opt_name, array(
     	array(
             'id'=>'dropdown_font_hover_background',
             'type' => 'color',
-            'title' => __('Dropdown Font Background Hover and Active Color', 'ascend'), 
+            'title' => __('Dropdown Font Background Hover and Active Color', 'juanjimeneztj'), 
             'default' => '',
             'transparent'=>false,
             'output' => array('background' => '.nav-main ul.sf-menu ul a:hover, .nav-main ul.sf-menu > li:not(.kt-lgmenu) ul li.sfHover > a, .nav-main ul.sf-menu ul li.current-menu-item > a, .second-navclass ul.sf-menu ul a:hover, .second-navclass ul.sf-menu > li:not(.kt-lgmenu) ul li.sfHover > a, .second-navclass ul.sf-menu ul li.current-menu-item > a, .kad-header-menu-inner .kt-header-extras .kt-woo-account-nav a:hover, body.woocommerce-account .kad-header-menu-inner .kt-header-extras .kt-woo-account-nav li.is-active a, .kad-relative-vertical-content  .kt-header-extras .kt-woo-account-nav a:hover, body.woocommerce-account .kad-relative-vertical-content  .kt-header-extras .kt-woo-account-nav li.is-active a'),
@@ -3748,31 +3748,31 @@ Redux::setSection( $opt_name, array(
     	array(
             'id'=>'info_menu_mobile_font',
             'type' => 'info',
-            'desc' => __('Mobile Menu Options', 'ascend'),
+            'desc' => __('Mobile Menu Options', 'juanjimeneztj'),
             ),
     	array(
             'id'=>'mobilemenu_background',
             'type' => 'background',
-            'title' => __('Mobile Menu background', 'ascend'), 
+            'title' => __('Mobile Menu background', 'juanjimeneztj'), 
             'default' => '',
             'output' => array('.mfp-slide #kt-mobile-menu, .mfp-slide #kt-mobile-cart, .mfp-slide #kt-mobile-account'),
             ),
     	array(
             'id'=>'mobile_submenu_collapse',
             'type' => 'switch', 
-            'title' => __('Submenu items collapse until opened', 'ascend'),
+            'title' => __('Submenu items collapse until opened', 'juanjimeneztj'),
             "default" => 1,
             ),
     	array(
             'id'=>'mobile_submenu_collapse_subitems',
             'type' => 'switch', 
-            'title' => __('Make menu items that have child elements only open sub items', 'ascend'),
+            'title' => __('Make menu items that have child elements only open sub items', 'juanjimeneztj'),
             "default" => 0,
             ),
     	array(
             'id'=>'font_mobile_menu',
             'type' => 'typography', 
-            'title' => __('Mobile Menu Font', 'ascend'),
+            'title' => __('Mobile Menu Font', 'juanjimeneztj'),
             'font-family'=>true, 
             'google'=>true, 
             'font-backup'=>false, 
@@ -3785,7 +3785,7 @@ Redux::setSection( $opt_name, array(
             'color'=>true,
             'preview'=>true, 
             'output' => array('.kad-mobile-nav li a, .kad-mobile-nav li', 'color' => '.kt-mobile-menu form.search-form input[type="search"].search-field, .kt-mobile-menu form.search-form .search-submit', '.mfp-slide #kt-mobile-account, .mfp-slide #kt-mobile-cart'),
-            'subtitle'=> __("Choose Size and Style for Mobile Menu", 'ascend'),
+            'subtitle'=> __("Choose Size and Style for Mobile Menu", 'juanjimeneztj'),
             'default'=> array(
                 'font-family'=>'Source Sans Pro',
                 'subsets'=>'latin',
@@ -3799,7 +3799,7 @@ Redux::setSection( $opt_name, array(
     	array(
             'id'=>'mobilemenu_bottom_border',
             'type' => 'color',
-            'title' => __('Mobile Menu font bottom border color', 'ascend'), 
+            'title' => __('Mobile Menu font bottom border color', 'juanjimeneztj'), 
             'default' => '',
             'transparent'=>true,
             'output' => array('border-color' => '.kad-mobile-nav li a'),
@@ -3808,7 +3808,7 @@ Redux::setSection( $opt_name, array(
     	array(
             'id'=>'mobilemenu_hover_color',
             'type' => 'color',
-            'title' => __('Mobile Hover and Active Font Color', 'ascend'), 
+            'title' => __('Mobile Hover and Active Font Color', 'juanjimeneztj'), 
             'default' => '',
             'transparent'=>false,
             'output' => array('color' => '.kad-mobile-nav li a:hover, kad-mobile-nav li.current-menu-item > a'),
@@ -3817,7 +3817,7 @@ Redux::setSection( $opt_name, array(
     	array(
             'id'=>'mobilemenu_hover_bg_color',
             'type' => 'color',
-            'title' => __('Mobile Hover and Active Background Color', 'ascend'), 
+            'title' => __('Mobile Hover and Active Background Color', 'juanjimeneztj'), 
             'default' => '',
             'output' => array('background' => '.kad-mobile-nav li a:hover, kad-mobile-nav li.current-menu-item > a'),
             'transparent'=>false,
@@ -3829,136 +3829,136 @@ Redux::setSection( $opt_name, array(
 Redux::setSection( $opt_name, array(
     'id' => 'language_settings',
     'customizer' => false,
-    'title' => __('Language Settings', 'ascend'),
-    'desc' => "<div class='redux-info-field'><h3>".__('Quick Language Settings', 'ascend')."</h3></div>",
+    'title' => __('Language Settings', 'juanjimeneztj'),
+    'desc' => "<div class='redux-info-field'><h3>".__('Quick Language Settings', 'juanjimeneztj')."</h3></div>",
     'fields' => array(
       	array(
             'id'=>'search_placeholder_text',
             'type' => 'text',
-            'title' => __('Search Placeholder Text', 'ascend'),
-            'subtitle' => __('Standard: Search...', 'ascend'),
+            'title' => __('Search Placeholder Text', 'juanjimeneztj'),
+            'subtitle' => __('Standard: Search...', 'juanjimeneztj'),
             ),
       	array(
             'id'=>'info_lang_header_extras',
             'type' => 'info',
-            'desc' => __('Header Quick Language Settings', 'ascend'),
+            'desc' => __('Header Quick Language Settings', 'juanjimeneztj'),
             ),
       	array(
             'id'=>'tl_cart',
             'type' => 'text',
-            'title' => __('Cart label', 'ascend'),
-            'subtitle' => __('Standard: Cart', 'ascend'),
+            'title' => __('Cart label', 'juanjimeneztj'),
+            'subtitle' => __('Standard: Cart', 'juanjimeneztj'),
             ),
       	array(
             'id'=>'tl_login_signup',
             'type' => 'text',
-            'title' => __('Login/Signup label', 'ascend'),
-            'subtitle' => __('Standard: Login', 'ascend'),
+            'title' => __('Login/Signup label', 'juanjimeneztj'),
+            'subtitle' => __('Standard: Login', 'juanjimeneztj'),
             ),
       	array(
             'id'=>'tl_my_account',
             'type' => 'text',
-            'title' => __('My Account label', 'ascend'),
-            'subtitle' => __('Standard: My Account', 'ascend'),
+            'title' => __('My Account label', 'juanjimeneztj'),
+            'subtitle' => __('Standard: My Account', 'juanjimeneztj'),
             ),
       	array(
             'id'=>'info_lang_blog_settings',
             'type' => 'info',
-            'desc' => __('Blog Quick Language Settings', 'ascend'),
+            'desc' => __('Blog Quick Language Settings', 'juanjimeneztj'),
             ),
       	array(
             'id'=>'post_readmore_text',
             'type' => 'text',
-            'title' => __('Post READ MORE text', 'ascend'),
-            'subtitle' => __('Standard: Read More', 'ascend'),
+            'title' => __('Post READ MORE text', 'juanjimeneztj'),
+            'subtitle' => __('Standard: Read More', 'juanjimeneztj'),
             ),
       	array(
             'id'=>'post_by_text',
             'type' => 'text',
-            'title' => __('Post Author BY text', 'ascend'),
-            'subtitle' => __('Standard: by', 'ascend'),
+            'title' => __('Post Author BY text', 'juanjimeneztj'),
+            'subtitle' => __('Standard: by', 'juanjimeneztj'),
             ),
       	array(
             'id'=>'info_lang_woocommerce',
             'type' => 'info',
-            'desc' => __('Woocommerce Quick Language Settings', 'ascend'),
+            'desc' => __('Woocommerce Quick Language Settings', 'juanjimeneztj'),
             ),
       array(
             'id'=>'sold_placeholder_text',
             'type' => 'text',
-            'title' => __('Product Sold Text', 'ascend'),
-            'subtitle' => __('Standard: Sold', 'ascend'),
+            'title' => __('Product Sold Text', 'juanjimeneztj'),
+            'subtitle' => __('Standard: Sold', 'juanjimeneztj'),
             ),
       array(
             'id'=>'sale_placeholder_text',
             'type' => 'text',
-            'title' => __('Product Sale Text', 'ascend'),
-            'subtitle' => __('Standard: Sale', 'ascend'),
+            'title' => __('Product Sale Text', 'juanjimeneztj'),
+            'subtitle' => __('Standard: Sale', 'juanjimeneztj'),
             ),
       array(
             'id'=>'wc_clear_placeholder_text',
             'type' => 'text',
-            'title' => __('Clear Selection Text', 'ascend'),
-            'subtitle' => __('Standard: Clear selection', 'ascend'),
+            'title' => __('Clear Selection Text', 'juanjimeneztj'),
+            'subtitle' => __('Standard: Clear selection', 'juanjimeneztj'),
             ),
       array(
             'id'=>'description_tab_text',
             'type' => 'text',
-            'title' => __('Product Page: Description tab text', 'ascend'),
-            'subtitle' => __('Standard: Description', 'ascend'),
+            'title' => __('Product Page: Description tab text', 'juanjimeneztj'),
+            'subtitle' => __('Standard: Description', 'juanjimeneztj'),
             ),
       array(
             'id'=>'description_header_text',
             'type' => 'text',
-            'title' => __('Product Page: Description header text', 'ascend'),
-            'subtitle' => __('Standard: Product Description', 'ascend'),
+            'title' => __('Product Page: Description header text', 'juanjimeneztj'),
+            'subtitle' => __('Standard: Product Description', 'juanjimeneztj'),
             ),
       array(
             'id'=>'additional_information_tab_text',
             'type' => 'text',
-            'title' => __('Product Page: Additional Information tab text', 'ascend'),
-            'subtitle' => __('Standard: Additional Information', 'ascend'),
+            'title' => __('Product Page: Additional Information tab text', 'juanjimeneztj'),
+            'subtitle' => __('Standard: Additional Information', 'juanjimeneztj'),
             ),
       array(
             'id'=>'additional_information_header_text',
             'type' => 'text',
-            'title' => __('Product Page: Additional Information Header text', 'ascend'),
-            'subtitle' => __('Standard: Additional Information', 'ascend'),
+            'title' => __('Product Page: Additional Information Header text', 'juanjimeneztj'),
+            'subtitle' => __('Standard: Additional Information', 'juanjimeneztj'),
             ),
       array(
             'id'=>'reviews_tab_text',
             'type' => 'text',
-            'title' => __('Product Page: Reviews tab text', 'ascend'),
-            'subtitle' => __('Standard: Reviews', 'ascend'),
+            'title' => __('Product Page: Reviews tab text', 'juanjimeneztj'),
+            'subtitle' => __('Standard: Reviews', 'juanjimeneztj'),
             ),
       array(
             'id'=>'related_products_text',
             'type' => 'text',
-            'title' => __('Product Page: Related Products text', 'ascend'),
-            'subtitle' => __('Standard: Related Products', 'ascend'),
+            'title' => __('Product Page: Related Products text', 'juanjimeneztj'),
+            'subtitle' => __('Standard: Related Products', 'juanjimeneztj'),
             ),
       array(
             'id'=>'wc_upsell_products_text',
             'type' => 'text',
-            'title' => __('Product Page: You may also like... text', 'ascend'),
-            'subtitle' => __('Standard: You may also like&hellip;', 'ascend'),
+            'title' => __('Product Page: You may also like... text', 'juanjimeneztj'),
+            'subtitle' => __('Standard: You may also like&hellip;', 'juanjimeneztj'),
             ),
         array(
             'id'=>'info_lang_lightbox_settings',
             'type' => 'info',
-            'desc' => __('Lightbox Quick Language Settings', 'ascend'),
+            'desc' => __('Lightbox Quick Language Settings', 'juanjimeneztj'),
             ),
       	array(
             'id'=>'lightbox_of_text',
             'type' => 'text',
-            'title' => __('LightBox: of text', 'ascend'),
-            'subtitle' => __('Standard: of', 'ascend'),
+            'title' => __('LightBox: of text', 'juanjimeneztj'),
+            'subtitle' => __('Standard: of', 'juanjimeneztj'),
             ),
       	array(
             'id'=>'lightbox_error_text',
             'type' => 'text',
-            'title' => __('LightBox: Error text', 'ascend'),
-            'subtitle' => __('Standard: The Image could not be loaded.', 'ascend'),
+            'title' => __('LightBox: Error text', 'juanjimeneztj'),
+            'subtitle' => __('Standard: The Image could not be loaded.', 'juanjimeneztj'),
             ),
     ),
 ) );
@@ -3966,28 +3966,28 @@ Redux::setSection( $opt_name, array(
 Redux::setSection( $opt_name, array(
     'id' => 'breadcrumbs',
     'customizer' => false,
-    'title' => __('Breadcrumb Settings', 'ascend'),
-    'desc' => "<div class='redux-info-field'><h3>".__('Sitewide Breadcrumbs', 'ascend')."</h3></div>",
+    'title' => __('Breadcrumb Settings', 'juanjimeneztj'),
+    'desc' => "<div class='redux-info-field'><h3>".__('Sitewide Breadcrumbs', 'juanjimeneztj')."</h3></div>",
     'fields' => array(
       	array(
             'id'=>'show_breadcrumbs_shop',
             'type' => 'switch', 
-            'title' => __('Show Breadcrumbs in Woocommerce archive pages?', 'ascend'),
-            'subtitle' => __('Choose to show or hide breadcrumbs on your Woocommerce archive pages', 'ascend'),
+            'title' => __('Show Breadcrumbs in Woocommerce archive pages?', 'juanjimeneztj'),
+            'subtitle' => __('Choose to show or hide breadcrumbs on your Woocommerce archive pages', 'juanjimeneztj'),
             "default" => 1,
             ),
       	array(
             'id'=>'show_breadcrumbs_product',
             'type' => 'switch', 
-            'title' => __('Show Breadcrumbs on Products?', 'ascend'),
-            'subtitle' => __('Choose to show or hide breadcrumbs on your Woocommerce products', 'ascend'),
+            'title' => __('Show Breadcrumbs on Products?', 'juanjimeneztj'),
+            'subtitle' => __('Choose to show or hide breadcrumbs on your Woocommerce products', 'juanjimeneztj'),
             "default" => 1,
             ),
      	array(
             'id'=>'show_breadcrumbs_post',
             'type' => 'switch', 
-            'title' => __('Show Breadcrumbs on Blog Posts?', 'ascend'),
-            'subtitle' => __('Choose to show or hide breadcrumbs on your single blog post', 'ascend'),
+            'title' => __('Show Breadcrumbs on Blog Posts?', 'juanjimeneztj'),
+            'subtitle' => __('Choose to show or hide breadcrumbs on your single blog post', 'juanjimeneztj'),
             "default" => 1,
             ),
      	array(
@@ -3995,42 +3995,42 @@ Redux::setSection( $opt_name, array(
             'type' => 'select',
             'data' => 'pages',
             'width' => 'width:60%',
-            'title' => __('All Blog Post Page', 'ascend'), 
-            'subtitle' => __('This sets the link for your main blog page, for breadcrumbs. Use only if your blog page is not your home page.', 'ascend'),
+            'title' => __('All Blog Post Page', 'juanjimeneztj'), 
+            'subtitle' => __('This sets the link for your main blog page, for breadcrumbs. Use only if your blog page is not your home page.', 'juanjimeneztj'),
             'required' => array('show_breadcrumbs_post','=','1'),
             ),
       	array(
             'id'=>'show_breadcrumbs_portfolio',
             'type' => 'switch', 
-            'title' => __('Show Breadcrumbs on Portfolio Posts?', 'ascend'),
-            'subtitle' => __('Choose to show or hide breadcrumbs on your single portfolio posts', 'ascend'),
+            'title' => __('Show Breadcrumbs on Portfolio Posts?', 'juanjimeneztj'),
+            'subtitle' => __('Choose to show or hide breadcrumbs on your single portfolio posts', 'juanjimeneztj'),
             "default" => 0,
             ),
       	array(
             'id'=>'show_breadcrumbs_archive',
             'type' => 'switch', 
-            'title' => __('Show Breadcrumbs on Archives?', 'ascend'),
-            'subtitle' => __('Choose to show or hide breadcrumbs on your archives', 'ascend'),
+            'title' => __('Show Breadcrumbs on Archives?', 'juanjimeneztj'),
+            'subtitle' => __('Choose to show or hide breadcrumbs on your archives', 'juanjimeneztj'),
             "default" => 1,
             ),
       	array(
             'id'=>'show_breadcrumbs_page',
             'type' => 'switch', 
-            'title' => __('Show Breadcrumbs on Pages?', 'ascend'),
-            'subtitle' => __('Choose to show or hide breadcrumbs on your pages', 'ascend'),
+            'title' => __('Show Breadcrumbs on Pages?', 'juanjimeneztj'),
+            'subtitle' => __('Choose to show or hide breadcrumbs on your pages', 'juanjimeneztj'),
             "default" => 0,
             ),
       	array(
             'id'=>'home_breadcrumb_text',
             'type' => 'text',
-            'title' => __('Home title for breadcrumbs', 'ascend'),
-            'subtitle' => __('Standard: Home', 'ascend'),
+            'title' => __('Home title for breadcrumbs', 'juanjimeneztj'),
+            'subtitle' => __('Standard: Home', 'juanjimeneztj'),
             ),
       	array(
             'id'=>'shop_breadcrumbs',
             'type' => 'switch', 
-            'title' => __('Show Shop page in breadcrumbs?', 'ascend'),
-            'subtitle' => __('Choose to show or hide the shop page in breadcrumbs on your site', 'ascend'),
+            'title' => __('Show Shop page in breadcrumbs?', 'juanjimeneztj'),
+            'subtitle' => __('Choose to show or hide the shop page in breadcrumbs on your site', 'juanjimeneztj'),
             "default" => 1,
             ),
     ),
@@ -4038,21 +4038,21 @@ Redux::setSection( $opt_name, array(
 Redux::setSection( $opt_name, array(
     'id' => 'search_settings',
     'customizer' => false,
-    'title' => __('Search Results Settings', 'ascend'),
-    'desc' => "<div class='redux-info-field'><h3>".__('Search page Settings', 'ascend')."</h3></div>",
+    'title' => __('Search Results Settings', 'juanjimeneztj'),
+    'desc' => "<div class='redux-info-field'><h3>".__('Search page Settings', 'juanjimeneztj')."</h3></div>",
     'fields' => array(
     	array(
             'id'=>'search_layout',
             'type' => 'select',
-            'title' => __('Search Results Layout', 'ascend'), 
-            'options' => array('full' => __('No sidebar layout', 'ascend'), 'sidebar' => __('Sidebar Layout', 'ascend')),
+            'title' => __('Search Results Layout', 'juanjimeneztj'), 
+            'options' => array('full' => __('No sidebar layout', 'juanjimeneztj'), 'sidebar' => __('Sidebar Layout', 'juanjimeneztj')),
             'width' => 'width:60%',
             'default' => 'full',
             ),
         array(
             'id'=>'search_sidebar_default',
             'type' => 'select',
-            'title' => __('Choose a Default Sidebar for your search results', 'ascend'), 
+            'title' => __('Choose a Default Sidebar for your search results', 'juanjimeneztj'), 
             'data' => 'sidebars',
             'default' => 'sidebar-primary',
             'width' => 'width:60%',
@@ -4060,8 +4060,8 @@ Redux::setSection( $opt_name, array(
         array(
             'id'=>'search_layout_style',
             'type' => 'select',
-            'title' => __('Search Results Layout Style', 'ascend'), 
-            'options' => array('grid' => __('Grid', 'ascend'),'singlecolumn' => __('Blog Like Single Column', 'ascend')),
+            'title' => __('Search Results Layout Style', 'juanjimeneztj'), 
+            'options' => array('grid' => __('Grid', 'juanjimeneztj'),'singlecolumn' => __('Blog Like Single Column', 'juanjimeneztj')),
             'width' => 'width:60%',
             'default' => 'grid',
             ),
@@ -4070,44 +4070,44 @@ Redux::setSection( $opt_name, array(
 Redux::setSection( $opt_name, array(
     'id' => 'misc_settings',
     'customizer' => false,
-    'title' => __('Misc Settings', 'ascend'),
-    'desc' => "<div class='redux-info-field'><h3>".__('Misc Settings', 'ascend')."</h3></div>",
+    'title' => __('Misc Settings', 'juanjimeneztj'),
+    'desc' => "<div class='redux-info-field'><h3>".__('Misc Settings', 'juanjimeneztj')."</h3></div>",
     'fields' => array(
         array(
             'id'=>'info_sidebars',
             'type' => 'info',
-            'desc' => __('Create Sidebars', 'ascend'),
+            'desc' => __('Create Sidebars', 'juanjimeneztj'),
             ),
         array(
             'id'=>'cust_sidebars',
             'type' => 'multi_text',
-            'title' => __('Create Custom Sidebars', 'ascend'),
-            'subtitle' => __('Type new sidebar name into textbox', 'ascend'),
-            'default' =>__('Extra Sidebar', 'ascend'),
+            'title' => __('Create Custom Sidebars', 'juanjimeneztj'),
+            'subtitle' => __('Type new sidebar name into textbox', 'juanjimeneztj'),
+            'default' =>__('Extra Sidebar', 'juanjimeneztj'),
             ),
         array(
             'id'=>'info_wpgallerys',
             'type' => 'info',
-            'desc' => __('WordPress Galleries', 'ascend'),
+            'desc' => __('WordPress Galleries', 'juanjimeneztj'),
             ),
         array(
             'id'=>'kadence_gallery',
             'type' => 'switch', 
-            'title' => __('Enable Ascend Galleries to override WordPress', 'ascend'),
-            'subtitle' => __('Disable this if using a plugin to customize galleries, for example jetpack tiled gallery.', 'ascend'),
+            'title' => __('Enable juanjimeneztj Galleries to override WordPress', 'juanjimeneztj'),
+            'subtitle' => __('Disable this if using a plugin to customize galleries, for example jetpack tiled gallery.', 'juanjimeneztj'),
             "default" => 1,
             ),
         array(
             'id'=>'info_lightbox',
             'type' => 'info',
-            'desc' => __('Theme Lightbox', 'ascend'),
+            'desc' => __('Theme Lightbox', 'juanjimeneztj'),
             ),
         array(
             'id'=>'kadence_themes_lightbox',
             'type' => 'switch',
-            'on' => __('Lightbox On', 'ascend'),
-            'off' => __('Lightbox Off', 'ascend'),
-            'title' => __('Theme Lightbox?', 'ascend'),
+            'on' => __('Lightbox On', 'juanjimeneztj'),
+            'off' => __('Lightbox Off', 'juanjimeneztj'),
+            'title' => __('Theme Lightbox?', 'juanjimeneztj'),
             "default" => 1,
             ),
     ),
@@ -4115,21 +4115,21 @@ Redux::setSection( $opt_name, array(
 Redux::setSection( $opt_name, array(
     'id' => 'custom_css',
     'customizer' => false,
-    'title' => __('Custom Css', 'ascend'),
+    'title' => __('Custom Css', 'juanjimeneztj'),
     'fields' => array(
         array(
             'id'=>'custom_css',
             'type' => 'textarea',
-            'title' => __('Custom CSS', 'ascend'), 
-            'subtitle' => __('Quickly add some CSS to your theme by adding it to this block.', 'ascend'),
+            'title' => __('Custom CSS', 'juanjimeneztj'), 
+            'subtitle' => __('Quickly add some CSS to your theme by adding it to this block.', 'juanjimeneztj'),
         ),
     ),
 ) );
 Redux::setSection( $opt_name, array(
 	    'id' => 'import_export',
 	    'customizer' => false,
-	    'title'  => __( 'Import / Export', 'ascend' ),
-	    'desc'   => __( 'Import and Export your Theme Options from text or URL.', 'ascend' ),
+	    'title'  => __( 'Import / Export', 'juanjimeneztj' ),
+	    'desc'   => __( 'Import and Export your Theme Options from text or URL.', 'juanjimeneztj' ),
 	    'fields' => array(
 	        array(
 	            'id'         => 'kadence-import-export',
@@ -4140,16 +4140,16 @@ Redux::setSection( $opt_name, array(
 	) );
 
 
-function ascend_override_redux_css() {
+function juanjimeneztj_override_redux_css() {
   	wp_dequeue_style( 'redux-admin-css' );
   	wp_enqueue_style( 'kt-redux-custom-css', get_template_directory_uri() . '/themeoptions/options/css/style.css', false, 001);
   	wp_dequeue_style( 'select2-css');
     wp_dequeue_style( 'redux-elusive-icon' );
     wp_dequeue_style( 'redux-elusive-icon-ie7' );
 }
-add_action('redux/page/ascend/enqueue', 'ascend_override_redux_css', 100);
+add_action('redux/page/juanjimeneztj/enqueue', 'juanjimeneztj_override_redux_css', 100);
 
-function ascend_remove_demo() {
+function juanjimeneztj_remove_demo() {
 
         if ( class_exists( 'ReduxFrameworkPlugin' ) ) {
             remove_filter( 'plugin_row_meta', array(
@@ -4160,12 +4160,12 @@ function ascend_remove_demo() {
             remove_action( 'admin_notices', array( ReduxFrameworkPlugin::instance(), 'admin_notices' ) );
         }
     }
-function ascend_update_callback_custom_logo($field, $value, $existing_value) {
+function juanjimeneztj_update_callback_custom_logo($field, $value, $existing_value) {
 	set_theme_mod( 'custom_logo', absint($value['id']));
 	$return['value'] = $value;
 	return $return;
 }
-function ascend_update_callback_custom_background($field, $value, $existing_value) {
+function juanjimeneztj_update_callback_custom_background($field, $value, $existing_value) {
 	if(isset($value['background-image'])) {
 		set_theme_mod( 'background_image', esc_url_raw($value['background-image']));
 	}
@@ -4196,11 +4196,11 @@ function ascend_update_callback_custom_background($field, $value, $existing_valu
 	$return['value'] = $value;
 	return $return;
 }
-add_action( 'customize_save_after', 'ascend_customizer_save_after' );
-function ascend_customizer_save_after( $wp_customize ) {
+add_action( 'customize_save_after', 'juanjimeneztj_customizer_save_after' );
+function juanjimeneztj_customizer_save_after( $wp_customize ) {
    	$logo_id = get_theme_mod( 'custom_logo' );
 	if(isset($logo_id)){
-		$options = get_option( 'ascend' );
+		$options = get_option( 'juanjimeneztj' );
 		if(isset($options['logo']['id']) && ($options['logo']['id'] != $logo_id) ){
 			$logo = wp_get_attachment_image_src($logo_id, 'full');
 			$options['logo']['id'] = absint($logo_id);
@@ -4209,12 +4209,12 @@ function ascend_customizer_save_after( $wp_customize ) {
 			$options['logo']['width'] = absint($logo['2']);
 			$options['logo']['thumbnail'] = esc_url_raw($logo['0']);
 
-			update_option( 'ascend',  $options); 
+			update_option( 'juanjimeneztj',  $options); 
 		}
 	}
 	$background_src = get_theme_mod( 'background_image' );
 	if(isset($background_src)) {
-		$options = get_option( 'ascend' );
+		$options = get_option( 'juanjimeneztj' );
 		if(!is_array($options['body_background'])) {
 			$options['body_background'] = array();
 		}
@@ -4244,32 +4244,32 @@ function ascend_customizer_save_after( $wp_customize ) {
 			$options['body_background']['background-position'] = sanitize_text_field($background_position_x.' '.$background_position_y);
 		} 
 
-		update_option( 'ascend',  $options);
+		update_option( 'juanjimeneztj',  $options);
 	}
 	$background_color = get_theme_mod( 'background_color' );
 	if(isset($background_color)){
-		$options = get_option( 'ascend' );
+		$options = get_option( 'juanjimeneztj' );
 		if(!is_array($options['body_background'])) {
 			$options['body_background'] = array();
 		}
 		if(isset($options['body_background']['background-color']) && ($options['body_background']['background-color'] != $background_color) || !isset($options['body_background']['background-color'])  ){
 			$options['body_background']['background-color'] = sanitize_hex_color('#'.$background_color);
 
-			update_option( 'ascend',  $options);
+			update_option( 'juanjimeneztj',  $options);
 		}
 	}
 }
-add_action( 'init', 'ascend_customizer_override_values');
-function ascend_customizer_override_values() {
+add_action( 'init', 'juanjimeneztj_customizer_override_values');
+function juanjimeneztj_customizer_override_values() {
 	global $pagenow, $wp_customize;
     if ( ! isset( $wp_customize ) && $pagenow !== "customize.php" && $pagenow !== "admin-ajax.php" ) {
         return;
     }
 	if ( isset( $_POST['wp_customize'] ) && $_POST['wp_customize'] == "on" && isset( $_POST['customized'] ) && ! empty( $_POST['customized'] ) && ! isset( $_POST['action'] ) ) {
-		 add_filter( 'ascend_theme_options_filter',  'ascend_override_options_filter', 100 );
+		 add_filter( 'juanjimeneztj_theme_options_filter',  'juanjimeneztj_override_options_filter', 100 );
     }
 }
-function ascend_override_options_filter($data) {
+function juanjimeneztj_override_options_filter($data) {
     $post_values = json_decode( stripslashes_deep( $_POST['customized'] ), true );
     if ( isset( $_POST['customized'] ) && ! empty( $post_values ) ) {
         if ( is_array( $post_values ) ) {
@@ -4283,8 +4283,8 @@ function ascend_override_options_filter($data) {
 					$data[ 'logo' ]['width'] = absint($logo['2']);
 					$data[ 'logo' ]['thumbnail'] = esc_url_raw($logo['0']);
             	}
-            	if ( strpos( $key, 'ascend' ) !== false ) {
-                    $key 			= str_replace( 'ascend[', '', rtrim( $key, "]" ) );
+            	if ( strpos( $key, 'juanjimeneztj' ) !== false ) {
+                    $key 			= str_replace( 'juanjimeneztj[', '', rtrim( $key, "]" ) );
                     $data[ $key ] 	= $value;
                 }
 			}
@@ -4293,10 +4293,10 @@ function ascend_override_options_filter($data) {
     }
     return $data;
 }
-function ascend_custom_wp_control_customize_register( $wp_customize ) {
+function juanjimeneztj_custom_wp_control_customize_register( $wp_customize ) {
     $wp_customize->get_control( 'custom_logo' )->section = 'logo_settings';
 
-    $wp_customize->get_section( 'background_image' )->title = __('Body Background', 'ascend');
+    $wp_customize->get_section( 'background_image' )->title = __('Body Background', 'juanjimeneztj');
     $wp_customize->get_control( 'background_color' )->section = 'background_image';
 }
-add_action( 'customize_register', 'ascend_custom_wp_control_customize_register', 199);
+add_action( 'customize_register', 'juanjimeneztj_custom_wp_control_customize_register', 199);

@@ -1,98 +1,98 @@
 <?php 
-add_filter( 'cmb2_admin_init', 'ascend_post_metaboxes');
-function ascend_post_metaboxes(){
+add_filter( 'cmb2_admin_init', 'juanjimeneztj_post_metaboxes');
+function juanjimeneztj_post_metaboxes(){
 	$prefix = '_kad_';
-	$ascend_standard_post = new_cmb2_box( array(
+	$juanjimeneztj_standard_post = new_cmb2_box( array(
 		'id'         	=> 'standard_post_metabox',
-		'title'      	=> __("Standard Post Options", 'ascend'),
+		'title'      	=> __("Standard Post Options", 'juanjimeneztj'),
 		'object_types'  => array('post'),
 		'priority'   	=> 'high',
 	) );
-	$ascend_standard_post->add_field( array(
-		'name'    => __("Post Summary", 'ascend' ),
+	$juanjimeneztj_standard_post->add_field( array(
+		'name'    => __("Post Summary", 'juanjimeneztj' ),
 		'desc'    => '',
 		'id'      => $prefix . 'post_summery',
 		'type'    => 'select',
 		'options' => array(
-			'default' 		=> __('Standard Post Default', 'ascend' ),
-			'text' 			=> __('Text', 'ascend' ),
-			'img_portrait' 	=> __('Portrait Image', 'ascend'),
-			'img_landscape' => __('Landscape Image', 'ascend'),
+			'default' 		=> __('Standard Post Default', 'juanjimeneztj' ),
+			'text' 			=> __('Text', 'juanjimeneztj' ),
+			'img_portrait' 	=> __('Portrait Image', 'juanjimeneztj'),
+			'img_landscape' => __('Landscape Image', 'juanjimeneztj'),
 			),
 	) );
 	// IMAGE POST //
-	$ascend_image_post = new_cmb2_box( array(
+	$juanjimeneztj_image_post = new_cmb2_box( array(
 		'id'         	=> 'image_post_metabox',
-		'title'      	=> __("Image Post Options", 'ascend'),
+		'title'      	=> __("Image Post Options", 'juanjimeneztj'),
 		'object_types'  => array( 'post' ),
 		'priority'   	=> 'high',
 		) );
 	
-	$ascend_image_post->add_field( array(
-		'name'    => __("Head Content", 'ascend' ),
+	$juanjimeneztj_image_post->add_field( array(
+		'name'    => __("Head Content", 'juanjimeneztj' ),
 		'desc'    => '',
 		'id'      => $prefix . 'image_blog_head',
 		'type'    => 'select',
 		'options' => array(
-			'default' 	=> __("Image Post Default", 'ascend' ),
-			'image' 	=> __("Image", 'ascend' ),
-			'none' 		=> __("None", 'ascend' ),
+			'default' 	=> __("Image Post Default", 'juanjimeneztj' ),
+			'image' 	=> __("Image", 'juanjimeneztj' ),
+			'none' 		=> __("None", 'juanjimeneztj' ),
 			),
 	) );
-	$ascend_image_post->add_field( array(
-		'name' => __("Max Image Height", 'ascend' ),
-		'desc' => __("Note: just input number, example: 350", 'ascend' ),
+	$juanjimeneztj_image_post->add_field( array(
+		'name' => __("Max Image Height", 'juanjimeneztj' ),
+		'desc' => __("Note: just input number, example: 350", 'juanjimeneztj' ),
 		'id'   => $prefix . 'image_posthead_height',
 		'type' => 'text_small',
 	) );
-	$ascend_image_post->add_field( array(
-		'name' => __("Max Image Width", 'ascend' ),
-		'desc' => __("Note: just input number, example: 650", 'ascend' ),
+	$juanjimeneztj_image_post->add_field( array(
+		'name' => __("Max Image Width", 'juanjimeneztj' ),
+		'desc' => __("Note: just input number, example: 650", 'juanjimeneztj' ),
 		'id'   => $prefix . 'image_posthead_width',
 		'type' => 'text_small',
 	) );
 
-	$ascend_image_post->add_field( array(
-		'name'    => __("Post Summary", 'ascend' ),
+	$juanjimeneztj_image_post->add_field( array(
+		'name'    => __("Post Summary", 'juanjimeneztj' ),
 		'desc'    => '',
 		'id'      => $prefix . 'image_post_summery',
 		'type'    => 'select',
 		'options' => array(
-			'default' 		=> __('Image Post Default', 'ascend' ),
-			'text' 			=> __('Text', 'ascend' ),
-			'img_portrait' 	=> __('Portrait Image', 'ascend'),
-			'img_landscape' => __('Landscape Image', 'ascend'),
+			'default' 		=> __('Image Post Default', 'juanjimeneztj' ),
+			'text' 			=> __('Text', 'juanjimeneztj' ),
+			'img_portrait' 	=> __('Portrait Image', 'juanjimeneztj'),
+			'img_landscape' => __('Landscape Image', 'juanjimeneztj'),
 		),
 	) );
 	
 	// NORMAL 
-	$ascend_post = new_cmb2_box( array(
+	$juanjimeneztj_post = new_cmb2_box( array(
 		'id'         	=> 'post_metabox',
-		'title'      	=> __("Post Options", 'ascend'),
+		'title'      	=> __("Post Options", 'juanjimeneztj'),
 		'object_types'  => array( 'post'),
 		'priority'   	=> 'high',
 	));
-	$ascend_post->add_field( array(
-		'name' 		=> __('Author Info', 'ascend'),
-		'desc' 		=> __('Display an author info box?', 'ascend'),
+	$juanjimeneztj_post->add_field( array(
+		'name' 		=> __('Author Info', 'juanjimeneztj'),
+		'desc' 		=> __('Display an author info box?', 'juanjimeneztj'),
 		'id'   		=> $prefix . 'blog_author',
 		'type'    	=> 'select',
 		'options' 	=> array(
-			'default' 	=> __('Default', 'ascend'),
-			'no' 		=> __('No', 'ascend'),
-			'yes' 		=> __('Yes', 'ascend'),
+			'default' 	=> __('Default', 'juanjimeneztj'),
+			'no' 		=> __('No', 'juanjimeneztj'),
+			'yes' 		=> __('Yes', 'juanjimeneztj'),
 			),
 	) );
-	$ascend_post->add_field( array(
-		'name' 		=> __('Posts Carousel', 'ascend'),
-		'desc' 		=> __('Display a carousel with similar or recent posts?', 'ascend'),
+	$juanjimeneztj_post->add_field( array(
+		'name' 		=> __('Posts Carousel', 'juanjimeneztj'),
+		'desc' 		=> __('Display a carousel with similar or recent posts?', 'juanjimeneztj'),
 		'id'   		=> $prefix . 'blog_carousel_similar',
 		'type'    	=> 'select',
 		'options' 	=> array(
-			'default' 	=> __('Default', 'ascend'),
-			'no' 		=> __('No', 'ascend'),
-			'recent' 	=> __('Yes - Display Recent Posts', 'ascend'),
-			'similar' 	=> __('Yes - Display Similar Posts', 'ascend'),
+			'default' 	=> __('Default', 'juanjimeneztj'),
+			'no' 		=> __('No', 'juanjimeneztj'),
+			'recent' 	=> __('Yes - Display Recent Posts', 'juanjimeneztj'),
+			'similar' 	=> __('Yes - Display Similar Posts', 'juanjimeneztj'),
 			),
 		
 	) );

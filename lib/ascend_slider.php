@@ -2,8 +2,8 @@
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
-if(!function_exists('ascend_build_slider_home')) {
-    function ascend_build_slider_home($slides = null, $width = null, $height = null, $class = null, $id = 'kt_slider_options', $type = 'slider', $captions = "false", $auto = 'true', $speed = '7000', $arrows = 'true', $fade = 'true', $fade_speed = '400', $title_max = '70', $title_min = '40', $subtitle_max = '30', $subtitle_min = '20', $align = 'center') {
+if(!function_exists('juanjimeneztj_build_slider_home')) {
+    function juanjimeneztj_build_slider_home($slides = null, $width = null, $height = null, $class = null, $id = 'kt_slider_options', $type = 'slider', $captions = "false", $auto = 'true', $speed = '7000', $arrows = 'true', $fade = 'true', $fade_speed = '400', $title_max = '70', $title_min = '40', $subtitle_max = '30', $subtitle_min = '20', $align = 'center') {
     	$crop = true;
     	$imgwidth = $width;
     	$stype = 'slider';
@@ -26,7 +26,7 @@ if(!function_exists('ascend_build_slider_home')) {
                     foreach ($slides as $slide) {
                     	if(!empty($slide['attachment_id'])) {
 	                        $alt = get_post_meta($slide['attachment_id'], '_wp_attachment_image_alt', true);
-	                        $img = ascend_get_image_array($imgwidth, $height, $crop, null, $alt, $slide['attachment_id'], false);
+	                        $img = juanjimeneztj_get_image_array($imgwidth, $height, $crop, null, $alt, $slide['attachment_id'], false);
 	                        echo '<div class="kt-slick-slide">';
 	                            if(!empty($slide['link'])) {
 	                                echo '<a href="'.esc_url($slide['link']).'" class="kt-slider-image-link">';
@@ -58,7 +58,7 @@ if(!function_exists('ascend_build_slider_home')) {
                 echo '<div id="'.esc_attr($id).'-thumbs" class="kt-slickslider-thumbs slick-slider">';
                         foreach ($slides as $slide) {
                             $alt = get_post_meta($slide['attachment_id'], '_wp_attachment_image_alt', true);
-                            $img = ascend_get_image_array(80, 80, true, null, $alt, $slide['attachment_id'], false);
+                            $img = juanjimeneztj_get_image_array(80, 80, true, null, $alt, $slide['attachment_id'], false);
                             echo '<div class="kt-slick-thumb">';
                                     echo '<img src="'.esc_url($img['src']).'" width="'.esc_attr($img['width']).'" height="'.esc_attr($img['height']).'" alt="'.esc_attr($img['alt']).'" itemprop="image" '.$img['srcset'].'/>';
                                     echo '<div class="thumb-highlight"></div>';
@@ -70,8 +70,8 @@ if(!function_exists('ascend_build_slider_home')) {
         endif;
     }
 }
-if(!function_exists('ascend_build_slider_home_fullwidth')) {
-    function ascend_build_slider_home_fullwidth($slides = null, $width = null, $height = null, $class = null, $id = 'kt_slider_options', $type = 'slider', $captions = "false", $auto = 'true', $speed = '7000', $arrows = 'true', $fade = 'true', $fade_speed = '400', $title_max = '70', $title_min = '40', $subtitle_max = '30', $subtitle_min = '20', $align = 'center') {
+if(!function_exists('juanjimeneztj_build_slider_home_fullwidth')) {
+    function juanjimeneztj_build_slider_home_fullwidth($slides = null, $width = null, $height = null, $class = null, $id = 'kt_slider_options', $type = 'slider', $captions = "false", $auto = 'true', $speed = '7000', $arrows = 'true', $fade = 'true', $fade_speed = '400', $title_max = '70', $title_min = '40', $subtitle_max = '30', $subtitle_min = '20', $align = 'center') {
     	$stype = 'slider';
         if(!empty($slides)) :
             echo '<div id="'.esc_attr($id).'" class="slick-slider kad-home-full-slider titleclass kad-light-gallery kt-slickslider loading '.esc_attr($class).'" data-slider-speed="'.esc_attr($speed).'" data-slider-anim-speed="'.esc_attr($fade_speed).'" data-slider-fade="'.esc_attr($fade).'" data-slider-type="'.esc_attr($stype).'" data-slider-auto="'.esc_attr($auto).'" data-slider-thumbid="#'.esc_attr($id).'-thumbs" data-slider-arrows="'.esc_attr($arrows).'" data-slider-thumbs-showing="0">';
@@ -100,8 +100,8 @@ if(!function_exists('ascend_build_slider_home_fullwidth')) {
         endif;
     }
 }
-if(!function_exists('ascend_build_slider')) {
-    function ascend_build_slider($id = 'post', $images = null, $width = null, $height = null, $link ='image', $class = null, $type = 'slider', $captions = "false", $auto = 'true', $speed = '7000', $arrows = 'true', $fade = 'true', $fade_speed = '400', $delay = '0') {
+if(!function_exists('juanjimeneztj_build_slider')) {
+    function juanjimeneztj_build_slider($id = 'post', $images = null, $width = null, $height = null, $link ='image', $class = null, $type = 'slider', $captions = "false", $auto = 'true', $speed = '7000', $arrows = 'true', $fade = 'true', $fade_speed = '400', $delay = '0') {
     	if(empty($images)) {
     		global $post;
             $attach_args = array('order'=> 'ASC','post_type'=> 'attachment','post_parent'=> $post->ID,'post_mime_type' => 'image','post_status'=> null,'orderby'=> 'menu_order','numberposts'=> -1);
@@ -121,7 +121,7 @@ if(!function_exists('ascend_build_slider')) {
                     if ($attachments) {
                         foreach ($attachments as $attachment) {
                             $alt = get_post_meta($attachment, '_wp_attachment_image_alt', true);
-                            $img = ascend_get_image_array($width, $height, true, null, $alt, $attachment, false);
+                            $img = juanjimeneztj_get_image_array($width, $height, true, null, $alt, $attachment, false);
                             echo '<div class="kt-slick-slide">';
                                 if($link == "post") {
                                     echo '<a href="'.esc_url(get_the_permalink()).'" class="kt-slider-image-link">';
@@ -158,7 +158,7 @@ if(!function_exists('ascend_build_slider')) {
                     if ($attachments) {
                         foreach ($attachments as $attachment) {
                             $alt = get_post_meta($attachment, '_wp_attachment_image_alt', true);
-                            $img = ascend_get_image_array(80, 80, true, null, $alt, $attachment, false);
+                            $img = juanjimeneztj_get_image_array(80, 80, true, null, $alt, $attachment, false);
                             echo '<div class="kt-slick-thumb">';
                                     echo '<img src="'.esc_url($img['src']).'" width="'.esc_attr($img['width']).'" height="'.esc_attr($img['height']).'" alt="'.esc_attr($img['alt']).'" itemprop="image" '.$img['srcset'].'/>';
                                     echo '<div class="thumb-highlight"></div>';
@@ -170,8 +170,8 @@ if(!function_exists('ascend_build_slider')) {
         endif;
     }
 }
-if(!function_exists('ascend_build_post_carousel')) {
-    function ascend_build_post_carousel($width = null, $height = 400, $class = null, $type = 'post', $cat = null, $items = 8, $orderby = 'date', $order = 'DESC', $offset = null, $auto = 'true', $speed = '7000', $arrows = 'true', $trans_speed = '400', $featured = null) {
+if(!function_exists('juanjimeneztj_build_post_carousel')) {
+    function juanjimeneztj_build_post_carousel($width = null, $height = 400, $class = null, $type = 'post', $cat = null, $items = 8, $orderby = 'date', $order = 'DESC', $offset = null, $auto = 'true', $speed = '7000', $arrows = 'true', $trans_speed = '400', $featured = null) {
     	$extraargs = array();
     	if($type == 'portfolio') {
     		$tax = 'portfolio-type';
@@ -209,7 +209,7 @@ if(!function_exists('ascend_build_post_carousel')) {
 					if ( $loop ) {
 						while ( $loop->have_posts() ) : $loop->the_post(); 
 							global $post;
-                            $img = ascend_get_image_array($width , $height, true, null, null, null, true);
+                            $img = juanjimeneztj_get_image_array($width , $height, true, null, null, null, true);
                             echo '<div class="kt-slick-slide blog_photo_item">';
 					                echo '<div class="carousel-image-object" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">';
 					                    echo '<img src="'.esc_url($img['src']).'" width="'.esc_attr($img['width']).'" height="'.esc_attr($img['height']).'" '.$img['srcset'].' class="'.esc_attr($img['class']).'" itemprop="contentUrl" alt="'.esc_attr($img['alt']).'">';
@@ -242,7 +242,7 @@ if(!function_exists('ascend_build_post_carousel')) {
 						endwhile;
 						wp_reset_postdata();
 					} else { 
-						echo '<div class="error-not-found">'.__('Sorry, no entries found.', 'ascend').'</div>';
+						echo '<div class="error-not-found">'.__('Sorry, no entries found.', 'juanjimeneztj').'</div>';
 						
 					} 
             echo '</div> <!--Post Carousel-->';

@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 global $post, $product;
-$ascend = ascend_get_options();
+$juanjimeneztj = juanjimeneztj_get_options();
 $columns           = apply_filters( 'woocommerce_product_thumbnails_columns', 4 );
 $post_thumbnail_id = $product->get_image_id();
 $full_size_image   = wp_get_attachment_image_src( $post_thumbnail_id, 'full' );
@@ -31,14 +31,14 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 	'kad-light-gallery',
 ) );
 if ( version_compare( WC_VERSION, '3.0', '>' ) ) {
-	if(isset($ascend['product_gallery_slider']) && 1 == $ascend['product_gallery_slider']) {
+	if(isset($juanjimeneztj['product_gallery_slider']) && 1 == $juanjimeneztj['product_gallery_slider']) {
 		$galleryslider = 'woo_product_slider_enabled';
 		$galslider = true;
 	} else {
 		$galleryslider = 'woo_product_slider_disabled';
 		$galslider = false;
 	}
-	if(isset($ascend['product_gallery_zoom']) && 1 == $ascend['product_gallery_zoom']) {
+	if(isset($juanjimeneztj['product_gallery_zoom']) && 1 == $juanjimeneztj['product_gallery_zoom']) {
 		$galleryzoom = 'woo_product_zoom_enabled';
 		$galzoom = true;
 	} else {
@@ -51,16 +51,16 @@ if ( version_compare( WC_VERSION, '3.0', '>' ) ) {
 	$galleryzoom = 'woo_product_zoom_disabled';
 	$galzoom = false;
 }
-if(isset($ascend['product_simg_resize']) && 0 == $ascend['product_simg_resize']) {
+if(isset($juanjimeneztj['product_simg_resize']) && 0 == $juanjimeneztj['product_simg_resize']) {
 	$presizeimage = 0;
 } else {
 	$presizeimage = 1;
-		if(isset($ascend['shop_img_ratio'])) { 
-			$img_ratio = $ascend['shop_img_ratio']; 
+		if(isset($juanjimeneztj['shop_img_ratio'])) { 
+			$img_ratio = $juanjimeneztj['shop_img_ratio']; 
 		} else {
 			$img_ratio = 'square';
 		}
-		if(ascend_display_sidebar()) { 
+		if(juanjimeneztj_display_sidebar()) { 
 			$productimgwidth = 360; 
 		} else {
 			$productimgwidth = 460; 
@@ -81,8 +81,8 @@ if(isset($ascend['product_simg_resize']) && 0 == $ascend['product_simg_resize'])
         } else {
 			$productimgheight = $productimgwidth;
 		}
-		$productimgwidth = apply_filters('ascend_product_single_image_width', $productimgwidth);
-        $productimgheight = apply_filters('ascend_product_single_image_height', $productimgheight);
+		$productimgwidth = apply_filters('juanjimeneztj_product_single_image_width', $productimgwidth);
+        $productimgheight = apply_filters('juanjimeneztj_product_single_image_height', $productimgheight);
 
 }
 ?>
@@ -105,7 +105,7 @@ if(isset($ascend['product_simg_resize']) && 0 == $ascend['product_simg_resize'])
 				if($presizeimage == 1){
 					$html  = '<div data-thumb="' . get_the_post_thumbnail_url( $post->ID, 'shop_thumbnail' ) . '" class="woocommerce-product-gallery__image">';
 						$html .= '<a href="' . esc_url( $full_size_image[0] ) . '">';
-					$html .= ascend_get_full_image_output($productimgwidth, $productimgheight, $image_crop, 'attachment-shop_single shop_single wp-post-image', $light_title, $post_thumbnail_id, false, false, false, $attributes);
+					$html .= juanjimeneztj_get_full_image_output($productimgwidth, $productimgheight, $image_crop, 'attachment-shop_single shop_single wp-post-image', $light_title, $post_thumbnail_id, false, false, false, $attributes);
 					$html .= '</a>';
 					$html .= '</div>';
 				} else {
@@ -113,7 +113,7 @@ if(isset($ascend['product_simg_resize']) && 0 == $ascend['product_simg_resize'])
 				}
 			} else {
 				$html  = '<div class="woocommerce-product-gallery__image--placeholder">';
-				$html .= sprintf( '<img src="%s" alt="%s" class="wp-post-image" />', esc_url( wc_placeholder_img_src( 'woocommerce_single' ) ), esc_html__( 'Awaiting product image', 'ascend' ) );
+				$html .= sprintf( '<img src="%s" alt="%s" class="wp-post-image" />', esc_url( wc_placeholder_img_src( 'woocommerce_single' ) ), esc_html__( 'Awaiting product image', 'juanjimeneztj' ) );
 				$html .= '</div>';
 			}
 

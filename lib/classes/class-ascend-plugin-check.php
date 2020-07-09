@@ -2,7 +2,7 @@
 /**
  * Checks if a plugin is active.
  *
- * @package Ascend Theme
+ * @package juanjimeneztj Theme
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @category Class
  */
-class Ascend_Plugin_Check {
+class juanjimeneztj_Plugin_Check {
 	/**
 	 * Static var active plugins
 	 *

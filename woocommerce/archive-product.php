@@ -26,9 +26,9 @@ get_header( 'shop' );
 	/**
 	 * woocommerce_before_main_content hook.
 	 *
-	 * @hooked ascend_woo_shop_page_title - 5
+	 * @hooked juanjimeneztj_woo_shop_page_title - 5
 	 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content) REPLACED BY THEME
-	 * @hooked ascend_woo_main_wrap_content_open - 10
+	 * @hooked juanjimeneztj_woo_main_wrap_content_open - 10
 	 * @hooked woocommerce_breadcrumb - 20
 	 */
 	do_action( 'woocommerce_before_main_content' );

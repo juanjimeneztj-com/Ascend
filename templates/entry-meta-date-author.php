@@ -4,11 +4,11 @@
     </span>   
     <span class="postauthortop kt-post-author author vcard">
         <?php 
-       		$ascend = ascend_get_options();
-        	if(!empty($ascend['post_by_text'])) {
-        		$authorbytext = $ascend['post_by_text'];
+       		$juanjimeneztj = juanjimeneztj_get_options();
+        	if(!empty($juanjimeneztj['post_by_text'])) {
+        		$authorbytext = $juanjimeneztj['post_by_text'];
         	} else {
-        		$authorbytext = __('by', 'ascend');
+        		$authorbytext = __('by', 'juanjimeneztj');
         	} 
         	echo '<span class="kt-by-author">'.esc_html($authorbytext).'</span>'; ?>
         	<span itemprop="author">

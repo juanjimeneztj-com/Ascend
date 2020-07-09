@@ -1,12 +1,12 @@
 <?php
-	$ascend = ascend_get_options();
+	$juanjimeneztj = juanjimeneztj_get_options();
 
-	do_action('ascend_before_footer');
+	do_action('juanjimeneztj_before_footer');
 ?>
 <footer id="containerfooter" class="footerclass">
   <div class="container">
   	<div class="row">
-  		<?php if(isset($ascend['footer_layout'])) { $footer_layout = $ascend['footer_layout']; } else { $footer_layout = 'fourc'; }
+  		<?php if(isset($juanjimeneztj['footer_layout'])) { $footer_layout = $juanjimeneztj['footer_layout']; } else { $footer_layout = 'fourc'; }
   			if ($footer_layout == "fourc") {
   				if (is_active_sidebar('footer_1') ) { ?> 
 					<div class="col-md-3 col-sm-6 footercol1">
@@ -110,8 +110,8 @@
 		        	?>
 		        	<p>
 		        		<?php 
-		        		if(isset($ascend['footer_text'])) {
-		        			$footertext = $ascend['footer_text']; 
+		        		if(isset($juanjimeneztj['footer_text'])) {
+		        			$footertext = $juanjimeneztj['footer_text']; 
 		        		} else {
 		        			$footertext = ''; 
 		        		}

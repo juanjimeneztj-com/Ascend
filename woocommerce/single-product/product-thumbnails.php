@@ -12,10 +12,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 global $post, $product;
-$ascend = ascend_get_options();
+$juanjimeneztj = juanjimeneztj_get_options();
 if ( version_compare( WC_VERSION, '3.0', '>' ) ) {
 	$attachment_ids = $product->get_gallery_image_ids();
-	if ( isset( $ascend['product_gallery_slider'] ) && 1 == $ascend['product_gallery_slider'] ) {
+	if ( isset( $juanjimeneztj['product_gallery_slider'] ) && 1 == $juanjimeneztj['product_gallery_slider'] ) {
 		$galslider = true;
 		$output_size = 'shop_single';
 	} else {
@@ -31,16 +31,16 @@ if ( version_compare( WC_VERSION, '3.0', '>' ) ) {
 
 if ( $attachment_ids && $product->get_image_id() ) {
 
-	if ( isset( $ascend['product_simg_resize'] ) && 0 == $ascend['product_simg_resize'] || false == $galslider ) {
+	if ( isset( $juanjimeneztj['product_simg_resize'] ) && 0 == $juanjimeneztj['product_simg_resize'] || false == $galslider ) {
 		$presizeimage = 0;
 	} else {
 		$presizeimage = 1;
-			if(isset($ascend['shop_img_ratio'])) { 
-				$img_ratio = $ascend['shop_img_ratio']; 
+			if(isset($juanjimeneztj['shop_img_ratio'])) { 
+				$img_ratio = $juanjimeneztj['shop_img_ratio']; 
 			} else {
 				$img_ratio = 'square';
 			}
-			if(ascend_display_sidebar()) { 
+			if(juanjimeneztj_display_sidebar()) { 
 				$productimgwidth = 360; 
 			} else {
 				$productimgwidth = 460; 
@@ -61,8 +61,8 @@ if ( $attachment_ids && $product->get_image_id() ) {
 	        } else {
 				$productimgheight = $productimgwidth;
 			}
-			$productimgwidth = apply_filters('ascend_product_single_image_width', $productimgwidth);
-	        $productimgheight = apply_filters('ascend_product_single_image_height', $productimgheight);
+			$productimgwidth = apply_filters('juanjimeneztj_product_single_image_width', $productimgwidth);
+	        $productimgheight = apply_filters('juanjimeneztj_product_single_image_height', $productimgheight);
 
 	}
 		foreach ( $attachment_ids as $attachment_id ) {
@@ -84,7 +84,7 @@ if ( $attachment_ids && $product->get_image_id() ) {
 			);
 			if ( $presizeimage == 1 ) {
 				$html  = '<div data-thumb="' .  esc_url( $thumbnail[0] ) . '" class="woocommerce-product-gallery__image"><a href="' . esc_url( $full_size_image[0] ) . '">';
-				$html .= ascend_get_full_image_output($productimgwidth, $productimgheight, $image_crop, 'attachment-shop_single shop_single wp-post-image', $light_title, $attachment_id, false, false, false, $attributes);
+				$html .= juanjimeneztj_get_full_image_output($productimgwidth, $productimgheight, $image_crop, 'attachment-shop_single shop_single wp-post-image', $light_title, $attachment_id, false, false, false, $attributes);
 				$html .= '</a></div>';
 			} else {
 				$html  = wc_get_gallery_image_html( $attachment_id  );

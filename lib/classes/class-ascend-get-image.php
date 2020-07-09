@@ -2,8 +2,8 @@
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
-if ( ! class_exists( 'Ascend_Get_Image' ) ) {
-	class Ascend_Get_Image {
+if ( ! class_exists( 'juanjimeneztj_Get_Image' ) ) {
+	class juanjimeneztj_Get_Image {
         /**
          * The singleton instance
          */
@@ -33,7 +33,7 @@ if ( ! class_exists( 'Ascend_Get_Image' ) ) {
 			}
 			// return with orginal if no width or height set.
 			if(empty($width) && empty($height) ) {
-				return self::ascend_get_full_image($id);
+				return self::juanjimeneztj_get_full_image($id);
 			}
 			// Find width or height if one or the other is not set.
 			$org_height = true;
@@ -48,8 +48,8 @@ if ( ! class_exists( 'Ascend_Get_Image' ) ) {
 		        $width = $sizes[4];
 		    }
 		    // Now we checked for an ID, made sure the width and height have values lets check if we can make the size at all
-		    if ( self::ascend_image_size_larger_than_original( $id, $width, $height ) ) {
-		    	return self::ascend_get_full_image($id);
+		    if ( self::juanjimeneztj_image_size_larger_than_original( $id, $width, $height ) ) {
+		    	return self::juanjimeneztj_get_full_image($id);
 			}
 		    //Check for jetpack
 		    if( class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'photon' ) ) {
@@ -59,65 +59,65 @@ if ( ! class_exists( 'Ascend_Get_Image' ) ) {
 		            0 => jetpack_photon_url( $image_url, $args ),
 		            1 => $width,
 		            2 => $height,
-		            3 => self::ascend_get_srcset_output($id, $image_url, $width, $height),
+		            3 => self::juanjimeneztj_get_srcset_output($id, $image_url, $width, $height),
 					4 => $image_url,
 					5 => $id
 		        );
-		    } else if( self::ascend_image_size_already_exists( $id, $width, $height ) ) {
+		    } else if( self::juanjimeneztj_image_size_already_exists( $id, $width, $height ) ) {
 
-		    		return self::ascend_get_image_at_size($id, $width, $height );
+		    		return self::juanjimeneztj_get_image_at_size($id, $width, $height );
 
 		    } else if(class_exists( 'Kadence_Image_Processing' )) {
 		    	// lets process the image
 		    	$Kadence_Image_Processing = Kadence_Image_Processing::getInstance();
             	$created = $Kadence_Image_Processing->process($id, $width, $height);
             	if($created) {
-		    		return self::ascend_get_image_at_size($id, $width, $height );
+		    		return self::juanjimeneztj_get_image_at_size($id, $width, $height );
 			    } else {
-			    	return self::ascend_get_full_image($id);
+			    	return self::juanjimeneztj_get_full_image($id);
 			    }
 		    } else {
 		    	//get the next best thing
 		    	if(800 < $width) {
 		    		// Large image
-		    		return self::ascend_get_full_image($id);
+		    		return self::juanjimeneztj_get_full_image($id);
 		    	} else if($org_height) {
 		    		//custom_ratio
 		    		if($width == $height) {
 		    			// square
 		    			if(150 >= $width) {
 		    				// Thumbnail
-		    				return self::ascend_get_image_at_size($id, 150,150);
+		    				return self::juanjimeneztj_get_image_at_size($id, 150,150);
 		    			} else {
-		    				// Ascend 600x600
-		    				return self::ascend_get_image_at_size($id, 600,600);
+		    				// juanjimeneztj 600x600
+		    				return self::juanjimeneztj_get_image_at_size($id, 600,600);
 		    			}
 		    		} else if(310 == $height && 270 == $width ) {
-		    			return self::ascend_get_image_at_size($id, 540,620);
+		    			return self::juanjimeneztj_get_image_at_size($id, 540,620);
 					} else if(($width/$height) == 1.5){
-						return self::ascend_get_image_at_size($id, 720,480);
+						return self::juanjimeneztj_get_image_at_size($id, 720,480);
 					} else {
-						return self::ascend_get_full_image($id);
+						return self::juanjimeneztj_get_full_image($id);
 					}
 		    	} else {
 		    		// Orginal ratio
 		    		if(300 >= $width) {
-		    			return self::ascend_get_image_at_size_name($id, 'medium');
+		    			return self::juanjimeneztj_get_image_at_size_name($id, 'medium');
 		    		} elseif(800 > $width) {
-		    			return self::ascend_get_image_at_size_name($id, 'large');
+		    			return self::juanjimeneztj_get_image_at_size_name($id, 'large');
 		    		} else {
-		    			return self::ascend_get_full_image($id);
+		    			return self::juanjimeneztj_get_full_image($id);
 		    		}
 		    	}
 
 		    }
 		}
-		public static function ascend_get_image_srcset($id = null, $url = null, $width = null, $height = null) {
+		public static function juanjimeneztj_get_image_srcset($id = null, $url = null, $width = null, $height = null) {
 		  	if(empty($id) || empty($url) || empty($width) || empty($height)) {
 		    	return false;
 		  	}
 		  
-		  	$image_meta = self::ascend_get_image_meta($id);
+		  	$image_meta = self::juanjimeneztj_get_image_meta($id);
 		  	if ( ! $image_meta ) {
 				return false;
 			}
@@ -130,8 +130,8 @@ if ( ! class_exists( 'Ascend_Get_Image' ) ) {
 
 		    return $output;
 		}
-		public static function ascend_get_srcset_output($id = null, $url = null, $width = null, $height = null) {
-		    $img_srcset = self::ascend_get_image_srcset($id, $url, $width, $height);
+		public static function juanjimeneztj_get_srcset_output($id = null, $url = null, $width = null, $height = null) {
+		    $img_srcset = self::juanjimeneztj_get_image_srcset($id, $url, $width, $height);
 		    if(!empty($img_srcset) ) {
 		      	$output = 'srcset="'.esc_attr($img_srcset).'" sizes="(max-width: '.esc_attr($width).'px) 100vw, '.esc_attr($width).'px"';
 		    } else {
@@ -139,8 +139,8 @@ if ( ! class_exists( 'Ascend_Get_Image' ) ) {
 		    }
 		    return $output;
 		}
-		public static function ascend_image_size_larger_than_original($id, $width, $height) {
-				$image_meta = self::ascend_get_image_meta( $id );
+		public static function juanjimeneztj_image_size_larger_than_original($id, $width, $height) {
+				$image_meta = self::juanjimeneztj_get_image_meta( $id );
 
 				if ( ! isset( $image_meta['width'] ) || ! isset( $image_meta['height'] ) ) {
 					return true;
@@ -151,20 +151,20 @@ if ( ! class_exists( 'Ascend_Get_Image' ) ) {
 
 				return false;
 		}
-		public static function ascend_get_full_image($id) {
+		public static function juanjimeneztj_get_full_image($id) {
 				$src = wp_get_attachment_image_src($id, 'full' );
 				// array return.
 				$image = array (
 					0 => $src[0],
 					1 => $src[1],
 					2 => $src[2],
-					3 => self::ascend_get_srcset_output($id, $src[0], $src[1], $src[2]),
+					3 => self::juanjimeneztj_get_srcset_output($id, $src[0], $src[1], $src[2]),
 					4 => $src[0],
 					5 => $id
 				);
 				return $image;
 		}
-		public static function ascend_get_image_at_size($id, $width, $height) {
+		public static function juanjimeneztj_get_image_at_size($id, $width, $height) {
 				$size = array(
 					0 => $width,
 					1 => $height
@@ -176,13 +176,13 @@ if ( ! class_exists( 'Ascend_Get_Image' ) ) {
 					0 => $src[0],
 					1 => $src[1],
 					2 => $src[2],
-					3 => self::ascend_get_srcset_output($id, $src[0], $src[1], $src[2]),
+					3 => self::juanjimeneztj_get_srcset_output($id, $src[0], $src[1], $src[2]),
 					4 => $full,
 					5 => $id
 				);
 				return $image;
 		}
-		public static function ascend_get_image_at_size_name($id, $size) {
+		public static function juanjimeneztj_get_image_at_size_name($id, $size) {
 				$src = wp_get_attachment_image_src($id, $size );
 				$full = wp_get_attachment_image_url($id, 'full' );
 				// array return.
@@ -190,27 +190,27 @@ if ( ! class_exists( 'Ascend_Get_Image' ) ) {
 					0 => $src[0],
 					1 => $src[1],
 					2 => $src[2],
-					3 => self::ascend_get_srcset_output($id, $src[0], $src[1], $src[2]),
+					3 => self::juanjimeneztj_get_srcset_output($id, $src[0], $src[1], $src[2]),
 					4 => $full,
 					5 => $id
 				);
 				return $image;
 		}
-		public static function ascend_get_image_meta( $id ) {
+		public static function juanjimeneztj_get_image_meta( $id ) {
 			return wp_get_attachment_metadata( $id );
 		}
-		public static function ascend_image_size_already_exists( $id, $width, $height ) {
-			$image_meta = self::ascend_get_image_meta( $id );
-			$ascend_size_name = self::ascend_get_size_name( array( $width, $height ));
+		public static function juanjimeneztj_image_size_already_exists( $id, $width, $height ) {
+			$image_meta = self::juanjimeneztj_get_image_meta( $id );
+			$juanjimeneztj_size_name = self::juanjimeneztj_get_size_name( array( $width, $height ));
 			$kip_size_name = self::kip_get_size_name( array( $width, $height ));
-			if(isset( $image_meta['sizes'][ $ascend_size_name ] ) || isset( $image_meta['sizes'][ $kip_size_name ] ) ) {
+			if(isset( $image_meta['sizes'][ $juanjimeneztj_size_name ] ) || isset( $image_meta['sizes'][ $kip_size_name ] ) ) {
 				return true;
 			} else {
 				return false;
 			}
 		}
-		public static function ascend_get_size_name( $size ) {
-			return 'ascend-' . $size[0] . 'x' . $size[1];
+		public static function juanjimeneztj_get_size_name( $size ) {
+			return 'juanjimeneztj-' . $size[0] . 'x' . $size[1];
 		}
 		public static function kip_get_size_name( $size ) {
 			return 'kip-' . $size[0] . 'x' . $size[1];

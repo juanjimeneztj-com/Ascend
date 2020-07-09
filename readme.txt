@@ -1,5 +1,5 @@
 -------------------------------------------------------
-    Ascend Theme Licensing:
+    juanjimeneztj Theme Licensing:
 -------------------------------------------------------
 
 Licensed under the General Public License V3
@@ -7,7 +7,7 @@ Licensed under the General Public License V3
 -------------------------------------------------------
     Description:
 -------------------------------------------------------
-Ascend will surpass your expectations over and over again. Amazingly versatile, easily customizable and loaded with features you will love.
+juanjimeneztj will surpass your expectations over and over again. Amazingly versatile, easily customizable and loaded with features you will love.
 
 -------------------------------------------------------
     Frequently Asked Questions:
@@ -15,7 +15,7 @@ Ascend will surpass your expectations over and over again. Amazingly versatile, 
 
 = Is there theme documentation? =
 
-Yes, go here: http://docs.kadencethemes.com/ascend-free/
+Yes, go here: http://docs.kadencethemes.com/juanjimeneztj-free/
 
 = Is there demo content available? =
 
@@ -26,7 +26,7 @@ Yes, go here: https://www.kadencethemes.com/kadence-themes-demo-content/
     Changelog:
 -------------------------------------------------------
 
-= Theme Name: Ascend =
+= Theme Name: juanjimeneztj =
 
 = Version 1.3.7 | 4th December 2018 =
 * Update: WordPress 5 ready.
@@ -160,7 +160,7 @@ Yes, go here: https://www.kadencethemes.com/kadence-themes-demo-content/
 * Update: Remove tag "custom-header".
 * Add: Custom background support.
 * Update: Change defined date to "get_option( 'date_format' )"
-* Update: Change kadence_mobile_walker to ascend_mobile_walker
+* Update: Change kadence_mobile_walker to juanjimeneztj_mobile_walker
 * Update: Class names for slides and icons.
 * Remove: a few comments in code so php sniffer doesn't put out a warning.
 * Update: Use wp_kses_post on video output.
@@ -174,8 +174,8 @@ Yes, go here: https://www.kadencethemes.com/kadence-themes-demo-content/
 * Update: Remove comment.php file
 * Remove: Remove two woo files.
 * Update: Add option for 1 column image menu item.
-* Update: Replace all global varibles with ascend prefix.
-* Update: Rename wiget classes to use ascend prefix.
+* Update: Replace all global varibles with juanjimeneztj prefix.
+* Update: Rename wiget classes to use juanjimeneztj prefix.
 * Update: replace: wp_reset_query() with wp_reset_postdata()
 * Update: remove placehold.it.
 
@@ -216,9 +216,9 @@ Yes, go here: https://www.kadencethemes.com/kadence-themes-demo-content/
 * Update: output css esc.
 * Update: esc_attr contact widget.
 * Update: to use the_title_attribute().
-* Update: Ascend_wp_pagenav uses the_posts_pagination.
+* Update: juanjimeneztj_wp_pagenav uses the_posts_pagination.
 * Update: Change Everything about images.
-* Update: ascend_title to use "the_archive_title"
+* Update: juanjimeneztj_title to use "the_archive_title"
 * Update wp_query use. Change variable to $loop.
 * Update: Prefix all things
 * Update: post-video-output.php
@@ -243,7 +243,7 @@ Yes, go here: https://www.kadencethemes.com/kadence-themes-demo-content/
 * Update: input security.
 * Update: output escape. 
 * Change: Prefix on image sizes, only create 3 images.
-* Update: All action prefixes to use ascend per theme review. 
+* Update: All action prefixes to use juanjimeneztj per theme review. 
 * Remove: Redux unique slug validation because of rewrite rules.
 * Remove: add-to-cart/variations.php file.
 * Add: defualts for customizer styling.
@@ -286,7 +286,7 @@ You are allowed to have non-presentational data like social links, although it's
     Copyright, Credits & Resources:
 -------------------------------------------------------
 
-Ascend WordPress Theme, Copyright 2017 kadencethemes.com
+juanjimeneztj WordPress Theme, Copyright 2017 kadencethemes.com
 It is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify

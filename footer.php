@@ -2,13 +2,13 @@
 /**
  * Footer Template
  *
- * @package Ascend theme
+ * @package juanjimeneztj theme
  */
 
-			do_action( 'ascend_after_content' ); ?>
+			do_action( 'juanjimeneztj_after_content' ); ?>
 			</div><!-- /.wrap -->
 			<?php
-			do_action( 'ascend_footer' );
+			do_action( 'juanjimeneztj_footer' );
 			?>
 		</div><!--Wrapper-->
 		<?php wp_footer(); ?>

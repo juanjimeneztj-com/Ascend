@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" <?php language_attributes(); ?> <?php ascend_html_tag_schema();?> >
+<html class="no-js" <?php language_attributes(); ?> <?php juanjimeneztj_html_tag_schema();?> >
 <head>
   	<meta charset="<?php bloginfo( 'charset' ); ?>">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">

@@ -6,11 +6,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Contact widget
  */
-class ascend_contact_widget extends WP_Widget {
+class juanjimeneztj_contact_widget extends WP_Widget {
     private static $instance = 0;
     public function __construct() {
-        $widget_ops = array('classname' => 'widget_kadence_contact', 'description' => __('Use this widget to add a Vcard to your site', 'ascend'));
-        parent::__construct('widget_kadence_contact', __('Ascend: Contact/Vcard', 'ascend'), $widget_ops);
+        $widget_ops = array('classname' => 'widget_kadence_contact', 'description' => __('Use this widget to add a Vcard to your site', 'juanjimeneztj'));
+        parent::__construct('widget_kadence_contact', __('juanjimeneztj: Contact/Vcard', 'juanjimeneztj'), $widget_ops);
     }
 
     public function widget($args, $instance) {
@@ -87,43 +87,43 @@ class ascend_contact_widget extends WP_Widget {
         $email = isset($instance['email']) ? esc_attr($instance['email']) : '';
         ?>
         <p>
-          <label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php _e('Title:', 'ascend'); ?></label>
+          <label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php _e('Title:', 'juanjimeneztj'); ?></label>
           <input class="widefat" id="<?php echo esc_attr($this->get_field_id('title')); ?>" name="<?php echo esc_attr($this->get_field_name('title')); ?>" type="text" value="<?php echo esc_attr($title); ?>" />
         </p>
         <p>
-          <label for="<?php echo esc_attr($this->get_field_id('company')); ?>"><?php _e('Company Name:', 'ascend'); ?></label>
+          <label for="<?php echo esc_attr($this->get_field_id('company')); ?>"><?php _e('Company Name:', 'juanjimeneztj'); ?></label>
           <input class="widefat" id="<?php echo esc_attr($this->get_field_id('company')); ?>" name="<?php echo esc_attr($this->get_field_name('company')); ?>" type="text" value="<?php echo esc_attr($company); ?>" />
         </p>
         <p>
-          <label for="<?php echo esc_attr($this->get_field_id('name')); ?>"><?php _e('Name:', 'ascend'); ?></label>
+          <label for="<?php echo esc_attr($this->get_field_id('name')); ?>"><?php _e('Name:', 'juanjimeneztj'); ?></label>
           <input class="widefat" id="<?php echo esc_attr($this->get_field_id('name')); ?>" name="<?php echo esc_attr($this->get_field_name('name')); ?>" type="text" value="<?php echo esc_attr($name); ?>" />
         </p>
         <p>
-          <label for="<?php echo esc_attr($this->get_field_id('street_address')); ?>"><?php _e('Street Address:', 'ascend'); ?></label>
+          <label for="<?php echo esc_attr($this->get_field_id('street_address')); ?>"><?php _e('Street Address:', 'juanjimeneztj'); ?></label>
           <input class="widefat" id="<?php echo esc_attr($this->get_field_id('street_address')); ?>" name="<?php echo esc_attr($this->get_field_name('street_address')); ?>" type="text" value="<?php echo esc_attr($street_address); ?>" />
         </p>
         <p>
-          <label for="<?php echo esc_attr($this->get_field_id('locality')); ?>"><?php _e('City/Locality:', 'ascend'); ?></label>
+          <label for="<?php echo esc_attr($this->get_field_id('locality')); ?>"><?php _e('City/Locality:', 'juanjimeneztj'); ?></label>
           <input class="widefat" id="<?php echo esc_attr($this->get_field_id('locality')); ?>" name="<?php echo esc_attr($this->get_field_name('locality')); ?>" type="text" value="<?php echo esc_attr($locality); ?>" />
         </p>
         <p>
-          <label for="<?php echo esc_attr($this->get_field_id('region')); ?>"><?php _e('State/Region:', 'ascend'); ?></label>
+          <label for="<?php echo esc_attr($this->get_field_id('region')); ?>"><?php _e('State/Region:', 'juanjimeneztj'); ?></label>
           <input class="widefat" id="<?php echo esc_attr($this->get_field_id('region')); ?>" name="<?php echo esc_attr($this->get_field_name('region')); ?>" type="text" value="<?php echo esc_attr($region); ?>" />
         </p>
         <p>
-          <label for="<?php echo esc_attr($this->get_field_id('postal_code')); ?>"><?php _e('Zipcode/Postal Code:', 'ascend'); ?></label>
+          <label for="<?php echo esc_attr($this->get_field_id('postal_code')); ?>"><?php _e('Zipcode/Postal Code:', 'juanjimeneztj'); ?></label>
           <input class="widefat" id="<?php echo esc_attr($this->get_field_id('postal_code')); ?>" name="<?php echo esc_attr($this->get_field_name('postal_code')); ?>" type="text" value="<?php echo esc_attr($postal_code); ?>" />
         </p>
         <p>
-          <label for="<?php echo esc_attr($this->get_field_id('tel')); ?>"><?php _e('Mobile Telephone:', 'ascend'); ?></label>
+          <label for="<?php echo esc_attr($this->get_field_id('tel')); ?>"><?php _e('Mobile Telephone:', 'juanjimeneztj'); ?></label>
           <input class="widefat" id="<?php echo esc_attr($this->get_field_id('tel')); ?>" name="<?php echo esc_attr($this->get_field_name('tel')); ?>" type="text" value="<?php echo esc_attr($tel); ?>" />
         </p>
         <p>
-          <label for="<?php echo esc_attr($this->get_field_id('fixedtel')); ?>"><?php _e('Fixed Telephone:', 'ascend'); ?></label>
+          <label for="<?php echo esc_attr($this->get_field_id('fixedtel')); ?>"><?php _e('Fixed Telephone:', 'juanjimeneztj'); ?></label>
           <input class="widefat" id="<?php echo esc_attr($this->get_field_id('fixedtel')); ?>" name="<?php echo esc_attr($this->get_field_name('fixedtel')); ?>" type="text" value="<?php echo esc_attr($fixedtel); ?>" />
         </p>
         <p>
-          <label for="<?php echo esc_attr($this->get_field_id('email')); ?>"><?php _e('Email:', 'ascend'); ?></label>
+          <label for="<?php echo esc_attr($this->get_field_id('email')); ?>"><?php _e('Email:', 'juanjimeneztj'); ?></label>
           <input class="widefat" id="<?php echo esc_attr($this->get_field_id('email')); ?>" name="<?php echo esc_attr($this->get_field_name('email')); ?>" type="text" value="<?php echo esc_attr($email); ?>" />
         </p>
       <?php

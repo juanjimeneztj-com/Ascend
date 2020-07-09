@@ -1,13 +1,13 @@
 <?php 
 
-global $post, $ascend_has_sidebar, $ascend_grid_columns, $ascend_grid_carousel;
-	$ascend = ascend_get_options();
-    if($ascend_has_sidebar) {
-        if(!empty($ascend_grid_columns)) {
-            if($ascend_grid_columns == '3') {
+global $post, $juanjimeneztj_has_sidebar, $juanjimeneztj_grid_columns, $juanjimeneztj_grid_carousel;
+	$juanjimeneztj = juanjimeneztj_get_options();
+    if($juanjimeneztj_has_sidebar) {
+        if(!empty($juanjimeneztj_grid_columns)) {
+            if($juanjimeneztj_grid_columns == '3') {
                 $image_width = 420;
                 $image_height = 280;
-            } else if($ascend_grid_columns == '2') {
+            } else if($juanjimeneztj_grid_columns == '2') {
                 $image_width = 660;
                 $image_height = 440;
             } else {
@@ -19,12 +19,12 @@ global $post, $ascend_has_sidebar, $ascend_grid_columns, $ascend_grid_carousel;
             $image_height = 240;
         }
     } else {
-        if(!empty($ascend_grid_columns)) {
-            if($ascend_grid_columns == '3') {
+        if(!empty($juanjimeneztj_grid_columns)) {
+            if($juanjimeneztj_grid_columns == '3') {
                 $image_width = 480;
                 $image_height = 320;
 
-            } else if($ascend_grid_columns == '2') {
+            } else if($juanjimeneztj_grid_columns == '2') {
                 $image_width = 660;
                 $image_height = 440;
             } else {
@@ -37,10 +37,10 @@ global $post, $ascend_has_sidebar, $ascend_grid_columns, $ascend_grid_carousel;
         }
     }
 
-    $image_width = apply_filters('ascend_post_grid_image_width', $image_width);
-    $image_height = apply_filters('ascend_post_grid_image_height', $image_height);
-    if(isset($ascend_grid_carousel) && $ascend_grid_carousel != true) {
-	    if(isset($ascend['postexcerpt_hard_crop']) && $ascend['postexcerpt_hard_crop'] == 1) {
+    $image_width = apply_filters('juanjimeneztj_post_grid_image_width', $image_width);
+    $image_height = apply_filters('juanjimeneztj_post_grid_image_height', $image_height);
+    if(isset($juanjimeneztj_grid_carousel) && $juanjimeneztj_grid_carousel != true) {
+	    if(isset($juanjimeneztj['postexcerpt_hard_crop']) && $juanjimeneztj['postexcerpt_hard_crop'] == 1) {
 	        $image_crop = true;
 	    } else {
 	        $image_height = null;
@@ -53,8 +53,8 @@ global $post, $ascend_has_sidebar, $ascend_grid_columns, $ascend_grid_carousel;
     <article id="post-<?php the_ID(); ?>" class="blog_item blog_photo_item kt_item_fade_in grid_item" itemscope itemtype="http://schema.org/CreativeWork">
         <div class="imghoverclass img-margin-center blog-grid-photo">
         <?php 
-        $img = ascend_get_image_array($image_width, $image_height, $image_crop, null, null, null, true);
-        if( ascend_lazy_load_filter() ) {
+        $img = juanjimeneztj_get_image_array($image_width, $image_height, $image_crop, null, null, null, true);
+        if( juanjimeneztj_lazy_load_filter() ) {
             $image_src_output = 'src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="'.esc_url($img['src']).'" '; 
         } else {
             $image_src_output = 'src="'.esc_url($img['src']).'"'; 
@@ -79,22 +79,22 @@ global $post, $ascend_has_sidebar, $ascend_grid_columns, $ascend_grid_carousel;
                 /**
                 *
                 */
-                do_action( 'ascend_post_photo_grid_excerpt_before_header' );
+                do_action( 'juanjimeneztj_post_photo_grid_excerpt_before_header' );
                 ?>
                 <header>
                     <?php 
                     /**
-                    * @hooked ascend_post_grid_excerpt_header_title - 10
+                    * @hooked juanjimeneztj_post_grid_excerpt_header_title - 10
                     */
-                    do_action( 'ascend_post_photo_grid_excerpt_header' );
+                    do_action( 'juanjimeneztj_post_photo_grid_excerpt_header' );
                     ?>
                 </header>
                 <div class="kt-post-photo-added-content">
                     <?php 
                     /**
-                    * @hooked ascend_post_header_meta_categories - 20
+                    * @hooked juanjimeneztj_post_header_meta_categories - 20
                     */
-                    do_action( 'ascend_post_photo_grid_excerpt_after_header' );
+                    do_action( 'juanjimeneztj_post_photo_grid_excerpt_after_header' );
                     ?>
                 </div>
             </div>
@@ -105,6 +105,6 @@ global $post, $ascend_has_sidebar, $ascend_grid_columns, $ascend_grid_carousel;
         /**
         * 
         */
-        do_action( 'ascend_post_grid_excerpt_after_footer' );
+        do_action( 'juanjimeneztj_post_grid_excerpt_after_footer' );
         ?>
     </article> <!-- Blog Item -->

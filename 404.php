@@ -6,17 +6,17 @@
 	get_header(); 
 	
 	/**
-    * @hooked ascend_page_title - 20
+    * @hooked juanjimeneztj_page_title - 20
     */
-	do_action('ascend_page_title_container');
+	do_action('juanjimeneztj_page_title_container');
 	?>
 	<div id="content" class="container">
 		<div class="row">
-			<div class="main <?php echo esc_attr( ascend_main_class() ); ?>" id="ktmain" role="main">
+			<div class="main <?php echo esc_attr( juanjimeneztj_main_class() ); ?>" id="ktmain" role="main">
 				<div class="kt-404-alert entry-content">
-					<h3><?php esc_html_e( 'Sorry, but the page you were trying to view does not exist.', 'ascend' ); ?></h2>
+					<h3><?php esc_html_e( 'Sorry, but the page you were trying to view does not exist.', 'juanjimeneztj' ); ?></h2>
 
-					<p><?php esc_html_e( 'It looks like this was the result of either a mistyped address or an out-of-date link', 'ascend' ); ?></p>
+					<p><?php esc_html_e( 'It looks like this was the result of either a mistyped address or an out-of-date link', 'juanjimeneztj' ); ?></p>
 					<?php get_search_form(); ?>
 				</div>
 			</div><!-- /.main -->
@@ -24,7 +24,7 @@
 				/**
 			    * Sidebar
 			    */
-				if (ascend_display_sidebar()) : 
+				if (juanjimeneztj_display_sidebar()) : 
 					get_sidebar();
 				endif; ?>
 		</div><!-- /.row-->

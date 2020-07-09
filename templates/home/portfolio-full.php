@@ -3,20 +3,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-global $ascend_portfolio_loop, $ascend_portfolio_loop_count;
-$ascend = ascend_get_options();
-	if(!empty($ascend['portfolio_full_title'])) {
-		$btitle = $ascend['portfolio_full_title'];
+global $juanjimeneztj_portfolio_loop, $juanjimeneztj_portfolio_loop_count;
+$juanjimeneztj = juanjimeneztj_get_options();
+	if(!empty($juanjimeneztj['portfolio_full_title'])) {
+		$btitle = $juanjimeneztj['portfolio_full_title'];
 	} else { 
 		$btitle = '';
 	}
-	if(isset($ascend['home_portfolio_full_show_type']) && $ascend['home_portfolio_full_show_type'] == '0') {
+	if(isset($juanjimeneztj['home_portfolio_full_show_type']) && $juanjimeneztj['home_portfolio_full_show_type'] == '0') {
 		$portfolio_item_types = 'false';
 	} else {
 		$portfolio_item_types = 'true';
 	}
-	if(isset($ascend['home_portfolio_full_order'])) {
-		$p_orderby = $ascend['home_portfolio_full_order'];
+	if(isset($juanjimeneztj['home_portfolio_full_order'])) {
+		$p_orderby = $juanjimeneztj['home_portfolio_full_order'];
 	} else {
 		$p_orderby = 'menu_order';
 	}
@@ -25,42 +25,42 @@ $ascend = ascend_get_options();
    	} else {
    		$p_order = 'DESC';
    	}
-	if(isset($ascend['home_portfolio_full_show_excerpt']) && $ascend['home_portfolio_full_show_excerpt'] == '1') {
+	if(isset($juanjimeneztj['home_portfolio_full_show_excerpt']) && $juanjimeneztj['home_portfolio_full_show_excerpt'] == '1') {
 		$portfolio_excerpt = 'true';
 	} else {
 		$portfolio_excerpt = 'false';
 	}
-	if(isset($ascend['home_portfolio_full_show_lightbox']) && $ascend['home_portfolio_full_show_lightbox'] == '0') {
+	if(isset($juanjimeneztj['home_portfolio_full_show_lightbox']) && $juanjimeneztj['home_portfolio_full_show_lightbox'] == '0') {
 		$portfolio_lightbox = 'false';
 	} else {
 		$portfolio_lightbox = 'true';
 	}
-	if(isset($ascend['home_portfolio_full_style']) ) {
-		$portfolio_style = $ascend['home_portfolio_full_style'];
+	if(isset($juanjimeneztj['home_portfolio_full_style']) ) {
+		$portfolio_style = $juanjimeneztj['home_portfolio_full_style'];
 	} else {
-   		if(isset($ascend['portfolio_tax_style'])) {
-   			$portfolio_style = $ascend['portfolio_tax_style'];
+   		if(isset($juanjimeneztj['portfolio_tax_style'])) {
+   			$portfolio_style = $juanjimeneztj['portfolio_tax_style'];
    		} else {
    			$portfolio_style = 'pgrid';
    		}
 	}
-	if(isset($ascend['home_portfolio_full_ratio']) ) {
-		$portfolio_ratio = $ascend['home_portfolio_full_ratio'];
+	if(isset($juanjimeneztj['home_portfolio_full_ratio']) ) {
+		$portfolio_ratio = $juanjimeneztj['home_portfolio_full_ratio'];
 	} else {
 		$portfolio_ratio = 'square';
 	}
-	if(isset($ascend['home_portfolio_full_columns']) ) {
-        $ascend_grid_columns = $ascend['home_portfolio_full_columns'];
+	if(isset($juanjimeneztj['home_portfolio_full_columns']) ) {
+        $juanjimeneztj_grid_columns = $juanjimeneztj['home_portfolio_full_columns'];
     } else {
-        $ascend_grid_columns = '4';
+        $juanjimeneztj_grid_columns = '4';
     }
-    if(isset($ascend['home_portfolio_full_count']) ) {
-        $portfolio_items = $ascend['home_portfolio_full_count'];
+    if(isset($juanjimeneztj['home_portfolio_full_count']) ) {
+        $portfolio_items = $juanjimeneztj['home_portfolio_full_count'];
     } else {
         $portfolio_items = '8';
     }
-    if(!empty($ascend['home_portfolio_full_type'])) { 
-		$portfolio_type = get_term_by ('id',$ascend['home_portfolio_full_type'],'portfolio-type');
+    if(!empty($juanjimeneztj['home_portfolio_full_type'])) { 
+		$portfolio_type = get_term_by ('id',$juanjimeneztj['home_portfolio_full_type'],'portfolio-type');
 		$portfolio_type_slug = $portfolio_type->slug;
 		$portfolio_type_id = $portfolio_type->id;
 	} else {
@@ -78,11 +78,11 @@ $ascend = ascend_get_options();
     	$margins 	= 'rowtight';
     }
 
-    $ascend_portfolio_loop = array(
+    $juanjimeneztj_portfolio_loop = array(
      	'lightbox' 		=> $portfolio_lightbox,
      	'showexcerpt' 	=> $portfolio_excerpt,
      	'showtypes' 	=> $portfolio_item_types,
-     	'columns' 		=> $ascend_grid_columns,
+     	'columns' 		=> $juanjimeneztj_grid_columns,
      	'ratio' 		=> $portfolio_ratio,
      	'style' 		=> $portfolio_style,
      	'carousel' 		=> 'false',
@@ -110,14 +110,14 @@ $ascend = ascend_get_options();
 					));
 				
 				if ( $loop ) : 
-					$ascend_portfolio_loop_count['loop'] = 1;
-					$ascend_portfolio_loop_count['count'] = $loop->post_count;
+					$juanjimeneztj_portfolio_loop_count['loop'] = 1;
+					$juanjimeneztj_portfolio_loop_count['count'] = $loop->post_count;
 					while ( $loop->have_posts() ) : $loop->the_post();
 								get_template_part('templates/content', 'loop-portfolio'); 
-								$ascend_portfolio_loop_count['loop']++;
+								$juanjimeneztj_portfolio_loop_count['loop']++;
 					endwhile; else: ?>
 				 
-						<div class="error-not-found"><?php _e('Sorry, no portfolio entries found.', 'ascend');?></div>
+						<div class="error-not-found"><?php _e('Sorry, no portfolio entries found.', 'juanjimeneztj');?></div>
 					
 				<?php endif; ?>
             </div> <!--portfoliowrapper-->

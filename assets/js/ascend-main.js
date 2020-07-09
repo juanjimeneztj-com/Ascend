@@ -330,11 +330,11 @@ jQuery(document).ready(function ($) {
 		*
 		* Header Parallax
 		*/
-		$('.kad-ascend-parallax').each(function(){
+		$('.kad-juanjimeneztj-parallax').each(function(){
 			var $ypos = $(this).css('background-position-y');
 			var $xpos = $(this).css('background-position-x');
 			var $bgobj = $(this);
-			$('.kad-ascend-parallax').appear(function() {
+			$('.kad-juanjimeneztj-parallax').appear(function() {
 		        $(window).scroll(function() {
 		            var yPos =  'calc(' + $ypos + ' - ' + ($(window).scrollTop() / 5) + 'px)'; 
 		            var coords = $xpos + ' ' + yPos;

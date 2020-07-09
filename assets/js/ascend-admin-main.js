@@ -109,13 +109,13 @@ $.imgupload = function(){
  (function($){
     "use strict";
     
-    $.ascendgallery = $.ascendgallery || {};
+    $.juanjimeneztjgallery = $.juanjimeneztjgallery || {};
     
     $(document).ready(function () {
-        $.ascendgallery();
+        $.juanjimeneztjgallery();
     });
 
-    $.ascendgallery = function(){
+    $.juanjimeneztjgallery = function(){
         // When the user clicks on the Add/Edit gallery button, we need to display the gallery editing
         $('body').on({
             click: function(event){
@@ -193,13 +193,13 @@ $.imgupload = function(){
 (function($){
     "use strict";
     
-    $.ascend_attachment_gallery = $.ascend_attachment_gallery || {};
+    $.juanjimeneztj_attachment_gallery = $.juanjimeneztj_attachment_gallery || {};
     
     $(document).ready(function () {
-        $.ascend_attachment_gallery();
+        $.juanjimeneztj_attachment_gallery();
     });
 
-    $.ascend_attachment_gallery = function(){
+    $.juanjimeneztj_attachment_gallery = function(){
         // When the user clicks on the Add/Edit gallery button, we need to display the gallery editing
         $('body').on({
             click: function(event){

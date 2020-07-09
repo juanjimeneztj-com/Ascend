@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $product, $woocommerce_loop;
 
-$ascend = ascend_get_options();
+$juanjimeneztj = juanjimeneztj_get_options();
 // Store loop count we're currently on
 if ( empty( $woocommerce_loop['loop'] ) ) {
 	$woocommerce_loop['loop'] = 0;
@@ -88,11 +88,11 @@ if ( $terms && ! is_wp_error( $terms ) ) {
 	/**
 	 * woocommerce_before_shop_loop_item_title hook
 	 *
-	 * @hooked ascend_woocommerce_image_link_open - 2
+	 * @hooked juanjimeneztj_woocommerce_image_link_open - 2
 	 * @hooked woocommerce_show_product_loop_sale_flash - 10 
 	 * @hooked woocommerce_template_loop_product_thumbnail - 10 (UNHOOKED BY THEME)
-	 * @hooked ascend_woocommerce_template_loop_product_thumbnail - 10
-	 * @hooked ascend_woocommerce_image_link_close - 50
+	 * @hooked juanjimeneztj_woocommerce_template_loop_product_thumbnail - 10
+	 * @hooked juanjimeneztj_woocommerce_image_link_close - 50
 	 */
 	do_action( 'woocommerce_before_shop_loop_item_title' ); ?> 
 
@@ -100,14 +100,14 @@ if ( $terms && ! is_wp_error( $terms ) ) {
 	/**
  	* woocommerce_shop_loop_item_title hook
  	*
- 	* @hooked ascend_woocommerce_archive_content_wrap_start - 5
- 	* @hooked ascend_woocommerce_archive_title_wrap_start - 6
- 	* @hooked ascend_woocommerce_archive_title_link_start - 7
+ 	* @hooked juanjimeneztj_woocommerce_archive_content_wrap_start - 5
+ 	* @hooked juanjimeneztj_woocommerce_archive_title_wrap_start - 6
+ 	* @hooked juanjimeneztj_woocommerce_archive_title_link_start - 7
  	* @hooked woocommerce_template_loop_product_title - 10 (UNHOOKED BY THEME)
- 	* @hooked ascend_woocommerce_template_loop_product_title - 10 
- 	* @hooked ascend_woocommerce_archive_title_link_end - 15
+ 	* @hooked juanjimeneztj_woocommerce_template_loop_product_title - 10 
+ 	* @hooked juanjimeneztj_woocommerce_archive_title_link_end - 15
  	* @hooked woocommerce_template_loop_product_title - 20
- 	* @hooked ascend_woocommerce_archive_title_wrap_end - 50
+ 	* @hooked juanjimeneztj_woocommerce_archive_title_wrap_end - 50
  	*/
 	do_action( 'woocommerce_shop_loop_item_title' );
 	?>
@@ -118,7 +118,7 @@ if ( $terms && ! is_wp_error( $terms ) ) {
 	 *
 	 * @hooked woocommerce_template_loop_rating - 5
 	 * @hooked woocommerce_template_loop_price - 10
-	 * @hooked ascend_woocommerce_archive_content_wrap_end - 50
+	 * @hooked juanjimeneztj_woocommerce_archive_content_wrap_end - 50
 	 */
 	do_action( 'woocommerce_after_shop_loop_item_title' );
 	?>

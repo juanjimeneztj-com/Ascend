@@ -5,8 +5,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Extend - Site Origin Panels 
  */
-add_filter('siteorigin_panels_full_width_container', 'ascend_fullwidth_container_id');
-function ascend_fullwidth_container_id($tag) {
+add_filter('siteorigin_panels_full_width_container', 'juanjimeneztj_fullwidth_container_id');
+function juanjimeneztj_fullwidth_container_id($tag) {
 	if($tag == 'body') {
 		$tag = '#inner-wrap';
 	}

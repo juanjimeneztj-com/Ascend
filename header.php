@@ -8,14 +8,14 @@
 get_template_part('templates/head');
 	?>
 	<body <?php body_class(); ?>>
-	<?php do_action('ascend_after_body_open'); ?>
+	<?php do_action('juanjimeneztj_after_body_open'); ?>
 	<div id="wrapper" class="container">
 		<?php
-		do_action('ascend_beforeheader');
+		do_action('juanjimeneztj_beforeheader');
 
-		do_action('ascend_header');
+		do_action('juanjimeneztj_header');
 
-		do_action('ascend_header_after');
+		do_action('juanjimeneztj_header_after');
 		?>
 
 			<div id="inner-wrap" class="wrap clearfix contentclass hfeed" role="document">
@@ -24,4 +24,4 @@ get_template_part('templates/head');
 				/*
 				* Hooked 
 				*/
-				do_action('ascend_content_top');
+				do_action('juanjimeneztj_content_top');

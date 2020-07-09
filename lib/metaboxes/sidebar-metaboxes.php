@@ -1,29 +1,29 @@
 <?php 
-add_filter( 'cmb2_admin_init', 'ascend_sidebar_metaboxes');
-function ascend_sidebar_metaboxes(){
+add_filter( 'cmb2_admin_init', 'juanjimeneztj_sidebar_metaboxes');
+function juanjimeneztj_sidebar_metaboxes(){
 	$prefix = '_kad_';
-	$ascend_sidebar = new_cmb2_box( array(
+	$juanjimeneztj_sidebar = new_cmb2_box( array(
 		'id'         	=> 'sidebar_post_metabox',
-		'title'      	=> __("Sidebar Options", 'ascend'),
-		'object_types' 	=> ascend_all_custom_posts(),
+		'title'      	=> __("Sidebar Options", 'juanjimeneztj'),
+		'object_types' 	=> juanjimeneztj_all_custom_posts(),
 		'priority'   	=> 'low',
 		'context'      	=> 'side',
 	) );
-	$ascend_sidebar->add_field( array(
-		'name' 		=> __('Display Sidebar?', 'ascend'),
+	$juanjimeneztj_sidebar->add_field( array(
+		'name' 		=> __('Display Sidebar?', 'juanjimeneztj'),
 		'id'   		=> $prefix . 'post_sidebar',
 		'type'    	=> 'select',
 		'options' 	=> array(
-			'default' 	=> __('Default', 'ascend'),
-			'yes' 		=> __('Yes', 'ascend'),
-			'no'		 => __('No', 'ascend'),
+			'default' 	=> __('Default', 'juanjimeneztj'),
+			'yes' 		=> __('Yes', 'juanjimeneztj'),
+			'no'		 => __('No', 'juanjimeneztj'),
 			),
 	) );
-	$ascend_sidebar->add_field( array(
-		'name'    => __('Choose Sidebar', 'ascend'),
+	$juanjimeneztj_sidebar->add_field( array(
+		'name'    => __('Choose Sidebar', 'juanjimeneztj'),
 		'desc'    => '',
 		'id'      => $prefix . 'sidebar_choice',
 		'type'    => 'select',
-		'options' => ascend_cmb_sidebar_options(),
+		'options' => juanjimeneztj_cmb_sidebar_options(),
 	) );
 }

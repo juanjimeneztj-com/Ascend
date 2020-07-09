@@ -2,7 +2,7 @@
 /**
  * Enqueue CSS & JS
  *
- * @package Ascend Theme
+ * @package juanjimeneztj Theme
  */
 
 /**
@@ -10,93 +10,93 @@
  *
  * @param string $hook is the page hook.
  */
-function ascend_admin_scripts( $hook ) {
+function juanjimeneztj_admin_scripts( $hook ) {
 
-	wp_register_script( 'kadence-toolkit-install', get_template_directory_uri() . '/assets/js/admin-activate.js', false, ASCEND_VERSION );
+	wp_register_script( 'kadence-toolkit-install', get_template_directory_uri() . '/assets/js/admin-activate.js', false, juanjimeneztj_VERSION );
 
 	if ( 'appearance_page_kad_options' === $hook || 'widgets.php' === $hook ) {
-		wp_enqueue_script( 'select2', get_template_directory_uri() . '/assets/js/min/select2-min.js', array( 'jquery' ), ASCEND_VERSION, false );
+		wp_enqueue_script( 'select2', get_template_directory_uri() . '/assets/js/min/select2-min.js', array( 'jquery' ), juanjimeneztj_VERSION, false );
 	}
 	if ( 'edit.php' !== $hook && 'post.php' !== $hook && 'post-new.php' !== $hook && 'widgets.php' !== $hook && 'appearance_page_kad_options' !== $hook ) {
 		return;
 	}
-	wp_enqueue_style( 'ascend_admin_styles', get_template_directory_uri() . '/assets/css/ascend_admin.css', false, ASCEND_VERSION );
+	wp_enqueue_style( 'juanjimeneztj_admin_styles', get_template_directory_uri() . '/assets/css/juanjimeneztj_admin.css', false, juanjimeneztj_VERSION );
 
 	if ( 'edit.php' !== $hook && 'post.php' !== $hook && 'post-new.php' !== $hook && 'widgets.php' !== $hook ) {
 		return;
 	}
 	wp_enqueue_media();
-	wp_enqueue_script( 'ascend_admin_main', get_template_directory_uri() . '/assets/js/min/ascend-admin-main-min.js', array( 'wp-color-picker', 'jquery' ), ASCEND_VERSION, false );
+	wp_enqueue_script( 'juanjimeneztj_admin_main', get_template_directory_uri() . '/assets/js/min/juanjimeneztj-admin-main-min.js', array( 'wp-color-picker', 'jquery' ), juanjimeneztj_VERSION, false );
 }
 
-add_action( 'admin_enqueue_scripts', 'ascend_admin_scripts' );
+add_action( 'admin_enqueue_scripts', 'juanjimeneztj_admin_scripts' );
 
 /**
  * Enqueue block editor style
  */
-function ascend_block_editor_styles() {
-	wp_enqueue_style( 'ascend-guten-editor-styles', get_template_directory_uri() . '/assets/css/guten-editor-style.css', false, ASCEND_VERSION, 'all' );
+function juanjimeneztj_block_editor_styles() {
+	wp_enqueue_style( 'juanjimeneztj-guten-editor-styles', get_template_directory_uri() . '/assets/css/guten-editor-style.css', false, juanjimeneztj_VERSION, 'all' );
 }
 
-add_action( 'enqueue_block_editor_assets', 'ascend_block_editor_styles' );
+add_action( 'enqueue_block_editor_assets', 'juanjimeneztj_block_editor_styles' );
 
 /**
  * Add inline css for fonts
  */
-function ascend_editor_dynamic_css() {
+function juanjimeneztj_editor_dynamic_css() {
 	global $current_screen;
 	$the_current_screen = get_current_screen();
 	if ( ( method_exists( $the_current_screen, 'is_block_editor' ) && $the_current_screen->is_block_editor() ) || ( function_exists( 'is_gutenberg_page' ) && is_gutenberg_page() ) ) {
-		$ascend        = ascend_get_options();
+		$juanjimeneztj        = juanjimeneztj_get_options();
 		$options_fonts = array( 'font_h1', 'font_h2', 'font_h3', 'font_h4', 'font_h5', 'font_p' );
 		$load_gfonts   = array();
 		foreach ( $options_fonts as $options_key ) {
-			if ( isset( $ascend[ $options_key ] ) && isset( $ascend[ $options_key ]['google'] ) && 'false' !== $ascend[ $options_key ]['google'] ) {
+			if ( isset( $juanjimeneztj[ $options_key ] ) && isset( $juanjimeneztj[ $options_key ]['google'] ) && 'false' !== $juanjimeneztj[ $options_key ]['google'] ) {
 				// check if it's in the array.
-				if ( isset( $load_gfonts[ sanitize_key( $ascend[ $options_key ]['font-family'] ) ] ) ) {
-					if ( isset( $ascend[ $options_key ]['font-weight'] ) && ! empty( $ascend[ $options_key ]['font-weight'] ) ) {
-						if ( isset( $ascend[ $options_key ]['font-style'] ) && ! empty( $ascend[ $options_key ]['font-style'] ) && ! is_numeric( $ascend[ $options_key ]['font-style'] ) && 'normal' !== $ascend[ $options_key ]['font-style'] ) {
-							$load_gfonts[ sanitize_key( $ascend[ $options_key ]['font-family'] ) ]['font-style'][ $ascend[ $options_key ]['font-weight'] . $ascend[ $options_key ]['font-style'] ] = $ascend[ $options_key ]['font-weight'] . $ascend[ $options_key ]['font-style'];
+				if ( isset( $load_gfonts[ sanitize_key( $juanjimeneztj[ $options_key ]['font-family'] ) ] ) ) {
+					if ( isset( $juanjimeneztj[ $options_key ]['font-weight'] ) && ! empty( $juanjimeneztj[ $options_key ]['font-weight'] ) ) {
+						if ( isset( $juanjimeneztj[ $options_key ]['font-style'] ) && ! empty( $juanjimeneztj[ $options_key ]['font-style'] ) && ! is_numeric( $juanjimeneztj[ $options_key ]['font-style'] ) && 'normal' !== $juanjimeneztj[ $options_key ]['font-style'] ) {
+							$load_gfonts[ sanitize_key( $juanjimeneztj[ $options_key ]['font-family'] ) ]['font-style'][ $juanjimeneztj[ $options_key ]['font-weight'] . $juanjimeneztj[ $options_key ]['font-style'] ] = $juanjimeneztj[ $options_key ]['font-weight'] . $juanjimeneztj[ $options_key ]['font-style'];
 						} else {
-							$load_gfonts[ sanitize_key( $ascend[ $options_key ]['font-family'] ) ]['font-style'][ $ascend[ $options_key ]['font-weight'] ] = $ascend[ $options_key ]['font-weight'];
+							$load_gfonts[ sanitize_key( $juanjimeneztj[ $options_key ]['font-family'] ) ]['font-style'][ $juanjimeneztj[ $options_key ]['font-weight'] ] = $juanjimeneztj[ $options_key ]['font-weight'];
 						}
 					}
-					if ( isset( $ascend[ $options_key ]['subsets'] ) && ! empty( $ascend[ $options_key ]['subsets'] ) ) {
-						$load_gfonts[ sanitize_key( $ascend[ $options_key ]['font-family'] ) ]['subsets'][ $ascend[ $options_key ]['subsets'] ] = $ascend[ $options_key ]['subsets'];
+					if ( isset( $juanjimeneztj[ $options_key ]['subsets'] ) && ! empty( $juanjimeneztj[ $options_key ]['subsets'] ) ) {
+						$load_gfonts[ sanitize_key( $juanjimeneztj[ $options_key ]['font-family'] ) ]['subsets'][ $juanjimeneztj[ $options_key ]['subsets'] ] = $juanjimeneztj[ $options_key ]['subsets'];
 					}
 				} else {
-					$load_gfonts[ sanitize_key( $ascend[ $options_key ]['font-family'] ) ] = array(
-						'font-family' => $ascend[ $options_key ]['font-family'],
+					$load_gfonts[ sanitize_key( $juanjimeneztj[ $options_key ]['font-family'] ) ] = array(
+						'font-family' => $juanjimeneztj[ $options_key ]['font-family'],
 						'font-style'  => array(),
 						'subsets'     => array(),
 					);
-					if ( isset( $ascend[ $options_key ]['font-weight'] ) && ! empty( $ascend[ $options_key ]['font-weight'] ) ) {
-						if ( isset( $ascend[ $options_key ]['font-style'] ) && ! empty( $ascend[ $options_key ]['font-style'] ) && ! is_numeric( $ascend[ $options_key ]['font-style'] ) && 'normal' !== $ascend[ $options_key ]['font-style'] ) {
-							$load_gfonts[ sanitize_key( $ascend[ $options_key ]['font-family'] ) ]['font-style'][ $ascend[ $options_key ]['font-weight'] . $ascend[ $options_key ]['font-style'] ] = $ascend[ $options_key ]['font-weight'] . $ascend[ $options_key ]['font-style'];
+					if ( isset( $juanjimeneztj[ $options_key ]['font-weight'] ) && ! empty( $juanjimeneztj[ $options_key ]['font-weight'] ) ) {
+						if ( isset( $juanjimeneztj[ $options_key ]['font-style'] ) && ! empty( $juanjimeneztj[ $options_key ]['font-style'] ) && ! is_numeric( $juanjimeneztj[ $options_key ]['font-style'] ) && 'normal' !== $juanjimeneztj[ $options_key ]['font-style'] ) {
+							$load_gfonts[ sanitize_key( $juanjimeneztj[ $options_key ]['font-family'] ) ]['font-style'][ $juanjimeneztj[ $options_key ]['font-weight'] . $juanjimeneztj[ $options_key ]['font-style'] ] = $juanjimeneztj[ $options_key ]['font-weight'] . $juanjimeneztj[ $options_key ]['font-style'];
 						} else {
-							$load_gfonts[ sanitize_key( $ascend[ $options_key ]['font-family'] ) ]['font-style'][ $ascend[ $options_key ]['font-weight'] ] = $ascend[ $options_key ]['font-weight'];
+							$load_gfonts[ sanitize_key( $juanjimeneztj[ $options_key ]['font-family'] ) ]['font-style'][ $juanjimeneztj[ $options_key ]['font-weight'] ] = $juanjimeneztj[ $options_key ]['font-weight'];
 						}
 					}
-					if ( isset( $ascend[ $options_key ]['subsets'] ) && ! empty( $ascend[ $options_key ]['subsets'] ) ) {
-						$load_gfonts[ sanitize_key( $ascend[ $options_key ]['font-family'] ) ]['subsets'][ $ascend[ $options_key ]['subsets'] ] = $ascend[ $options_key ]['subsets'];
+					if ( isset( $juanjimeneztj[ $options_key ]['subsets'] ) && ! empty( $juanjimeneztj[ $options_key ]['subsets'] ) ) {
+						$load_gfonts[ sanitize_key( $juanjimeneztj[ $options_key ]['font-family'] ) ]['subsets'][ $juanjimeneztj[ $options_key ]['subsets'] ] = $juanjimeneztj[ $options_key ]['subsets'];
 					}
 				}
 				if ( 'font_p' === $options_key ) {
 					$path      = trailingslashit( get_template_directory() ) . 'lib/gfont-json.php';
 					$all_fonts = include $path;
-					if ( isset( $all_fonts[ $ascend[ $options_key ]['font-family'] ] ) ) {
-						$p_font = $all_fonts[ $ascend[ $options_key ]['font-family'] ];
+					if ( isset( $all_fonts[ $juanjimeneztj[ $options_key ]['font-family'] ] ) ) {
+						$p_font = $all_fonts[ $juanjimeneztj[ $options_key ]['font-family'] ];
 						if ( isset( $p_font['variants']['italic']['400'] ) ) {
-							$load_gfonts[ sanitize_key( $ascend[ $options_key ]['font-family'] ) ]['font-style']['400italic'] = '400italic';
+							$load_gfonts[ sanitize_key( $juanjimeneztj[ $options_key ]['font-family'] ) ]['font-style']['400italic'] = '400italic';
 						}
 						if ( isset( $p_font['variants']['italic']['700'] ) ) {
-							$load_gfonts[ sanitize_key( $ascend[ $options_key ]['font-family'] ) ]['font-style']['700italic'] = '700italic';
+							$load_gfonts[ sanitize_key( $juanjimeneztj[ $options_key ]['font-family'] ) ]['font-style']['700italic'] = '700italic';
 						}
 						if ( isset( $p_font['variants']['normal']['400'] ) ) {
-							$load_gfonts[ sanitize_key( $ascend[ $options_key ]['font-family'] ) ]['font-style']['400'] = '400';
+							$load_gfonts[ sanitize_key( $juanjimeneztj[ $options_key ]['font-family'] ) ]['font-style']['400'] = '400';
 						}
 						if ( isset( $p_font['variants']['normal']['700'] ) ) {
-							$load_gfonts[ sanitize_key( $ascend[ $options_key ]['font-family'] ) ]['font-style']['700'] = '700';
+							$load_gfonts[ sanitize_key( $juanjimeneztj[ $options_key ]['font-family'] ) ]['font-style']['700'] = '700';
 						}
 					}
 				}
@@ -128,71 +128,71 @@ function ascend_editor_dynamic_css() {
 			}
 			echo '<link href="//fonts.googleapis.com/css?family=' . esc_attr( str_replace( '|', '%7C', $link ) ) . ' " rel="stylesheet">';
 		}
-		echo '<style type="text/css" id="ascend-editor-font-family">';
-		if ( isset( $ascend['font_h1'] ) ) {
+		echo '<style type="text/css" id="juanjimeneztj-editor-font-family">';
+		if ( isset( $juanjimeneztj['font_h1'] ) ) {
 			echo 'body.block-editor-page .editor-post-title__block .editor-post-title__input, body.block-editor-page .wp-block-heading h1, body.block-editor-page .editor-block-list__block h1, body.block-editor-page .editor-post-title__block .editor-post-title__input {
-					font-size: ' . esc_attr( $ascend['font_h1']['font-size'] ) . ';
-					line-height: ' . esc_attr( $ascend['font_h1']['line-height'] ) . ';
-					font-weight: ' . esc_attr( $ascend['font_h1']['font-weight'] ) . ';
-					font-family: ' . esc_attr( $ascend['font_h1']['font-family'] ) . ';
-					letter-spacing: ' . esc_attr( $ascend['font_h1']['letter-spacing'] ) . ';
-					color: ' . esc_attr( $ascend['font_h1']['color'] ) . ';
+					font-size: ' . esc_attr( $juanjimeneztj['font_h1']['font-size'] ) . ';
+					line-height: ' . esc_attr( $juanjimeneztj['font_h1']['line-height'] ) . ';
+					font-weight: ' . esc_attr( $juanjimeneztj['font_h1']['font-weight'] ) . ';
+					font-family: ' . esc_attr( $juanjimeneztj['font_h1']['font-family'] ) . ';
+					letter-spacing: ' . esc_attr( $juanjimeneztj['font_h1']['letter-spacing'] ) . ';
+					color: ' . esc_attr( $juanjimeneztj['font_h1']['color'] ) . ';
 				}';
 		}
-		if ( isset( $ascend['font_h2'] ) ) {
+		if ( isset( $juanjimeneztj['font_h2'] ) ) {
 			echo 'body.gutenberg-editor-page .wp-block-heading h2, body.gutenberg-editor-page .editor-block-list__block h2, body.block-editor-page .wp-block-heading h2, body.block-editor-page .editor-block-list__block h2 {
-				font-size: ' . esc_attr( $ascend['font_h2']['font-size'] ) . ';
-				line-height: ' . esc_attr( $ascend['font_h2']['line-height'] ) . ';
-				font-weight: ' . esc_attr( $ascend['font_h2']['font-weight'] ) . ';
-				font-family: ' . esc_attr( $ascend['font_h2']['font-family'] ) . ';
-				letter-spacing: ' . esc_attr( $ascend['font_h2']['letter-spacing'] ) . ';
-				color: ' . esc_attr( $ascend['font_h2']['color'] ) . ';
+				font-size: ' . esc_attr( $juanjimeneztj['font_h2']['font-size'] ) . ';
+				line-height: ' . esc_attr( $juanjimeneztj['font_h2']['line-height'] ) . ';
+				font-weight: ' . esc_attr( $juanjimeneztj['font_h2']['font-weight'] ) . ';
+				font-family: ' . esc_attr( $juanjimeneztj['font_h2']['font-family'] ) . ';
+				letter-spacing: ' . esc_attr( $juanjimeneztj['font_h2']['letter-spacing'] ) . ';
+				color: ' . esc_attr( $juanjimeneztj['font_h2']['color'] ) . ';
 			}';
 		}
-		if ( isset( $ascend['font_h3'] ) ) {
+		if ( isset( $juanjimeneztj['font_h3'] ) ) {
 			echo 'body.gutenberg-editor-page .wp-block-heading h3, body.gutenberg-editor-page .editor-block-list__block h3, body.block-editor-page .wp-block-heading h3, body.block-editor-page .editor-block-list__block h3 {
-				font-size: ' . esc_attr( $ascend['font_h3']['font-size'] ) . ';
-				line-height: ' . esc_attr( $ascend['font_h3']['line-height'] ) . ';
-				font-weight: ' . esc_attr( $ascend['font_h3']['font-weight'] ) . ';
-				font-family: ' . esc_attr( $ascend['font_h3']['font-family'] ) . ';
-				letter-spacing: ' . esc_attr( $ascend['font_h3']['letter-spacing'] ) . ';
-				color: ' . esc_attr( $ascend['font_h3']['color'] ) . ';
+				font-size: ' . esc_attr( $juanjimeneztj['font_h3']['font-size'] ) . ';
+				line-height: ' . esc_attr( $juanjimeneztj['font_h3']['line-height'] ) . ';
+				font-weight: ' . esc_attr( $juanjimeneztj['font_h3']['font-weight'] ) . ';
+				font-family: ' . esc_attr( $juanjimeneztj['font_h3']['font-family'] ) . ';
+				letter-spacing: ' . esc_attr( $juanjimeneztj['font_h3']['letter-spacing'] ) . ';
+				color: ' . esc_attr( $juanjimeneztj['font_h3']['color'] ) . ';
 			}';
 		}
-		if ( isset( $ascend['font_h4'] ) ) {
+		if ( isset( $juanjimeneztj['font_h4'] ) ) {
 			echo 'body.gutenberg-editor-page .wp-block-heading h4, body.gutenberg-editor-page .editor-block-list__block h4, body.block-editor-page .wp-block-heading h4, body.block-editor-page .editor-block-list__block h4 {
-				font-size: ' . esc_attr( $ascend['font_h4']['font-size'] ) . ';
-				line-height: ' . esc_attr( $ascend['font_h4']['line-height'] ) . ';
-				font-weight: ' . esc_attr( $ascend['font_h4']['font-weight'] ) . ';
-				font-family: ' . esc_attr( $ascend['font_h4']['font-family'] ) . ';
-				letter-spacing: ' . esc_attr( $ascend['font_h4']['letter-spacing'] ) . ';
-				color: ' . esc_attr( $ascend['font_h4']['color'] ) . ';
+				font-size: ' . esc_attr( $juanjimeneztj['font_h4']['font-size'] ) . ';
+				line-height: ' . esc_attr( $juanjimeneztj['font_h4']['line-height'] ) . ';
+				font-weight: ' . esc_attr( $juanjimeneztj['font_h4']['font-weight'] ) . ';
+				font-family: ' . esc_attr( $juanjimeneztj['font_h4']['font-family'] ) . ';
+				letter-spacing: ' . esc_attr( $juanjimeneztj['font_h4']['letter-spacing'] ) . ';
+				color: ' . esc_attr( $juanjimeneztj['font_h4']['color'] ) . ';
 			} body.gutenberg-editor-page .editor-block-list__block .widgets-container .so-widget h4 {font-size:inherit; letter-spacing:normal; font-family:inherit;}';
 		}
-		if ( isset( $ascend['font_h5'] ) ) {
+		if ( isset( $juanjimeneztj['font_h5'] ) ) {
 			echo 'body.gutenberg-editor-page .wp-block-heading h5, body.gutenberg-editor-page .editor-block-list__block h5, body.block-editor-page .wp-block-heading h5, body.block-editor-page .editor-block-list__block h5 {
-				font-size: ' . esc_attr( $ascend['font_h5']['font-size'] ) . ';
-				line-height: ' . esc_attr( $ascend['font_h5']['line-height'] ) . ';
-				font-weight: ' . esc_attr( $ascend['font_h5']['font-weight'] ) . ';
-				font-family: ' . esc_attr( $ascend['font_h5']['font-family'] ) . ';
-				letter-spacing: ' . esc_attr( $ascend['font_h5']['letter-spacing'] ) . ';
-				color: ' . esc_attr( $ascend['font_h5']['color'] ) . ';
+				font-size: ' . esc_attr( $juanjimeneztj['font_h5']['font-size'] ) . ';
+				line-height: ' . esc_attr( $juanjimeneztj['font_h5']['line-height'] ) . ';
+				font-weight: ' . esc_attr( $juanjimeneztj['font_h5']['font-weight'] ) . ';
+				font-family: ' . esc_attr( $juanjimeneztj['font_h5']['font-family'] ) . ';
+				letter-spacing: ' . esc_attr( $juanjimeneztj['font_h5']['letter-spacing'] ) . ';
+				color: ' . esc_attr( $juanjimeneztj['font_h5']['color'] ) . ';
 			}';
 		}
-		if ( isset( $ascend['font_p'] ) ) {
+		if ( isset( $juanjimeneztj['font_p'] ) ) {
 			echo '.edit-post-visual-editor, .edit-post-visual-editor p, body.gutenberg-editor-page .editor-block-list__block, .edit-post-visual-editor, .edit-post-visual-editor p, .edit-post-visual-editor.editor-styles-wrapper p {
-				font-size: ' . esc_attr( $ascend['font_p']['font-size'] ) . ';
-				font-weight: ' . esc_attr( $ascend['font_p']['font-weight'] ) . ';
-				font-family: ' . esc_attr( $ascend['font_p']['font-family'] ) . ';
-				letter-spacing: ' . esc_attr( $ascend['font_p']['letter-spacing'] ) . ';
-				color: ' . esc_attr( $ascend['font_p']['color'] ) . ';
+				font-size: ' . esc_attr( $juanjimeneztj['font_p']['font-size'] ) . ';
+				font-weight: ' . esc_attr( $juanjimeneztj['font_p']['font-weight'] ) . ';
+				font-family: ' . esc_attr( $juanjimeneztj['font_p']['font-family'] ) . ';
+				letter-spacing: ' . esc_attr( $juanjimeneztj['font_p']['letter-spacing'] ) . ';
+				color: ' . esc_attr( $juanjimeneztj['font_p']['color'] ) . ';
 			}';
 			echo '.block-editor-page .edit-post-visual-editor {
-				font-family: ' . esc_attr( $ascend['font_p']['font-family'] ) . ';
+				font-family: ' . esc_attr( $juanjimeneztj['font_p']['font-family'] ) . ';
 			}';
 		}
 		echo '</style>';
 	}
 }
-add_action( 'admin_head-post.php', 'ascend_editor_dynamic_css' );
-add_action( 'admin_head-post-new.php', 'ascend_editor_dynamic_css' );
+add_action( 'admin_head-post.php', 'juanjimeneztj_editor_dynamic_css' );
+add_action( 'admin_head-post-new.php', 'juanjimeneztj_editor_dynamic_css' );

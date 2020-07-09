@@ -10,16 +10,16 @@
 		/**
 	    * @hooked asencd_single_post_header - 20
 	    */
-	    do_action('ascend_post_header');
+	    do_action('juanjimeneztj_post_header');
 
 		/**
-	    * @hooked ascend_single_post_upper_headcontent - 10
+	    * @hooked juanjimeneztj_single_post_upper_headcontent - 10
 	    */
-	    do_action( 'ascend_single_post_begin' ); 
+	    do_action( 'juanjimeneztj_single_post_begin' ); 
 	    ?>
 		<div id="content" class="container clearfix">
     		<div class="row single-article">
-    			<div class="main <?php echo esc_attr(ascend_main_class()); ?>" id="ktmain" role="main">
+    			<div class="main <?php echo esc_attr(juanjimeneztj_main_class()); ?>" id="ktmain" role="main">
 			    	<?php 
 					/**
 				    * Content
@@ -36,7 +36,7 @@
 				/**
 			    * Sidebar
 			    */
-				if (ascend_display_sidebar()) : 
+				if (juanjimeneztj_display_sidebar()) : 
 				      	get_sidebar();
 			    endif; ?>
     		</div><!-- /.row-->

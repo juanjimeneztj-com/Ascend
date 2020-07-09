@@ -6,9 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Wrap embedded media for video fit
  */
-add_filter('embed_oembed_html', 'ascend_maybe_video_wrap_embed', 10, 2);
+add_filter('embed_oembed_html', 'juanjimeneztj_maybe_video_wrap_embed', 10, 2);
 
-function ascend_video_wrap_embed( $html ) {
+function juanjimeneztj_video_wrap_embed( $html ) {
 	return $html && is_string( $html ) ? sprintf( '<div class="entry-content-asset videofit">%s</div>', $html ) : $html;
 }
 /**
@@ -25,7 +25,7 @@ function ascend_video_wrap_embed( $html ) {
  * @param  string  $url
  * @return string
  */
-function ascend_maybe_video_wrap_embed( $html, $url ) {
+function juanjimeneztj_maybe_video_wrap_embed( $html, $url ) {
 	if ( ! $html || ! is_string( $html ) || ! $url )
 		return $html;
 	$do_wrap = false;
@@ -46,11 +46,11 @@ function ascend_maybe_video_wrap_embed( $html, $url ) {
 		'#https?://(www\.)?collegehumor\.com/video/.*#i',
 		'#https?://(www\.|embed\.)?ted\.com/talks/.*#i'
 	);
-	$patterns = apply_filters( 'ascend_maybe_wrap_embed_patterns', $patterns );
+	$patterns = apply_filters( 'juanjimeneztj_maybe_wrap_embed_patterns', $patterns );
 	foreach ( $patterns as $pattern ) {
 		$do_wrap = preg_match( $pattern, $url );
 		if ( $do_wrap )
-			return ascend_video_wrap_embed( $html );
+			return juanjimeneztj_video_wrap_embed( $html );
 	}
 	return $html;
 }
@@ -58,39 +58,39 @@ function ascend_maybe_video_wrap_embed( $html, $url ) {
 /**
  * Set Excert Length
  */
-function ascend_excerpt_length($length) {
- 	$ascend = ascend_get_options();
+function juanjimeneztj_excerpt_length($length) {
+ 	$juanjimeneztj = juanjimeneztj_get_options();
 
-  	return isset( $ascend['post_word_count'] ) ? absint( $ascend['post_word_count'] ) : 40;
+  	return isset( $juanjimeneztj['post_word_count'] ) ? absint( $juanjimeneztj['post_word_count'] ) : 40;
 }
-add_filter('excerpt_length', 'ascend_excerpt_length', 999);
+add_filter('excerpt_length', 'juanjimeneztj_excerpt_length', 999);
 
-function ascend_excerpt_more($more) {
-  	$ascend = ascend_get_options();
+function juanjimeneztj_excerpt_more($more) {
+  	$juanjimeneztj = juanjimeneztj_get_options();
 
-  	$readmore = (! empty( $ascend['post_readmore_text'] ) ) ? $ascend['post_readmore_text'] : __('Read More', 'ascend');
+  	$readmore = (! empty( $juanjimeneztj['post_readmore_text'] ) ) ? $juanjimeneztj['post_readmore_text'] : __('Read More', 'juanjimeneztj');
 
   	return ' &hellip; <a class="kt-excerpt-readmore more-link" href="' . esc_url( get_permalink() ) . '">'. esc_html($readmore) . '</a>';
 }
-add_filter('excerpt_more', 'ascend_excerpt_more');
+add_filter('excerpt_more', 'juanjimeneztj_excerpt_more');
 
-function ascend_custom_excerpt_more( $excerpt ) {
+function juanjimeneztj_custom_excerpt_more( $excerpt ) {
   	$excerpt_more = '';
   	if( has_excerpt() ) {
-      	$ascend = ascend_get_options();
-    	$readmore = (! empty( $ascend['post_readmore_text'] ) ) ? $ascend['post_readmore_text'] : __('Read More', 'ascend');
+      	$juanjimeneztj = juanjimeneztj_get_options();
+    	$readmore = (! empty( $juanjimeneztj['post_readmore_text'] ) ) ? $juanjimeneztj['post_readmore_text'] : __('Read More', 'juanjimeneztj');
 
     	$excerpt_more = '&hellip; <a class="kt-excerpt-readmore more-link" href="' . esc_url( get_permalink() ). '">'. esc_html($readmore) . '</a>';
   	}
   	return $excerpt . $excerpt_more;
 }
-add_filter( 'get_the_excerpt', 'ascend_custom_excerpt_more' );
+add_filter( 'get_the_excerpt', 'juanjimeneztj_custom_excerpt_more' );
 
 /**
  * Add additional classes for widgets
  *
  */
-function ascend_widget_first_last_classes($params) {
+function juanjimeneztj_widget_first_last_classes($params) {
   	global $my_widget_num;
 
   	$this_id = $params[0]['id'];
@@ -122,6 +122,6 @@ function ascend_widget_first_last_classes($params) {
 
   	return $params;
 }
-add_filter('dynamic_sidebar_params', 'ascend_widget_first_last_classes');
+add_filter('dynamic_sidebar_params', 'juanjimeneztj_widget_first_last_classes');
 
 

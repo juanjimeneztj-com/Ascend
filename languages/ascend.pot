@@ -1,7 +1,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Ascend\n"
+"Project-Id-Version: juanjimeneztj\n"
 "POT-Creation-Date: 2018-09-24 16:44-0600\n"
 "PO-Revision-Date: 2015-05-08 13:15-0700\n"
 "Last-Translator: \n"
@@ -40,193 +40,193 @@ msgstr ""
 msgid "Sorry, no blog entries found."
 msgstr ""
 
-#: lib/ascend-plugins-activate.php:22
+#: lib/juanjimeneztj-plugins-activate.php:22
 msgid "Install Kadence Toolkit"
 msgstr ""
 
-#: lib/ascend-plugins-activate.php:25
+#: lib/juanjimeneztj-plugins-activate.php:25
 msgid "Activate Kadence Toolkit"
 msgstr ""
 
-#: lib/ascend-plugins-activate.php:44
-msgid "Thanks for choosing the Ascend Theme"
+#: lib/juanjimeneztj-plugins-activate.php:44
+msgid "Thanks for choosing the juanjimeneztj Theme"
 msgstr ""
 
 #. translators: %s: <strong>
-#: lib/ascend-plugins-activate.php:45
+#: lib/juanjimeneztj-plugins-activate.php:45
 #, php-format
 msgid ""
-"To take full advantage of the Ascend Theme please install the %1$sKadence "
+"To take full advantage of the juanjimeneztj Theme please install the %1$sKadence "
 "Toolkit%2$s, this adds extra settings and features."
 msgstr ""
 
-#: lib/ascend-plugins-activate.php:47
+#: lib/juanjimeneztj-plugins-activate.php:47
 msgid "Activating..."
 msgstr ""
 
-#: lib/ascend-plugins-activate.php:47
+#: lib/juanjimeneztj-plugins-activate.php:47
 msgid "Activated"
 msgstr ""
 
-#: lib/ascend-plugins-activate.php:47
+#: lib/juanjimeneztj-plugins-activate.php:47
 msgid "Installing..."
 msgstr ""
 
-#: lib/ascend-plugins-activate.php:47
+#: lib/juanjimeneztj-plugins-activate.php:47
 msgid "Installed"
 msgstr ""
 
-#: lib/ascend-plugins-activate.php:48
+#: lib/juanjimeneztj-plugins-activate.php:48
 msgid "Skip"
 msgstr ""
 
-#: lib/ascend-plugins-activate.php:62
+#: lib/juanjimeneztj-plugins-activate.php:62
 msgid "Authorization failed. Please refresh the page and try again."
 msgstr ""
 
-#: lib/ascend-plugins-activate.php:131
+#: lib/juanjimeneztj-plugins-activate.php:131
 msgid "Install Suggested Plugins"
 msgstr ""
 
-#: lib/ascend-plugins-activate.php:132
+#: lib/juanjimeneztj-plugins-activate.php:132
 msgid "Theme Plugins"
 msgstr ""
 
 #. translators: %s: plugin name.
-#: lib/ascend-plugins-activate.php:133
+#: lib/juanjimeneztj-plugins-activate.php:133
 #: lib/classes/class-plugin-activation.php:330
 #, php-format
 msgid "Installing Plugin: %s"
 msgstr ""
 
-#: lib/ascend-plugins-activate.php:134
+#: lib/juanjimeneztj-plugins-activate.php:134
 #: lib/classes/class-plugin-activation.php:333
 msgid "Something went wrong with the plugin API."
 msgstr ""
 
-#: lib/ascend-plugins-activate.php:145
+#: lib/juanjimeneztj-plugins-activate.php:145
 msgid "Return to recommended Plugins Installer"
 msgstr ""
 
-#: lib/ascend-plugins-activate.php:146
+#: lib/juanjimeneztj-plugins-activate.php:146
 #: lib/classes/class-plugin-activation.php:387
 #: lib/classes/class-plugin-activation.php:3159
 msgid "Plugin activated successfully."
 msgstr ""
 
-#: lib/ascend-plugins-activate.php:147
+#: lib/juanjimeneztj-plugins-activate.php:147
 #, php-format
 msgid "All plugins installed and activated successfully. %s"
 msgstr ""
 
-#: lib/ascend_slider.php:245 templates/home/basic-slider.php:142
+#: lib/juanjimeneztj_slider.php:245 templates/home/basic-slider.php:142
 msgid "Sorry, no entries found."
 msgstr ""
 
-#: lib/classes/class-ascend_custom_menu.php:59
+#: lib/classes/class-juanjimeneztj_custom_menu.php:59
 msgid "Enable Mega Sub-Menu"
 msgstr ""
 
-#: lib/classes/class-ascend_custom_menu.php:64
+#: lib/classes/class-juanjimeneztj_custom_menu.php:64
 msgid "Submenu Number of Columns"
 msgstr ""
 
-#: lib/classes/class-ascend_custom_menu.php:74
+#: lib/classes/class-juanjimeneztj_custom_menu.php:74
 msgid "Icon Class (e.g. kt-icon-home)"
 msgstr ""
 
 #. translators: %s: title of menu item which is invalid
-#: lib/classes/class-ascend_walker_nav_menu_custom.php:91
+#: lib/classes/class-juanjimeneztj_walker_nav_menu_custom.php:91
 #, php-format
 msgid "%s (Invalid)"
 msgstr ""
 
 #. translators: %s: title of menu item in draft status
-#: lib/classes/class-ascend_walker_nav_menu_custom.php:95
+#: lib/classes/class-juanjimeneztj_walker_nav_menu_custom.php:95
 #, php-format
 msgid "%s (Pending)"
 msgstr ""
 
-#: lib/classes/class-ascend_walker_nav_menu_custom.php:108
+#: lib/classes/class-juanjimeneztj_walker_nav_menu_custom.php:108
 msgid "sub item"
 msgstr ""
 
-#: lib/classes/class-ascend_walker_nav_menu_custom.php:123
+#: lib/classes/class-juanjimeneztj_walker_nav_menu_custom.php:123
 msgid "Move up"
 msgstr ""
 
-#: lib/classes/class-ascend_walker_nav_menu_custom.php:136
+#: lib/classes/class-juanjimeneztj_walker_nav_menu_custom.php:136
 msgid "Move down"
 msgstr ""
 
-#: lib/classes/class-ascend_walker_nav_menu_custom.php:140
+#: lib/classes/class-juanjimeneztj_walker_nav_menu_custom.php:140
 msgid "Edit menu item"
 msgstr ""
 
-#: lib/classes/class-ascend_walker_nav_menu_custom.php:140
+#: lib/classes/class-juanjimeneztj_walker_nav_menu_custom.php:140
 msgid "Edit"
 msgstr ""
 
-#: lib/classes/class-ascend_walker_nav_menu_custom.php:149
+#: lib/classes/class-juanjimeneztj_walker_nav_menu_custom.php:149
 msgid "URL"
 msgstr ""
 
-#: lib/classes/class-ascend_walker_nav_menu_custom.php:156
+#: lib/classes/class-juanjimeneztj_walker_nav_menu_custom.php:156
 msgid "Navigation Label"
 msgstr ""
 
-#: lib/classes/class-ascend_walker_nav_menu_custom.php:162
+#: lib/classes/class-juanjimeneztj_walker_nav_menu_custom.php:162
 msgid "Title Attribute"
 msgstr ""
 
-#: lib/classes/class-ascend_walker_nav_menu_custom.php:169
+#: lib/classes/class-juanjimeneztj_walker_nav_menu_custom.php:169
 msgid "Open link in a new tab"
 msgstr ""
 
-#: lib/classes/class-ascend_walker_nav_menu_custom.php:174
+#: lib/classes/class-juanjimeneztj_walker_nav_menu_custom.php:174
 msgid "CSS Classes (optional)"
 msgstr ""
 
-#: lib/classes/class-ascend_walker_nav_menu_custom.php:180
+#: lib/classes/class-juanjimeneztj_walker_nav_menu_custom.php:180
 msgid "Link Relationship (XFN)"
 msgstr ""
 
-#: lib/classes/class-ascend_walker_nav_menu_custom.php:186
+#: lib/classes/class-juanjimeneztj_walker_nav_menu_custom.php:186
 msgid "Description"
 msgstr ""
 
-#: lib/classes/class-ascend_walker_nav_menu_custom.php:188
+#: lib/classes/class-juanjimeneztj_walker_nav_menu_custom.php:188
 msgid ""
 "The description will be displayed in the menu if the current theme supports "
 "it."
 msgstr ""
 
-#: lib/classes/class-ascend_walker_nav_menu_custom.php:200
+#: lib/classes/class-juanjimeneztj_walker_nav_menu_custom.php:200
 msgid "Move"
 msgstr ""
 
-#: lib/classes/class-ascend_walker_nav_menu_custom.php:201
+#: lib/classes/class-juanjimeneztj_walker_nav_menu_custom.php:201
 msgid "Up one"
 msgstr ""
 
-#: lib/classes/class-ascend_walker_nav_menu_custom.php:202
+#: lib/classes/class-juanjimeneztj_walker_nav_menu_custom.php:202
 msgid "Down one"
 msgstr ""
 
-#: lib/classes/class-ascend_walker_nav_menu_custom.php:205
+#: lib/classes/class-juanjimeneztj_walker_nav_menu_custom.php:205
 msgid "To the top"
 msgstr ""
 
-#: lib/classes/class-ascend_walker_nav_menu_custom.php:212
+#: lib/classes/class-juanjimeneztj_walker_nav_menu_custom.php:212
 #, php-format
 msgid "Original: %s"
 msgstr ""
 
-#: lib/classes/class-ascend_walker_nav_menu_custom.php:225
+#: lib/classes/class-juanjimeneztj_walker_nav_menu_custom.php:225
 msgid "Remove"
 msgstr ""
 
-#: lib/classes/class-ascend_walker_nav_menu_custom.php:226
+#: lib/classes/class-juanjimeneztj_walker_nav_menu_custom.php:226
 msgid "Cancel"
 msgstr ""
 
@@ -586,8 +586,8 @@ msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
 #: lib/cleanup.php:71 lib/cleanup.php:81
-#: lib/widgets/class-ascend_recent_posts_widget.php:54
-#: lib/widgets/class-ascend_recent_posts_widget.php:59
+#: lib/widgets/class-juanjimeneztj_recent_posts_widget.php:54
+#: lib/widgets/class-juanjimeneztj_recent_posts_widget.php:59
 #: templates/content-post-full.php:50 templates/home/blog-home.php:105
 #: themeoptions/options.php:1772
 msgid "Read More"
@@ -683,7 +683,7 @@ msgstr ""
 msgid "Year: %s"
 msgstr ""
 
-#: lib/metaboxes/ascend_cmb_extensions.php:9
+#: lib/metaboxes/juanjimeneztj_cmb_extensions.php:9
 #: lib/metaboxes/pagesetting-metaboxes.php:20
 #: lib/metaboxes/pagesetting-metaboxes.php:31
 #: lib/metaboxes/post-metaboxes.php:81 lib/metaboxes/post-metaboxes.php:92
@@ -692,11 +692,11 @@ msgstr ""
 msgid "Default"
 msgstr ""
 
-#: lib/metaboxes/ascend_cmb_extensions.php:36
+#: lib/metaboxes/juanjimeneztj_cmb_extensions.php:36
 msgid "All Blog Posts"
 msgstr ""
 
-#: lib/metaboxes/ascend_cmb_extensions.php:53
+#: lib/metaboxes/juanjimeneztj_cmb_extensions.php:53
 msgid "All Types"
 msgstr ""
 
@@ -1281,301 +1281,301 @@ msgstr ""
 msgid "Tags:"
 msgstr ""
 
-#: lib/widgets/class-ascend_contact_widget.php:12
+#: lib/widgets/class-juanjimeneztj_contact_widget.php:12
 msgid "Use this widget to add a Vcard to your site"
 msgstr ""
 
-#: lib/widgets/class-ascend_contact_widget.php:13
-msgid "Ascend: Contact/Vcard"
+#: lib/widgets/class-juanjimeneztj_contact_widget.php:13
+msgid "juanjimeneztj: Contact/Vcard"
 msgstr ""
 
-#: lib/widgets/class-ascend_contact_widget.php:90
-#: lib/widgets/class-ascend_post_grid_widget.php:156
-#: lib/widgets/class-ascend_recent_posts_widget.php:180
-#: lib/widgets/class-ascend_social_widget.php:189
+#: lib/widgets/class-juanjimeneztj_contact_widget.php:90
+#: lib/widgets/class-juanjimeneztj_post_grid_widget.php:156
+#: lib/widgets/class-juanjimeneztj_recent_posts_widget.php:180
+#: lib/widgets/class-juanjimeneztj_social_widget.php:189
 msgid "Title:"
 msgstr ""
 
-#: lib/widgets/class-ascend_contact_widget.php:94
+#: lib/widgets/class-juanjimeneztj_contact_widget.php:94
 msgid "Company Name:"
 msgstr ""
 
-#: lib/widgets/class-ascend_contact_widget.php:98
+#: lib/widgets/class-juanjimeneztj_contact_widget.php:98
 msgid "Name:"
 msgstr ""
 
-#: lib/widgets/class-ascend_contact_widget.php:102
+#: lib/widgets/class-juanjimeneztj_contact_widget.php:102
 msgid "Street Address:"
 msgstr ""
 
-#: lib/widgets/class-ascend_contact_widget.php:106
+#: lib/widgets/class-juanjimeneztj_contact_widget.php:106
 msgid "City/Locality:"
 msgstr ""
 
-#: lib/widgets/class-ascend_contact_widget.php:110
+#: lib/widgets/class-juanjimeneztj_contact_widget.php:110
 msgid "State/Region:"
 msgstr ""
 
-#: lib/widgets/class-ascend_contact_widget.php:114
+#: lib/widgets/class-juanjimeneztj_contact_widget.php:114
 msgid "Zipcode/Postal Code:"
 msgstr ""
 
-#: lib/widgets/class-ascend_contact_widget.php:118
+#: lib/widgets/class-juanjimeneztj_contact_widget.php:118
 msgid "Mobile Telephone:"
 msgstr ""
 
-#: lib/widgets/class-ascend_contact_widget.php:122
+#: lib/widgets/class-juanjimeneztj_contact_widget.php:122
 msgid "Fixed Telephone:"
 msgstr ""
 
-#: lib/widgets/class-ascend_contact_widget.php:126
+#: lib/widgets/class-juanjimeneztj_contact_widget.php:126
 #: woocommerce/checkout/thankyou.php:59
 msgid "Email:"
 msgstr ""
 
-#: lib/widgets/class-ascend_image_widget.php:9
+#: lib/widgets/class-juanjimeneztj_image_widget.php:9
 msgid "This allows for an image and a simple about text."
 msgstr ""
 
-#: lib/widgets/class-ascend_image_widget.php:10
-msgid "Ascend: Image"
+#: lib/widgets/class-juanjimeneztj_image_widget.php:10
+msgid "juanjimeneztj: Image"
 msgstr ""
 
-#: lib/widgets/class-ascend_image_widget.php:92
+#: lib/widgets/class-juanjimeneztj_image_widget.php:92
 msgid "Lightbox"
 msgstr ""
 
-#: lib/widgets/class-ascend_image_widget.php:93
+#: lib/widgets/class-juanjimeneztj_image_widget.php:93
 msgid "New Window"
 msgstr ""
 
-#: lib/widgets/class-ascend_image_widget.php:94
+#: lib/widgets/class-juanjimeneztj_image_widget.php:94
 msgid "Same Window"
 msgstr ""
 
-#: lib/widgets/class-ascend_image_widget.php:95
+#: lib/widgets/class-juanjimeneztj_image_widget.php:95
 msgid "No Link"
 msgstr ""
 
-#: lib/widgets/class-ascend_image_widget.php:111
+#: lib/widgets/class-juanjimeneztj_image_widget.php:111
 msgid "Image URL"
 msgstr ""
 
-#: lib/widgets/class-ascend_image_widget.php:114
+#: lib/widgets/class-juanjimeneztj_image_widget.php:114
 msgid "Upload"
 msgstr ""
 
-#: lib/widgets/class-ascend_image_widget.php:117
+#: lib/widgets/class-juanjimeneztj_image_widget.php:117
 msgid "Image size"
 msgstr ""
 
-#: lib/widgets/class-ascend_image_widget.php:121
+#: lib/widgets/class-juanjimeneztj_image_widget.php:121
 msgid "Custom Width"
 msgstr ""
 
-#: lib/widgets/class-ascend_image_widget.php:125
+#: lib/widgets/class-juanjimeneztj_image_widget.php:125
 msgid "Custom Height"
 msgstr ""
 
-#: lib/widgets/class-ascend_image_widget.php:129
+#: lib/widgets/class-juanjimeneztj_image_widget.php:129
 msgid "Image opens in"
 msgstr ""
 
-#: lib/widgets/class-ascend_image_widget.php:133
+#: lib/widgets/class-juanjimeneztj_image_widget.php:133
 msgid "Image Link (optional)"
 msgstr ""
 
-#: lib/widgets/class-ascend_image_widget.php:137
+#: lib/widgets/class-juanjimeneztj_image_widget.php:137
 msgid "Text/Caption (optional)"
 msgstr ""
 
-#: lib/widgets/class-ascend_post_grid_widget.php:13
+#: lib/widgets/class-juanjimeneztj_post_grid_widget.php:13
 msgid ""
 "This shows a grid of featured images from recent posts or portfolio items"
 msgstr ""
 
-#: lib/widgets/class-ascend_post_grid_widget.php:14
-msgid "Ascend: Post Grid"
+#: lib/widgets/class-juanjimeneztj_post_grid_widget.php:14
+msgid "juanjimeneztj: Post Grid"
 msgstr ""
 
-#: lib/widgets/class-ascend_post_grid_widget.php:159
+#: lib/widgets/class-juanjimeneztj_post_grid_widget.php:159
 msgid "Grid Choice:"
 msgstr ""
 
-#: lib/widgets/class-ascend_post_grid_widget.php:161
+#: lib/widgets/class-juanjimeneztj_post_grid_widget.php:161
 msgid "Blog Posts"
 msgstr ""
 
-#: lib/widgets/class-ascend_post_grid_widget.php:162
+#: lib/widgets/class-juanjimeneztj_post_grid_widget.php:162
 msgid "Portfolio"
 msgstr ""
 
-#: lib/widgets/class-ascend_post_grid_widget.php:165
+#: lib/widgets/class-juanjimeneztj_post_grid_widget.php:165
 msgid "If Post - Choose Category (Optional):"
 msgstr ""
 
-#: lib/widgets/class-ascend_post_grid_widget.php:168
+#: lib/widgets/class-juanjimeneztj_post_grid_widget.php:168
 msgid "If Portfolio - Choose Type (Optional):"
 msgstr ""
 
-#: lib/widgets/class-ascend_post_grid_widget.php:171
+#: lib/widgets/class-juanjimeneztj_post_grid_widget.php:171
 msgid "Number of images to show:"
 msgstr ""
 
-#: lib/widgets/class-ascend_post_grid_widget.php:174
-#: lib/widgets/class-ascend_recent_posts_widget.php:188
+#: lib/widgets/class-juanjimeneztj_post_grid_widget.php:174
+#: lib/widgets/class-juanjimeneztj_recent_posts_widget.php:188
 msgid "Orderby:"
 msgstr ""
 
-#: lib/widgets/class-ascend_recent_posts_widget.php:15
+#: lib/widgets/class-juanjimeneztj_recent_posts_widget.php:15
 msgid "This shows the most recent posts on your site with a thumbnail"
 msgstr ""
 
-#: lib/widgets/class-ascend_recent_posts_widget.php:16
-msgid "Ascend: Recent Posts"
+#: lib/widgets/class-juanjimeneztj_recent_posts_widget.php:16
+msgid "juanjimeneztj: Recent Posts"
 msgstr ""
 
-#: lib/widgets/class-ascend_recent_posts_widget.php:184
+#: lib/widgets/class-juanjimeneztj_recent_posts_widget.php:184
 msgid "Number of posts to show:"
 msgstr ""
 
-#: lib/widgets/class-ascend_recent_posts_widget.php:192
+#: lib/widgets/class-juanjimeneztj_recent_posts_widget.php:192
 msgid "Limit to Catagory (Optional):"
 msgstr ""
 
-#: lib/widgets/class-ascend_recent_posts_widget.php:196
+#: lib/widgets/class-juanjimeneztj_recent_posts_widget.php:196
 msgid "Feature first item:"
 msgstr ""
 
-#: lib/widgets/class-ascend_recent_posts_widget.php:200
+#: lib/widgets/class-juanjimeneztj_recent_posts_widget.php:200
 msgid "View more link at end of post list?:"
 msgstr ""
 
-#: lib/widgets/class-ascend_recent_posts_widget.php:204
+#: lib/widgets/class-juanjimeneztj_recent_posts_widget.php:204
 msgid "View more link text:"
 msgstr ""
 
-#: lib/widgets/class-ascend_social_widget.php:12
+#: lib/widgets/class-juanjimeneztj_social_widget.php:12
 msgid "Simple way to add Social Icons"
 msgstr ""
 
-#: lib/widgets/class-ascend_social_widget.php:13
-msgid "Ascend: Social Links"
+#: lib/widgets/class-juanjimeneztj_social_widget.php:13
+msgid "juanjimeneztj: Social Links"
 msgstr ""
 
-#: lib/widgets/class-ascend_social_widget.php:175
+#: lib/widgets/class-juanjimeneztj_social_widget.php:175
 msgid "Enable"
 msgstr ""
 
-#: lib/widgets/class-ascend_social_widget.php:175
+#: lib/widgets/class-juanjimeneztj_social_widget.php:175
 msgid "Disable"
 msgstr ""
 
-#: lib/widgets/class-ascend_social_widget.php:181
+#: lib/widgets/class-juanjimeneztj_social_widget.php:181
 msgid "Top"
 msgstr ""
 
-#: lib/widgets/class-ascend_social_widget.php:181
+#: lib/widgets/class-juanjimeneztj_social_widget.php:181
 msgid "Bottom"
 msgstr ""
 
-#: lib/widgets/class-ascend_social_widget.php:181 themeoptions/options.php:969
+#: lib/widgets/class-juanjimeneztj_social_widget.php:181 themeoptions/options.php:969
 #: themeoptions/options.php:1225 themeoptions/options.php:1560
 #: themeoptions/options.php:2285
 msgid "Left"
 msgstr ""
 
-#: lib/widgets/class-ascend_social_widget.php:181 themeoptions/options.php:969
+#: lib/widgets/class-juanjimeneztj_social_widget.php:181 themeoptions/options.php:969
 #: themeoptions/options.php:1225 themeoptions/options.php:1560
 #: themeoptions/options.php:2285
 msgid "Right"
 msgstr ""
 
-#: lib/widgets/class-ascend_social_widget.php:193
+#: lib/widgets/class-juanjimeneztj_social_widget.php:193
 msgid "Facebook:"
 msgstr ""
 
-#: lib/widgets/class-ascend_social_widget.php:197
+#: lib/widgets/class-juanjimeneztj_social_widget.php:197
 msgid "Twitter:"
 msgstr ""
 
-#: lib/widgets/class-ascend_social_widget.php:201
+#: lib/widgets/class-juanjimeneztj_social_widget.php:201
 msgid "Instagram:"
 msgstr ""
 
-#: lib/widgets/class-ascend_social_widget.php:205
+#: lib/widgets/class-juanjimeneztj_social_widget.php:205
 msgid "GooglePlus:"
 msgstr ""
 
-#: lib/widgets/class-ascend_social_widget.php:209
+#: lib/widgets/class-juanjimeneztj_social_widget.php:209
 msgid "Flickr:"
 msgstr ""
 
-#: lib/widgets/class-ascend_social_widget.php:213
+#: lib/widgets/class-juanjimeneztj_social_widget.php:213
 msgid "Vimeo:"
 msgstr ""
 
-#: lib/widgets/class-ascend_social_widget.php:217
+#: lib/widgets/class-juanjimeneztj_social_widget.php:217
 msgid "Youtube:"
 msgstr ""
 
-#: lib/widgets/class-ascend_social_widget.php:221
+#: lib/widgets/class-juanjimeneztj_social_widget.php:221
 msgid "Pinterest:"
 msgstr ""
 
-#: lib/widgets/class-ascend_social_widget.php:225
+#: lib/widgets/class-juanjimeneztj_social_widget.php:225
 msgid "Dribbble:"
 msgstr ""
 
-#: lib/widgets/class-ascend_social_widget.php:229
+#: lib/widgets/class-juanjimeneztj_social_widget.php:229
 msgid "Linkedin:"
 msgstr ""
 
-#: lib/widgets/class-ascend_social_widget.php:233
+#: lib/widgets/class-juanjimeneztj_social_widget.php:233
 msgid "Tumblr:"
 msgstr ""
 
-#: lib/widgets/class-ascend_social_widget.php:237
+#: lib/widgets/class-juanjimeneztj_social_widget.php:237
 msgid "Stumbleupon:"
 msgstr ""
 
-#: lib/widgets/class-ascend_social_widget.php:241
+#: lib/widgets/class-juanjimeneztj_social_widget.php:241
 msgid "VK:"
 msgstr ""
 
-#: lib/widgets/class-ascend_social_widget.php:245
+#: lib/widgets/class-juanjimeneztj_social_widget.php:245
 msgid "Viadeo:"
 msgstr ""
 
-#: lib/widgets/class-ascend_social_widget.php:249
+#: lib/widgets/class-juanjimeneztj_social_widget.php:249
 msgid "xing:"
 msgstr ""
 
-#: lib/widgets/class-ascend_social_widget.php:253
+#: lib/widgets/class-juanjimeneztj_social_widget.php:253
 msgid "Yelp:"
 msgstr ""
 
-#: lib/widgets/class-ascend_social_widget.php:257
+#: lib/widgets/class-juanjimeneztj_social_widget.php:257
 msgid "Soundcloud:"
 msgstr ""
 
-#: lib/widgets/class-ascend_social_widget.php:261
+#: lib/widgets/class-juanjimeneztj_social_widget.php:261
 msgid "Snapchat:"
 msgstr ""
 
-#: lib/widgets/class-ascend_social_widget.php:265
+#: lib/widgets/class-juanjimeneztj_social_widget.php:265
 msgid "Behance:"
 msgstr ""
 
-#: lib/widgets/class-ascend_social_widget.php:269
+#: lib/widgets/class-juanjimeneztj_social_widget.php:269
 msgid "RSS:"
 msgstr ""
 
-#: lib/widgets/class-ascend_social_widget.php:273
+#: lib/widgets/class-juanjimeneztj_social_widget.php:273
 msgid "Show Tooltip"
 msgstr ""
 
-#: lib/widgets/class-ascend_social_widget.php:277
+#: lib/widgets/class-juanjimeneztj_social_widget.php:277
 msgid "Tooltip Direction"
 msgstr ""
 
@@ -1723,7 +1723,7 @@ msgstr ""
 
 #: themeoptions/options.php:51
 msgid ""
-"Thank you for using the Ascend Theme by <a href=\"https://kadencethemes.com/"
+"Thank you for using the juanjimeneztj Theme by <a href=\"https://kadencethemes.com/"
 "\" target=\"_blank\">Kadence Themes</a>."
 msgstr ""
 
@@ -4364,7 +4364,7 @@ msgid "WordPress Galleries"
 msgstr ""
 
 #: themeoptions/options.php:4096
-msgid "Enable Ascend Galleries to override WordPress"
+msgid "Enable juanjimeneztj Galleries to override WordPress"
 msgstr ""
 
 #: themeoptions/options.php:4097

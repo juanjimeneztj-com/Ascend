@@ -6,11 +6,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Social widget
  */
-class ascend_social_widget extends WP_Widget {
+class juanjimeneztj_social_widget extends WP_Widget {
   	private static $instance = 0;
     public function __construct() {
-    	$widget_ops = array('classname' => 'widget_kadence_social', 'description' => __('Simple way to add Social Icons', 'ascend'));
-    	parent::__construct('widget_kadence_social', __('Ascend: Social Links', 'ascend'), $widget_ops);
+    	$widget_ops = array('classname' => 'widget_kadence_social', 'description' => __('Simple way to add Social Icons', 'juanjimeneztj'));
+    	parent::__construct('widget_kadence_social', __('juanjimeneztj: Social Links', 'juanjimeneztj'), $widget_ops);
   	}
 
   	function widget($args, $instance) {
@@ -172,13 +172,13 @@ class ascend_social_widget extends WP_Widget {
 	    $rss = isset($instance['rss']) ? esc_attr($instance['rss']) : '';
 	    $tooltip = isset($instance['tooltip']) ? esc_attr($instance['tooltip']) : 'tooltip';
 	    $tooltip_dir = isset($instance['tooltip_dir']) ? esc_attr($instance['tooltip_dir']) : 'top';
-	    $tool_options = array(array("slug" => "tooltip", "name" => __('Enable', 'ascend')), array("slug" => "none", "name" => __('Disable', 'ascend')));
+	    $tool_options = array(array("slug" => "tooltip", "name" => __('Enable', 'juanjimeneztj')), array("slug" => "none", "name" => __('Disable', 'juanjimeneztj')));
 	    $tool_options_array = array();
 	    foreach ($tool_options as $tool_option) {
 	      	if ($tooltip == $tool_option['slug']) { $selected=' selected="selected"';} else { $selected=""; }
 	      	$tool_options_array[] = '<option value="' . esc_attr($tool_option['slug']) .'"' . $selected . '>' . esc_html($tool_option['name']) . '</option>';
 	    }
-	    $tool_directions = array(array("slug" => "top", "name" => __('Top', 'ascend')), array("slug" => "bottom", "name" => __('Bottom', 'ascend')), array("slug" => "left", "name" => __('Left', 'ascend')), array("slug" => "right", "name" => __('Right', 'ascend')));
+	    $tool_directions = array(array("slug" => "top", "name" => __('Top', 'juanjimeneztj')), array("slug" => "bottom", "name" => __('Bottom', 'juanjimeneztj')), array("slug" => "left", "name" => __('Left', 'juanjimeneztj')), array("slug" => "right", "name" => __('Right', 'juanjimeneztj')));
 	    $tool_directions_array = array();
 	    foreach ($tool_directions as $tool_direction) {
 	      	if ($tooltip_dir == $tool_direction['slug']) { $selected=' selected="selected"';} else { $selected=""; }
@@ -186,95 +186,95 @@ class ascend_social_widget extends WP_Widget {
 	    }
 	  	?>
 	  	<p>
-	      	<label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php _e('Title:', 'ascend'); ?></label>
+	      	<label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php _e('Title:', 'juanjimeneztj'); ?></label>
 	      	<input class="widefat" id="<?php echo esc_attr($this->get_field_id('title')); ?>" name="<?php echo esc_attr($this->get_field_name('title')); ?>" type="text" value="<?php echo esc_attr($title); ?>" />
 	    </p>
 	    <p>
-	      	<label for="<?php echo esc_attr($this->get_field_id('facebook')); ?>"><?php _e('Facebook:', 'ascend'); ?></label>
+	      	<label for="<?php echo esc_attr($this->get_field_id('facebook')); ?>"><?php _e('Facebook:', 'juanjimeneztj'); ?></label>
 	      	<input class="widefat" id="<?php echo esc_attr($this->get_field_id('facebook')); ?>" name="<?php echo esc_attr($this->get_field_name('facebook')); ?>" type="text" value="<?php echo esc_attr($facebook); ?>" />
 	    </p>
 	    <p>
-	      	<label for="<?php echo esc_attr($this->get_field_id('twitter')); ?>"><?php _e('Twitter:', 'ascend'); ?></label>
+	      	<label for="<?php echo esc_attr($this->get_field_id('twitter')); ?>"><?php _e('Twitter:', 'juanjimeneztj'); ?></label>
 	      	<input class="widefat" id="<?php echo esc_attr($this->get_field_id('twitter')); ?>" name="<?php echo esc_attr($this->get_field_name('twitter')); ?>" type="text" value="<?php echo esc_attr($twitter); ?>" />
 	    </p>
 	    <p>
-	      	<label for="<?php echo esc_attr($this->get_field_id('instagram')); ?>"><?php _e('Instagram:', 'ascend'); ?></label>
+	      	<label for="<?php echo esc_attr($this->get_field_id('instagram')); ?>"><?php _e('Instagram:', 'juanjimeneztj'); ?></label>
 	      	<input class="widefat" id="<?php echo esc_attr($this->get_field_id('instagram')); ?>" name="<?php echo esc_attr($this->get_field_name('instagram')); ?>" type="text" value="<?php echo esc_attr($instagram); ?>" />
 	    </p>
 	    <p>
-	      	<label for="<?php echo esc_attr($this->get_field_id('googleplus')); ?>"><?php _e('GooglePlus:', 'ascend'); ?></label>
+	      	<label for="<?php echo esc_attr($this->get_field_id('googleplus')); ?>"><?php _e('GooglePlus:', 'juanjimeneztj'); ?></label>
 	      	<input class="widefat" id="<?php echo esc_attr($this->get_field_id('googleplus')); ?>" name="<?php echo esc_attr($this->get_field_name('googleplus')); ?>" type="text" value="<?php echo esc_attr($googleplus); ?>" />
 	    </p>
 	    <p>
-	      	<label for="<?php echo esc_attr($this->get_field_id('flickr')); ?>"><?php _e('Flickr:', 'ascend'); ?></label>
+	      	<label for="<?php echo esc_attr($this->get_field_id('flickr')); ?>"><?php _e('Flickr:', 'juanjimeneztj'); ?></label>
 	      	<input class="widefat" id="<?php echo esc_attr($this->get_field_id('flickr')); ?>" name="<?php echo esc_attr($this->get_field_name('flickr')); ?>" type="text" value="<?php echo esc_attr($flickr); ?>" />
 	    </p>
 	    <p>
-	      	<label for="<?php echo esc_attr($this->get_field_id('vimeo')); ?>"><?php _e('Vimeo:', 'ascend'); ?></label>
+	      	<label for="<?php echo esc_attr($this->get_field_id('vimeo')); ?>"><?php _e('Vimeo:', 'juanjimeneztj'); ?></label>
 	      	<input class="widefat" id="<?php echo esc_attr($this->get_field_id('vimeo')); ?>" name="<?php echo esc_attr($this->get_field_name('vimeo')); ?>" type="text" value="<?php echo esc_attr($vimeo); ?>" />
 	    </p>
 	    <p>
-	      	<label for="<?php echo esc_attr($this->get_field_id('youtube')); ?>"><?php _e('Youtube:', 'ascend'); ?></label>
+	      	<label for="<?php echo esc_attr($this->get_field_id('youtube')); ?>"><?php _e('Youtube:', 'juanjimeneztj'); ?></label>
 	      	<input class="widefat" id="<?php echo esc_attr($this->get_field_id('youtube')); ?>" name="<?php echo esc_attr($this->get_field_name('youtube')); ?>" type="text" value="<?php echo esc_attr($youtube); ?>" />
 	    </p>
 	    <p>
-	      	<label for="<?php echo esc_attr($this->get_field_id('pinterest')); ?>"><?php _e('Pinterest:', 'ascend'); ?></label>
+	      	<label for="<?php echo esc_attr($this->get_field_id('pinterest')); ?>"><?php _e('Pinterest:', 'juanjimeneztj'); ?></label>
 	      	<input class="widefat" id="<?php echo esc_attr($this->get_field_id('pinterest')); ?>" name="<?php echo esc_attr($this->get_field_name('pinterest')); ?>" type="text" value="<?php echo esc_attr($pinterest); ?>" />
 	    </p>
 	    <p>
-	      	<label for="<?php echo esc_attr($this->get_field_id('dribbble')); ?>"><?php _e('Dribbble:', 'ascend'); ?></label>
+	      	<label for="<?php echo esc_attr($this->get_field_id('dribbble')); ?>"><?php _e('Dribbble:', 'juanjimeneztj'); ?></label>
 	      	<input class="widefat" id="<?php echo esc_attr($this->get_field_id('dribbble')); ?>" name="<?php echo esc_attr($this->get_field_name('dribbble')); ?>" type="text" value="<?php echo esc_attr($dribbble); ?>" />
 	    </p>
 	    <p>
-	      	<label for="<?php echo esc_attr($this->get_field_id('linkedin')); ?>"><?php _e('Linkedin:', 'ascend'); ?></label>
+	      	<label for="<?php echo esc_attr($this->get_field_id('linkedin')); ?>"><?php _e('Linkedin:', 'juanjimeneztj'); ?></label>
 	      	<input class="widefat" id="<?php echo esc_attr($this->get_field_id('linkedin')); ?>" name="<?php echo esc_attr($this->get_field_name('linkedin')); ?>" type="text" value="<?php echo esc_attr($linkedin); ?>" />
 	    </p>
 	    <p>
-	      	<label for="<?php echo esc_attr($this->get_field_id('tumblr')); ?>"><?php _e('Tumblr:', 'ascend'); ?></label>
+	      	<label for="<?php echo esc_attr($this->get_field_id('tumblr')); ?>"><?php _e('Tumblr:', 'juanjimeneztj'); ?></label>
 	      	<input class="widefat" id="<?php echo esc_attr($this->get_field_id('tumblr')); ?>" name="<?php echo esc_attr($this->get_field_name('tumblr')); ?>" type="text" value="<?php echo esc_attr($tumblr); ?>" />
 	    </p>
 	    <p>
-	      	<label for="<?php echo esc_attr($this->get_field_id('stumbleupon')); ?>"><?php _e('Stumbleupon:', 'ascend'); ?></label>
+	      	<label for="<?php echo esc_attr($this->get_field_id('stumbleupon')); ?>"><?php _e('Stumbleupon:', 'juanjimeneztj'); ?></label>
 	      	<input class="widefat" id="<?php echo esc_attr($this->get_field_id('stumbleupon')); ?>" name="<?php echo esc_attr($this->get_field_name('stumbleupon')); ?>" type="text" value="<?php echo esc_attr($stumbleupon); ?>" />
 	    </p>
 	    <p>
-	      	<label for="<?php echo esc_attr($this->get_field_id('vk')); ?>"><?php _e('VK:', 'ascend'); ?></label>
+	      	<label for="<?php echo esc_attr($this->get_field_id('vk')); ?>"><?php _e('VK:', 'juanjimeneztj'); ?></label>
 	      	<input class="widefat" id="<?php echo esc_attr($this->get_field_id('vk')); ?>" name="<?php echo esc_attr($this->get_field_name('vk')); ?>" type="text" value="<?php echo esc_attr($vk); ?>" />
 	    </p>
 	    <p>
-	      	<label for="<?php echo esc_attr($this->get_field_id('viadeo')); ?>"><?php _e('Viadeo:', 'ascend'); ?></label>
+	      	<label for="<?php echo esc_attr($this->get_field_id('viadeo')); ?>"><?php _e('Viadeo:', 'juanjimeneztj'); ?></label>
 	      	<input class="widefat" id="<?php echo esc_attr($this->get_field_id('viadeo')); ?>" name="<?php echo esc_attr($this->get_field_name('viadeo')); ?>" type="text" value="<?php echo esc_attr($viadeo); ?>" />
 	    </p>
 	    <p>
-	      	<label for="<?php echo esc_attr($this->get_field_id('xing')); ?>"><?php _e('xing:', 'ascend'); ?></label>
+	      	<label for="<?php echo esc_attr($this->get_field_id('xing')); ?>"><?php _e('xing:', 'juanjimeneztj'); ?></label>
 	      	<input class="widefat" id="<?php echo esc_attr($this->get_field_id('xing')); ?>" name="<?php echo esc_attr($this->get_field_name('xing')); ?>" type="text" value="<?php echo esc_attr($xing); ?>" />
 	    </p>
 	    <p>
-	      	<label for="<?php echo esc_attr($this->get_field_id('yelp')); ?>"><?php _e('Yelp:', 'ascend'); ?></label>
+	      	<label for="<?php echo esc_attr($this->get_field_id('yelp')); ?>"><?php _e('Yelp:', 'juanjimeneztj'); ?></label>
 	      	<input class="widefat" id="<?php echo esc_attr($this->get_field_id('yelp')); ?>" name="<?php echo esc_attr($this->get_field_name('yelp')); ?>" type="text" value="<?php echo esc_attr($yelp); ?>" />
 	    </p>
 	    <p>
-	      	<label for="<?php echo esc_attr($this->get_field_id('soundcloud')); ?>"><?php _e('Soundcloud:', 'ascend'); ?></label>
+	      	<label for="<?php echo esc_attr($this->get_field_id('soundcloud')); ?>"><?php _e('Soundcloud:', 'juanjimeneztj'); ?></label>
 	      	<input class="widefat" id="<?php echo esc_attr($this->get_field_id('soundcloud')); ?>" name="<?php echo esc_attr($this->get_field_name('soundcloud')); ?>" type="text" value="<?php echo esc_attr($soundcloud); ?>" />
 	    </p>
 	    <p>
-	      	<label for="<?php echo esc_attr($this->get_field_id('snapchat')); ?>"><?php _e('Snapchat:', 'ascend'); ?></label>
+	      	<label for="<?php echo esc_attr($this->get_field_id('snapchat')); ?>"><?php _e('Snapchat:', 'juanjimeneztj'); ?></label>
 	      	<input class="widefat" id="<?php echo esc_attr($this->get_field_id('snapchat')); ?>" name="<?php echo esc_attr($this->get_field_name('snapchat')); ?>" type="text" value="<?php echo esc_attr($snapchat); ?>" />
 	    </p>
 	    <p>
-	      	<label for="<?php echo esc_attr($this->get_field_id('behance')); ?>"><?php _e('Behance:', 'ascend'); ?></label>
+	      	<label for="<?php echo esc_attr($this->get_field_id('behance')); ?>"><?php _e('Behance:', 'juanjimeneztj'); ?></label>
 	      	<input class="widefat" id="<?php echo esc_attr($this->get_field_id('behance')); ?>" name="<?php echo esc_attr($this->get_field_name('behance')); ?>" type="text" value="<?php echo esc_attr($behance); ?>" />
 	    </p>
 	    <p>
-	      	<label for="<?php echo esc_attr($this->get_field_id('rss')); ?>"><?php _e('RSS:', 'ascend'); ?></label>
+	      	<label for="<?php echo esc_attr($this->get_field_id('rss')); ?>"><?php _e('RSS:', 'juanjimeneztj'); ?></label>
 	      	<input class="widefat" id="<?php echo esc_attr($this->get_field_id('rss')); ?>" name="<?php echo esc_attr($this->get_field_name('rss')); ?>" type="text" value="<?php echo esc_attr($rss); ?>" />
 	    </p>
 	    <p>
-	   		<label for="<?php echo $this->get_field_id('tooltip'); ?>"><?php _e('Show Tooltip', 'ascend'); ?></label>
+	   		<label for="<?php echo $this->get_field_id('tooltip'); ?>"><?php _e('Show Tooltip', 'juanjimeneztj'); ?></label>
 	    	<select id="<?php echo $this->get_field_id('tooltip'); ?>" name="<?php echo $this->get_field_name('tooltip'); ?>"><?php echo implode('', $tool_options_array); ?></select>
 	    </p>
 	    <p>
-	   		<label for="<?php echo $this->get_field_id('tooltip_dir'); ?>"><?php _e('Tooltip Direction', 'ascend'); ?></label>
+	   		<label for="<?php echo $this->get_field_id('tooltip_dir'); ?>"><?php _e('Tooltip Direction', 'juanjimeneztj'); ?></label>
 	    	<select id="<?php echo $this->get_field_id('tooltip_dir'); ?>" name="<?php echo $this->get_field_name('tooltip_dir'); ?>"><?php echo implode('', $tool_directions_array); ?></select>
 	    </p>
 	  	<?php

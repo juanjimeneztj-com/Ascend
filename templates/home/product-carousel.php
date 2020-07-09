@@ -4,54 +4,54 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 	global $woocommerce_loop;
-	$ascend = ascend_get_options();
+	$juanjimeneztj = juanjimeneztj_get_options();
 
-		if(!empty($ascend['home_featured_title'])) {
-			$featured_title = $ascend['home_featured_title'];
+		if(!empty($juanjimeneztj['home_featured_title'])) {
+			$featured_title = $juanjimeneztj['home_featured_title'];
 		} else {
-			$featured_title = __('Featured', 'ascend');
+			$featured_title = __('Featured', 'juanjimeneztj');
 		}
-		if(!empty($ascend['home_best_title'])) {
-			$best_title = $ascend['home_best_title'];
+		if(!empty($juanjimeneztj['home_best_title'])) {
+			$best_title = $juanjimeneztj['home_best_title'];
 		} else {
-			$best_title = __('Best Selling', 'ascend');
+			$best_title = __('Best Selling', 'juanjimeneztj');
 		}
-		if(!empty($ascend['home_sale_title'])) {
-			$sale_title = $ascend['home_sale_title'];
+		if(!empty($juanjimeneztj['home_sale_title'])) {
+			$sale_title = $juanjimeneztj['home_sale_title'];
 		} else {
-			$sale_title = __('On Sale', 'ascend');
+			$sale_title = __('On Sale', 'juanjimeneztj');
 		}
-		if(!empty($ascend['home_latest_title'])) {
-			$latest_title = $ascend['home_latest_title'];
+		if(!empty($juanjimeneztj['home_latest_title'])) {
+			$latest_title = $juanjimeneztj['home_latest_title'];
 		} else {
-			$latest_title = __('Latest', 'ascend');
+			$latest_title = __('Latest', 'juanjimeneztj');
 		}
-		if(!empty($ascend['home_product_tabs'])) {
-			$product_tabs = $ascend['home_product_tabs'];
+		if(!empty($juanjimeneztj['home_product_tabs'])) {
+			$product_tabs = $juanjimeneztj['home_product_tabs'];
 		} else {
 			$product_tabs = array('featured' => '1', 'best' => '1', 'sale' => '1', 'latest' => '1');
 		}
-		if(!empty($ascend['home_product_tabs_column'])) {
-			$product_columns = $ascend['home_product_tabs_column'];
+		if(!empty($juanjimeneztj['home_product_tabs_column'])) {
+			$product_columns = $juanjimeneztj['home_product_tabs_column'];
 		} else {
 			$product_columns = '4';
 		}
-		if(!empty($ascend['home_product_count'])) {
-			$items = $ascend['home_product_count'];
+		if(!empty($juanjimeneztj['home_product_count'])) {
+			$items = $juanjimeneztj['home_product_count'];
 		} else {
 			$items = '8';
 		}
-		if(isset($ascend['home_product_auto']) && $ascend['home_product_auto'] == '0') {
+		if(isset($juanjimeneztj['home_product_auto']) && $juanjimeneztj['home_product_auto'] == '0') {
 			$auto = 'false';
 		} else {
 			$auto = 'true';
 		}
-		if(!empty($ascend['home_product_speed'])) {
-			$speed = $ascend['home_product_speed'].'000';
+		if(!empty($juanjimeneztj['home_product_speed'])) {
+			$speed = $juanjimeneztj['home_product_speed'].'000';
 		} else {
 			$speed = '9000';
 		} 
-		if(isset($ascend['home_product_scroll']) && $ascend['home_product_scroll'] == 'all' ) {
+		if(isset($juanjimeneztj['home_product_scroll']) && $juanjimeneztj['home_product_scroll'] == 'all' ) {
 			$scroll = '';
 		} else {
 			$scroll = '1';
@@ -93,7 +93,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 							$class = '';
 						}
 						echo '<div class="tab-pane clearfix '.esc_attr($class).'" id="pt-'.esc_attr($key).'">';
-							ascend_build_post_content_carousel($key, $product_columns, 'product', null, $items, 'menu_order', 'ASC', 'products', null, $auto, $speed, $scroll, 'true', '400', $key ); 
+							juanjimeneztj_build_post_content_carousel($key, $product_columns, 'product', null, $items, 'menu_order', 'ASC', 'products', null, $auto, $speed, $scroll, 'true', '400', $key ); 
 						echo '</div>';
 						$i ++;
 					}

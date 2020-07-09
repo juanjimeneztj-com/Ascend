@@ -2,41 +2,41 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
-global $ascend_has_sidebar, $ascend_grid_columns, $ascend_blog_loop;
-$ascend = ascend_get_options(); 
+global $juanjimeneztj_has_sidebar, $juanjimeneztj_grid_columns, $juanjimeneztj_blog_loop;
+$juanjimeneztj = juanjimeneztj_get_options(); 
 
-    $ascend_blog_loop['loop'] = 1;
+    $juanjimeneztj_blog_loop['loop'] = 1;
     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-    if(isset($ascend['home_main_post_style'])) {
-    	$layout = $ascend['home_main_post_style'];
+    if(isset($juanjimeneztj['home_main_post_style'])) {
+    	$layout = $juanjimeneztj['home_main_post_style'];
     } else {
     	$layout = 'normal';
     }
-    $lay = ascend_get_postlayout($layout);
-    if(isset($ascend['home_main_columns'])) {
-        $ascend_grid_columns = $ascend['home_main_columns'];
+    $lay = juanjimeneztj_get_postlayout($layout);
+    if(isset($juanjimeneztj['home_main_columns'])) {
+        $juanjimeneztj_grid_columns = $juanjimeneztj['home_main_columns'];
     } else {
-        $ascend_grid_columns = '3';
+        $juanjimeneztj_grid_columns = '3';
     } 
-    if(ascend_display_sidebar()) {
+    if(juanjimeneztj_display_sidebar()) {
         $fullclass 		= '';
-        $ascend_has_sidebar = true;
+        $juanjimeneztj_has_sidebar = true;
     } else {
         $fullclass 		= 'fullwidth';
-        $ascend_has_sidebar = false;
+        $juanjimeneztj_has_sidebar = false;
     }
-    $itemsize = ascend_get_post_grid_item_size($ascend_grid_columns, $ascend_has_sidebar);
+    $itemsize = juanjimeneztj_get_post_grid_item_size($juanjimeneztj_grid_columns, $juanjimeneztj_has_sidebar);
 
 		if (!have_posts()) : ?>
             <div class="error-not-found">
-                <?php _e('Sorry, no results were found.', 'ascend'); ?>
+                <?php _e('Sorry, no results were found.', 'juanjimeneztj'); ?>
                 <?php get_search_form(); ?>
             </div>
         <?php endif; ?>
         <div class="<?php echo esc_attr($lay['pclass']); ?>">
             <div class="kt_archivecontent <?php echo esc_attr($lay['tclass']); ?>" data-masonry-selector="<?php echo esc_attr($lay['data_selector']);?>" data-masonry-style="<?php echo esc_attr($lay['data_style']);?>"> 
                 <?php 
-                $ascend_blog_loop['count'] = $wp_query->post_count;
+                $juanjimeneztj_blog_loop['count'] = $wp_query->post_count;
                 while (have_posts()) : the_post();
 	                if($lay['sum'] == 'full'){ 
 	                    if (has_post_format( 'quote' )) {
@@ -45,7 +45,7 @@ $ascend = ascend_get_options();
 	                        get_template_part('templates/content', 'post-full'); 
 	                    }
 	                } else if($lay['sum'] == 'grid') { 
-	                    if($lay['highlight'] == 'true' && $ascend_blog_loop['loop'] == 1 && $paged == 1) {
+	                    if($lay['highlight'] == 'true' && $juanjimeneztj_blog_loop['loop'] == 1 && $paged == 1) {
 	                        get_template_part('templates/content', get_post_format());
 	                    } else { ?>
 	                        <div class="<?php echo esc_attr($itemsize);?> b_item kad_blog_item">
@@ -62,14 +62,14 @@ $ascend = ascend_get_options();
 	                } else { 
 	                    get_template_part('templates/content', get_post_format());
 	                }
-	                $ascend_blog_loop['loop'] ++;
+	                $juanjimeneztj_blog_loop['loop'] ++;
 	            endwhile;
 
                 ?>
             </div><!-- /.archive content -->
             <?php 
             /**
-            * @hooked ascend_pagination - 20
+            * @hooked juanjimeneztj_pagination - 20
             */
-            do_action('ascend_pagination'); ?>
+            do_action('juanjimeneztj_pagination'); ?>
                 </div>

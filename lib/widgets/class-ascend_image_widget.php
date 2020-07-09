@@ -2,12 +2,12 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
-if ( ! class_exists( 'ascend_image_widget' ) ) {
-	class ascend_image_widget extends WP_Widget{
+if ( ! class_exists( 'juanjimeneztj_image_widget' ) ) {
+	class juanjimeneztj_image_widget extends WP_Widget{
 	    private static $instance = 0;
 	    public function __construct() {
-	        $widget_ops = array('classname' => 'kadence_about_with_image', 'description' => __('This allows for an image and a simple about text.', 'ascend'));
-	        parent::__construct('kadence_about_with_image', __('Ascend: Image', 'ascend'), $widget_ops);
+	        $widget_ops = array('classname' => 'kadence_about_with_image', 'description' => __('This allows for an image and a simple about text.', 'juanjimeneztj'));
+	        parent::__construct('kadence_about_with_image', __('juanjimeneztj: Image', 'juanjimeneztj'), $widget_ops);
 	    }
 
     public function widget($args, $instance){ 
@@ -49,7 +49,7 @@ if ( ! class_exists( 'ascend_image_widget' ) ) {
                		echo '<a href="'.esc_url($link).'" '.wp_kses($linktype, array('a' => array('target' => array(),'data' => array()))).'>';
                	} 
                 if($size == 'custom') {
-                	$img = ascend_get_image_array($instance['width'], $instance['height'], true, null, null, $instance['image_id'], true);
+                	$img = juanjimeneztj_get_image_array($instance['width'], $instance['height'], true, null, null, $instance['image_id'], true);
                 	echo '<img src="'.esc_url($img['src']).'" width="'.esc_attr($img['width']).'" height="'.esc_attr($img['height']).'" '.$img['srcset'].' class="'.esc_attr($img['class']).'" itemprop="contentUrl" alt="'.esc_attr($img['alt']).'">';
                 } else {
                 	echo wp_get_attachment_image( $instance['image_id'], $size ); 
@@ -88,11 +88,11 @@ if ( ! class_exists( 'ascend_image_widget' ) ) {
     if (isset($instance['image_size'])) { $image_size = esc_attr($instance['image_size']); } else {$image_size = 'full';}
     $link_options = array();
     $link_options_array = array();
-    $sizes = ascend_basic_image_sizes();
-    $link_options[] = array("slug" => "lightbox", "name" => __('Lightbox', 'ascend'));
-    $link_options[] = array("slug" => "_blank", "name" => __('New Window', 'ascend'));
-    $link_options[] = array("slug" => "_self", "name" => __('Same Window', 'ascend'));
-    $link_options[] = array("slug" => "none", "name" => __('No Link', 'ascend'));
+    $sizes = juanjimeneztj_basic_image_sizes();
+    $link_options[] = array("slug" => "lightbox", "name" => __('Lightbox', 'juanjimeneztj'));
+    $link_options[] = array("slug" => "_blank", "name" => __('New Window', 'juanjimeneztj'));
+    $link_options[] = array("slug" => "_self", "name" => __('Same Window', 'juanjimeneztj'));
+    $link_options[] = array("slug" => "none", "name" => __('No Link', 'juanjimeneztj'));
 
     foreach ($link_options as $link_option) {
       if ($image_link_open == $link_option['slug']) { $selected=' selected="selected"';} else { $selected=""; }
@@ -108,33 +108,33 @@ if ( ! class_exists( 'ascend_image_widget' ) ) {
         <img class="kad_custom_media_image" src="<?php if(!empty($instance['image_uri'])){echo esc_attr($instance['image_uri']);} ?>" style="margin:0;padding:0;max-width:100px;display:block" />
     </p>
     <p>
-        <label for="<?php echo $this->get_field_id('image_uri'); ?>"><?php _e('Image URL', 'ascend'); ?></label><br />
+        <label for="<?php echo $this->get_field_id('image_uri'); ?>"><?php _e('Image URL', 'juanjimeneztj'); ?></label><br />
         <input type="text" class="widefat kad_custom_media_url" name="<?php echo $this->get_field_name('image_uri'); ?>" id="<?php echo $this->get_field_id('image_uri'); ?>" value="<?php echo esc_attr($image_uri); ?>">
         <input type="hidden" value="<?php echo esc_attr($image_id); ?>" class="kad_custom_media_id" name="<?php echo $this->get_field_name('image_id'); ?>" id="<?php echo $this->get_field_id('image_id'); ?>" />
-        <input type="button" value="<?php esc_attr_e('Upload', 'ascend'); ?>" class="button kad_custom_media_upload" id="kad_custom_image_uploader" />
+        <input type="button" value="<?php esc_attr_e('Upload', 'juanjimeneztj'); ?>" class="button kad_custom_media_upload" id="kad_custom_image_uploader" />
     </p>
     <p>
-        <label for="<?php echo $this->get_field_id('image_size'); ?>"><?php _e('Image size', 'ascend'); ?></label><br />
+        <label for="<?php echo $this->get_field_id('image_size'); ?>"><?php _e('Image size', 'juanjimeneztj'); ?></label><br />
         <select id="<?php echo $this->get_field_id('image_size'); ?>" name="<?php echo $this->get_field_name('image_size'); ?>"><?php echo implode('', $sizes_array);?></select>
     </p>
     <p>
-        <label for="<?php echo $this->get_field_id('width'); ?>"><?php _e('Custom Width', 'ascend'); ?></label><br />
+        <label for="<?php echo $this->get_field_id('width'); ?>"><?php _e('Custom Width', 'juanjimeneztj'); ?></label><br />
         <input type="text" class="widefat kad_img_widget_link" name="<?php echo $this->get_field_name('width'); ?>" id="<?php echo $this->get_field_id('width'); ?>" value="<?php echo esc_attr($width); ?>">
     </p>
     <p>
-        <label for="<?php echo $this->get_field_id('height'); ?>"><?php _e('Custom Height', 'ascend'); ?></label><br />
+        <label for="<?php echo $this->get_field_id('height'); ?>"><?php _e('Custom Height', 'juanjimeneztj'); ?></label><br />
         <input type="text" class="widefat kad_img_widget_link" name="<?php echo $this->get_field_name('height'); ?>" id="<?php echo $this->get_field_id('height'); ?>" value="<?php echo esc_attr($height); ?>">
     </p>
     <p>
-        <label for="<?php echo $this->get_field_id('image_link_open'); ?>"><?php _e('Image opens in', 'ascend'); ?></label><br />
+        <label for="<?php echo $this->get_field_id('image_link_open'); ?>"><?php _e('Image opens in', 'juanjimeneztj'); ?></label><br />
         <select id="<?php echo $this->get_field_id('image_link_open'); ?>" name="<?php echo $this->get_field_name('image_link_open'); ?>"><?php echo implode('', $link_options_array);?></select>
     </p>
     <p>
-        <label for="<?php echo $this->get_field_id('image_link'); ?>"><?php _e('Image Link (optional)', 'ascend'); ?></label><br />
+        <label for="<?php echo $this->get_field_id('image_link'); ?>"><?php _e('Image Link (optional)', 'juanjimeneztj'); ?></label><br />
         <input type="text" class="widefat kad_img_widget_link" name="<?php echo $this->get_field_name('image_link'); ?>" id="<?php echo $this->get_field_id('image_link'); ?>" value="<?php echo esc_attr($image_link); ?>">
     </p>
     <p>
-      <label for="<?php echo $this->get_field_id('text'); ?>"><?php _e('Text/Caption (optional)', 'ascend'); ?></label><br />
+      <label for="<?php echo $this->get_field_id('text'); ?>"><?php _e('Text/Caption (optional)', 'juanjimeneztj'); ?></label><br />
       <textarea name="<?php echo $this->get_field_name('text'); ?>" id="<?php echo $this->get_field_id('text'); ?>" class="widefat" ><?php if(!empty($instance['text'])) echo esc_textarea($instance['text']); ?></textarea>
     </p>
   </div>

@@ -1,13 +1,13 @@
  <?php 
- global $post, $ascend_has_sidebar, $ascend_feat_width;
+ global $post, $juanjimeneztj_has_sidebar, $juanjimeneztj_feat_width;
 
-    $ascend = ascend_get_options();
+    $juanjimeneztj = juanjimeneztj_get_options();
 
     $postclass = array('postclass');
     $postclass[] = 'kt_no_post_header_content';
     $postclass[] = 'kad_blog_item';
 
-    do_action( 'ascend_single_post_before' ); 
+    do_action( 'juanjimeneztj_single_post_before' ); 
     ?> 
     <article <?php post_class($postclass); ?> itemscope itemtype="http://schema.org/CreativeWork">
                 <?php if (has_post_thumbnail( $post->ID ) ) { 
@@ -27,11 +27,11 @@
                 <div class="entry-content kt-quote-post-outer <?php echo esc_attr($quote_class);?> clearfix" itemprop="description" style="<?php echo esc_attr($style);?>">
                     <div class="kt-quote-post">
                         <?php
-                        do_action( 'ascend_single_post_content_before' );
+                        do_action( 'juanjimeneztj_single_post_content_before' );
                         
                             the_content(); 
                         
-                        do_action( 'ascend_single_post_content_after' );
+                        do_action( 'juanjimeneztj_single_post_content_after' );
                         ?>
                     </div>
                 </div>
@@ -45,18 +45,18 @@
         <footer class="single-footer">
         <?php 
             /**
-            * @hooked ascend_post_footer_meta - 30
+            * @hooked juanjimeneztj_post_footer_meta - 30
             */
-            do_action( 'ascend_single_loop_post_footer' );
+            do_action( 'juanjimeneztj_single_loop_post_footer' );
 
             if ( comments_open() ) :
                 echo '<p class="kad_comments_link">';
                   	comments_popup_link( 
-	                    '<i class="kt-icon-comments-o"></i>'. __( 'Leave a Reply', 'ascend' ), 
-	                    '<i class="kt-icon-comments-o"></i>'. __( '1 Comment', 'ascend' ), 
-	                   	'<i class="kt-icon-comments-o"></i>'. __( '% Comments', 'ascend' ),
+	                    '<i class="kt-icon-comments-o"></i>'. __( 'Leave a Reply', 'juanjimeneztj' ), 
+	                    '<i class="kt-icon-comments-o"></i>'. __( '1 Comment', 'juanjimeneztj' ), 
+	                   	'<i class="kt-icon-comments-o"></i>'. __( '% Comments', 'juanjimeneztj' ),
 	                    'comments-link',
-	                    '<i class="kt-icon-comments-o"></i>'. __( 'Comments are Closed', 'ascend' )
+	                    '<i class="kt-icon-comments-o"></i>'. __( 'Comments are Closed', 'juanjimeneztj' )
                 	);
                 echo '</p>';
             endif;

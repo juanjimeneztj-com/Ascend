@@ -2,18 +2,18 @@
     "use strict";
 
     redux.field_objects = redux.field_objects || {};
-    redux.field_objects.ascend_slides = redux.field_objects.ascend_slides || {};
+    redux.field_objects.juanjimeneztj_slides = redux.field_objects.juanjimeneztj_slides || {};
 
     $( document ).ready(
         function() {
-            //redux.field_objects.ascend_slides.init();
+            //redux.field_objects.juanjimeneztj_slides.init();
         }
     );
 
-    redux.field_objects.ascend_slides.init = function( selector ) {
+    redux.field_objects.juanjimeneztj_slides.init = function( selector ) {
 
         if ( !selector ) {
-            selector = $( document ).find( ".redux-group-tab:visible" ).find( '.redux-container-ascend_slides:visible' );
+            selector = $( document ).find( ".redux-group-tab:visible" ).find( '.redux-container-juanjimeneztj_slides:visible' );
         }
 
         $( selector ).each(
@@ -27,7 +27,7 @@
                     parent = el.parents( '.redux-field-container:first' );
                 }
                 
-                if ( parent.hasClass( 'redux-container-ascend_slides' ) ) {
+                if ( parent.hasClass( 'redux-container-juanjimeneztj_slides' ) ) {
                     parent.addClass( 'redux-field-init' );    
                 }
                 
@@ -45,7 +45,7 @@
                         $( this ).parent().siblings().find( 'textarea' ).val( '' );
                         $( this ).parent().siblings().find( 'input[type="hidden"]' ).val( '' );
 
-                        var slideCount = $( this ).parents( '.redux-container-ascend_slides:first' ).find( '.redux-slides-accordion-group' ).length;
+                        var slideCount = $( this ).parents( '.redux-container-juanjimeneztj_slides:first' ).find( '.redux-slides-accordion-group' ).length;
 
                         if ( slideCount > 1 ) {
                             $( this ).parents( '.redux-slides-accordion-group:first' ).slideUp(
@@ -57,7 +57,7 @@
                             var content_new_title = $( this ).parent( '.redux-slides-accordion' ).data( 'new-content-title' );
 
                             $( this ).parents( '.redux-slides-accordion-group:first' ).find( '.remove-image' ).click();
-                            $( this ).parents( '.redux-container-ascend_slides:first' ).find( '.redux-slides-accordion-group:last' ).find( '.redux-slides-header' ).text( content_new_title );
+                            $( this ).parents( '.redux-container-juanjimeneztj_slides:first' ).find( '.redux-slides-accordion-group:last' ).find( '.redux-slides-header' ).text( content_new_title );
                         }
                     }
                 );

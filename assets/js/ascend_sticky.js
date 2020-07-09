@@ -1,4 +1,4 @@
-// Sticky Plugin v1.0.4 for jQuery  (EDITED FOR ASCEND THEME)
+// Sticky Plugin v1.0.4 for jQuery  (EDITED FOR juanjimeneztj THEME)
 // =============
 // Author: Anthony Garand
 // Improvements by German M. Bravo (Kronuz) and Ruud Kamphuis (ruudk)

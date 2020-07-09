@@ -3,10 +3,10 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
 
-function ascend_display_page_breadcrumbs() {
-    $ascend = ascend_get_options();
-    if(isset($ascend['show_breadcrumbs_page'])) {
-        if($ascend['show_breadcrumbs_page'] == 1 ) {
+function juanjimeneztj_display_page_breadcrumbs() {
+    $juanjimeneztj = juanjimeneztj_get_options();
+    if(isset($juanjimeneztj['show_breadcrumbs_page'])) {
+        if($juanjimeneztj['show_breadcrumbs_page'] == 1 ) {
             $showbreadcrumbs = true;
         } else { 
             $showbreadcrumbs = false;
@@ -16,11 +16,11 @@ function ascend_display_page_breadcrumbs() {
     }
   return $showbreadcrumbs;
 }
-function ascend_display_archive_breadcrumbs() {
-    $ascend = ascend_get_options();
+function juanjimeneztj_display_archive_breadcrumbs() {
+    $juanjimeneztj = juanjimeneztj_get_options();
     if( is_tax( array( 'product_cat', 'product_tag' ) ) ) {
-    	if(isset($ascend['show_breadcrumbs_shop'])) {
-			if($ascend['show_breadcrumbs_shop'] == 1 ) {
+    	if(isset($juanjimeneztj['show_breadcrumbs_shop'])) {
+			if($juanjimeneztj['show_breadcrumbs_shop'] == 1 ) {
 				$showbreadcrumbs = true;
 			} else {
 				$showbreadcrumbs = false;
@@ -29,8 +29,8 @@ function ascend_display_archive_breadcrumbs() {
 			$showbreadcrumbs = true;
 		}
     } else {
-		if(isset($ascend['show_breadcrumbs_archive'])) {
-			if($ascend['show_breadcrumbs_archive'] == 1 ) {
+		if(isset($juanjimeneztj['show_breadcrumbs_archive'])) {
+			if($juanjimeneztj['show_breadcrumbs_archive'] == 1 ) {
 				$showbreadcrumbs = true;
 			} else {
 				$showbreadcrumbs = false;
@@ -41,10 +41,10 @@ function ascend_display_archive_breadcrumbs() {
 	}
   return $showbreadcrumbs;
 }
-function ascend_display_post_breadcrumbs() {
-  	$ascend = ascend_get_options();
-   	if(isset($ascend['show_breadcrumbs_post'])) {
-  		if($ascend['show_breadcrumbs_post'] == 1 ) {
+function juanjimeneztj_display_post_breadcrumbs() {
+  	$juanjimeneztj = juanjimeneztj_get_options();
+   	if(isset($juanjimeneztj['show_breadcrumbs_post'])) {
+  		if($juanjimeneztj['show_breadcrumbs_post'] == 1 ) {
   			$showbreadcrumbs = true;
   		} else { 
   			$showbreadcrumbs = false;
@@ -54,10 +54,10 @@ function ascend_display_post_breadcrumbs() {
 	}
   	return $showbreadcrumbs;
 }
-function ascend_display_shop_breadcrumbs() {
-  	$ascend = ascend_get_options();
-   	if(isset($ascend['show_breadcrumbs_shop'])) {
-	  	if($ascend['show_breadcrumbs_shop'] == 1 ) {
+function juanjimeneztj_display_shop_breadcrumbs() {
+  	$juanjimeneztj = juanjimeneztj_get_options();
+   	if(isset($juanjimeneztj['show_breadcrumbs_shop'])) {
+	  	if($juanjimeneztj['show_breadcrumbs_shop'] == 1 ) {
 	  		$showbreadcrumbs = true;
 	  	} else { 
 	  		$showbreadcrumbs = false;
@@ -67,10 +67,10 @@ function ascend_display_shop_breadcrumbs() {
 	}
   return $showbreadcrumbs;
 }
-function ascend_display_product_breadcrumbs() {
-  	$ascend = ascend_get_options();
-   	if(isset($ascend['show_breadcrumbs_product'])) {
-  		if($ascend['show_breadcrumbs_product'] == 1 ) {
+function juanjimeneztj_display_product_breadcrumbs() {
+  	$juanjimeneztj = juanjimeneztj_get_options();
+   	if(isset($juanjimeneztj['show_breadcrumbs_product'])) {
+  		if($juanjimeneztj['show_breadcrumbs_product'] == 1 ) {
   			$showbreadcrumbs = true;
   		} else {
   			$showbreadcrumbs = false;
@@ -80,10 +80,10 @@ function ascend_display_product_breadcrumbs() {
 	}
   	return $showbreadcrumbs;
 }
-function ascend_display_portfolio_breadcrumbs() {
-  	$ascend = ascend_get_options();
-   	if(isset($ascend['show_breadcrumbs_portfolio'])) {
-	  	if($ascend['show_breadcrumbs_portfolio'] == 1 ) {
+function juanjimeneztj_display_portfolio_breadcrumbs() {
+  	$juanjimeneztj = juanjimeneztj_get_options();
+   	if(isset($juanjimeneztj['show_breadcrumbs_portfolio'])) {
+	  	if($juanjimeneztj['show_breadcrumbs_portfolio'] == 1 ) {
 	  		$showbreadcrumbs = true;
 	  	} else {
 	  		$showbreadcrumbs = false;
@@ -94,18 +94,18 @@ function ascend_display_portfolio_breadcrumbs() {
   	return $showbreadcrumbs;
 }
 
-function ascend_breadcrumbs() {
+function juanjimeneztj_breadcrumbs() {
   	global $post, $wp_query;
-  	$ascend = ascend_get_options();
-  	if(!empty($ascend['home_breadcrumb_text'])) {
-  		$home = $ascend['home_breadcrumb_text'];
+  	$juanjimeneztj = juanjimeneztj_get_options();
+  	if(!empty($juanjimeneztj['home_breadcrumb_text'])) {
+  		$home = $juanjimeneztj['home_breadcrumb_text'];
   	} else {
-  		$home = __('Home', 'ascend');
+  		$home = __('Home', 'juanjimeneztj');
   	}
 
 	$wrap_before    	= '<div id="kadbreadcrumbs"><div class="kt-breadcrumb-container container">';
 	$wrap_after     	= '</div></div>';
-	$delimiter 			= apply_filters('ascend_breadcrumb_delimiter', '&raquo;');
+	$delimiter 			= apply_filters('juanjimeneztj_breadcrumb_delimiter', '&raquo;');
 	$delimiter_before   = '<span class="bc-delimiter">'; 
 	$delimiter_after    = '</span>';
 	$sep            	= ' ' . $delimiter_before . $delimiter . $delimiter_after . ' ';
@@ -118,7 +118,7 @@ function ascend_breadcrumbs() {
  	$after 				= '</span>';
  	$home_link      	= $link_before . '<a href="' . esc_url(home_url('/')) . '" itemprop="url" class="kad-bc-home">' . $link_in_before . esc_html($home) . $link_in_after . '</a>' . $link_after . $sep;
  	$shop_bread = '';
-	if (class_exists('woocommerce') && isset($ascend['shop_breadcrumbs']) && $ascend['shop_breadcrumbs'] == 1) {
+	if (class_exists('woocommerce') && isset($juanjimeneztj['shop_breadcrumbs']) && $juanjimeneztj['shop_breadcrumbs'] == 1) {
 	    $shop_page_id = wc_get_page_id( 'shop' );
 	    $shop_page    = get_post( $shop_page_id );
 	    if (get_option( 'page_on_front' ) !== $shop_page_id ) {
@@ -129,12 +129,12 @@ function ascend_breadcrumbs() {
 
     	echo $wrap_before . $home_link;
   	
-  		do_action('ascend_breadcrumbs_after_home');
+  		do_action('juanjimeneztj_breadcrumbs_after_home');
 
     	if ( is_category() ) {
-	       	if( !empty($ascend['blog_link'])){ 
-	            $bparentpagelink 	= get_page_link($ascend['blog_link']); 
-	            $bparenttitle 		= get_the_title($ascend['blog_link']);
+	       	if( !empty($juanjimeneztj['blog_link'])){ 
+	            $bparentpagelink 	= get_page_link($juanjimeneztj['blog_link']); 
+	            $bparenttitle 		= get_the_title($juanjimeneztj['blog_link']);
 	            echo sprintf($link, esc_url($bparentpagelink), esc_html($bparenttitle)) . $sep;
 	        } 
 	      	$thiscat = get_category(get_query_var('cat'), false);
@@ -145,24 +145,24 @@ function ascend_breadcrumbs() {
 				echo $cats.$sep;
 	      	}
 
-	      	echo $before . ascend_title() . $after;
+	      	echo $before . juanjimeneztj_title() . $after;
   		} elseif ( is_tag() ) {
-		    if( !empty($ascend['blog_link'])){ 
-	            $bparentpagelink 	= get_page_link($ascend['blog_link']); 
-	            $bparenttitle 		= get_the_title($ascend['blog_link']);
+		    if( !empty($juanjimeneztj['blog_link'])){ 
+	            $bparentpagelink 	= get_page_link($juanjimeneztj['blog_link']); 
+	            $bparenttitle 		= get_the_title($juanjimeneztj['blog_link']);
 	            echo sprintf($link, esc_url($bparentpagelink), esc_html($bparenttitle)) . $sep;
 	        } 
 		    echo $before . single_tag_title('', false) . $after;
     	} elseif ( is_tax('post_format') ) {
 	    	$term = get_term_by('slug', get_query_var('term'), get_query_var('taxonomy'));
-	      	if( !empty($ascend['blog_link'])){ 
-	            $bparentpagelink 	= get_page_link($ascend['blog_link']); 
-	            $bparenttitle 		= get_the_title($ascend['blog_link']);
+	      	if( !empty($juanjimeneztj['blog_link'])){ 
+	            $bparentpagelink 	= get_page_link($juanjimeneztj['blog_link']); 
+	            $bparenttitle 		= get_the_title($juanjimeneztj['blog_link']);
 	            echo sprintf($link, esc_url($bparentpagelink), esc_html($bparenttitle)) . $sep;
 	        } 
       		echo $before . esc_html($term->name) . $after;
     	} elseif ( is_search() ) {
-      		echo $before . __('Search results for', 'ascend'). ' "' . get_search_query() . '"' . $after;
+      		echo $before . __('Search results for', 'juanjimeneztj'). ' "' . get_search_query() . '"' . $after;
   
     	} elseif ( is_day() ) {
     		echo sprintf($link, esc_url(get_year_link(get_the_time('Y'))), get_the_time('Y')) . $sep;
@@ -183,9 +183,9 @@ function ascend_breadcrumbs() {
       		$post_type = get_post_type();
       		// PORTFOLIO
         	if($post_type == "portfolio") {
-                if( !empty($ascend['portfolio_link']) ) { 
-                    $parentpagelink = get_page_link($ascend['portfolio_link']); 
-                    $parenttitle = get_the_title($ascend['portfolio_link']);
+                if( !empty($juanjimeneztj['portfolio_link']) ) { 
+                    $parentpagelink = get_page_link($juanjimeneztj['portfolio_link']); 
+                    $parenttitle = get_the_title($juanjimeneztj['portfolio_link']);
                     echo sprintf($link, esc_url($parentpagelink), esc_html($parenttitle)) . $sep;
                 }
                 $main_term = '';
@@ -277,9 +277,9 @@ function ascend_breadcrumbs() {
           			echo sprintf($link, esc_url(tribe_get_events_link()), esc_html(tribe_get_event_label_plural())) . $sep;
           	// POST
           	} else if($post_type == "post") {
-          		if( !empty($ascend['blog_link'])){ 
-	              	$bparentpagelink = get_page_link($ascend['blog_link']); 
-	              	$bparenttitle = get_the_title($ascend['blog_link']);
+          		if( !empty($juanjimeneztj['blog_link'])){ 
+	              	$bparentpagelink = get_page_link($juanjimeneztj['blog_link']); 
+	              	$bparenttitle = get_the_title($juanjimeneztj['blog_link']);
 	              	echo sprintf($link, esc_url($bparentpagelink), esc_html($bparenttitle)) . $sep;
 	            }
 	            // check if yoast category set and there is a primary
@@ -311,9 +311,9 @@ function ascend_breadcrumbs() {
    			echo $before . get_the_title() . $after;
      	
     	} elseif (is_tax('portfolio-type')) {
-            if( !empty($ascend['portfolio_link']) ) { 
-                $parentpagelink = get_page_link($ascend['portfolio_link']); 
-                $parenttitle = get_the_title($ascend['portfolio_link']);
+            if( !empty($juanjimeneztj['portfolio_link']) ) { 
+                $parentpagelink = get_page_link($juanjimeneztj['portfolio_link']); 
+                $parenttitle = get_the_title($juanjimeneztj['portfolio_link']);
                 echo sprintf($link, esc_url($parentpagelink), esc_html($parenttitle)) . $sep;
             }
             $ancestors = get_ancestors( get_queried_object()->term_id, 'portfolio-type' );
@@ -323,16 +323,16 @@ function ascend_breadcrumbs() {
             	echo sprintf($link, esc_url(get_term_link( $ancestor->slug, 'portfolio-type' )), esc_html($ancestor->name)) . $sep;
             }
            
-            echo $before . ascend_title() . $after;
+            echo $before . juanjimeneztj_title() . $after;
 
     	} elseif (is_tax('portfolio-tag')) {
-             if( !empty($ascend['portfolio_link']) ) { 
-                $parentpagelink = get_page_link($ascend['portfolio_link']); 
-                $parenttitle = get_the_title($ascend['portfolio_link']);
+             if( !empty($juanjimeneztj['portfolio_link']) ) { 
+                $parentpagelink = get_page_link($juanjimeneztj['portfolio_link']); 
+                $parenttitle = get_the_title($juanjimeneztj['portfolio_link']);
                 echo sprintf($link, esc_url($parentpagelink), esc_html($parenttitle)) . $sep;
             }
 
-            echo $before . ascend_title() . $after;
+            echo $before . juanjimeneztj_title() . $after;
 
     	} elseif ( is_tax('product_cat') ) {
         	echo $shop_bread;
@@ -344,11 +344,11 @@ function ascend_breadcrumbs() {
          		echo sprintf($link, esc_url(get_term_link( $ancestor->slug, 'product_cat' )), esc_html($ancestor->name)) . $sep;
         	}
         
-      		echo $before . ascend_title() . $after;
+      		echo $before . juanjimeneztj_title() . $after;
 
   		} elseif ( is_tax('product_tag') ) {
   			echo $shop_bread;
-  			echo $before . ascend_title() . $after;
+  			echo $before . juanjimeneztj_title() . $after;
 
   		} elseif (class_exists('woocommerce') && is_shop()) {
       		$shop_page_id = wc_get_page_id( 'shop' );
@@ -390,9 +390,9 @@ function ascend_breadcrumbs() {
       		echo $before . get_the_title() . $after;
   
   		} elseif ( is_author() ) {
-  			if( !empty($ascend['blog_link'])){ 
-	            $bparentpagelink 	= get_page_link($ascend['blog_link']); 
-	            $bparenttitle 		= get_the_title($ascend['blog_link']);
+  			if( !empty($juanjimeneztj['blog_link'])){ 
+	            $bparentpagelink 	= get_page_link($juanjimeneztj['blog_link']); 
+	            $bparenttitle 		= get_the_title($juanjimeneztj['blog_link']);
 	            echo sprintf($link, esc_url($bparentpagelink), esc_html($bparenttitle)) . $sep;
 	        } 
 	       	global $author;
@@ -401,14 +401,14 @@ function ascend_breadcrumbs() {
 
 	    } elseif (is_archive()) {
 
-            echo $before . ascend_title() . $after;
+            echo $before . juanjimeneztj_title() . $after;
 
      	} elseif ( is_404() ) {
-	      	echo $before . __('Error 404', 'ascend') . $after;
+	      	echo $before . __('Error 404', 'juanjimeneztj') . $after;
 	    }
  		// Paged
 	    if ( get_query_var('paged') ) {
-	      	echo ' - ' .__('Page', 'ascend') . ' ' . esc_html(get_query_var('paged'));
+	      	echo ' - ' .__('Page', 'juanjimeneztj') . ' ' . esc_html(get_query_var('paged'));
 	    }
   
     	echo $wrap_after;

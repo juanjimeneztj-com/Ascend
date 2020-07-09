@@ -4,8 +4,8 @@
 *
 *
 */
-global $post, $ascend_has_sidebar, $ascend_feat_width;
-	$ascend = ascend_get_options();
+global $post, $juanjimeneztj_has_sidebar, $juanjimeneztj_feat_width;
+	$juanjimeneztj = juanjimeneztj_get_options();
     if (has_post_format( 'quote' )) { ?>
         <article id="post-<?php the_ID(); ?>" <?php post_class('kad_blog_item clearfix'); ?> itemscope itemtype="http://schema.org/CreativeWork">
               <div class="postcontent">
@@ -26,11 +26,11 @@ global $post, $ascend_has_sidebar, $ascend_feat_width;
                 <div class="entry-content kt-quote-post-outer <?php echo esc_attr($quote_class);?> clearfix" itemprop="description" style="<?php echo esc_attr($style);?>" >
                     <div class="kt-quote-post">
                         <?php 
-                             do_action( 'ascend_post_excerpt_content_before' );
+                             do_action( 'juanjimeneztj_post_excerpt_content_before' );
 
                              the_content();
 
-                             do_action( 'ascend_post_excerpt_content_after' );
+                             do_action( 'juanjimeneztj_post_excerpt_content_after' );
                         ?>
                    </div>
                    </div>
@@ -46,14 +46,14 @@ global $post, $ascend_has_sidebar, $ascend_feat_width;
     <?php
     } else {
 
-        if($ascend_has_sidebar){
-            $ascend_feat_width = apply_filters('ascend_blog_image_width_sidebar', ascend_post_sidebar_image_width()); 
-            $ascend_portraittext = 'col-xxl-95 col-xl-9 col-md-8 col-sm-8 col-xs-7';
-            $ascend_portraitimg_size = 'col-xxl-25 col-xl-3 col-md-4 col-sm-4 col-xs-5 col-ss-4';
+        if($juanjimeneztj_has_sidebar){
+            $juanjimeneztj_feat_width = apply_filters('juanjimeneztj_blog_image_width_sidebar', juanjimeneztj_post_sidebar_image_width()); 
+            $juanjimeneztj_portraittext = 'col-xxl-95 col-xl-9 col-md-8 col-sm-8 col-xs-7';
+            $juanjimeneztj_portraitimg_size = 'col-xxl-25 col-xl-3 col-md-4 col-sm-4 col-xs-5 col-ss-4';
         } else {
-            $ascend_feat_width = apply_filters('ascend_blog_image_width', ascend_post_image_width()); 
-            $ascend_portraittext = 'col-xxl-95 col-xl-9 col-md-9 col-sm-8 col-xs-7';
-            $ascend_portraitimg_size = 'col-xxl-25 col-xl-3 col-md-3 col-sm-4 col-xs-5 col-ss-4';
+            $juanjimeneztj_feat_width = apply_filters('juanjimeneztj_blog_image_width', juanjimeneztj_post_image_width()); 
+            $juanjimeneztj_portraittext = 'col-xxl-95 col-xl-9 col-md-9 col-sm-8 col-xs-7';
+            $juanjimeneztj_portraitimg_size = 'col-xxl-25 col-xl-3 col-md-3 col-sm-4 col-xs-5 col-ss-4';
         }
 
         if (has_post_format( 'gallery' )) {
@@ -64,12 +64,12 @@ global $post, $ascend_has_sidebar, $ascend_feat_width;
                 $imageheight = $height;
             } else {
                 $slideheight = 400;
-                $imageheight = apply_filters('ascend_single_post_image_height', 400); 
+                $imageheight = apply_filters('juanjimeneztj_single_post_image_height', 400); 
             }
             if (!empty($swidth)) {
                 $slidewidth = $swidth;
             } else {
-                $slidewidth = $ascend_feat_width;
+                $slidewidth = $juanjimeneztj_feat_width;
             } 
         } elseif (has_post_format( 'image' )) {
             $swidth = get_post_meta( $post->ID, '_kad_image_posthead_width', true );
@@ -77,19 +77,19 @@ global $post, $ascend_has_sidebar, $ascend_feat_width;
             if (!empty($height)) {
                 $imageheight = $height;
             } else {
-                $imageheight = apply_filters('ascend_single_post_image_height', 400); 
+                $imageheight = apply_filters('juanjimeneztj_single_post_image_height', 400); 
             }
             if (!empty($swidth)) {
                 $slidewidth = $swidth;
             } else {
-                $slidewidth = $ascend_feat_width;
+                $slidewidth = $juanjimeneztj_feat_width;
             }
         } else {
-            $imageheight = apply_filters('ascend_single_post_image_height', 400);
-            $slidewidth = $ascend_feat_width;
+            $imageheight = apply_filters('juanjimeneztj_single_post_image_height', 400);
+            $slidewidth = $juanjimeneztj_feat_width;
         }
         // get post summary
-        $postsummery = ascend_get_postsummary();
+        $postsummery = juanjimeneztj_get_postsummary();
         ?>
         <article id="post-<?php the_ID(); ?>" <?php post_class('kad_blog_item clearfix'); ?> itemscope itemtype="http://schema.org/BlogPosting">
             <div class="row">
@@ -97,24 +97,24 @@ global $post, $ascend_has_sidebar, $ascend_feat_width;
 	          	/**
 	            *
 	            */
-	            do_action( 'ascend_post_excerpt_before_content' );
+	            do_action( 'juanjimeneztj_post_excerpt_before_content' );
 	            ?>
 
               	<div class="col-md-12 post-text-container postcontent">
                 	<div class="post-text-inner">
 	                   	<?php 
 	                    /**
-	                    * @hooked ascend_post_header_meta_categories - 20
+	                    * @hooked juanjimeneztj_post_header_meta_categories - 20
 	                    */
-	                    do_action( 'ascend_post_excerpt_before_header' );
+	                    do_action( 'juanjimeneztj_post_excerpt_before_header' );
 	                    ?>
 	                   	<header>
 	                        <?php 
 	                        /**
-	                        * @hooked ascend_post_excerpt_header_title - 10
-	                        * @hooked ascend_post_header_meta - 20
+	                        * @hooked juanjimeneztj_post_excerpt_header_title - 10
+	                        * @hooked juanjimeneztj_post_header_meta - 20
 	                        */
-	                        do_action( 'ascend_post_excerpt_header' );
+	                        do_action( 'juanjimeneztj_post_excerpt_header' );
 	                        ?>
 	                   	</header>
 	                   	<div class="row kt-media-below-title">
@@ -125,7 +125,7 @@ global $post, $ascend_has_sidebar, $ascend_feat_width;
 			                        <div class="col-md-12 post-land-image-container">
 			                              <div class="imghoverclass img-margin-center">
 			                                <a href="<?php the_permalink();  ?>" title="<?php the_title_attribute(); ?>">
-			                                    <?php echo ascend_get_full_image_output($slidewidth, $imageheight, true, 'attachment-thumb wp-post-image kt-image-link', null, null, true); ?>
+			                                    <?php echo juanjimeneztj_get_full_image_output($slidewidth, $imageheight, true, 'attachment-thumb wp-post-image kt-image-link', null, null, true); ?>
 			                                </a> 
 			                            </div>
 			                        </div>
@@ -133,14 +133,14 @@ global $post, $ascend_has_sidebar, $ascend_feat_width;
 			              
 			                } elseif($postsummery == 'img_portrait') { 
 
-			                    $portraitwidth = apply_filters('ascend_post_excerpt_image_width_portrait', 270);
-			                    $portraitheight = apply_filters('ascend_post_excerpt_image_height_portrait', 310);
-			                    $textsize = $ascend_portraittext;
+			                    $portraitwidth = apply_filters('juanjimeneztj_post_excerpt_image_width_portrait', 270);
+			                    $portraitheight = apply_filters('juanjimeneztj_post_excerpt_image_height_portrait', 310);
+			                    $textsize = $juanjimeneztj_portraittext;
 			                    ?>
-			                    <div class="<?php echo esc_attr($ascend_portraitimg_size);?> post-image-container">
+			                    <div class="<?php echo esc_attr($juanjimeneztj_portraitimg_size);?> post-image-container">
 			                        <div class="imghoverclass img-margin-center">
 			                            <a href="<?php the_permalink();  ?>" title="<?php the_title_attribute(); ?>">
-			                                <?php echo ascend_get_full_image_output($portraitwidth, $portraitheight, true, 'attachment-thumb wp-post-image kt-image-link', null, null, true); ?>
+			                                <?php echo juanjimeneztj_get_full_image_output($portraitwidth, $portraitheight, true, 'attachment-thumb wp-post-image kt-image-link', null, null, true); ?>
 			                            </a> 
 			                        </div>
 			                    </div>
@@ -150,7 +150,7 @@ global $post, $ascend_has_sidebar, $ascend_feat_width;
 
 			                    $textsize = 'col-md-12'; ?>
 			                    <div class="col-md-12 post-photo-grid-container">
-			                    <?php ascend_build_image_collage($post->ID, 'post', $ascend_has_sidebar); ?>
+			                    <?php juanjimeneztj_build_image_collage($post->ID, 'post', $juanjimeneztj_has_sidebar); ?>
 			                    </div>    
 			                    <?php
 
@@ -159,18 +159,18 @@ global $post, $ascend_has_sidebar, $ascend_feat_width;
 			                    $textsize = 'col-md-12'; 
 			                    echo '<div class="col-md-12 post-land-image-container">';
 			                        $image_gallery = get_post_meta( $post->ID, '_kad_image_gallery', true );
-			                        ascend_build_slider($post->ID, $image_gallery, $slidewidth, $slideheight, 'post', 'kt-slider-same-image-ratio');
+			                        juanjimeneztj_build_slider($post->ID, $image_gallery, $slidewidth, $slideheight, 'post', 'kt-slider-same-image-ratio');
 			                    echo '</div>';
 
 			              	} elseif($postsummery == 'slider_portrait') { 
 
-			                    $textsize = $ascend_portraittext; 
-			                    $portraitwidth = apply_filters('ascend_post_excerpt_image_width_portrait', 270);
-			                    $portraitheight = apply_filters('ascend_post_excerpt_image_height_portrait', 310); 
+			                    $textsize = $juanjimeneztj_portraittext; 
+			                    $portraitwidth = apply_filters('juanjimeneztj_post_excerpt_image_width_portrait', 270);
+			                    $portraitheight = apply_filters('juanjimeneztj_post_excerpt_image_height_portrait', 310); 
 
-			                    echo '<div class="'.esc_attr($ascend_portraitimg_size).' post-image-container">';
+			                    echo '<div class="'.esc_attr($juanjimeneztj_portraitimg_size).' post-image-container">';
 			                        $image_gallery = get_post_meta( $post->ID, '_kad_image_gallery', true );
-			                        ascend_build_slider($post->ID, $image_gallery, $portraitwidth, $portraitheight, 'post', 'kt-slider-same-image-ratio');
+			                        juanjimeneztj_build_slider($post->ID, $image_gallery, $portraitwidth, $portraitheight, 'post', 'kt-slider-same-image-ratio');
 			                    echo '</div>';                 
 
 			              	} elseif($postsummery == 'video') {
@@ -189,11 +189,11 @@ global $post, $ascend_has_sidebar, $ascend_feat_width;
               			<div class="<?php echo esc_attr($textsize);?> kt-media-below-text-content">
 		                   	<div class="entry-content" itemprop="articleBody">
 		                        <?php 
-		                             do_action( 'ascend_post_excerpt_content_before' );
+		                             do_action( 'juanjimeneztj_post_excerpt_content_before' );
 
 		                             the_excerpt();
 
-		                             do_action( 'ascend_post_excerpt_content_after' );
+		                             do_action( 'juanjimeneztj_post_excerpt_content_after' );
 		                        ?>
 		                   	</div>
 		                   	<footer>
@@ -201,7 +201,7 @@ global $post, $ascend_has_sidebar, $ascend_feat_width;
 		                        /**
 		                        *
 		                        */
-		                        do_action( 'ascend_post_excerpt_footer' );
+		                        do_action( 'juanjimeneztj_post_excerpt_footer' );
 		                        ?>
 		                   	</footer>
 	                   	</div>
@@ -210,7 +210,7 @@ global $post, $ascend_has_sidebar, $ascend_feat_width;
 	                   	/**
 	                   	* 
 	                   	*/
-	                   	do_action( 'ascend_post_excerpt_after_footer' );
+	                   	do_action( 'juanjimeneztj_post_excerpt_after_footer' );
 	                   	?>
 	                </div><!-- Inner -->
               	</div><!-- Text size -->

@@ -23,7 +23,7 @@
 if( !defined( 'ABSPATH' ) ) exit;
 
 // Don't duplicate me!
-if( !class_exists( 'ReduxFramework_Extension_ascend_slides' ) ) {
+if( !class_exists( 'ReduxFramework_Extension_juanjimeneztj_slides' ) ) {
 
 
     /**
@@ -31,7 +31,7 @@ if( !class_exists( 'ReduxFramework_Extension_ascend_slides' ) ) {
      *
      * @since       3.1.6
      */
-    class ReduxFramework_Extension_ascend_slides extends ReduxFramework {
+    class ReduxFramework_Extension_juanjimeneztj_slides extends ReduxFramework {
 
         // Protected vars
         protected $parent;
@@ -55,7 +55,7 @@ if( !class_exists( 'ReduxFramework_Extension_ascend_slides' ) ) {
             if ( empty( $this->extension_dir ) ) {
                 $this->extension_dir = trailingslashit( str_replace( '\\', '/', dirname( __FILE__ ) ) );
             }
-            $this->field_name = 'ascend_slides';
+            $this->field_name = 'juanjimeneztj_slides';
 
             self::$theInstance = $this;
 

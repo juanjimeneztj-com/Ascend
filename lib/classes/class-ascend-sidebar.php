@@ -2,7 +2,7 @@
 /**
  * Determines whether or not to display the sidebar based on an array of conditional tags or page templates.
  */
-class Ascend_Sidebar {
+class juanjimeneztj_Sidebar {
     private $conditionals;
 
     public $display = true;

@@ -2,7 +2,7 @@
 /**
  * Custom functions
  *
- * @package Ascend Theme
+ * @package juanjimeneztj Theme
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @param string $hex string hex code.
  */
-function ascend_hex2rgb( $hex ) {
+function juanjimeneztj_hex2rgb( $hex ) {
 	$hex = str_replace( '#', '', $hex );
 
 	if ( strlen( $hex ) == 3 ) {
@@ -37,7 +37,7 @@ function ascend_hex2rgb( $hex ) {
  * @param string $hex string hex code.
  * @param int    $steps adjustment steps.
  */
-function ascend_adjust_brightness( $hex, $steps ) {
+function juanjimeneztj_adjust_brightness( $hex, $steps ) {
 	// Steps should be between -255 and 255. Negative = darker, positive = lighter.
 	$steps = max( -255, min( 255, $steps ) );
 
@@ -63,7 +63,7 @@ function ascend_adjust_brightness( $hex, $steps ) {
 /**
  * Schema type
  */
-function ascend_html_tag_schema() {
+function juanjimeneztj_html_tag_schema() {
 	$schema = 'http://schema.org/';
 
 	if ( is_singular( 'post' ) ) {
@@ -76,6 +76,6 @@ function ascend_html_tag_schema() {
 		$type = 'WebPage';
 	}
 
-	echo apply_filters( 'ascend_html_schema', 'itemscope="itemscope" itemtype="' . esc_attr( $schema ) . esc_attr( $type ) . '"' );
+	echo apply_filters( 'juanjimeneztj_html_schema', 'itemscope="itemscope" itemtype="' . esc_attr( $schema ) . esc_attr( $type ) . '"' );
 }
 

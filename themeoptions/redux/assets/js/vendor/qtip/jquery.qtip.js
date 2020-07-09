@@ -3185,7 +3185,7 @@
                 len, next, i, points,
                 result, position, dimensions;
 
-            // Ascend the parentNode chain until we find an element with getBBox()
+            // juanjimeneztj the parentNode chain until we find an element with getBBox()
             while(!elem.getBBox) { elem = elem.parentNode; }
             if(!elem.getBBox || !elem.parentNode) { return FALSE; }
 

@@ -2,9 +2,9 @@
 
 // Depreciated will be removed soon.
 
-$ascend = ascend_get_options();
-if(isset($ascend['site_layout'])) {
-    $site_layout = $ascend['site_layout'];
+$juanjimeneztj = juanjimeneztj_get_options();
+if(isset($juanjimeneztj['site_layout'])) {
+    $site_layout = $juanjimeneztj['site_layout'];
 } else {
     $site_layout = 'above';
 }

@@ -3,10 +3,10 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
 
-function ascend_cmb_sidebar_options() {
-    global $ascend;
+function juanjimeneztj_cmb_sidebar_options() {
+    global $juanjimeneztj;
     $sidebars = array(
-        'default' => __('Default', 'ascend')
+        'default' => __('Default', 'juanjimeneztj')
     );
     $nonsidebars = array(
     	'homewidget',
@@ -26,14 +26,14 @@ function ascend_cmb_sidebar_options() {
     return $sidebars;
 }
 
-add_action( 'cmb2_render_kt_text_number', 'ascend_render_kt_text_number', 10, 5 );
-function ascend_render_kt_text_number($field, $meta, $object_id, $object_type, $field_type_object) {
+add_action( 'cmb2_render_kt_text_number', 'juanjimeneztj_render_kt_text_number', 10, 5 );
+function juanjimeneztj_render_kt_text_number($field, $meta, $object_id, $object_type, $field_type_object) {
     echo $field_type_object->input( array( 'class' => 'cmb_text_small', 'type' => 'number' ) );
 }
-add_action( 'cmb2_render_kt_select_category', 'ascend_render_select_category', 10, 2 );
-function ascend_render_select_category( $field, $meta ) {
+add_action( 'cmb2_render_kt_select_category', 'juanjimeneztj_render_select_category', 10, 2 );
+function juanjimeneztj_render_select_category( $field, $meta ) {
     wp_dropdown_categories(array(
-            'show_option_none' => __( "All Blog Posts", 'ascend' ),
+            'show_option_none' => __( "All Blog Posts", 'juanjimeneztj' ),
             'hierarchical' => 1,
             'taxonomy' => 'category',
             'orderby' => 'name', 
@@ -47,10 +47,10 @@ function ascend_render_select_category( $field, $meta ) {
     	echo '<p class="cmb_metabox_description">' . $desc . '</p>';
     }
 }
-add_action( 'cmb2_render_kt_select_type', 'ascend_render_select_type', 10, 2 );
-function ascend_render_select_type( $field, $meta ) {
+add_action( 'cmb2_render_kt_select_type', 'juanjimeneztj_render_select_type', 10, 2 );
+function juanjimeneztj_render_select_type( $field, $meta ) {
     wp_dropdown_categories(array(
-            'show_option_none' => __( "All Types", 'ascend' ),
+            'show_option_none' => __( "All Types", 'juanjimeneztj' ),
             'hierarchical' => 1,
             'taxonomy' => $field->args( 'taxonomy'),
             'orderby' => 'name', 
@@ -64,7 +64,7 @@ function ascend_render_select_type( $field, $meta ) {
     	echo '<p class="cmb_metabox_description">' . $desc . '</p>';
     }
 }
-function ascend_metabox_include_home_page( $display, $meta_box ) {
+function juanjimeneztj_metabox_include_home_page( $display, $meta_box ) {
     if ( ! isset( $meta_box['show_on']['key'] ) ) {
         return $display;
     }
@@ -93,8 +93,8 @@ function ascend_metabox_include_home_page( $display, $meta_box ) {
     }
     return $response;
 }
-add_filter( 'cmb2_show_on', 'ascend_metabox_include_home_page', 10, 2 );
-function ascend_all_custom_posts() {
+add_filter( 'cmb2_show_on', 'juanjimeneztj_metabox_include_home_page', 10, 2 );
+function juanjimeneztj_all_custom_posts() {
     $args = array(
        'public'   => true,
     );

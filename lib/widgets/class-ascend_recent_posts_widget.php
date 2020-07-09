@@ -8,12 +8,12 @@ if ( ! defined( 'ABSPATH' ) ) {
  *  Just a rewite of wp recent post
  * 
  */
-class ascend_recent_posts_widget extends WP_Widget {
+class juanjimeneztj_recent_posts_widget extends WP_Widget {
 
   	private static $instance = 0;
 	public function __construct() {
-  		$widget_ops = array('classname' => 'kadence_recent_posts', 'description' => __('This shows the most recent posts on your site with a thumbnail', 'ascend'));
-  		parent::__construct('kadence_recent_posts', __('Ascend: Recent Posts', 'ascend'), $widget_ops);
+  		$widget_ops = array('classname' => 'kadence_recent_posts', 'description' => __('This shows the most recent posts on your site with a thumbnail', 'juanjimeneztj'));
+  		parent::__construct('kadence_recent_posts', __('juanjimeneztj: Recent Posts', 'juanjimeneztj'), $widget_ops);
 	}
 
   	public function widget($args, $instance) {
@@ -51,12 +51,12 @@ class ascend_recent_posts_widget extends WP_Widget {
 	    if(isset($instance['read_more_txt']) && !empty($instance['read_more_txt'])) {
 	      	$readmore_txt = $instance['read_more_txt'];
 	    } else {
-	      	$readmore_txt = __('Read More', 'ascend');
+	      	$readmore_txt = __('Read More', 'juanjimeneztj');
 	    }
 	    if(isset($instance['thecate'])) {
 	      	$cat = $instance['thecate'];
 	    } else {
-	      	$cat = __('Read More', 'ascend');
+	      	$cat = __('Read More', 'juanjimeneztj');
 	    }
     	$r = new WP_Query( apply_filters( 'widget_posts_args', array( 
 	        'posts_per_page' => $number,
@@ -86,14 +86,14 @@ class ascend_recent_posts_widget extends WP_Widget {
 	    			echo '<li class="clearfix postclass kt-top-featured">';
 	    			if(has_post_thumbnail( $post->ID ) ) {
 	    				echo '<a href="'.esc_url( get_the_permalink() ).'" title="'.esc_attr(get_the_title()).'" class="recentpost_featimg">';
-	                	echo ascend_get_full_image_output($feature_image_size['width'], $feature_image_size['height'], true, 'attachment-widget-thumb wp-post-image', null, null, true);
+	                	echo juanjimeneztj_get_full_image_output($feature_image_size['width'], $feature_image_size['height'], true, 'attachment-widget-thumb wp-post-image', null, null, true);
 	                	echo '</a>';
 	                } 
           		} else {
 		        	echo '<li class="clearfix postclass">';
 		            if(has_post_thumbnail( $post->ID ) ) { 
 		                echo '<a href="'.esc_url( get_the_permalink() ).'" title="'.esc_attr(get_the_title()).'" class="recentpost_featimg">';
-		                echo ascend_get_full_image_output($image_size['width'], $image_size['height'], true, 'attachment-widget-thumb wp-post-image', null, null, true);
+		                echo juanjimeneztj_get_full_image_output($image_size['width'], $image_size['height'], true, 'attachment-widget-thumb wp-post-image', null, null, true);
 		                echo '</a>';
 		            }
 		        }
@@ -177,31 +177,31 @@ class ascend_recent_posts_widget extends WP_Widget {
     	}
 		?>
 	    <p>
-	    	<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'ascend'); ?></label>
+	    	<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'juanjimeneztj'); ?></label>
 	    	<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" />
 	    </p>
 	    <p>
-	    	<label for="<?php echo $this->get_field_id('number'); ?>"><?php _e('Number of posts to show:', 'ascend'); ?></label>
+	    	<label for="<?php echo $this->get_field_id('number'); ?>"><?php _e('Number of posts to show:', 'juanjimeneztj'); ?></label>
 	    	<input id="<?php echo $this->get_field_id('number'); ?>" name="<?php echo $this->get_field_name('number'); ?>" type="text" value="<?php echo esc_attr($number); ?>" size="3" />
 	    </p>
 	    <p>
-	    	<label for="<?php echo $this->get_field_id('orderby'); ?>"><?php _e('Orderby:', 'ascend'); ?></label>
+	    	<label for="<?php echo $this->get_field_id('orderby'); ?>"><?php _e('Orderby:', 'juanjimeneztj'); ?></label>
 	    	<select id="<?php echo $this->get_field_id('orderby'); ?>" name="<?php echo $this->get_field_name('orderby'); ?>"><?php echo implode('', $order_options); ?></select>
 	    </p>
         <p>
-    		<label for="<?php echo $this->get_field_id('thecate'); ?>"><?php _e('Limit to Catagory (Optional):', 'ascend'); ?></label>
+    		<label for="<?php echo $this->get_field_id('thecate'); ?>"><?php _e('Limit to Catagory (Optional):', 'juanjimeneztj'); ?></label>
     		<select id="<?php echo $this->get_field_id('thecate'); ?>" name="<?php echo $this->get_field_name('thecate'); ?>"><?php echo implode('', $cate_options); ?></select>
   		</p>
   		<p>
-	    	<label for="<?php echo $this->get_field_id('first_feature'); ?>"><?php _e('Feature first item:', 'ascend'); ?></label>
+	    	<label for="<?php echo $this->get_field_id('first_feature'); ?>"><?php _e('Feature first item:', 'juanjimeneztj'); ?></label>
 	    	<select id="<?php echo $this->get_field_id('first_feature'); ?>" name="<?php echo $this->get_field_name('first_feature'); ?>"><?php echo implode('', $feature_options); ?></select>
 	    </p>
 	    <p>
-	    	<label for="<?php echo $this->get_field_id('read_more'); ?>"><?php _e('View more link at end of post list?:', 'ascend'); ?></label>
+	    	<label for="<?php echo $this->get_field_id('read_more'); ?>"><?php _e('View more link at end of post list?:', 'juanjimeneztj'); ?></label>
 	    	<select id="<?php echo $this->get_field_id('read_more'); ?>" name="<?php echo $this->get_field_name('read_more'); ?>"><?php echo implode('', $readmore_options); ?></select>
 	    </p>
 	    <p>
-	    	<label for="<?php echo $this->get_field_id('read_more_txt'); ?>"><?php _e('View more link text:', 'ascend'); ?></label>
+	    	<label for="<?php echo $this->get_field_id('read_more_txt'); ?>"><?php _e('View more link text:', 'juanjimeneztj'); ?></label>
 	    	<input class="widefat" id="<?php echo $this->get_field_id('read_more_txt'); ?>" name="<?php echo $this->get_field_name('read_more_txt'); ?>" type="text" value="<?php echo esc_attr($read_more_txt); ?>" />
 	    </p>
 <?php

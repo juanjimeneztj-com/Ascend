@@ -8,21 +8,21 @@
 	get_header(); 
 
     /**
-    * @hooked ascend_page_title - 20
+    * @hooked juanjimeneztj_page_title - 20
     */
-    do_action('ascend_page_title_container');
+    do_action('juanjimeneztj_page_title_container');
 
-    global $ascend_has_sidebar; 
-    $ascend = ascend_get_options();
-    if(ascend_display_sidebar()) {
-    	$ascend_has_sidebar = true;
+    global $juanjimeneztj_has_sidebar; 
+    $juanjimeneztj = juanjimeneztj_get_options();
+    if(juanjimeneztj_display_sidebar()) {
+    	$juanjimeneztj_has_sidebar = true;
         $itemsize = 'col-xxl-3 col-xl-4 col-md-4 col-sm-4 col-xs-6 col-ss-12';
     } else {
-    	$ascend_has_sidebar = false;
+    	$juanjimeneztj_has_sidebar = false;
         $itemsize = 'col-xxl-3 col-xl-4 col-md-4 col-sm-4 col-xs-6 col-ss-12'; 
     }
-    if(isset($ascend['search_layout_style'])) {
-    	$layout = $ascend['search_layout_style'];
+    if(isset($juanjimeneztj['search_layout_style'])) {
+    	$layout = $juanjimeneztj['search_layout_style'];
     } else {
     	$layout = 'grid';
     }
@@ -33,11 +33,11 @@
 	}?>
     <div id="content" class="container">
       	<div class="row">
-      		<div class="main <?php echo esc_attr(ascend_main_class()); ?> " id="ktmain" role="main">
+      		<div class="main <?php echo esc_attr(juanjimeneztj_main_class()); ?> " id="ktmain" role="main">
 
 				<?php if (!have_posts()) : ?>
 				  	<div class="alert">
-				    	<?php _e('Sorry, no results were found.', 'ascend'); ?>
+				    	<?php _e('Sorry, no results were found.', 'juanjimeneztj'); ?>
 				  	</div>
 				  	<?php get_search_form(); ?>
 				<?php endif;
@@ -56,15 +56,15 @@
 				
 				<?php 
 					/**
-	                * @hooked ascend_pagination - 20
+	                * @hooked juanjimeneztj_pagination - 20
 	                */
-	                do_action('ascend_pagination'); ?>
+	                do_action('juanjimeneztj_pagination'); ?>
 				</div><!-- /.main -->
 				<?php
 				/**
 			    * Sidebar
 			    */
-				if (ascend_display_sidebar()) : 
+				if (juanjimeneztj_display_sidebar()) : 
 				      	get_sidebar();
 			    endif; ?>
     		</div><!-- /.row-->
